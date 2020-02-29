@@ -8,7 +8,14 @@
     "exclude": [],
     "order": [
       "Home.md",
-      "Features:Input.md"
+      "project-management.md",
+      "project-management:-Milestones.md",
+      "Flight-Records.md",
+      "Features.md",
+      "Features:-Input.md",
+      "Features:-Analysis.md",
+      "Constructors.md",
+      "Constructors:-Airbus.md"
     ]
   },
   "separator": ":",

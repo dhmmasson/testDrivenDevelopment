@@ -1,14 +1,20 @@
 # Advanced Programming
 This is the wiki of the Estia class Advanced Programming.
-
-## Educational Goals of the class
-* Start and manage a software development project following some Agile project management principles
-  * Organize features to be develop
-  * set up milestone to reach  
-* Use of a version control system.
-  *
+> **Outline**
+- [Advanced Programming](#advanced-programming)
+  * [Educational Goals of the class](#educational-goals-of-the-class)
+- [Pandora - a flight data recorder analyser](#pandora---a-flight-data-recorder-analyser)
+  * [Project description](#project-description)
+    + [Flight data records](#flight-data-records)
+    + [Flight Analysis](#flight-analysis)
+    + [Features to develop](#features-to-develop)
 
 ***
+## Educational Goals of the class
+* Start and manage a software development project following some Agile project management principles
+  * Organize [features](./Features) to be developed
+  * set up [milestone](./project-management:Milestones) to reach  
+* Use of a version control system.
 
 # Pandora - a flight data recorder analyser
 Pandora is a tool to analyse flight record data to provide information to the operating company.
