@@ -8,6 +8,12 @@
 | Latitude | Required  | Number | Decimal Degrees | Location latitude | 40.446 |
 | Longitude | Required | Number | Decimal Degrees | Location longitude | 79.982 |
 | AMSL | Required | Number | meters | Height above mean sea level |  |
-|  | Required |  | meter |  |  |
-| FL | Required |  |  |  |  |
+| FL | Required |  |  | Flight level  |  |
+| Fuel Reserve | Required, Multiple |  |  |  |  |
+| Engine thrust | Multiple 1-4 |  |  |  |  |
+| External temperature | Multiple 1-4 |  |  |  |  |
+| External pressure | Multiple 1-4 |  |  |  |  |
+| Cabin temperature | Multiple 1-4 |  |  |  |  |
+| Cabin pressure  | Multiple 1-4 |  |  |  |  |
+| Engine power | Multiple 1-4 |  |  |  |  |
 |  |  |  |  |  |  |

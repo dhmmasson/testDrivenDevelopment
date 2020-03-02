@@ -1,4 +1,8 @@
 # Assignment
+[Ex1]: ./Assignements%3A-Ex1
+[Ex2]: ./Assignements%3A-Ex2
+[Ex3]: ./Assignements%3A-Ex3
+[Project]: ./Assignements/
 
 # Exercice 1 - First commit
 ## Objectives
@@ -46,9 +50,3 @@ Some references
 [git flow](https://guides.github.com/introduction/flow/)
 
 # Pandora Project  
-
-
-[Ex1]: ./Assignements/
-[Ex2]: ./Assignements/
-[Ex3]: ./Assignements/
-[Project]: ./Assignements/
