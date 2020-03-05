@@ -26,11 +26,15 @@ A distributed version control system (DVCS) is a type of version control where t
 
 # Install
 
+TODO: integrate William Tutorial.
 
 # Branches
 
 What is a branch,
-## Master, develop ...
+## master, develop ...
+
+master
+: The master 
 
 ## Pull requests
 
@@ -46,7 +50,8 @@ What is a branch,
 
 # Ressources
 
-Some of the ressources used to create this page :
+Some of the [ressources][github-guide] used to create this page,
 [Git handbook][Git-handbook]
 
 [Git-handbook]: https://guides.github.com/introduction/git-handbook/
+[github-guide]:https://guides.github.com/

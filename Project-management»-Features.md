@@ -33,23 +33,44 @@ The projet
 * Ground speed
   * Average
   * Top
+* Altitude
+  * max
+  * average
 * Flight distance
 *
-
 
 ## Cabin report
 * Internal temperature
 * Internal pressure
 * Internal pressure
+* Electric Comsumption
+* Time gate closed
 
-## Simple flight analysis
-* Flight optimal path ( actual distance on direct distance)
-*  
+## Simple flight analysis ?
+* Comparison to some objective ( mission time, expected consumption)
+* Rapport de grandeur  ...
+* Best Engine
+* phase de vol :
 
-## Analysis
+## Anomaly Analysis
 
 * Turbulence
 * Décrochage
 * Panne moteur
 * dépréssurisation cabine
+* Leak
+
+## Multiple flights analysis
+### Same flight
+* Best fuel efficiency (ratio consumption / h, min, etc)
+* more secure (fewer anomalies)
+* Fastest
+*
+
+### different flights
+
+
+# Error Handling
+
+* Missing file
 *
