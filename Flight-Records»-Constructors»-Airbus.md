@@ -11,9 +11,8 @@
 | FL | Required |  |  | Flight level  |  |
 | Fuel Reserve | Required, Multiple |  |  |  |  |
 | Engine thrust | Multiple 1-4 |  |  |  |  |
-| External temperature | Multiple 1-4 |  |  |  |  |
-| External pressure | Multiple 1-4 |  |  |  |  |
+| External temperature | Multiple 1-4 |  |  |
+| External Pressure | Multiple 1-4 |  |  |  |  |
 | Cabin temperature | Multiple 1-4 |  |  |  |  |
 | Cabin pressure  | Multiple 1-4 |  |  |  |  |
-| Engine power | Multiple 1-4 |  |  |  |  |
 |  |  |  |  |  |  |
