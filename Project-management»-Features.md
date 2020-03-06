@@ -65,10 +65,16 @@ The projet
 * Other?
 
 ### Questions
-* Which phase demands the most engine power?
+* Which phase:
+  * Demands the most engine power?
+  * Is the most stressful for the pilot?
+  * Has the highest horizontal acceleration?
 * How long did it take for the jet to:
-  * reach 80% of its max altitude?
-  * travel 80% of its planned distance?
+  * Reach 80% of its max altitude?
+  * Travel 80% of its planned distance?
+* With an average over a time window of 5min, at what altitude level is:
+  * The fastest wind outside the aircraft?
+  * The highest speed of the aircraft?
 
 ## Cabin report
 
@@ -95,10 +101,16 @@ The projet
   * Max
 
 ### Compute
-* ?
+* None
 
 ### Analysis
-* 
+* None
+
+### Questions
+* Assuming a heating system set to 25 ℃ during the whole flight, what is the average noise in the data?
+* Did the pilot suffered from stress?
+* Which phase(s) required more than 50% of oxygen concentration in the mask?
+
 
 ## Simple flight analysis ?
 * Comparison to some objective ( mission time, expected consumption)
@@ -122,8 +134,16 @@ The projet
 
 ### different flights
 
+* Which flights flew less than 50km away from each others? 100km away?
+* Which flew the highest during its cruise phase? The lowest?
+* Which pilot stressed more than the others? Less than the others?
+* 
+
 
 # Error Handling
+Each errors should be reported according to a standard.
+An error should start with: "error detected", followed by the name of the error and its details. For example, if the test file 'the_example_test_file.xyz' is missing, the program output will be "error detected: MISSING_FILE - the_example_test_file.xyz"
 
-* Missing file
+| Error | Description | Error Name | Error Detail(s) | Example|
+| Missing file | A file given as an input is not found | MISSING_FILE | the file name(s) | error detected: MISSING_FILE - file1 file2 file3|
 *
