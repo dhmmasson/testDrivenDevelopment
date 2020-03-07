@@ -4,11 +4,11 @@
 
 ## The problem
 
-How have you saving your modifications while working on a project until now ? Have you named the same file:  `internship_report.pdf`, `internship_report_v1.pdf`, `internship_report_v2.pdf`, `internship_report_v2_Final.pdf` ? Have send this file to Alice Martin to received `internship_report_v2_Final_AM.pdf` and went on having `internship_report_v1_Final_AM_2.pdf`, ... `internship_report_v1_Final_AM_2_Finale.pdf`...
+Up until now, How did you manage modifications while working on a collaborative project? Did you name the same file:  `internship_report.pdf`, `internship_report_v1.pdf`, `internship_report_v2.pdf`, `internship_report_v2_Final.pdf`? Then did you send this file to Alice Martin just to receive `internship_report_v2_Final_AM.pdf`, and went on having `internship_report_v1_Final_AM_2.pdf`, ... `internship_report_v1_Final_AM_2_Finale.pdf`...
 
-Maybe you have used google drive, or Microsoft OneDrive to manage the diferent version of a file. You have shared a file in the cloud that automagically save all the change made by you and your contributors. Maybe you know about the revision system that tracks individual change and you came back on a previous version. But working concurrently on a same section or on different files is not easy.
+Maybe you used google drive, or Microsoft OneDrive, to manage the different version of your files. You have shared a file in the cloud that automagically save every changes made by you and your collaborators. Maybe you know about a revision system that tracks individual change, and you came back on a previous version. But working concurrently on a same section or on different files is not easy.
 
-All the previous systems ( saving backups, using cloud solutions ) are version control system, albeit not very good one for software development project.  
+All the previous systems (saving backups, using cloud solutions) are version control system, albeit not very good ones a software development project.  
 
 > *From the [Git handbook][git-handbook]:*
 >
@@ -26,7 +26,15 @@ A distributed version control system (DVCS) is a type of version control where t
 
 # Install
 
-TODO: integrate William Tutorial.
+* Create a user account on [GitHub](#https://github.com/)
+* Install a git client (e.g., [GitHub Desktop](#https://desktop.github.com/))
+![alt text](./images/img1.png "Desktop client")
+* Click on "clone a repository from the internet”
+![alt text](./images/img2.png "Clone a repo")
+* Select the "**`pandora-template`**" project
+* Select the location you want the download to happen on your computer
+* Click "clone"
+
 
 # Branches
 

@@ -1,17 +1,38 @@
 # Organisation of the features
 
-The projet
+The project is organized according to 8 main milestones. Each of these [milestones](#milestones) has some [features](#output-features-list) and functionalities to implement in order to be completed.
 
-# Milestone
+# Milestones
 * **Pandora-initial** :
-  - Description : Initial version of the pandora software : load one Russian flight record and output the
-  - Features: 1,2,3  
+    * Description : Initial version of the pandora software : load one Russian flight record and output the
+* **Milestone 0** : Mono RU Flight Description
+    * Description: Provide basic descriptive summary data of a Russian fighter jet flight
+* **Milestone 1** : Mono RU Cockpit Description
+    * Description: Provide basic descriptive summary data of a Russian cockpit during a flight
+* **Milestone 2** : Mono RU Flight Computation
+    * Description: Provide simple computed data about a Russian jet flight
+* **Milestone 3** : Mono RU Flight Analysis
+    * Description: Extract high-level information from data
+* **Milestone 4** : File Handling
+    * Description: Handle batch option and US fighter jet files
+* **Milestone 5** : Error Management
+    * Description: Handle Errors
+* **Milestone 6** : Multiple Flights Computations
+    * Description: Perform computations using multiple flights data
+* **Milestone 7** : Multiple Flights Analysis
+    * Description: Extract high-level information about multiple flights
+
+
+
+
+
 
 # Input features - Flight Data Records
 ## Input
-* Mono
-* Batch management
-* Multi records management
+* Mono: The program takes one file name as an argument on its command line
+* Batch management: The program can take several file names on its command line
+* Multi records management: The program needs multiple files to process the requested feature (e.g., find the fastest fighter jet)
+
 ## Data validation
 * Command line
     * Missing argument (done)
@@ -162,7 +183,7 @@ An error should start with: "error detected", followed by the name of the error,
 **<ins>Important</ins>** : In case of multiple files and multiple parameters, the output is organized `alphabetically`.
 
 
-###List of potential errors:
+### List of potential errors:
 
 | Error | Description | Error Name | Error Detail(s) | Example|
 |-------------|-------------|------------|-----------------|----------------------------------------|
