@@ -1,5 +1,5 @@
 # Advanced Programming
-This is the wiki for the Estia class Advanced Programming class.
+This is the wiki for the Estia Advanced Programming class.
 > **Outline**
 - [Advanced Programming](#advanced-programming)
   * [Educational Goals of the class](#educational-goals-of-the-class)
@@ -16,6 +16,11 @@ This is the wiki for the Estia class Advanced Programming class.
   * set up [milestone](./project-management:Milestones) to reach  
 * Use of a version control system.
 
+## Evaluation
+You will be automatically evaluated based on how many functionalities you developed and how many milestones you managed to complete.
+You can check by yourself how many tests your program passed or failed every time you will commit you current version on GitHub.
+
+
 # Pandora - a flight data recorder analyzer
 Pandora is a tool to analyze flight record data to provide information to the operating company.
 
@@ -25,11 +30,12 @@ Planes are equipped with [Flight Recorder](https://en.wikipedia.org/wiki/Flight_
 We will in this class take some liberties on how the data are stored and extracted to simplify the process.
 
 ### Flight data records
-Records about a flight will be store in a text file. Specifications can be found here
+Records about a flight will be store in a text file. Specifications can be found [here](./Flight-Records)
 ### Flight Analysis  
 the tool will produce multiple flight analyses depending on the input flight records it is working on.
 * Basic Flight Analysis
 * Incident Flight Analysis  
 *
+
 ### Features to develop
-a list of complete features to be integrated can be found [here](./Features)
+A list of complete features to be integrated can be found [here](./Features)

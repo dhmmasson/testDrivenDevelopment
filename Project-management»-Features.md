@@ -1,28 +1,51 @@
-# Organisation of the features
+# Organisation of the Features: Milestones and Issues
+
+
+
+> **Outline**
+> 
+> - [Milestones](#milestones)
+> - [Input](#input-features-flight-data-records)
+>       - [Input](#input)
+>       - [Data Validation](#data-validation)
+>       - [Origin](#fighter-jet-origin)
+> - [Output](#output-features-list)
+>       - [Simple Flight Report](#simple-flight-report)
+>       - [Cabin Report](#cabin-report)
+>       - [Multiple Flights Analysis](#multiple-flights-analysis)
+
+
 
 The project is organized according to 8 main milestones. Each of these [milestones](#milestones) has some [features](#output-features-list) and functionalities to implement in order to be completed.
 
 # Milestones
 * **Pandora-initial** :
     * Description : Initial version of the pandora software : load one Russian flight record and output the
+    * Number of issues: 3
 * **Milestone 0** : Mono RU Flight Description
     * Description: Provide basic descriptive summary data of a Russian fighter jet flight
+    * Number of issues: 7
 * **Milestone 1** : Mono RU Cockpit Description
     * Description: Provide basic descriptive summary data of a Russian cockpit during a flight
+    * Number of issues: 16
 * **Milestone 2** : Mono RU Flight Computation
     * Description: Provide simple computed data about a Russian jet flight
+    * Number of issues: 9
 * **Milestone 3** : Mono RU Flight Analysis
     * Description: Extract high-level information from data
+    * Number of issues: 39
 * **Milestone 4** : File Handling
     * Description: Handle batch option and US fighter jet files
+    * Number of issues: 6
 * **Milestone 5** : Error Management
     * Description: Handle Errors
+    * Number of issues: 13
 * **Milestone 6** : Multiple Flights Computations
     * Description: Perform computations using multiple flights data
+    * Number of issues: 19
 * **Milestone 7** : Multiple Flights Analysis
     * Description: Extract high-level information about multiple flights
-
-
+    * Number of issues: 4
 
 
 
@@ -51,9 +74,10 @@ The project is organized according to 8 main milestones. Each of these [mileston
 
 Refer to the [error handling](#error-handling) section for more details.
 
-## Plane Constructor Integration
+## Fighter jet origin
 * Russian fighter jets
 * American fighter jets
+
 
 # Output features - List
 ## Simple flight report  
@@ -175,10 +199,10 @@ Refer to the [error handling](#error-handling) section for more details.
 
 # Error Handling
 Each errors should be reported according to a standard.
-An error should start with: "error detected", followed by the name of the error, a minus symbol "-", and finally its details. For example, if the test file 'file1.xyz' is missing 'origin' and 'date' from its header, and 'file2.xyz' is missing 'flight id', the program output will be:
+An error should start with: "ERROR", followed by the name of the error, a minus symbol "-", and finally its details. For example, if the test file 'file1.xyz' is missing 'origin' and 'date' from its header, and 'file2.xyz' is missing 'flight id', the program output will be:
 
 
-**<p style="text-align: center;">error detected: INCOMPLETE_HEADER - the_example_test_file.xyz</p>**
+**<p style="text-align: center;">ERROR: INCOMPLETE_HEADER - file1.xyz=[date,origin] file2.xyz=[flight id]</p>**
 
 **<ins>Important</ins>** : In case of multiple files and multiple parameters, the output is organized `alphabetically`.
 
@@ -187,17 +211,17 @@ An error should start with: "error detected", followed by the name of the error,
 
 | Error | Description | Error Name | Error Detail(s) | Example|
 |-------------|-------------|------------|-----------------|----------------------------------------|
-| Invalid options | Unrecognized options given to the program | INCORRECT_CLI_OPT | ... | ...|
-| Missing command line parameters | Required parameter(s) given options are missing | MISSING_OPT_PARAM | ... |...|
-| Not implemented | An option is not (yet) implemented | NOT_IMPLEMENTED | ... | ...|
-| Missing file | A file given as an input is not found | MISSING_FILE | the file name(s) | error detected: MISSING_FILE - file1 file2 file3|
-| Encoding problem | The content of a file has encoding problems (ascii, utf-8, etc) | ENCODING | the file name(s) | error detected: ENCODING - file1 file2 file3|
-| Corrupted file | The file cannot be open because of incorrect binary data | CORRUPTED | the file name(s) |error detected: CORRUPTED - file1 file2 file3|
-|Missing header | The header section is not in the file | MISSING_HEADER | The file name(s) | error detected: MISSING_HEADER - file1 file2|
-|Incomplete header | The header is missing some information | INCOMPLETE_HEADER | file_name=[info1, info2...] | error detected: INCOMPLETE_HEADER - file1=[origin,flight id] file2=[date] |
-| Missing columns | Some required columns are not in the file | MISSING_COLUMN | file_name=[col1,col2] | error detected: MISSING_COLUMN - file1=[timestamp] file2=[longitude,latitude] |
-| Missing column names | The log file does not contain the column names | MISSING_COLNAMES | the file name(s) | error detected: MISSING_COLNAMES - file1 file2 file3 |
-| Incorrect timestamp ordering | The log file is not presenting data lines in a timely ordered way | ORDERING | The fle name(s) | error detected: ORDERING - file1 file2 file3 
+| Invalid options | Unrecognized options given to the program | -- | (already implemented) | ERROR: Invalid Options -x (or --xxxx) is not recognized |
+| Missing command line parameters | Required parameter(s) given options are missing | -- | (already implemented) | ERROR: Invalid Options -x (or --xxxx) is missing a parameter|
+| Not implemented | An option is not (yet) implemented | -- | (already implemented) | ERROR: Invalid Options -x (or --xxxx) has not been implemented yet |
+| Missing file | A file given as an input is not found | MISSING_FILE | the file name(s) | ERROR: MISSING_FILE - file1 file2 file3|
+| Encoding problem | The content of a file has encoding problems (ascii, utf-8, etc) | ENCODING | the file name(s) | ERROR: ENCODING - file1 file2 file3|
+| Corrupted file | The file cannot be open because of incorrect binary data | CORRUPTED | the file name(s) |ERROR: CORRUPTED - file1 file2 file3|
+|Missing header | The header section is not in the file | MISSING_HEADER | The file name(s) | ERROR: MISSING_HEADER - file1 file2|
+|Incomplete header | The header is missing some information | INCOMPLETE_HEADER | file_name=[info1, info2...] | ERROR: INCOMPLETE_HEADER - file1=[origin,flight id] file2=[date] |
+| Missing columns | Some required columns are not in the file | MISSING_COLUMN | file_name=[col1,col2] | ERROR: MISSING_COLUMN - file1=[timestamp] file2=[longitude,latitude] |
+| Missing column names | The log file does not contain the column names | MISSING_COLNAMES | the file name(s) | ERROR: MISSING_COLNAMES - file1 file2 file3 |
+| Incorrect timestamp ordering | The log file is not presenting data lines in a timely ordered way | ORDERING | The fle name(s) | ERROR: ORDERING - file1 file2 file3 
 
 
 
