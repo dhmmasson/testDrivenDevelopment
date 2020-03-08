@@ -10,6 +10,8 @@ To use git on your computer, you'll need a client :
 
 * https://desktop.github.com/
 
+* Settings modification remove emails spam
+
 
 # Create repositories 
 
@@ -23,7 +25,17 @@ In a normal setting you would go to your github page to create a repository and 
 
 Before we create our local repositories will look around the github user interface. 
 
-* 
+* Issues : 
+* **Settings** : We will desactivate notification  
+
+## Create a project 
+
+
+
+- Call it project management
+- Manage enhancement 
+- AUtomatic kanban
+- 
 
 
 ## Create local repositories 
@@ -51,15 +63,21 @@ One member will make some change to the project and publish them for the rest of
 # Discover change 
 
 - On the github webpage 
+    - Go to the Code tab ( the home page ) 
+    - Click on the 3 commits to see the commits 
 - propagate the change with a pull from the other local repository ( member2 and 3 ) 
+    - On each github desktop pull changes 
 
-At the end you will know :
+You now know : 
 
 - [ ] Created an group repository
 - [ ] Create a local repository
 * [ ] Make and stage your modifications
 * [ ] Commit your progress with a message.
 - [ ] Push your commit to a group repository
+
+# Next exercice : 
+[ Ex2 ]( ./Assignements%3A-Ex2 )
 
 [//]: # (Reference for this page)
 [classroomAssignement]: https://classroom.github.com/g/XH2huM0G
