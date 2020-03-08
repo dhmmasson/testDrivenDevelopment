@@ -18,7 +18,17 @@ This is the wiki for the Estia Advanced Programming class.
 
 ## Evaluation
 You will be automatically evaluated based on how many functionalities you developed and how many milestones you managed to complete.
-You can check by yourself how many tests your program passed or failed every time you will commit you current version on GitHub.
+Fairly simple: To get a passing grade (E), you need to complete at least 2 milestones. The more milestones you complete after that, the better your grade.
+
+You can check by yourself how many tests your program passed or failed every time you will commit your current version on GitHub.
+A Continuous Integration is set up in your git repository. This means that the tests will check if your new version passes new tests, but also previous ones (to prevent regression). The tests simply consist in a text-based comparison between: 
+ 
+ * The output your program generates (e.g. java -jar pandora.jar -o avgAltitude file1.dfr ==> 1234.56) and,
+ * The output of our program for the same test. 
+
+If it is different, someone has an error. Make sure to follow the [instructions](./Instructions)
+
+
 
 
 # Pandora - a flight data recorder analyzer
