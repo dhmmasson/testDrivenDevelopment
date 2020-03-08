@@ -4,7 +4,7 @@ Learn how to change something in the project and publish the change to the world
 
 # Create a github account - Download Git 
 
-Go to github and create an account, or login to an existing account. You may use any address to use GitHub for Free. If you use your @net.estia.fr you will be eligible for a student Developer Pack, which offers free access to tools and services used by professional developers ). If you already have an account you can link it to your estia address.
+Go to github and create an account, or login to an existing account. You may use any address to use GitHub for Free. If you use your @net.estia.fr you will be eligible for a student Developer Pack, which offers free access to tools and services used by professional developers. If you already have an account you can link it to your estia address.
 
 To use git on your computer, you'll need a client : 
 
@@ -13,10 +13,10 @@ To use git on your computer, you'll need a client :
 
 # Create repositories 
 
-There is two ways to start a Git project. You could start locally to track change of a project and a some point decide to share it with collaborators, creating a remote repository onto which you would push your history. 
+There are two ways to start a Git project. You could start locally to track change of a project and at some point decide to share it with collaborators, creating a remote repository onto which you would push your history. 
 Or you can start by creating a non empty remote repository and clone it locally ( either by starting with a template repository, or by forking ( duplicating ) someone else project ). 
 
-In this class will start from a template repository created specifically.  
+you will start from a template repository created specifically for this class.  
 
 ## Create remote repository 
 In a normal setting you would go to your github page to create a repository and then share it with collaborators. For this course will use the following [link][classroomAssignement] that will create a repository for your team, and populate it with a starter code. Once the repository created go to the home page and bookmark it for future reference. 
@@ -61,5 +61,5 @@ At the end you will know :
 * [ ] Commit your progress with a message.
 - [ ] Push your commit to a group repository
 
-[//]: # Reference for this page
+[//]: # (Reference for this page)
 [classroomAssignement]: https://classroom.github.com/g/XH2huM0G
