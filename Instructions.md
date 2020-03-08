@@ -2,6 +2,18 @@
 
 Since we want to compare computed values between your program and ours for every tests, we need to set up some ground rules.
 
-1- **Decimal**: Round your decimal values to 2 digits (e.g., `1234.5678` becomes `1234.57`)
+* **Decimal**: Round your decimal values to 2 digits (e.g., `1234.5678` becomes `1234.57`)
 
-2- **Constants**: Please use these values:
+* **Constants**: Please use these values:
+	* Distances:
+		* 1 m = `3.281` ft
+	* Weights:
+		* 1 kg = `2.205` lbs
+	* Speed:
+		* 1 kts = `1.852` km/h
+		* 1 mph = `1.609` km/h
+
+
+
+
+

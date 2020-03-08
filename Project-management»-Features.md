@@ -20,7 +20,7 @@ The project is organized according to 8 main milestones. Each of these [mileston
 
 # Milestones
 * **Pandora-initial** :
-    * Description : Initial version of the pandora software : load one Russian flight record and output the
+    * Description : Initial version of the Pandora software : load one Russian flight record and output the
     * Number of issues: 3
 * **Milestone 0** : Mono RU Flight Description
     * Description: Provide basic descriptive summary data of a Russian fighter jet flight
@@ -51,6 +51,7 @@ The project is organized according to 8 main milestones. Each of these [mileston
 
 
 # Input features - Flight Data Records
+
 ## Input
 * Mono: The program takes one file name as an argument on its command line
 * Batch management: The program can take several file names on its command line

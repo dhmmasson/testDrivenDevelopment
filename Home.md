@@ -10,7 +10,7 @@ This is the wiki for the Estia Advanced Programming class.
     + [Features to develop](#features-to-develop)
 
 ***
-## Educational Goals of the class
+## Educational Goals of the Class
 * Start and manage a software development project following some Agile project management principles
   * Organize [features](./Features) to be developed
   * set up [milestone](./project-management:Milestones) to reach  
@@ -26,13 +26,13 @@ A Continuous Integration is set up in your git repository. This means that the t
  * The output your program generates (e.g. java -jar pandora.jar -o avgAltitude file1.dfr ==> 1234.56) and,
  * The output of our program for the same test. 
 
-If it is different, someone has an error. Make sure to follow the [instructions](./Instructions)
+If it is different, someone has an error. Make sure to follow the [instructions](./Instructions). If you think our version is having a problem, do not hesitate to [open an issue](https://github.com/Estia-advanced-programming/pandora-public/issues) so that we can investigate further.
 
 
 
 
-# Pandora - a flight data recorder analyzer
-Pandora is a tool to analyze flight record data to provide information to the operating company.
+# Pandora - a Flight Data Recorder Analyzer
+Pandora is a tool to analyze flight record data to provide summary and high-level information based on low-level sensor data (e.g., fighter jet position).
 
 ## Project description
 
@@ -40,12 +40,16 @@ Planes are equipped with [Flight Recorder](https://en.wikipedia.org/wiki/Flight_
 We will in this class take some liberties on how the data are stored and extracted to simplify the process.
 
 ### Flight data records
-Records about a flight will be store in a text file. Specifications can be found [here](./Flight-Records)
-### Flight Analysis  
-the tool will produce multiple flight analyses depending on the input flight records it is working on.
-* Basic Flight Analysis
-* Incident Flight Analysis  
-*
 
-### Features to develop
-A list of complete features to be integrated can be found [here](./Features)
+Records about a flight will be store in a text file. Specifications can be found [here](./Flight-Records)
+
+### Flight Analysis  
+
+The tool will produce multiple flight analyses depending on the `output` option it receives as a Command Line Option. It can:
+
+* Compute and display a single value (e.g., average altitude during the whole flight), as well as multiple values (e.g., a full report)
+* Consider a `single file` (e.g., the average altitude of a given flight), `several files` (e.g., the average altitude of each flight), and `multiple files` (e.g., the maximum average altitude of a flight among others).
+
+
+### Features to Develop
+Features are represented by issues open in your git repository. They are organized according to milestones. A list of features and milestones can be found [here](./Features)
