@@ -51,4 +51,4 @@ Some references
 
 # Pandora Project  
 
-[]
+Now, we will enter the programming part of the project. See this [small tutorial](./Tutorial) next.

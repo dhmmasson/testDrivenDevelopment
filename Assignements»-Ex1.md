@@ -70,11 +70,11 @@ One member will make some change to the project and publish them for the rest of
 
 You now know :
 
-- [ ] Created an group repository
-- [ ] Create a local repository
-* [ ] Make and stage your modifications
-* [ ] Commit your progress with a message.
-- [ ] Push your commit to a group repository
+- [ ] How to create a group repository
+- [ ] How to create a local repository
+* [ ] How to make and stage your modifications
+* [ ] How to commit your progress with a message
+- [ ] How to push your commit to a group repository
 
 # Next exercice :
 [ Ex2 ]( ./Assignements%3A-Ex2 )
