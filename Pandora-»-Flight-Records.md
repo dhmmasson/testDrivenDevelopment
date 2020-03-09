@@ -101,8 +101,6 @@ RU and US fighter jets do not use the same units when logging their data.
 | roll | Optional | Decimal | Decimal Degrees (°) | Roll is positive when rolling the aircraft to the right | 0.8 |
 | pitch | Optional | Decimal | Decimal Degrees (°) | Pitch is positive when taking-off | 1.5 |
 | yaw | Optional | Decimal | Decimal Degrees (°) | Yaw is clockwise relative to the true north | 224.8 |
-| u | Optional | Decimal | Meter (m) | Native x coordinate | 1184039.6704352 |
-| v | Optional | Decimal | Meter (m) | Native y coordinate | 343628.7183452 |
 | heading | Optional | Decimal | Decimal Degrees (°) | Heading is the yaw relative to the true north of the flat world. It is required because the native world north usually does not match spherical world north because of projection errors. | 224.8 |
 | air_speed | Required | Decimal | Meter per second (m/s) | Wind speed reported by external sensors  | 516.6514247099457 |
 | engine_X | Required | Decimal | Watt (W) | Power of engine number X  | 30565986.61627765 |
@@ -125,8 +123,6 @@ RU and US fighter jets do not use the same units when logging their data.
 | roll | Optional | Decimal | Decimal Degrees (°) | Roll is positive when rolling the aircraft to the right | 0.8 |
 | pitch | Optional | Decimal | Decimal Degrees (°) | Pitch is positive when taking-off | 1.5 |
 | yaw | Optional | Decimal | Decimal Degrees (°) | Yaw is clockwise relative to the true north | 224.8 |
-| u | Optional | Decimal | Feet (ft) | Native x coordinate | 1184039.6704352 |
-| v | Optional | Decimal | Feet (ft) | Native y coordinate | 343628.7183452 |
 | heading | Optional | Decimal | Decimal Degrees (°) | Heading is the yaw relative to the true north of the flat world. It is required because the native world north usually does not match spherical world north because of projection errors. | 224.8 |
 | air_speed | Required | Decimal | Miles per Hour (mph) | Wind speed reported by external sensors  | 516.6514247099457 |
 | engine_X | Required | Decimal | HorsePower (hp) | Power of engine number X  | 30565986.61627765 |
