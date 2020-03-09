@@ -22,30 +22,33 @@ The project is organized according to 8 main milestones. Each of these [mileston
 * **Pandora-initial** :
     * Description : Initial version of the Pandora software : load one Russian flight record and output the
     * Number of issues: 3
-* **Milestone 0** : Mono RU Flight Description
+* Milestone 1: Mono RU Flight Description
     * Description: Provide basic descriptive summary data of a Russian fighter jet flight
     * Number of issues: 7
-* **Milestone 1** : Mono RU Cockpit Description
+* Milestone 2: Mono RU Cockpit Description
     * Description: Provide basic descriptive summary data of a Russian cockpit during a flight
     * Number of issues: 16
-* **Milestone 2** : Mono RU Flight Computation
+* Milestone 3: Mono RU Flight Computation
     * Description: Provide simple computed data about a Russian jet flight
     * Number of issues: 9
-* **Milestone 3** : Mono RU Flight Analysis
+* Milestone 4: Mono RU Flight Analysis
     * Description: Extract high-level information from data
     * Number of issues: 39
-* **Milestone 4** : File Handling
+* Milestone 5: File Handling
     * Description: Handle batch option and US fighter jet files
     * Number of issues: 6
-* **Milestone 5** : Error Management
+* Milestone 6: Error Management
     * Description: Handle Errors
     * Number of issues: 13
-* **Milestone 6** : Multiple Flights Computations
+* Milestone 7: Multiple Flights Computations
     * Description: Perform computations using multiple flights data
     * Number of issues: 19
-* **Milestone 7** : Multiple Flights Analysis
+* Milestone 8: Multiple Flights Analysis
     * Description: Extract high-level information about multiple flights
     * Number of issues: 4
+* Initiation to Git
+    * Description: Learn about Git and the Pandora project
+    * Number of issues: 3
 
 
 
@@ -79,8 +82,19 @@ Refer to the [error handling](#error-handling) section for more details.
 * Russian fighter jets
 * American fighter jets
 
+Make sure to distinguish both origin as they do not use the same units when logging data (see [details](./Pandora-»-Flight-Records#parameters-list))
 
 # Output features - List
+
+This is a list of option the program should have in the end. Some of them are explicit options (-o optionName in the command line) and will output a desired result. Some options are functionalities (e.g., possibility to parse both Russian and American files). All these features are on your git repository - created as issues and organized in milestones. The main themes are:
+
+* Reporting (flight and cabin data) 
+* Computing
+* Analysis
+* Error handling
+* File management
+
+
 ## Simple flight report  
 
 ### Get

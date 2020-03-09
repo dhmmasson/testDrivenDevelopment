@@ -73,7 +73,7 @@ The Data structure contains the information recorded during the flights. Paramet
 > _Fig.4 Data section is a csv table of  parameters values describing a flight_
 
 #### Column Names
-The line with column names is located at the top of the data section. It indicates which parameters were recorded for this flight. The complete list of possible parameters can be found [there](#Parameters-list). Some parameters are mandatory and will always be in the same position (_e.g._ timestamp is always first). Some parameters are optional and depends mostly on the plane (_e.g._ there will be as many engine thrust columns as there are engine on the plane).  
+The line with column names is located at the top of the data section. It indicates which parameters were recorded for this flight. The complete list of possible parameters can be found [there](#parameters-list). Some parameters are mandatory and will always be in the same position (_e.g._ timestamp is always first). Some parameters are optional and depends mostly on the plane (_e.g._ there will be as many engine thrust columns as there are engine on the plane).  
 > ```
 > Timestamp,Parameter,...,Parameter
 > ```
