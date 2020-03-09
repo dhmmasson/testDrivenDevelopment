@@ -18,6 +18,14 @@ Since we want to compare computed values between your program and ours for every
 * Speed:
 	* 1 kts = `1.852` km/h
 	* 1 mph = `1.609` km/h
+	* `1225` km/h = 1 Mach
+	* Classification:
+		* Subsonic: Mach < 1.0
+		* Transonic: Mach = 1.0
+		* Supersomic: Mach > 1.0
+		* Hypersonic: Mach > 5.0
+	* 1 g = `9.80665` m/s2
+
 
 * Earth radius: `6,371` km
 

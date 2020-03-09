@@ -10,16 +10,57 @@
 * Install a git client (e.g., [GitHub Desktop](#https://desktop.github.com/))
 
 ![alt text](./images/img1.png "Desktop client")
+> _Fig.1_ A basic Git Desktop client
 
 * Click on "clone a repository from the internet”
 
 ![alt text](./images/img2.png "Clone a repo")
+> _Fig.2_ Cloning a repository
 
 * Select the project that has been created for your group project. The url is something like https://github.com/Estia-advanced-programming/pandora-2020-group1-GROUPENAME.git
 
 * Select the location you want the download to happen on your computer. Remember this location, you will need it to import the project in [Eclipse](./Tutorial-»-Eclipse) later.
 
 * Click "clone"
+
+
+## EGit, the Eclipse Git Plugin
+
+Another possibility is to get everything in one place! (Repository, code, issues, tasks, etc). Check out [this tutorial](https://eclipsesource.com/blogs/2012/08/28/tips-and-tricks-using-eclipse-with-github/).
+Basically, you need to understand that Git can be used with several projects, not only Java and Eclipse. If you understood that, then we can start to look at how some tools (e.g., Eclipse, Visual Studio, etc) integrates Git tools.
+
+For Eclipse, it is call EGit. It can be useful to have a quick access to milestones and issues (Fig.3 - 1) or the branches history (Fig.3 - 2). You can quickly open / close issues, switch branches, commit, push, pull, go back to a previous version just by right-clicking on the project (or just one file), finding the `Team` menu item, and browsing the options.
+
+![alt text](./images/views.png "Git in Eclipse")
+> _Fig.3_ Git in Eclipse
+
+If you already have Git in Eclipse, you should have the `Team` option when right-clicking on your project (and see some yellow icons to indicate that the project is under version control). If this is the case, just go to the [configuration](#configuration) section. Otherwise, perform the install.
+
+### Install
+
+1. In Eclipse, click `Help` and `Install new software...`
+
+1. Click `Add` source (Fig.4 - 1), then `name` it `egit` (or whatever) and write the `location` to `http://download.eclipse.org/egit/updates` (Fig.4 - 2)
+
+![alt text](./images/add_egit.png "Adding an install")
+> _Fig.4_ Adding an install source in Eclipse
+
+1. Now select this newly added items, check all packages, and continue the installation.
+
+
+### Configuration
+
+Egit should already know what is going on in your repository: the tool looks into your .git folder, where everything is already configured (remote repository, etc). You might only need to input your login/password the first few times you will trigger commands.
+
+For the task view, you need an additional package.
+
+1. As in the [install](#install) section, add a new package repository with a name (e.g., `mylin`)  and this location `http://download.eclipse.org/egit/github/updates`.
+
+1. Finish the installation of the package
+
+1. Then, you can finally setting up your task repository (or issues, etc) by following this [tutorial](https://eclipsesource.com/blogs/2012/08/28/tips-and-tricks-using-eclipse-with-github/) 
+
+
 
 
 
