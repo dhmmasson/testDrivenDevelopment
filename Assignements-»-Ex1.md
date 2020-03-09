@@ -77,6 +77,10 @@ One member will make some change to the project and publish them for the rest of
 - propagate the change with a pull from the other local repositories ( member2 and 3 )
     - On each github desktop pull changes
 
+## Close the issue
+
+Go back to your `project management` project page on github, close the issue and move it to Done.
+
 You now know :
 
 - [ ] How to create a group repository
