@@ -1,7 +1,6 @@
   * [Home](./Home)
   * [project management](./project-management)
   * [Assignements](./Assignements)
-  * Assignements
     * [Ex1](./Assignements-»-Ex1)
     * [Ex2](./Assignements-»-Ex2)
     * [Ex3](./Assignements-»-Ex3)
