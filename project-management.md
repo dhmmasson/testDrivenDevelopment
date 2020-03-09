@@ -1,6 +1,5 @@
-# Git
+# Git - Version Control
 
-# Version Control
 
 ## The problem
 
@@ -24,39 +23,10 @@ A distributed version control system (DVCS) is a type of version control where t
 >
 > Git is an example of a distributed version control system (DVCS) commonly used for open source and commercial software development. DVCSs allow full access to every file, branch, and iteration of a project, and allows every user access to a full and self-contained history of all changes. Unlike once popular centralized version control systems, DVCSs like Git don’t need a constant connection to a central repository. Developers can work anywhere and collaborate asynchronously from any time zone.
 
-# Install
-
-* Create a user account on [GitHub](#https://github.com/)
-* Install a git client (e.g., [GitHub Desktop](#https://desktop.github.com/))
-![alt text](./images/img1.png "Desktop client")
-* Click on "clone a repository from the internet”
-![alt text](./images/img2.png "Clone a repo")
-* Select the "**`pandora-template`**" project
-* Select the location you want the download to happen on your computer
-* Click "clone"
 
 
-# Branches
 
-What is a branch,
-## master, develop ...
-
-master
-: The master 
-
-## Pull requests
-
-
-# Create a feature
-
-* Create a branch **locally**
-  * name it develop_yourName_NameOfTheFeature
-* Code, code, code...
-* Commit locally every time that something run
-* When the feature is done : Clean up, Comment
-*
-
-# Ressources
+## Ressources
 
 Some of the [ressources][github-guide] used to create this page,
 [Git handbook][Git-handbook]

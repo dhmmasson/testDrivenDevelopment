@@ -6,11 +6,13 @@ Learn how to change something in the project and publish the change to the world
 
 Go to github and create an account, or login to an existing account. You may use any address to use GitHub for Free. If you use your @net.estia.fr you will be eligible for a student Developer Pack, which offers free access to tools and services used by professional developers. If you already have an account you can link it to your estia address.
 
-To use git on your computer, you'll need a client :
+To use git on your computer, you'll need a client:
 
 * https://desktop.github.com/
 
 * Settings modification remove emails spam
+
+[Checkout the tutorial](./Tutorial-»-Git-Client)
 
 
 # Create repositories
