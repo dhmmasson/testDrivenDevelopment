@@ -90,7 +90,7 @@ You now know :
 - [ ] How to push your commit to a group repository
 
 # Next exercice :
-[ Ex2 ]( ./Assignements%3A-Ex2 )
+[ Ex2 ]( ./Assignements#exercice-2-first-conflict)
 
 [//]: # (Reference for this page)
 [classroomAssignement]: https://classroom.github.com/g/XH2huM0G
