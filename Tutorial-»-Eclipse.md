@@ -21,7 +21,7 @@ In order to do so via Eclipse, you should:
 * Click on `run configuration` (menu when clicking on the right of the little `run` green icon) (Fig. 1 - 1)
 * Select the `Java Application` (Fig. 1 - 2) and click on the 'New' icon (Fig. 1 -3)
 * Name it, and click on the `arguments` tab (Fig. 1 -4)
-* Type `-o flightDuration ./src/test/resources/0_101_MiG-29A.frd`
+* Type `./src/test/resources/0_201_MiG-23MLD.frd `
 * Click `run`
 
 You should see the program running!
