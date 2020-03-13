@@ -1,5 +1,8 @@
 # Advanced Programming
 This is the wiki for the Estia Advanced Programming class.
+# Updates :
+Latest news here : [Update](./Update)
+
 > **Outline**
 - [Advanced Programming](#advanced-programming)
   * [Educational Goals of the class](#educational-goals-of-the-class)
