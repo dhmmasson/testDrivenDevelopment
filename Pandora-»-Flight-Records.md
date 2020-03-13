@@ -2,6 +2,7 @@
 
 > **Outline**
 > 
+> - [Test files](#test-files)
 > - [File Structure](#file-structure)
 > - [Metadata Section](#list-of-metadata-fields)
 > - [Data Section](#data-section)
@@ -11,6 +12,10 @@
 
 
 A flight records is a text file describing a flight. It contains global information about the flight (flight id, origin, ... [complete list](#metadata-section)), as well as parameters values recorded during the flight (GPS coordinates, air speed, ... [complete list](#parameters-list) )
+
+# Test files
+
+[Folder full of test files](https://github.com/Estia-advanced-programming/pandora-public/tree/master/testGenerator/TestFiles)
 
 # File Structure
 
