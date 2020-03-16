@@ -1,14 +1,15 @@
-  * [Home](./Home)
-  * [project management](./project-management)
-  * [Assignements](./Assignements)
+  * [:house: Home](./Home)
+  * [:exclamation: **Updates**!](./Update ) 
+  * [:clipboard: project management](./project-management)
+  * [:school_satchel: Assignements](./Assignements)
     * [Ex1](./Assignements-»-Ex1)
     * [Ex2](./Assignements-»-Ex2)
     * [Ex3](./Assignements-»-Ex3)
-  * Pandora
+  * :vhs: Pandora
     * [Instructions](./Pandora-»-Instructions)
     * [Features](./Pandora-»-Features)
     * [Flight Records](./Pandora-»-Flight-Records)
-  * Tutorial
+  * :mortar_board: Tutorial
     * [Eclipse](./Tutorial-»-Eclipse)
     * [Git Client](./Tutorial-»-Git-Client)
 
