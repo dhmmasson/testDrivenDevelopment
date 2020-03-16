@@ -49,7 +49,7 @@ The project is organized according to 8 main milestones. Each of these [mileston
     * List:
         * Average Temperature >> CLI option: -o avgTemp 
         * Min Temperature >> CLI option: -o minTemp 
-        * Max Temperature >> CLI option: -o avgTemp 
+        * Max Temperature >> CLI option: -o maxTemp 
         * Average Pressure >> CLI option: -o avgPressure 
         * Max Pressure >> CLI option: -o maxPressure 
         * Minimum Pressure >> CLI option: -o minPressure 
