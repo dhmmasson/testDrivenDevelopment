@@ -58,7 +58,7 @@ For the task view, you need an additional package.
 
 1. Finish the installation of the package
 
-1. Then, you can finally setting up your task repository (or issues, etc) by following this [tutorial](https://eclipsesource.com/blogs/2012/08/28/tips-and-tricks-using-eclipse-with-github/) 
+1. Then, you can finally set up your tasks repository (or issues, etc) by following this [tutorial](https://eclipsesource.com/blogs/2012/08/28/tips-and-tricks-using-eclipse-with-github/) 
 
 
 
