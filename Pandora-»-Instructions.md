@@ -48,7 +48,7 @@ In this project, we will implement a very simplistic heuristic: we will simply l
 ![alt text](./images/phases.png "Phases illustration")
 > _Fig. 1 Illustration of flight phases simple heuristic in our project. 
  Top: Flight path.
- Middle: Yaw values. A green line indicates the beginning of a plateau. A red line indicates the end of a plateaux. (Note that the green and red lines in the middle are merged on this example)
+ Middle: Yaw values. A green line indicates the beginning of a plateau. A red line indicates the end of a plateau. (Note that the green and red lines in the middle are merged on this example)
  Bottom: Yaw derivative values_
 
 ### Algorithm
@@ -81,7 +81,7 @@ def findPlateaux(values, timestamp) :
 			save_in_array([start, end])
 
 	## FILTERING #########################
-    # filter the saved plateaus to know if the 
+    # filter the saved plateaus to know if they 
     # are long enough in time to be considered
     for start, end in array:
     	if time_between(start, end) > 60 			# !Important: threshold of 60
