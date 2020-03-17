@@ -37,6 +37,12 @@ Since we want to compare computed values between your program and ours for every
 
 * ℃ to radian conversion: Use the Java built-in method `Math.toRadians(...)`
 
+## Timestamp
+
+You can convert double values to Instant Java objects.
+In this case, you can access quick display options (via `DateTimeFormatter`). For this, you need to define a zone. Use the `.withZone(ZoneId.systemDefault())`. (Check this [forum thread](https://stackoverflow.com/questions/25229124/format-instant-to-string) for more examples).
+
+
 ## Flight Phases
 
 For those interested, you can read research paper [1] or thesis [2] for free.

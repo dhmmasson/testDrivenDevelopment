@@ -1,4 +1,5 @@
 # Updates 
+- 17/03/2020 - 17:25 : We added some more information about [using timestamp](./Pandora-»-Instructions#timestamps) in your program
 - 17/03/2020 - 15:26 : We added a simple heuristic to find flight phases [in the instructions](./Pandora-»-Instructions#flight-phases) along with a pseudo-code in python
 - 17/03/2020 - 12:18 : If you want us to look to a specific problem in your code follow [this procedure ](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request)
 - 16/03/2020 - 10:46 : Regarding the precision of printed numbers ([issue](https://github.com/Estia-advanced-programming/pandora-public/issues/29)), use `String.format("%.2f", variableName);` instead of `String.valueOf(variableName);` to add your resuls into the `featureValues` dictionary
