@@ -1,4 +1,5 @@
 # Updates 
+- 18/03/2020 - 17:40 : Issues #96 and #97. Discard the `average` part. Just report the altitude at which the max (wind speed for #96 and aircraft speed for #97) occurs.
 - 18/03/2020 - 15:42 : Flights should be around 4:00 am with your local time zone [timestamp](./Pandora-»-Instructions#clues)
 - 17/03/2020 - 17:25 : We added some more information about [using timestamp](./Pandora-»-Instructions#timestamps) in your program
 - 17/03/2020 - 15:26 : We added a simple heuristic to find flight phases [in the instructions](./Pandora-»-Instructions#flight-phases) along with a pseudo-code in python
