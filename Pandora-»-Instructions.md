@@ -46,6 +46,12 @@ In this case, you can access quick display options (via `DateTimeFormatter`). Fo
 All flights happened around 8:00am in a particular timezone. With your system timezone, these flights should be around 4:00am.
 
 
+## Special Situations
+
+* if a phase is not detected, report: `phase_name: not detected`
+* if no phase has a O2 concentration > 50%, report `oxygenPhase: none`
+
+
 ## Flight Phases
 
 For those interested, you can read research paper [1] or thesis [2] for free.

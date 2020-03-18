@@ -1,4 +1,5 @@
 # Updates 
+- 18/03/2020 - 23:56 : We added more information in case of [special situations](./Pandora-»-Instructions#special-situations)
 - 18/03/2020 - 20:06 : Issue #99. We consider a stress pilot if her/his heart rate jumps more than ±10 bpm.
 - 18/03/2020 - 18:06 : Issue #100. If multiple phases required an oxygen concentration > 50%, list them in alphabetical order, and separate the names with coma.
 - 18/03/2020 - 17:40 : Issues #96 and #97. Discard the `average` part. Just report the altitude at which the max (wind speed for #96 and aircraft speed for #97) occurs.
