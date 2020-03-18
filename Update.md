@@ -1,4 +1,5 @@
 # Updates 
+- 18/03/2020 - 15:42 : Flights should be around 4:00 am with your local time zone [timestamp](./Pandora-»-Instructions#clues)
 - 17/03/2020 - 17:25 : We added some more information about [using timestamp](./Pandora-»-Instructions#timestamps) in your program
 - 17/03/2020 - 15:26 : We added a simple heuristic to find flight phases [in the instructions](./Pandora-»-Instructions#flight-phases) along with a pseudo-code in python
 - 17/03/2020 - 12:18 : If you want us to look to a specific problem in your code follow [this procedure ](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request)

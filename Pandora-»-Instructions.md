@@ -42,6 +42,9 @@ Since we want to compare computed values between your program and ours for every
 You can convert double values to Instant Java objects.
 In this case, you can access quick display options (via `DateTimeFormatter`). For this, you need to define a zone. Use the `.withZone(ZoneId.systemDefault())`. (Check this [forum thread](https://stackoverflow.com/questions/25229124/format-instant-to-string) for more examples).
 
+### Clue
+All flights happened around 8:00am in a particular timezone. With your system timezone, these flights should be around 4:00am.
+
 
 ## Flight Phases
 
