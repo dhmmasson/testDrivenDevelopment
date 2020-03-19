@@ -1,4 +1,5 @@
 # Updates 
+- 19/03/2020 - 15:27 : Added conversion values for power (1 hp = `754.7` W)
 - **19/03/2020 - 15:00 : add new [tests][tests] for milestone 1 and 2 to check your code** 
 - **19/03/2020 - 15:00 : updated pandora.jar in the release folder v1.5**
 - 18/03/2020 - 23:56 : We added more information in case of [special situations](./Pandora-»-Instructions#special-situations)
