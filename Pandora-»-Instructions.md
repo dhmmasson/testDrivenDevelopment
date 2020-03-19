@@ -15,6 +15,9 @@ Since we want to compare computed values between your program and ours for every
 * Weights:
 	* 1 kg = `2.205` lbs
 
+* Power:
+	* 1 hp = `754.7` W
+	
 * Speed:
 	* 1 kts = `1.852` km/h
 	* 1 mph = `1.609` km/h
