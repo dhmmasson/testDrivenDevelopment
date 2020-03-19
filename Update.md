@@ -1,4 +1,6 @@
 # Updates 
+- **19/03/2020 - 15:00 : add new [tests][tests] for milestone 1 and 2 to check your code** 
+- **19/03/2020 - 15:00 : updated pandora.jar in the release folder v1.5**
 - 18/03/2020 - 23:56 : We added more information in case of [special situations](./Pandora-»-Instructions#special-situations)
 - 18/03/2020 - 20:06 : Issue #99. We consider a stress pilot if her/his heart rate jumps more than ±10 bpm.
 - 18/03/2020 - 18:06 : Issue #100. If multiple phases required an oxygen concentration > 50%, list them in alphabetical order, and separate the names with coma.
@@ -10,3 +12,5 @@
 - 16/03/2020 - 10:46 : Regarding the precision of printed numbers ([issue](https://github.com/Estia-advanced-programming/pandora-public/issues/29)), use `String.format("%.2f", variableName);` instead of `String.valueOf(variableName);` to add your resuls into the `featureValues` dictionary
 - 16/03/2020 - 10:15 : I have opened chat on [moodle]( https://moodle2a.estia.fr/mod/chat/view.php?id=11608 )  
 - 13/03/2020 - 15:00 : you can find more about tests files [here](./Pandora-»-Flight-Records) (US jet files, files with various erros, files with several jet engines, etc)
+
+[tests]:https://github.com/Estia-advanced-programming/pandora-public/tree/master/testGenerator/autogradingGenerator/autograder/testsFiles
