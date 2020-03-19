@@ -1,7 +1,8 @@
 # Updates 
-- 19/03/2020 - 15:27 : Added conversion values for power (1 hp = `754.7` W)
-- **19/03/2020 - 15:00 : add new [tests][tests] for milestone 1 and 2 to check your code** 
-- **19/03/2020 - 15:00 : updated pandora.jar in the release folder v1.5**
+- 19/03/2020 - 15:27 : Added conversion values for Temperature and Pressure in [instructions](./Pandora-»-Instructions#constant-values)
+- 19/03/2020 - 15:27 : Added conversion values for power (1 hp = `754.7` W) in [instructions](./Pandora-»-Instructions#constant-values)
+- 19/03/2020 - 15:00 : add new [tests][tests] for milestone 1 and 2 to check your code
+- 19/03/2020 - 15:00 : updated pandora.jar in the release folder v1.5
 - 18/03/2020 - 23:56 : We added more information in case of [special situations](./Pandora-»-Instructions#special-situations)
 - 18/03/2020 - 20:06 : Issue #99. We consider a stress pilot if her/his heart rate jumps more than ±10 bpm.
 - 18/03/2020 - 18:06 : Issue #100. If multiple phases required an oxygen concentration > 50%, list them in alphabetical order, and separate the names with coma.

@@ -17,6 +17,12 @@ Since we want to compare computed values between your program and ours for every
 
 * Power:
 	* 1 hp = `754.7` W
+
+* Temperature:
+	* 1 K = ℃ - `273.15`
+
+* Pressure
+	* 1 psi = `6894.76` Pa
 	
 * Speed:
 	* 1 kts = `1.852` km/h
