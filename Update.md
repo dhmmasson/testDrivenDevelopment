@@ -1,4 +1,5 @@
 # Updates 
+- 20/03/2020 - 00:02 : Added required values for the metadat section in [instructions](./Pandora-»-Instructions#metadata)
 - 19/03/2020 - 15:27 : Added conversion values for Temperature and Pressure in [instructions](./Pandora-»-Instructions#constant-values)
 - 19/03/2020 - 15:27 : Added conversion values for power (1 hp = `754.7` W) in [instructions](./Pandora-»-Instructions#constant-values)
 - 19/03/2020 - 15:00 : add new [tests][tests] for milestone 1 and 2 to check your code

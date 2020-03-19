@@ -23,7 +23,7 @@ Since we want to compare computed values between your program and ours for every
 
 * Pressure
 	* 1 psi = `6894.76` Pa
-	
+
 * Speed:
 	* 1 kts = `1.852` km/h
 	* 1 mph = `1.609` km/h
@@ -59,6 +59,23 @@ All flights happened around 8:00am in a particular timezone. With your system ti
 
 * if a phase is not detected, report: `phase_name: not detected`
 * if no phase has a O2 concentration > 50%, report `oxygenPhase: none`
+
+## Metadata
+
+* Required information are:
+	* flight id
+	* flight code
+	* origin
+	* date
+	* from
+	* to
+	* motor(s)
+
+* Optional parameters:
+	* mass aircraft
+	* mass fuel
+	* lift coef
+	* drag coef
 
 
 ## Flight Phases
