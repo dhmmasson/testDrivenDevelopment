@@ -1,4 +1,5 @@
 # Updates 
+- **20/03/2020 - 12:34 : Updated [tests][tests] up to milestone 3, reference version of [pandora.jar] updated**
 - 20/03/2020 - 00:02 : Added required values for the metadat section in [instructions](./Pandora-»-Instructions#metadata)
 - 19/03/2020 - 15:27 : Added conversion values for Temperature and Pressure in [instructions](./Pandora-»-Instructions#constant-values)
 - 19/03/2020 - 15:27 : Added conversion values for power (1 hp = `754.7` W) in [instructions](./Pandora-»-Instructions#constant-values)
@@ -17,3 +18,4 @@
 - 13/03/2020 - 15:00 : you can find more about tests files [here](./Pandora-»-Flight-Records) (US jet files, files with various erros, files with several jet engines, etc)
 
 [tests]:https://github.com/Estia-advanced-programming/pandora-public/tree/master/testGenerator/autogradingGenerator/autograder/testsFiles
+[pandora.jar]:https://github.com/Estia-advanced-programming/pandora-public/blob/master/release/pandora.jar
