@@ -1,4 +1,4 @@
-# Organisation of the Features: Milestones and Issues
+# Features Organization: Milestones and Issues
 
 
 
