@@ -29,7 +29,7 @@
 Another possibility is to get everything in one place! (Repository, code, issues, tasks, etc). Check out [this tutorial](https://eclipsesource.com/blogs/2012/08/28/tips-and-tricks-using-eclipse-with-github/).
 Basically, you need to understand that Git can be used with several projects, not only Java and Eclipse. If you understood that, then we can start to look at how some tools (e.g., Eclipse, Visual Studio, etc) integrates Git tools.
 
-For Eclipse, it is call EGit. It can be useful to have a quick access to milestones and issues (Fig.3 - 1) or the branches history (Fig.3 - 2). You can quickly open / close issues, switch branches, commit, push, pull, go back to a previous version just by right-clicking on the project (or just one file), finding the `Team` menu item, and browsing the options.
+For Eclipse, it is called EGit. It can be useful to have a quick access to milestones and issues (Fig.3 - 1) or the branches history (Fig.3 - 2). You can quickly open / close issues, switch branches, commit, push, pull, go back to a previous version just by right-clicking on the project (or just one file), finding the `Team` menu item, and browsing the options.
 
 ![alt text](./images/views.png "Git in Eclipse")
 > _Fig.3_ Git in Eclipse
@@ -79,7 +79,7 @@ It is common to merge and push your current work on 'Master' only when you are s
 
 1- There is no conflict
 
-Make sure you Pull the master branch before trying to pull your work. resolve every potential conflict locally. With this in mind, you will always push a proper version than any new comers could clone and run.
+Make sure you Pull the master branch before trying to push your work. Resolve every potential conflicts locally. With this in mind, you will always push a clean version that any new comers could clone and run.
 
 2- Your current task is complete
 

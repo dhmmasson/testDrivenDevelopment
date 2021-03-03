@@ -1,7 +1,7 @@
 # Advanced Programming
 This is the wiki for the Estia Advanced Programming class.
-# Updates :
-Latest news here : [Update](./Update)
+# Updates:
+Latest news here: [Update](./Update)
 
 > **Outline**
 - [Advanced Programming](#advanced-programming)
@@ -44,7 +44,7 @@ We will in this class take some liberties on how the data are stored and extract
 
 ### Flight data records
 
-Records about a flight will be store in a text file. Specifications can be found [here](./Pandora-»-Flight-Records)
+Records about a flight will be stored in a text file. Specifications can be found [here](./Pandora-»-Flight-Records)
 
 ### Flight Analysis  
 

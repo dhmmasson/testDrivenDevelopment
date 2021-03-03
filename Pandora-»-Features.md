@@ -1,23 +1,38 @@
 # Features Organization: Milestones and Issues
 
 
+<!-- MarkdownTOC -->
 
-> **Outline**
-> 
-> - [Milestones](#milestones)
-> - [Input](#input-features-flight-data-records)
->       - [Input](#input)
->       - [Data Validation](#data-validation)
->       - [Origin](#fighter-jet-origin)
-> - [Output](#output-features-list)
->       - [Simple Flight Report](#simple-flight-report)
->       - [Cabin Report](#cabin-report)
->       - [Multiple Flights Analysis](#multiple-flights-analysis)
+- [Milestones](#milestones)
+- [Input features - Flight Data Records](#input-features---flight-data-records)
+    - [Input](#input)
+    - [Data validation](#data-validation)
+    - [Fighter jet origin](#fighter-jet-origin)
+- [Output features - List](#output-features---list)
+    - [Simple flight report](#simple-flight-report)
+        - [Get](#get)
+        - [Compute](#compute)
+        - [Analysis](#analysis)
+        - [Anomaly Analysis](#anomaly-analysis)
+    - [Cabin report](#cabin-report)
+        - [Get](#get-1)
+        - [Compute](#compute-1)
+        - [Analysis](#analysis-1)
+        - [Questions](#questions)
+        - [Anomaly Analysis](#anomaly-analysis-1)
+    - [Multiple flights analysis](#multiple-flights-analysis)
+        - [Compute](#compute-2)
+        - [Analysis](#analysis-2)
+- [Error Handling](#error-handling)
+        - [List of potential errors:](#list-of-potential-errors)
+
+<!-- /MarkdownTOC -->
 
 
 
 The project is organized according to 8 main milestones. Each of these [milestones](#milestones) has some [features](#output-features-list) and functionalities to implement in order to be completed.
 
+<a id="milestones"></a>
 # Milestones
 * **Pandora-initial** :
     * Description : Initial version of the Pandora software : load one Russian flight record and output the
@@ -188,13 +203,16 @@ The project is organized according to 8 main milestones. Each of these [mileston
 
 
 
+<a id="input-features---flight-data-records"></a>
 # Input features - Flight Data Records
 
+<a id="input"></a>
 ## Input
 * Mono: The program takes one file name as an argument on its command line
 * Batch management: The program can take several file names on its command line
 * Multi records management: The program needs multiple files to process the requested feature (e.g., find the fastest fighter jet)
 
+<a id="data-validation"></a>
 ## Data validation
 * Command line
     * Missing argument (done)
@@ -213,12 +231,14 @@ The project is organized according to 8 main milestones. Each of these [mileston
 
 Refer to the [error handling](#error-handling) section for more details.
 
+<a id="fighter-jet-origin"></a>
 ## Fighter jet origin
 * Russian fighter jets
 * American fighter jets
 
 Make sure to distinguish both origin as they do not use the same units when logging data (see [details](./Pandora-»-Flight-Records#parameters-list))
 
+<a id="output-features---list"></a>
 # Output features - List
 
 This is a list of option the program should have in the end. Some of them are explicit options (-o optionName in the command line) and will output a desired result. Some options are functionalities (e.g., possibility to parse both Russian and American files). All these features are on your git repository - created as issues and organized in milestones. The main themes are:
@@ -230,8 +250,10 @@ This is a list of option the program should have in the end. Some of them are ex
 * File management
 
 
+<a id="simple-flight-report"></a>
 ## Simple flight report  
 
+<a id="get"></a>
 ### Get
 * Altitude
     * Average
@@ -243,6 +265,7 @@ This is a list of option the program should have in the end. Some of them are ex
     * Average
     * Max
 
+<a id="compute"></a>
 ### Compute
 * Flight Duration
 * Flight distance
@@ -253,6 +276,7 @@ This is a list of option the program should have in the end. Some of them are ex
 * Max Speed in mach
 * Max Acceleration in g
 
+<a id="analysis"></a>
 ### Analysis
 * Phase detection 
     * Take off
@@ -272,13 +296,16 @@ This is a list of option the program should have in the end. Some of them are ex
     * The fastest wind outside the aircraft?
     * The highest speed of the aircraft?
 
+<a id="anomaly-analysis"></a>
 ### Anomaly Analysis
 * None... yet!
 
 
 
+<a id="cabin-report"></a>
 ## Cabin report
 
+<a id="get-1"></a>
 ### Get
 * Internal temperature
     * Average
@@ -301,24 +328,30 @@ This is a list of option the program should have in the end. Some of them are ex
     * Min
     * Max
 
+<a id="compute-1"></a>
 ### Compute
 * None
 
+<a id="analysis-1"></a>
 ### Analysis
 * None
 
+<a id="questions"></a>
 ### Questions
 * Assuming a heating system set to 25 ℃ during the whole flight, what is the average noise in the data?
 * Did the pilot suffered from stress?
 * Which flight phase(s) required more than 50% of oxygen concentration in the mask?
 
 
+<a id="anomaly-analysis-1"></a>
 ### Anomaly Analysis
 * None... yet!
 
 
+<a id="multiple-flights-analysis"></a>
 ## Multiple flights analysis
 
+<a id="compute-2"></a>
 ### Compute
 * Total flight duration
 * Total distance
@@ -339,6 +372,7 @@ This is a list of option the program should have in the end. Some of them are ex
         * Per hour?
     * Is the most stressed? Less stressed?
 
+<a id="analysis-2"></a>
 ### Analysis
 * Which flights flew less than 50km away from each others? 100km away?
     * With the same origin
@@ -347,6 +381,7 @@ This is a list of option the program should have in the end. Some of them are ex
 
 
 
+<a id="error-handling"></a>
 # Error Handling
 Each errors should be reported according to a standard.
 An error should start with: "ERROR", followed by the name of the error, a minus symbol "-", and finally its details. For example, if the test file 'file1.xyz' is missing 'origin' and 'date' from its header, and 'file2.xyz' is missing 'flight id', the program output will be:
@@ -357,6 +392,7 @@ An error should start with: "ERROR", followed by the name of the error, a minus 
 **<ins>Important</ins>** : In case of multiple files and multiple parameters, the output is organized `alphabetically`.
 
 
+<a id="list-of-potential-errors"></a>
 ### List of potential errors:
 
 | Error | Description | Error Name | Error Detail(s) | Example|
