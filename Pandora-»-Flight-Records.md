@@ -15,7 +15,7 @@ A flight records is a text file describing a flight. It contains global informat
 
 # Test files
 
-[Folder full of test files](https://github.com/Estia-advanced-programming/pandora-public/tree/master/testGenerator/TestFiles)
+[Folder full of test files](https://github.com/Estia-advanced-programming/pandora-public/tree/master/flightRecords)
 
 # File Structure
 
