@@ -1,6 +1,7 @@
 # Updates 
+- 09/03/2021 - 10:16 : Common Eclipse configuration issue. If `could not find or load Pandora main class` error, simply clean the project.
 - 20/03/2020 - 19:09 : New detail: maxAcceleration should consider negative values as well (e.g., max([-3.2, -0.1, 0.5, 2.9]) = -3.2)
-- **20/03/2020 - 12:34 : Updated [tests][tests] up to milestone 3, reference version of [pandora.jar] updated**
+- 20/03/2020 - 12:34 : Updated [tests][tests] up to milestone 3, reference version of [pandora.jar] updated
 - 20/03/2020 - 00:02 : Added required values for the metadata section in [instructions](./Pandora-»-Instructions#metadata)
 - 19/03/2020 - 15:27 : Added conversion values for Temperature and Pressure in [instructions](./Pandora-»-Instructions#constant-values)
 - 19/03/2020 - 15:27 : Added conversion values for power (1 hp = `754.7` W) in [instructions](./Pandora-»-Instructions#constant-values)
