@@ -96,8 +96,15 @@ In this project, we will implement a very simplistic heuristic: we will simply l
 
 1. Take the yaw values
 1. Take the first order derivative
-1. Consider derivative values that are **smaller than 1**
+1. Consider derivative values that are 
+	1. **smaller than 1**
+	1. for yaw values that are **different from -1** (default values when the sensors are not turned on yet)
+	1. after at least **10 derivative values were greater than 1** (To make sure we do not get first plateau happening before any yaw consequent modification)
 1. A plateau is defined as a portion in time for which values derivative values are < 1 **and for at least 60 seconds**
+
+> Note
+With this pseudo-algorithm and its heuristics, most flight analyses make sense.
+Only one flight (RU) will have an undetected take off phase.
 
 ```python
 def findPlateaux(values, timestamp) :
@@ -107,7 +114,11 @@ def findPlateaux(values, timestamp) :
 	# get the derivative
 	derivative = diff(values)
 	# get the indexes we are interested in
-	indexes = derivative.where(<1)					# !Important: threshold of 1 
+	# we want the index for which
+	#		* yaw values != -1
+	#		* derivative values < 1
+	#		* after at least 10 derivatives > 1 happened (to make sure the sensors were correctly switched on!)
+	indexes = derivative.where(<1 and values != -1 and turbulences_happened = True)					# !Important: threshold of 1 
 	# get the distance between these indexes
 	distance_index = diff(indexes)
 	start, end  = None
