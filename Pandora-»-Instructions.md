@@ -90,17 +90,17 @@ In this project, we will implement a very simplistic heuristic: we will simply l
 > _Fig. 1 Illustration of flight phases simple heuristic in our project. 
  Top: Flight path.
  Middle: Yaw values. A green line indicates the beginning of a plateau. A red line indicates the end of a plateau. (Note that the green and red lines in the middle are merged on this example)
- Bottom: Yaw derivative values_
+ Bottom: Yaw delta values_
 
 ### Algorithm
 
 1. Take the yaw values
-1. Take the first order derivative
-1. Consider derivative values that are 
+1. Take the delta values (simple difference between `i` and `i-1`)
+1. Consider delta values that are 
 	1. **smaller than 1**
 	1. for yaw values that are **different from -1** (default values when the sensors are not turned on yet)
-	1. after at least **10 derivative values were greater than 1** (To make sure we do not get first plateau happening before any yaw consequent modification)
-1. A plateau is defined as a portion in time for which values derivative values are < 1 **and for at least 60 seconds**
+	1. after at least **10 delta values were greater than 1** (To make sure we do not get first plateau happening before any yaw consequent modification)
+1. A plateau is defined as a portion in time for which values delta values are < 1 **and for at least 60 seconds**
 
 > Note
 With this pseudo-algorithm and its heuristics, most flight analyses make sense.
@@ -111,14 +111,14 @@ def findPlateaux(values, timestamp) :
 	
 	## PREPARE THE DATA #########################
 
-	# get the derivative
-	derivative = diff(values)
+	# get the delta
+	delta = delta(values)				# no need for delta time division
 	# get the indexes we are interested in
 	# we want the index for which
 	#		* yaw values != -1
-	#		* derivative values < 1
-	#		* after at least 10 derivatives > 1 happened (to make sure the sensors were correctly switched on!)
-	indexes = derivative.where(<1 and values != -1 and turbulences_happened = True)					# !Important: threshold of 1 
+	#		* delta values < 1
+	#		* after at least 10 deltas > 1 happened (to make sure the sensors were correctly switched on!)
+	indexes = delta.where(<1 and values != -1 and turbulences_happened = True)					# !Important: threshold of 1 
 	# get the distance between these indexes
 	distance_index = diff(indexes)
 	start, end  = None
