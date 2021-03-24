@@ -1,11 +1,12 @@
 I graded all released versions (on master on the 23rd at 18:49) of your pandora projects :
 
-Currently only 5 groups have a milestone 1 and 2 :ok: and have a passing grade. 4 groups have one of the milestone :ok:. 
+Currently only 6 groups have a milestone 1 and 2 :ok: and have a passing grade. 4 groups have one of the milestone :ok:. 
 
 |team|milestone 1|milestone 2|milestone 3|milestone 4|"note /20"| Passing grade|
 |-|-|-|-|-|-|-|
 |Groupe_K|100%|100%|77%|1%|13,9|:ok:|
 |Equipe_F|100%|100%|1%|1%|10,1|:ok:|
+|Groupe_H|79%|100%|13%|2%|9,7|:ok:|
 |Equipe_P_W|86%|100%|0%|1%|9,4|:ok:|
 |groupe_I|83%|100%|1%|1%|9,2|:ok:|
 |Groupe_J|100%|80%|0%|1%|9,1|:ok:|
