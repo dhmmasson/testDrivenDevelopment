@@ -2,7 +2,12 @@
 
 Since we want to compare computed values between your program and ours for every tests, we need to set up some ground rules. You will need constants. We list here some constant values you might need. 
 
+
 **<ins style="color:red;">Important</ins>**: If you need another constant, let us know. Call us, or even better, use the git repository to [open an issue](https://github.com/Estia-advanced-programming/pandora-public/issues). We will then update this page so that everyone can use the same values.
+
+## Number precision
+
+Make sure to use the `String.format("%.2f", variableName)` solution to display your results with a 0.01 precision.
 
 
 <!-- * **Decimal**: Round your decimal values to 2 digits (e.g., `1234.5678` becomes `1234.57`) -->
