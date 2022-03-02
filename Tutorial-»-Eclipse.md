@@ -43,10 +43,11 @@ We hence provide a second main method in the `fr.estia.pandora.test` package: **
 
 To use it, simply 
 
-1- Create a custom test file
+1- Create a custom test file  
 1- Add the test command line and expected output in the `./src/test/resources/custom/multitest.config` file.
 
-> Example
+
+### Example
 
 Let's imagine we want to try our `maxAlt` feature (issue #5) with a file `my-test-alt-1.csv` that contains only 1 line.
 This line has the Altitude value set to `42`.
@@ -65,5 +66,24 @@ output:
 42
 ---
 
-
 ```
+
+* Run the MultiTest main program and check its outputs
+
+
+### Config file
+
+The goal is to complete this file as the project goes forward.
+This is a simple solution to see if any new changes involve previous tests failure.
+In the end, with an average of 5 tests / feature, this file should contain around 500 tests blocks.
+
+A test is simply a series of lines including:
+
+* a comment (starting with `#`)
+
+* the command line to send to Pandora (starting with `cmd: `)
+
+* the expected output (starting with `output:` and the output line(s) on a new line)
+
+* an ending block `---`
+
