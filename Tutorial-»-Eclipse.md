@@ -87,3 +87,19 @@ A test is simply a series of lines including:
 
 * an ending block `---`
 
+```
+# test X: a comment
+cmd: -o <featureName> <file>
+output:
+<expected_output>
+---
+
+# test X+1: a comment
+cmd: -o <featureName> <file>
+output:
+<expected_output>
+---
+
+etc.
+
+```
