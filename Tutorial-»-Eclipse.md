@@ -34,3 +34,36 @@ It can be cumbersome to run several configurations. You can of course save your 
 
 At this point, note that there is nothing else implemented.
 A list of options (more than 100) to implement is [available](./Pandora-»-Features), and this is your job to complete the program.
+
+
+## Running multiple tests in one go
+
+It can be cumbersome to change the Eclipse run settings every time you want to run Pandora on a new file or a new feature.
+We hence provide a second main method in the `fr.estia.pandora.test` package: **MultiTest.java**.
+
+To use it, simply 
+
+1- Create a custom test file
+1- Add the test command line and expected output in the `./src/test/resources/custom/multitest.config` file.
+
+> Example
+
+Let's imagine we want to try our `maxAlt` feature (issue #5) with a file `my-test-alt-1.csv` that contains only 1 line.
+This line has the Altitude value set to `42`.
+We then:
+
+* Add our `my-test-alt-1.csv` file in the `./src/test/resources/custom/feature5/` folder
+
+* Edit the multitest.config file to add our test:
+
+```
+# this line is a comment
+# useful to know what the test is about!
+# test 1: simple example for the maxAlt feature
+cmd: -o maxAlt ./src/test/resources/custom/feature5/my-test-alt-1.csv
+output:
+42
+---
+
+
+```
