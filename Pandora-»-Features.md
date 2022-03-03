@@ -38,6 +38,7 @@ The project is organized according to 8 main milestones. Each of these [mileston
     * Description : Initial version of the Pandora software : load one Russian flight record and output the
     * Number of issues: 3
 
+
 * **Milestone 0: Initiation to Git**
     * Description: Learn about Git and the Pandora project
     * Number of features: 3
@@ -60,7 +61,7 @@ The project is organized according to 8 main milestones. Each of these [mileston
 
 * **Milestone 2: Mono RU Cockpit Description**
     * Description: Provide basic descriptive summary data of a Russian cockpit during a flight
-    * Number of features: 16
+    * Number of features: 17
     * List:
         * Average Temperature >> CLI option: -o avgTemp 
         * Min Temperature >> CLI option: -o minTemp 
@@ -78,6 +79,7 @@ The project is organized according to 8 main milestones. Each of these [mileston
         * Min Oxygen Concentration >> CLI option: -o minOxygen 
         * Max Oxygen Concentration >> CLI option: -o maxOxygen 
         * Milestone 1 Full Report >> CLI option:  
+        * Milestone 9 Full Report >> CLI option:  
 
 * **Milestone 3: Mono RU Flight Computation**
     * Description: Provide simple computed data about a Russian jet flight
@@ -95,46 +97,14 @@ The project is organized according to 8 main milestones. Each of these [mileston
 
 * **Milestone 4: Mono RU Flight Analysis**
     * Description: Extract high-level information from data
-    * Number of features: 39
+    * Number of features: 7
     * List:
-        * Take Off Phase Detection >> CLI option: -o takeOff 
-        * Cruise Phase Detection >> CLI option: -o cruise 
-        * Landing Phase Detection >> CLI option: -o landing 
-        * Ratio Distance >> CLI option: -o ratioDistance 
-        * Average Air Speed (Take Off) >> CLI option: -o avgAirSpeedTakeOff 
-        * Max Air Speed (Take Off) >> CLI option: -o maxAirSpeedTakeOff 
-        * Average Engine Power (Take Off) >> CLI option: -o avgEnginePowerTakeOff 
-        * Max Engine Power (Take Off) >> CLI option: -o maxEnginePowerTakeOff 
-        * Average Air Speed (Cruise) >> CLI option: -o avgAirSpeedCruise 
-        * Max Air Speed (Cruise) >> CLI option: -o maxAirSpeedCruise 
-        * Average Engine Power (Cruise) >> CLI option: -o avgEnginePowerCruise 
-        * Max Engine Power (Cruise) >> CLI option: -o maxEnginePowerCruise 
-        * Average Air Speed (Landing) >> CLI option: -o avgAirSpeedLanding 
-        * Max Air Speed (Landing) >> CLI option: -o maxAirSpeedLanding 
-        * Average Engine Power (Landing) >> CLI option: -o avgEnginePowerLanding 
-        * Max Engine Power (Landing) >> CLI option: -o maxEnginePowerLanding 
-        * Flight Distance (Take Off) >> CLI option: -o flightDistanceTakeOff 
-        * Average Acceleration (Take Off) >> CLI option: -o avgAccelerationTakeOff 
-        * Max Acceleration (Take Off) >> CLI option: -o maxAccelerationTakeOff 
-        * Wind Speed (Take Off) >> CLI option: -o windSpeedTakeOff 
-        * Flight Distance (Cruise) >> CLI option: -o flightDistanceCruise 
-        * Average Acceleration (Cruise) >> CLI option: -o avgAccelerationCruise 
-        * Max Acceleration (Cruise) >> CLI option: -o maxAccelerationCruise 
-        * Wind Speed (Cruise) >> CLI option: -o windSpeedCruise 
-        * Flight Distance (Landing) >> CLI option: -o flightDistanceLanding 
-        * Average Acceleration (Landing) >> CLI option: -o avgAccelerationLanding 
-        * Max Acceleration (Landing) >> CLI option: -o maxAccelerationLanding 
-        * Wind Speed (Landing) >> CLI option: -o windSpeedLanding 
-        * Most Demanding Phase - Engine Power >> CLI option: -o mostPowerPhase 
-        * Most Demanding Phase - Stress >> CLI option: -o mostStressPhase 
-        * Most Demanding Phase - Horizontal Acceleration >> CLI option: -o mostAccelPhase 
         * Reaching 80% Max Altitude >> CLI option: -o reachAlt 
         * Reaching 80% Total Distance >> CLI option: -o reachDist 
         * Altitude with Fastest Wind >> CLI option: -o fastWindAlt 
         * Altitude with Highest Aircraft Speed >> CLI option: -o fastJetAlt 
         * Noise of Temperature Sensors >> CLI option: -o noiseTemp 
         * Stressed Pilot >> CLI option: -o stressedPilot 
-        * 50% Oxygen Phase >> CLI option: -o oxygenPhase 
         * Milestone 3 Full Report >> CLI option:  
 
 * **Milestone 5: File Handling**
@@ -198,6 +168,43 @@ The project is organized according to 8 main milestones. Each of these [mileston
         * Flight Closeness (Same origin) >> CLI option: -o closeFlightSameOri 
         * Flight Closeness (Different origin) >> CLI option: -o closeFlightDiffOri 
         * Milestone 7 Full Report >> CLI option:  
+
+* **Milestone 9: Mono RU Flight Phases**
+    * Description: Extrapolate flight phases from data
+    * Number of features: 32
+    * List:
+        * Take Off Phase Detection >> CLI option: -o takeOff 
+        * Cruise Phase Detection >> CLI option: -o cruise 
+        * Landing Phase Detection >> CLI option: -o landing 
+        * Ratio Distance >> CLI option: -o ratioDistance 
+        * Average Air Speed (Take Off) >> CLI option: -o avgAirSpeedTakeOff 
+        * Max Air Speed (Take Off) >> CLI option: -o maxAirSpeedTakeOff 
+        * Average Engine Power (Take Off) >> CLI option: -o avgEnginePowerTakeOff 
+        * Max Engine Power (Take Off) >> CLI option: -o maxEnginePowerTakeOff 
+        * Average Air Speed (Cruise) >> CLI option: -o avgAirSpeedCruise 
+        * Max Air Speed (Cruise) >> CLI option: -o maxAirSpeedCruise 
+        * Average Engine Power (Cruise) >> CLI option: -o avgEnginePowerCruise 
+        * Max Engine Power (Cruise) >> CLI option: -o maxEnginePowerCruise 
+        * Average Air Speed (Landing) >> CLI option: -o avgAirSpeedLanding 
+        * Max Air Speed (Landing) >> CLI option: -o maxAirSpeedLanding 
+        * Average Engine Power (Landing) >> CLI option: -o avgEnginePowerLanding 
+        * Max Engine Power (Landing) >> CLI option: -o maxEnginePowerLanding 
+        * Flight Distance (Take Off) >> CLI option: -o flightDistanceTakeOff 
+        * Average Acceleration (Take Off) >> CLI option: -o avgAccelerationTakeOff 
+        * Max Acceleration (Take Off) >> CLI option: -o maxAccelerationTakeOff 
+        * Wind Speed (Take Off) >> CLI option: -o windSpeedTakeOff 
+        * Flight Distance (Cruise) >> CLI option: -o flightDistanceCruise 
+        * Average Acceleration (Cruise) >> CLI option: -o avgAccelerationCruise 
+        * Max Acceleration (Cruise) >> CLI option: -o maxAccelerationCruise 
+        * Wind Speed (Cruise) >> CLI option: -o windSpeedCruise 
+        * Flight Distance (Landing) >> CLI option: -o flightDistanceLanding 
+        * Average Acceleration (Landing) >> CLI option: -o avgAccelerationLanding 
+        * Max Acceleration (Landing) >> CLI option: -o maxAccelerationLanding 
+        * Wind Speed (Landing) >> CLI option: -o windSpeedLanding 
+        * Most Demanding Phase - Engine Power >> CLI option: -o mostPowerPhase 
+        * Most Demanding Phase - Stress >> CLI option: -o mostStressPhase 
+        * Most Demanding Phase - Horizontal Acceleration >> CLI option: -o mostAccelPhase 
+        * 50% Oxygen Phase >> CLI option: -o oxygenPhase 
 
 
 
