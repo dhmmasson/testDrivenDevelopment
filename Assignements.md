@@ -1,7 +1,4 @@
 # Assignment
-[Ex1](./Assignements-»-Ex1)
-[Ex2](./Assignements-»-Ex2)
-[Ex3](./Assignements-»-Ex3)
 [Project]: ./Assignements/
 
 # Exercice 1 - First commit
@@ -24,13 +21,17 @@ At the end you will know :
 
 # Exercice 2 - First Conflict
 
-In collaborative project, several person will modify the code base concurrently, and sometimes multiple change will affect the same file. When you push your commit this concurrent change must be merged. Some merges can happen automatically, - because they affect different files or different part of a file for example. Some merges will result in a conflict, that you will need to resolve. while good team organization ([exercice 3][ex3])) will allow you to reduce the number of these conflicts, they are a normal part of the process that you'll need to address serenely.
+In collaborative project, several people will modify the code base concurrently, and sometimes multiple changes will affect the same file. When you push your commit these concurrent changes must be merged. Some merges can happen automatically, - because they affect different files or different parts of a file for example. Some merges will result in a conflict, that you will need to resolve. While good team organization ([exercice 3][ex3])) will allow you to reduce the number of these conflicts, they are a normal part of the process that you'll need to address serenely.
 
 At the end you will know :
 
 * How to **pull** modifications from the group **repository**
 * perform concurrent **Commit** from several members of the group
 * **pull** and resolve conflict  
+
+## Instructions
+
+[Detailed Instructions can be found there][Ex2]
 
 # Exercice 3 - Branch management
 
@@ -52,3 +53,7 @@ Some references additional references:
 # Pandora Project  
 
 Now, we will enter the programming part of the project. See this [small tutorial](./Tutorial-»-Eclipse) next.
+
+[Ex1]: ./Assignements-»-Ex1
+[Ex2]: ./Assignements-»-Ex2
+[Ex3]: ./Assignements-»-Ex3
