@@ -1,6 +1,11 @@
 # Updates 
+## 2022
+- 08/03/2022 - 12:23 : Updated a mistake in the template / skeleton code where `flightDuration` was stored as an `int`. **Teams should merge immediately** the pull request `Correction for first pandora run` by williamDelamare.  
+## 2021
 - 24/03/2021 - 10:16 : New algorithm for **phase detection** in [instructions](./Pandora-»-Instructions#algorithm).
 - 09/03/2021 - 10:16 : Common Eclipse configuration issue. If `could not find or load Pandora main class` error, simply clean the project.
+
+## 2020
 - 20/03/2020 - 19:09 : New detail: maxAcceleration should consider negative values as well (e.g., max([-3.2, -0.1, 0.5, 2.9]) = -3.2)
 - 20/03/2020 - 12:34 : Updated [tests][tests] up to milestone 3, reference version of [pandora.jar] updated
 - 20/03/2020 - 00:02 : Added required values for the metadata section in [instructions](./Pandora-»-Instructions#metadata)
