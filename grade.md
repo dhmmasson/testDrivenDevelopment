@@ -1,5 +1,30 @@
 # Current Standing of the teams for the 2022 edition
 
+## Friday March 11th - 18:00 
+Scores are based only on milestone 1 on branch master as of 11/03/2022. They may not reflect where your team really is if you have not yet merged some pull request.
+
+Team|milestone 1 - Unit Test|milestone a1 - Full test on actual flight|Score Milestone 1 / 20
+-|-|-|-
+pandora-2022-aled_2021|5.99|6|20
+pandora-2022-blackmailbox_2021|5.42|5|17
+pandora-2022-groupe_seghir_zyat_zhao_2021|4.34|4.2|14
+pandora-2022-team-abc_2021|4.04|3.88|13
+pandora-2022-g1_mcjdtt_2021|1.95|2.83|8
+pandora-2022-meg_2021|0.34|3.02|6
+pandora-2022-estiaerofusex_2021|2|1|5
+pandora-2022-groupe_duthel_sqalli-adoui_2021|0.33|0|1
+pandora-2022-dops_2021|0|0|0
+pandora-2022-ferhat-mansour_2021|0|0|0
+pandora-2022-groupe_ameel_huang_2021|0|0|0
+pandora-2022-groupe_ouchqi_2021|0|0|0
+pandora-2022-groupe_somane_wang_2021|0|0|0
+pandora-2022-msz-team_2021|0|0|0
+pandora-2022-takeoff_2021|0|0|0
+pandora-2022-groupe_fadli_faidi_addiche_2021[^1]|0|0|0
+
+[^1]: The source code on master does not compile be careful 
+
+## Monday March 7th 
 Team name | total commits | issues opened | Member 1 | Member 2 | Member 3 | Milestone 1 | Milestone 2 | Milestone 3
 ---|---|---|---|---|---|---|---|---
 ALED | 22 Commits | 114 | Dr-droide <br>8 Commits | KillianGuiguen <br>5 Commits | RobinHilliet <br>7 Commits | N/A | N/A | N/A
