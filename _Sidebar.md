@@ -11,7 +11,7 @@
     * [Features](./Pandora-»-Features)
     * [Flight Records](./Pandora-»-Flight-Records)
   * :mortar_board: Tutorial
-    * [Eclipse (import, run, and test](./Tutorial-»-Eclipse)
+    * [Eclipse (import, run, and test)](./Tutorial-»-Eclipse)
     * [Git Client](./Tutorial-»-Git-Client)
 
 
