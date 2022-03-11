@@ -112,7 +112,7 @@ RU and US fighter jets do not use the same units when logging their data.
 | temperature_in | Required | Decimal | Celsius Degree (℃) | Cockpit temperature  | 27.156045641442 |
 | humidity_in | Required | Decimal | Percentage (%) | Relative humidity  | 45.971654984 |
 | pressure_in | Required | Decimal | Pascal (Pa) | Cockpit pressure  | 27.156045641442 |
-| heart_rate | Required | Number | Beats per Minute (bpm) | Pilot's heart beats  | 80 |
+| heart_rate | Required | Decimal | Beats per Minute (bpm) | Pilot's heart beats  | 80 |
 | oxygen_mask | Required | Decimal | Percentage (%) | Oxygen concentration sent to the pilot  | 78.3458795665 |
 
 
