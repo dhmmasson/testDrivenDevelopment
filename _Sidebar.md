@@ -1,4 +1,4 @@
-  * [:mortar_board: **Current Standing : temporary GRADES ! Fri 11/03/2022 ** :exclamation: ](./grade)
+  * [:mortar_board: **Current Standing : temporary GRADES ! Fri 11/03/2022** :exclamation: ](./grade)
   * [:house: Home](./Home)
   * [:exclamation: **Updates**!](./Update ) 
   * [:clipboard: project management](./project-management)
