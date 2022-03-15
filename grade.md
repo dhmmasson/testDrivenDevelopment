@@ -11,44 +11,44 @@ Course success only means that you have already reached the minimum requirement 
 
 Team|Milestone 1|Milestone 2|Milestone 3|Total|Course success
 ----|--|--|--|--------------------------|--------------
-pandora-2022-estiaerofusex_2021|19.98|19.97|2.68|14.21|🟩Pass
-pandora-2022-aled_2021|19.98|18.73|1.05|13.25|🟩Pass
-pandora-2022-groupe_seghir_zyat_zhao_2021|17.56|19.97|1.05|12.86|🟩Pass
-pandora-2022-blackmailbox_2021|19.26|15.98|0.97|12.07|🟩Pass
-pandora-2022-meg_2021|13.33|19.97|0.91|11.40|🟩Pass
-pandora-2022-g1_mcjdtt_2021|19.18|7.95|2.93|10.02|🟧Almost
-pandora-2022-team-abc_2021|13.2|0|1.05|4.75|🟥Fail
-pandora-2022-groupe_duthel_sqalli-adoui_2021|0.55|0|1.05|0.53|🟥Fail
-pandora-2022-dops_2021|0|0|1.05|0.35|🟥Fail
-pandora-2022-ferhat-mansour_2021|0|0|1.05|0.35|🟥Fail
-pandora-2022-groupe_ameel_huang_2021|0|0|1.05|0.35|🟥Fail
-pandora-2022-msz-team_2021|0|0|1.05|0.35|🟥Fail
-pandora-2022-takeoff_2021|0|0|0.97|0.32|🟥Fail
-pandora-2022-groupe_ouchqi_2021|0|0|0|0|🟥Fail
-pandora-2022-groupe_somane_wang_2021|0|0|0|0|🟥Fail
-pandora-2022-groupe_fadli_faidi_addiche_2021|0|0|0|0|🟥Fail
+estiaerofusex_2021|19.98|19.97|2.68|14.21|🟩Pass
+aled_2021|19.98|18.73|1.05|13.25|🟩Pass
+groupe_seghir_zyat_zhao_2021|17.56|19.97|1.05|12.86|🟩Pass
+blackmailbox_2021|19.26|15.98|0.97|12.07|🟩Pass
+meg_2021|13.33|19.97|0.91|11.40|🟩Pass
+g1_mcjdtt_2021|19.18|7.95|2.93|10.02|🟧Almost
+team-abc_2021|13.2|0|1.05|4.75|🟥Fail
+groupe_duthel_sqalli-adoui_2021|0.55|0|1.05|0.53|🟥Fail
+dops_2021|0|0|1.05|0.35|🟥Fail
+ferhat-mansour_2021|0|0|1.05|0.35|🟥Fail
+groupe_ameel_huang_2021|0|0|1.05|0.35|🟥Fail
+msz-team_2021|0|0|1.05|0.35|🟥Fail
+takeoff_2021|0|0|0.97|0.32|🟥Fail
+groupe_ouchqi_2021|0|0|0|0|🟥Fail
+groupe_somane_wang_2021|0|0|0|0|🟥Fail
+groupe_fadli_faidi_addiche_2021|0|0|0|0|🟥Fail
 
 ## Friday March 11th - 18:00 
 Scores are based only on milestone 1 on branch master as of 11/03/2022. They may not reflect where your team really is if you have not yet merged some pull request.
 
 Team|milestone 1 - Unit Test|milestone a1 - Full test on actual flight|Score Milestone 1 / 20
 -|-|-|-
-pandora-2022-aled_2021|5.99|6|20
-pandora-2022-blackmailbox_2021|5.42|5|17
-pandora-2022-groupe_seghir_zyat_zhao_2021|4.34|4.2|14
-pandora-2022-team-abc_2021|4.04|3.88|13
-pandora-2022-g1_mcjdtt_2021|1.95|2.83|8
-pandora-2022-meg_2021|0.34|3.02|6
-pandora-2022-estiaerofusex_2021|2|1|5
-pandora-2022-groupe_duthel_sqalli-adoui_2021|0.33|0|1
-pandora-2022-dops_2021|0|0|0
-pandora-2022-ferhat-mansour_2021|0|0|0
-pandora-2022-groupe_ameel_huang_2021|0|0|0
-pandora-2022-groupe_ouchqi_2021|0|0|0
-pandora-2022-groupe_somane_wang_2021|0|0|0
-pandora-2022-msz-team_2021|0|0|0
-pandora-2022-takeoff_2021|0|0|0
-pandora-2022-groupe_fadli_faidi_addiche_2021[^1]|0|0|0
+aled_2021|5.99|6|20
+blackmailbox_2021|5.42|5|17
+groupe_seghir_zyat_zhao_2021|4.34|4.2|14
+team-abc_2021|4.04|3.88|13
+g1_mcjdtt_2021|1.95|2.83|8
+meg_2021|0.34|3.02|6
+estiaerofusex_2021|2|1|5
+groupe_duthel_sqalli-adoui_2021|0.33|0|1
+dops_2021|0|0|0
+ferhat-mansour_2021|0|0|0
+groupe_ameel_huang_2021|0|0|0
+groupe_ouchqi_2021|0|0|0
+groupe_somane_wang_2021|0|0|0
+msz-team_2021|0|0|0
+takeoff_2021|0|0|0
+groupe_fadli_faidi_addiche_2021[^1]|0|0|0
 
 [^1]: The source code on master does not compile be careful 
 
