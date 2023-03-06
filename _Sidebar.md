@@ -2,7 +2,7 @@
   * [:house: Home](./Home)
   * [:exclamation: **Updates**!](./Update ) 
   * [:clipboard: project management](./project-management)
-  * [:school_satchel: Git Introduction / Refresher](./assignments)
+  * [:school_satchel: Git Introduction / Refresher](./Assignements)
     * [Ex1](./Assignements-»-Ex1)
     * [Ex2](./Assignements-»-Ex2)
     * [Ex3](./Assignements-»-Ex3)
