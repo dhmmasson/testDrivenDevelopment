@@ -1,4 +1,7 @@
-# Assignment
+# Git Tutorial 
+
+[Skip this tutorial](./Tutorial-»-Eclipse) if you have enrolled in SGV in Estia 1a.
+
 [Project]: ./Assignements/
 
 # Exercice 1 - First commit
