@@ -1,15 +1,16 @@
-  * [:mortar_board: **Current Standing : temporary GRADES ! Fri 11/03/2022** :exclamation: ](./grade)
   * [:house: Home](./Home)
+  * [:mortar_board: **Current Standing : temporary GRADES ! Fri 11/03/2022** :exclamation: ](./grade)
   * [:exclamation: **Updates**!](./Update ) 
-  * [:clipboard: project management](./project-management)
-  * :mortar_board: Tutorial
-    * [Eclipse (import, run, and test)](./Tutorial-»-Eclipse)
-    * [Git Client](./Tutorial-»-Git-Client)
-    * [:school_satchel: Git Introduction / Refresher](./Assignements)
   * :vhs: Pandora
     * [Instructions](./Pandora-»-Instructions)
     * [Features](./Pandora-»-Features)
     * [Flight Records](./Pandora-»-Flight-Records)
+  * :mortar_board: Tutorial
+    * [Eclipse (import, run, and test)](./Tutorial-»-Eclipse)
+    * [Git Client](./Tutorial-»-Git-Client)
+    * [:clipboard: project management](./project-management)
+    * [:school_satchel: Git Introduction / Refresher](./Assignements)
+
 
 
 
