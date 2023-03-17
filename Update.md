@@ -1,4 +1,9 @@
 # Updates 
+
+## 2023
+- 17/03/2023 - 14:22 : For features `fastJetAlt` and `fastWindAlt`, forget about the 5min window. Just return the first altitude at which the maximum is encountered. You should hence simply have `altitude (m): max_wind_speed (m/s)` and `altitude (m): max_jet_speed (m/s)`.
+
+
 ## 2022
 - 08/03/2022 - 12:23 : Updated a mistake in the template / skeleton code where `flightDuration` was stored as an `int`. **Teams should merge immediately** the pull request `Correction for first pandora run` by williamDelamare.  
 ## 2021
