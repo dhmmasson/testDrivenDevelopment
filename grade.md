@@ -11,6 +11,7 @@ Course success only means that you have already reached the minimum requirement 
 Teams|Milestone 1 |Milestone 2 |Milestone 3|Milestone 4|Milestone 5|Course success
 -|-|-|-|-|-|-
 the-blissful-blossoms|20.0|20.0|15.4|10.8|7.3|🟩Pass
+the-Tranquil-Lakes.log|19.3|19.5|19.6|0.3|7.3|🟩Pass Previous commit did not compile
 the-golden-harvests|20.0|16.0|15.8|1.0|7.7|🟩Pass, you have some failure on milestone 2
 the-gracious-gazelles|19.9|20.0|11.3|2.5|7.3|🟩Pass
 the-wonderful-waterfalls|20.0|20.0|5.5|0.3|12.5|🟧Almost
@@ -23,7 +24,6 @@ the-Mighty-Elephants|13.3|0.0|1.7|0.3|0.5|🟥Fail
 the-fabulous-fairies|0.0|0.0|1.1|0.3|0.0|🟥Fail
 the-majestic-mountains|0.0|0.0|1.1|0.3|0.0|🟥Fail
 the-radiant-sunflowers|0.0|0.0|1.1|0.3|0.0|🟥Fail
-the-Tranquil-Lakes.log|0.0|0.0|0.0|0.3|0.0|🟥Fail
 the-superb-sunsets|0.0|0.0|0.0|0.3|0.0|🟥Fail
 
 # Current Standing of the teams for the 2022 edition
