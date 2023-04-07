@@ -4,9 +4,9 @@ Score were computed on the version of your code present on the branch `master` o
 Score per milestone and total are normalized on a 20-point scale for an easier reading. However milestone 1 contains 6 features, milestone 2 contains 15 features, milestone 3 contains 8 features, milestone 4 contains 36 features et milestone 5 contains 29 features.
 Course success only means that you have already reached the minimum requirement of completing milestone 1 and 2 and 3
 
-- For the 7 teams with a 🟥Fail in course success, you still have two scheduled work sessions but you should probably work in between.
+- For the 6 teams with a 🟥Fail in course success, you still have two scheduled work sessions but you should probably work in between.
 - For the 5 teams with an 🟧Almost in course success, you are on the right track, continue your effort.  
-- For the 3 teams with a 🟩Pass in course success, The final grade will depends on how many more feature you can complete, so the competition is still on. 
+- For the 4 teams with a 🟩Pass in course success, The final grade will depends on how many more feature you can complete, so the competition is still on. 
 
 Teams|Milestone 1 |Milestone 2 |Milestone 3|Milestone 4|Milestone 5|Course success
 -|-|-|-|-|-|-
