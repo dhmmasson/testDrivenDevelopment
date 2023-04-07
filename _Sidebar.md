@@ -1,5 +1,5 @@
   * [:house: Home](./Home)
-  * [:mortar_board: **Current Standing : temporary GRADES ! Fri 11/03/2022** :exclamation: ](./grade)
+  * [:mortar_board: **Current Standing : temporary GRADES ! Fri 07/04/2023** :exclamation: ](./grade)
   * [:exclamation: **Updates**!](./Update ) 
   * :vhs: Pandora
     * [Instructions](./Pandora-»-Instructions)
