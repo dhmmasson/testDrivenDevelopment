@@ -3,7 +3,7 @@
   * [:exclamation: **Updates**!](./Update ) 
   * :vhs: Pandora
     * [Instructions](Pandora-Instructions.md)
-    * [Features](Pandora-Features.md)
+    * [Features](Features.md)
     * [Flight Records](Pandora-Flight_Records.md)
   * :mortar_board: Tutorials
     * [Eclipse (import, run, and test)](tools-Eclipse.md)

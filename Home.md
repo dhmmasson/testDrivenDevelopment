@@ -15,7 +15,7 @@ Latest news here: [Update](./Update)
 ***
 ## Educational Goals of the Class
 * Start and manage a software development project following some Agile project management principles
-  * Organize [features](Pandora-Features.md) to be developed
+  * Organize [features](Features.md) to be developed
   * Set up [milestones](./project-management:Milestones) to reach  
 * Use of a version control system
 
@@ -55,4 +55,4 @@ The tool will produce multiple flight analyses depending on the `output` option 
 
 
 ### Features to Develop
-Features are represented by issues open in your git repository. They are organized according to milestones. A list of features and milestones can be found [here](Pandora-Features.md)
+Features are represented by issues open in your git repository. They are organized according to milestones. A list of features and milestones can be found [here](Features.md)
