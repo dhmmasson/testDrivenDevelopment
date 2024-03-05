@@ -10,16 +10,19 @@ java -jar pandora.jar [OPTIONS] ...source
 ...source - path to flightRecord files or folder containing flightRecord files
 
 OPTIONS o:hvd
--o arg, --output arg,           output - Print only the specified feature at the end
+-d, --debug,            Debug - print additional debug information on Unhandled 
 -h, --help,             Help - print this help message
+-m arg, --metadata arg  Metadata - Print the value of the specified metadata
+-o arg, --output arg,   output - Print only the specified feature at the end
+-p arg, --parameters    Parameters - List in alphabetical order the parameters presents in the source
 -v, --version,          Version - print the version of the application 
--d, --debug,            Debug - print additional debug information on Unhandled error
+error
 
 ```
 
 # EXAMPLES
 
-Print the [version](version) of the pandora project. 
+Print the [Semantic-Versioning](Semantic-Versioning) of the pandora project. 
 ```bash
 $ java -jar pandora.jar --version 
 pandora@1.0.1

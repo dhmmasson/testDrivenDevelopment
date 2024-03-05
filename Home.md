@@ -14,10 +14,11 @@ Latest news here: [Update](./Update)
 
 ***
 ## Educational Goals of the Class
-* Start and manage a software development project following some Agile project management principles
+* Start and manage a software development project following some Agile project management and [Test-Driven-Development](Test-Driven-Development) principles
   * Organize [features](Features) to be developed
   * Set up [milestones](./project-management:Milestones) to reach  
 * Use of a version control system
+* 
 
 # Evaluation
 You will be automatically evaluated based on how many functionalities you developed and how many milestones you managed to complete.
