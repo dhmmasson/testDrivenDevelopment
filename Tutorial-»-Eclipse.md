@@ -34,3 +34,72 @@ It can be cumbersome to run several configurations. You can of course save your 
 
 At this point, note that there is nothing else implemented.
 A list of options (more than 100) to implement is [available](./Pandora-»-Features), and this is your job to complete the program.
+
+
+## Running multiple tests in one go
+
+It can be cumbersome to change the Eclipse run settings every time you want to run Pandora on a new file or a new feature.
+We hence provide a second main method in the `fr.estia.pandora.test` package: **MultiTest.java**.
+
+To use it, simply 
+
+1- Create a custom test file  
+1- Add the test command line and expected output in the `./src/test/resources/custom/multitest.config` file.
+
+
+### Example
+
+Let's imagine we want to try our `maxAlt` feature (issue #5) with a file `my-test-alt-1.csv` that contains only 1 line.
+This line has the Altitude value set to `42`.
+We then:
+
+* Add our `my-test-alt-1.csv` file in the `./src/test/resources/custom/feature5/` folder
+
+* Edit the multitest.config file to add our test:
+
+```
+# this line is a comment
+# useful to know what the test is about!
+# test 1: simple example for the maxAlt feature
+cmd: -o maxAlt ./src/test/resources/custom/feature5/my-test-alt-1.csv
+output:
+42
+---
+
+```
+
+* Run the MultiTest main program and check its outputs
+
+
+### Config file
+
+The goal is to complete this file as the project goes forward.
+This is a simple solution to see if any new changes involve previous tests failure.
+In the end, with an average of 5 tests / feature, this file should contain around 500 tests blocks.
+
+A test is simply a series of lines including:
+
+* a comment (starting with `#`)
+
+* the command line to send to Pandora (starting with `cmd: `)
+
+* the expected output (starting with `output:` and the output line(s) on a new line)
+
+* an ending block `---`
+
+```
+# test X: a comment
+cmd: -o <featureName> <file>
+output:
+<expected_output>
+---
+
+# test X+1: a comment
+cmd: -o <featureName> <file>
+output:
+<expected_output>
+---
+
+etc.
+
+```

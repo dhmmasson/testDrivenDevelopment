@@ -2,7 +2,12 @@
 
 Since we want to compare computed values between your program and ours for every tests, we need to set up some ground rules. You will need constants. We list here some constant values you might need. 
 
+
 **<ins style="color:red;">Important</ins>**: If you need another constant, let us know. Call us, or even better, use the git repository to [open an issue](https://github.com/Estia-advanced-programming/pandora-public/issues). We will then update this page so that everyone can use the same values.
+
+## Number precision
+
+Make sure to use the `String.format("%.2f", variableName)` solution to display your results with a 0.01 precision.
 
 
 <!-- * **Decimal**: Round your decimal values to 2 digits (e.g., `1234.5678` becomes `1234.57`) -->
@@ -90,24 +95,35 @@ In this project, we will implement a very simplistic heuristic: we will simply l
 > _Fig. 1 Illustration of flight phases simple heuristic in our project. 
  Top: Flight path.
  Middle: Yaw values. A green line indicates the beginning of a plateau. A red line indicates the end of a plateau. (Note that the green and red lines in the middle are merged on this example)
- Bottom: Yaw derivative values_
+ Bottom: Yaw delta values_
 
 ### Algorithm
 
 1. Take the yaw values
-1. Take the first order derivative
-1. Consider derivative values that are **smaller than 1**
-1. A plateau is defined as a portion in time for which values derivative values are < 1 **and for at least 60 seconds**
+1. Take the delta values (simple difference between `i` and `i-1`)
+1. Consider delta values that are 
+	1. **smaller than 1**
+	1. for yaw values that are **different from -1** (default values when the sensors are not turned on yet)
+	1. after at least **10 delta values were greater than 1** (To make sure we do not get first plateau happening before any yaw consequent modification)
+1. A plateau is defined as a portion in time for which values delta values are < 1 **and for at least 60 seconds**
+
+> Note
+With this pseudo-algorithm and its heuristics, most flight analyses make sense.
+Only one flight (RU) will have an undetected take off phase.
 
 ```python
 def findPlateaux(values, timestamp) :
 	
 	## PREPARE THE DATA #########################
 
-	# get the derivative
-	derivative = diff(values)
+	# get the delta
+	delta = delta(values)				# no need for delta time division
 	# get the indexes we are interested in
-	indexes = derivative.where(<1)					# !Important: threshold of 1 
+	# we want the index for which
+	#		* yaw values != -1
+	#		* delta values < 1
+	#		* after at least 10 deltas > 1 happened (to make sure the sensors were correctly switched on!)
+	indexes = delta.where(<1 and values != -1 and turbulences_happened = True)					# !Important: threshold of 1 
 	# get the distance between these indexes
 	distance_index = diff(indexes)
 	start, end  = None
