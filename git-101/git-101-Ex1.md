@@ -12,7 +12,7 @@ To use git on your computer, you'll need a client:
 
 * Settings modification remove emails spam
 
-[Checkout the tutorial](./Tutorial-»-Git-Client)
+[Checkout the tutorial](tools-Git-Client.md)
 
 
 ## Create repositories
@@ -36,7 +36,7 @@ From the github page of your project, click on the menu Projects. Projects are b
   - Set a description : Project board for the pandora project
   - Set it to : Automatic Kanban
 
-In the background, a special task for the project has been created :  it will create more than an hundred issues (it may take some times). Each issue is related to a task you have to do in this project. Most of them are [Features](./Pandora-»-Features) to implement, some relate to the start up exercices. Having a lot of issues makes it hard to find the ones you care about. Milestones, labels, and assignees allows to filter and categorize issues. 
+In the background, a special task for the project has been created :  it will create more than an hundred issues (it may take some times). Each issue is related to a task you have to do in this project. Most of them are [Features](Pandora-Features.md) to implement, some relate to the start up exercices. Having a lot of issues makes it hard to find the ones you care about. Milestones, labels, and assignees allows to filter and categorize issues. 
 
 - [ ] Discover the milestone for the start up exercices 
   - From the Github project page, click on the menu Issues 
@@ -90,7 +90,7 @@ You now know :
 - [ ] How to push your commit to a group repository
 
 # Next exercice :
-[ Ex2 ]( ./Assignements#exercice-2---first-conflict)
+[ Ex2 ]( git-101.md#exercice-2---first-conflict)
 
 [//]: # (Reference for this page)
 [classroomAssignement]: https://classroom.github.com/g/XH2huM0G

@@ -243,7 +243,7 @@ Refer to the [error handling](#error-handling) section for more details.
 * Russian fighter jets
 * American fighter jets
 
-Make sure to distinguish both origin as they do not use the same units when logging data (see [details](./Pandora-»-Flight-Records#parameters-list))
+Make sure to distinguish both origin as they do not use the same units when logging data (see [details](Pandora-Flight_Records.md#parameters-list))
 
 <a id="output-features---list"></a>
 # Output features - List

@@ -26,14 +26,14 @@ In order to do so via Eclipse, you should:
 
 You should see the program running!
 
-![alt text](./images/screen_eclipse.png "Running configuration")
+![alt text](screen_eclipse.png "Running configuration")
 > _Fig. 1 Eclipse screenshot for running configuration_
 
 
 It can be cumbersome to run several configurations. You can of course save your configuration, but also create `launch group` in which you can include as many configuration you set up in sequential order. Otherwise, you can also omit the output option parameter `-o`. In this case **every output** will be printed.
 
 At this point, note that there is nothing else implemented.
-A list of options (more than 100) to implement is [available](./Pandora-»-Features), and this is your job to complete the program.
+A list of options (more than 100) to implement is [available](Pandora-Features.md), and this is your job to complete the program.
 
 
 ## Running multiple tests in one go
