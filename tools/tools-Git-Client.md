@@ -19,7 +19,7 @@
 
 * Select the project that has been created for your group project. The url is something like https://github.com/Estia-advanced-programming/pandora-2020-group1-GROUPENAME.git
 
-* Select the location you want the download to happen on your computer. Remember this location, you will need it to import the project in [Eclipse](tools-Eclipse.md) later.
+* Select the location you want the download to happen on your computer. Remember this location, you will need it to import the project in [Eclipse](tools-Eclipse) later.
 
 * Click "clone"
 

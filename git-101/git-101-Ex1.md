@@ -12,7 +12,7 @@ To use git on your computer, you'll need a client:
 
 * Settings modification remove emails spam
 
-[Checkout the tutorial](tools-Git-Client.md)
+[Checkout the tutorial](tools-Git-Client)
 
 
 ## Create repositories
@@ -36,7 +36,7 @@ From the github page of your project, click on the menu Projects. Projects are b
   - Set a description : Project board for the pandora project
   - Set it to : Automatic Kanban
 
-In the background, a special task for the project has been created :  it will create more than an hundred issues (it may take some times). Each issue is related to a task you have to do in this project. Most of them are [Features](Features.md) to implement, some relate to the start up exercices. Having a lot of issues makes it hard to find the ones you care about. Milestones, labels, and assignees allows to filter and categorize issues. 
+In the background, a special task for the project has been created :  it will create more than an hundred issues (it may take some times). Each issue is related to a task you have to do in this project. Most of them are [Features](Features) to implement, some relate to the start up exercices. Having a lot of issues makes it hard to find the ones you care about. Milestones, labels, and assignees allows to filter and categorize issues. 
 
 - [ ] Discover the milestone for the start up exercices 
   - From the Github project page, click on the menu Issues 

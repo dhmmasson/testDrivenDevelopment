@@ -15,7 +15,7 @@ Latest news here: [Update](./Update)
 ***
 ## Educational Goals of the Class
 * Start and manage a software development project following some Agile project management principles
-  * Organize [features](Features.md) to be developed
+  * Organize [features](Features) to be developed
   * Set up [milestones](./project-management:Milestones) to reach  
 * Use of a version control system
 
@@ -29,7 +29,7 @@ A Continuous Integration is set up in your git repository. This means that the t
  * The output your program generates (e.g. java -jar pandora.jar -o avgAltitude file1.dfr ==> 1234.56) and,
  * The output of our program for the same test. 
 
-If it is different, someone has an error. Make sure to follow the [instructions](Pandora-Instructions.md). If you think our version is having a problem, do not hesitate to [open an issue](https://github.com/Estia-advanced-programming/pandora-public/issues) so that we can investigate further.
+If it is different, someone has an error. Make sure to follow the [instructions](Pandora-Instructions). If you think our version is having a problem, do not hesitate to [open an issue](https://github.com/Estia-advanced-programming/pandora-public/issues) so that we can investigate further.
 
 
 
@@ -44,7 +44,7 @@ We will in this class take some liberties on how the data are stored and extract
 
 ### Flight data records
 
-Records about a flight will be stored in a text file. Specifications can be found [here](Pandora-Flight_Records.md)
+Records about a flight will be stored in a text file. Specifications can be found [here](Pandora-Flight_Records)
 
 ### Flight Analysis  
 
@@ -55,4 +55,4 @@ The tool will produce multiple flight analyses depending on the `output` option 
 
 
 ### Features to Develop
-Features are represented by issues open in your git repository. They are organized according to milestones. A list of features and milestones can be found [here](Features.md)
+Features are represented by issues open in your git repository. They are organized according to milestones. A list of features and milestones can be found [here](Features)
