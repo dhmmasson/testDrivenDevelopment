@@ -44,7 +44,7 @@ We will in this class take some liberties on how the data are stored and extract
 
 ### Flight data records
 
-Records about a flight will be stored in a text file. Specifications can be found [here](Pandora-Flight_Records)
+Records about a flight will be stored in a text file. Specifications can be found [here](Flight-Records)
 
 ### Flight Analysis  
 

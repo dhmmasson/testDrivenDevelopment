@@ -1,13 +1,12 @@
   * [:house: Home](./Home)
-  * [:mortar_board: **Current Standing : temporary GRADES ! Fri 07/04/2023** :exclamation: ](grade-2023)
   * [:exclamation: **Updates**!](./Update ) 
   * :vhs: Pandora
     * [Instructions](Pandora-Instructions)
     * [Features](Features)
-    * [Flight Records](Pandora-Flight_Records)
+    * [Flight Records](Flight-Records)
   * :mortar_board: Tutorials
-    * [Eclipse (import, run, and test)](tools-Eclipse)
-    * [Git Client](tools-Git-Client)
+    * [Eclipse (import, run, and test)](Eclipse)
+    * [Git Client](Git-Client)
     * [:school_satchel: Git Introduction / Refresher](git-101)
 
 

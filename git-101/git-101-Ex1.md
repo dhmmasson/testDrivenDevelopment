@@ -12,7 +12,7 @@ To use git on your computer, you'll need a client:
 
 * Settings modification remove emails spam
 
-[Checkout the tutorial](tools-Git-Client)
+[Checkout the tutorial](Git-Client)
 
 
 ## Create repositories
