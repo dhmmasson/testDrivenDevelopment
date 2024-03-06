@@ -1,35 +1,46 @@
-# Name 
+# Name
 
-pandora - a tool to analyze flight record data to provide summary and high-level information based on low-level sensor data (e.g., fighter jet position).
+pandora - a tool to analyze [Flight-records](Flight-Records) data to provide summary and high-level information based on low-level sensor data (e.g., fighter jet position).
 
-# Synopsis 
+# Synopsis
 
 ```
 java -jar pandora.jar [OPTIONS] ...source
 
 ...source - path to flightRecord files or folder containing flightRecord files
 
-OPTIONS o:hvd
+OPTIONS o:m:bhvd
+-b, --batch,            Batch Mode - process all files in the source folder one by one
 -d, --debug,            Debug - print additional debug information on Unhandled 
 -h, --help,             Help - print this help message
 -m arg, --metadata arg  Metadata - Print the value of the specified metadata
 -o arg, --output arg,   output - Print only the specified feature at the end
--p arg, --parameters    Parameters - List in alphabetical order the parameters presents in the source
+-p, --parameters        Parameters - List in alphabetical order the parameters presents in the source
 -v, --version,          Version - print the version of the application 
-error
 
+Implemented Features
+
+<Feature List>
 ```
 
 # EXAMPLES
 
-Print the [Semantic-Versioning](Semantic-Versioning) of the pandora project. 
+Print the [Semantic-Versioning](Semantic-Versioning) of the pandora project:
+
 ```bash
 $ java -jar pandora.jar --version 
 pandora@1.0.1
 ```
 
+Print the maximum altitude reached during a given flight:
 
-Full report 
+```bash
+$ java -jar pandora.jar -o maxAlt test/resources/0_201_MiG-23MLD.frd
+14321
+```
+
+With no option pandora produce a Full report
+
 ```bash 
 $ java -jar pandora.jar test/resources/0_201_MiG-23MLD.frd 
 Flight Report for flight:201
@@ -102,194 +113,198 @@ windSpeedLanding: 25.96
 windSpeedTakeOff: 3.44
 ```
 
-
 # Options
 
-- -d, --debug
-   Debug - print additional debug information on Unhandled error. By default pandora should be as silent as possible, only outputting what is expected by the -o option or the full report. For debug purposes you can print additional debug information when the option -d is used.
-- -h, --help 
-  Print an help message and quit 
-- -o \<feature\>, --output  \<feature\>
-  Print only the result of the specified [Feature](Features) on the command line
-- -v, --version,          
-  Version - print the version of the application
+- -b, --batch,  
+  **Batch Mode** - process all files in the source folder one by one
+- -d, --debug  
+   **Debug** - print additional debug information on Unhandled error. By default pandora should be as silent as possible, only outputting what is expected by the -o option or the full report. For debug purposes you can print additional debug information when the option -d is used.
+- -h, --help  
+  **Help** - Print an help message and quit
+- -m arg, --metadata arg  
+  **Metadata** - Print the value of the specified metadata
+- -o \<feature\>, --output \<feature\>  
+  **Output** - Print only the result of the specified [Feature](Features) on the command line
+- -p, --parameters  
+  **Parameters** - List in alphabetical order the parameters presents in the source
+- -v, --version,  
+  **Version** - print the version of the application
 
-## Features 
+## Features
 
-- avgAlt
+- avgAlt  
   Average Altitude
-- maxAlt
+- maxAlt  
   Max Altitude
-- avgAirSpeed
+- avgAirSpeed  
   Average Air Speed
-- maxAirSpeed
+- maxAirSpeed  
   Max Air Speed
-- avgEnginePower
+- avgEnginePower  
   Average Engine Power
-- maxEnginePower
+- maxEnginePower  
   Max Engine Power
-- avgTemp
+- avgTemp  
   Average Temperature
-- minTemp
+- minTemp  
   Min Temperature
-- maxTemp
+- maxTemp  
   Max Temperature
-- avgPressure
+- avgPressure  
   Average Pressure
-- maxPressure
+- maxPressure  
   Max Pressure
-- minPressure
+- minPressure  
   Minimum Pressure
-- avgHumidity
+- avgHumidity  
   Average Relative Humidity
-- maxHumidity
+- maxHumidity  
   Max Relative Humidity
-- minHumidity
+- minHumidity  
   Min Relative Humidity
-- avgHeartRate
+- avgHeartRate  
   Average Heart Rate
-- maxHeartRate
+- maxHeartRate  
   Max Heart Rate
-- minHeartRate
+- minHeartRate  
   Min Heart Rate
-- avgOxygen
+- avgOxygen  
   Average Oxygen Concentration
-- minOxygen
+- minOxygen  
   Min Oxygen Concentration
-- maxOxygen
+- maxOxygen  
   Max Oxygen Concentration
-- flightDuration
+- flightDuration  
   Flight Duration
-- flightDistance
+- flightDistance  
   Flight Distance
-- avgAcceleration
+- avgAcceleration  
   Average Acceleration
-- maxAcceleration
+- maxAcceleration  
   Max Acceleration
-- windSpeed
+- windSpeed  
   Wind Speed
-- avgMachSpeed
+- avgMachSpeed  
   Average Mach Speed
-- maxMachSpeed
+- maxMachSpeed  
   Max Mach Speed
-- maxAccelG
+- maxAccelG  
   Max Acceleration in G
-- reachAlt
+- reachAlt  
   Reaching 80% Max Altitude
-- reachDist
+- reachDist  
   Reaching 80% Total Distance
-- fastWindAlt
+- fastWindAlt  
   Altitude with Fastest Wind
-- fastJetAlt
+- fastJetAlt  
   Altitude with Highest Aircraft Speed
-- noiseTemp
+- noiseTemp  
   Noise of Temperature Sensors
-- stressedPilot
+- stressedPilot  
   Stressed Pilot
-- cumulDuration
+- cumulDuration  
   Total Cumulative Flight Duration
-- cumulDistance
+- cumulDistance  
   Total Cumulative Flight Distance
-- airportTakeOff
+- airportTakeOff  
   Most Used Airport (Take Off)
-- airportLanding
+- airportLanding  
   Most Used Airport (Landing)
-- highestDrag
+- highestDrag  
   Highest Drag Coef
-- smallestDrag
+- smallestDrag  
   Smallest Drag Coef
-- highestLift
+- highestLift  
   Highest Lift Coef
-- smallestLift
+- smallestLift  
   Smallest Lift Coef
-- highestSpeed
+- highestSpeed  
   Highest Average Speed
-- slowestSpeed
+- slowestSpeed  
   Slowest Average Speed
-- highestAltitude
+- highestAltitude  
   Highest Altitude
-- longestDuration
+- longestDuration  
   Longest Flight Duration
-- firstLanding
+- firstLanding  
   First Landing
-- lastLanding
+- lastLanding  
   Last Landing
-- highestPower
+- highestPower  
   Highest Average Engine Power
-- highestOxygen
+- highestOxygen  
   Highest Average Oxygen
-- highestHeartBeat
+- highestHeartBeat  
   Highest Average Heart Beat
-- lowestHeartBeat
+- lowestHeartBeat  
   Lowest Average Heart Beat
-- closeFlight
-  Flight Closeness 
-- closeFlightSameOri
+- closeFlight  
+  Flight Closeness
+- closeFlightSameOri  
   Flight Closeness (Same origin)
-- closeFlightDiffOri
+- closeFlightDiffOri  
   Flight Closeness (Different origin)
-- takeOff
+- takeOff  
   Take Off Phase Detection
-- cruise
+- cruise  
   Cruise Phase Detection
-- landing
+- landing  
   Landing Phase Detection
-- ratioDistance
+- ratioDistance  
   Ratio Distance
-- avgAirSpeedTakeOff
+- avgAirSpeedTakeOff  
   Average Air Speed (Take Off)
-- maxAirSpeedTakeOff
+- maxAirSpeedTakeOff  
   Max Air Speed (Take Off)
-- avgEnginePowerTakeOff
+- avgEnginePowerTakeOff  
   Average Engine Power (Take Off)
-- maxEnginePowerTakeOff
+- maxEnginePowerTakeOff  
   Max Engine Power (Take Off)
-- avgAirSpeedCruise
+- avgAirSpeedCruise  
   Average Air Speed (Cruise)
-- maxAirSpeedCruise
+- maxAirSpeedCruise  
   Max Air Speed (Cruise)
-- avgEnginePowerCruise
+- avgEnginePowerCruise  
   Average Engine Power (Cruise)
-- maxEnginePowerCruise
+- maxEnginePowerCruise  
   Max Engine Power (Cruise)
-- avgAirSpeedLanding
+- avgAirSpeedLanding  
   Average Air Speed (Landing)
-- maxAirSpeedLanding
+- maxAirSpeedLanding  
   Max Air Speed (Landing)
-- avgEnginePowerLanding
+- avgEnginePowerLanding  
   Average Engine Power (Landing)
-- maxEnginePowerLanding
+- maxEnginePowerLanding  
   Max Engine Power (Landing)
-- flightDistanceTakeOff
+- flightDistanceTakeOff  
   Flight Distance (Take Off)
-- avgAccelerationTakeOff
+- avgAccelerationTakeOff  
   Average Acceleration (Take Off)
-- maxAccelerationTakeOff
+- maxAccelerationTakeOff  
   Max Acceleration (Take Off)
-- windSpeedTakeOff
+- windSpeedTakeOff  
   Wind Speed (Take Off)
-- flightDistanceCruise
+- flightDistanceCruise  
   Flight Distance (Cruise)
-- avgAccelerationCruise
+- avgAccelerationCruise  
   Average Acceleration (Cruise)
-- maxAccelerationCruise
+- maxAccelerationCruise  
   Max Acceleration (Cruise)
-- windSpeedCruise
+- windSpeedCruise  
   Wind Speed (Cruise)
-- flightDistanceLanding
+- flightDistanceLanding  
   Flight Distance (Landing)
-- avgAccelerationLanding
+- avgAccelerationLanding  
   Average Acceleration (Landing)
-- maxAccelerationLanding
+- maxAccelerationLanding  
   Max Acceleration (Landing)
-- windSpeedLanding
+- windSpeedLanding  
   Wind Speed (Landing)
-- mostPowerPhase
+- mostPowerPhase  
   Most Demanding Phase - Engine Power
-- mostStressPhase
+- mostStressPhase  
   Most Demanding Phase - Stress
-- mostAccelPhase
+- mostAccelPhase  
   Most Demanding Phase - Horizontal Acceleration
-- oxygenPhase
+- oxygenPhase  
   50% Oxygen Phase
-

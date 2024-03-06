@@ -30,7 +30,7 @@ A Continuous Integration is set up in your git repository. This means that the t
  * The output your program generates (e.g. java -jar pandora.jar -o avgAltitude file1.dfr ==> 1234.56) and,
  * The output of our program for the same test. 
 
-If it is different, someone has an error. Make sure to follow the [instructions](Pandora-Instructions). If you think our version is having a problem, do not hesitate to [open an issue](https://github.com/Estia-advanced-programming/pandora-public/issues) so that we can investigate further.
+If it is different, someone has an error. Make sure to follow the [instructions](Constants). If you think our version is having a problem, do not hesitate to [open an issue](https://github.com/Estia-advanced-programming/pandora-public/issues) so that we can investigate further.
 
 
 
