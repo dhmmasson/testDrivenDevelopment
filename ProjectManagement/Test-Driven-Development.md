@@ -7,21 +7,65 @@ Test-Driven Development (TDD) is a software development approach in which tests 
     - [Commit](Conventional%20Commits) that test (test: add a test for feature X)
 2. **Green: Write the Minimum Code to Pass the Test**
     - You then write the minimum amount of code necessary to make the test pass. The focus is on making the test successful.
-    - commit your code (feat: implement feature X)
+    - commit your code (```feat: implement feature X```)
 3. **Refactor: Improve Code Without Changing Functionality**
-    - After the test has passed, you should refactor the code to improve its structure, readability, or performance without making the test fails (nor previous tests).
-    - Commit the changes (e.g. refactor: improve feature X by skipping empty row or docs: add [Javadoc](Javadoc) to function Y)
+    - After the test has passed, you should refactor the code to improve its structure, readability, or performance without making the test fail (nor previous tests).
+    - Commit the changes (e.g. ```refactor: improve feature X by skipping empty row``` or ```docs: add [Javadoc](Javadoc) to function Y```)
 
 Add the meaningful change to your [Changelog](Changelog), if your team feel that it has done enough change create a new [release](Semantic-Versioning#)
 
-The primary benefits of TDD include:
+There are several strategies and kind of tests you could develop to test your project:
 
-- **Early Detection of Bugs:** Since tests are written before the code, any deviations from expected behavior are immediately identified, making it easier to catch and fix bugs early in the development process.
-    
-- **Code Confidence:** The comprehensive suite of tests provides a safety net, allowing developers to make changes and refactor code with confidence, knowing that existing functionality won't break unnoticed.
-    
-- **Improved Design:** TDD often leads to more modular and maintainable code as developers focus on writing code that is testable and easily adaptable.
-    
-- **Documentation:** The tests serve as executable documentation, providing insights into the expected behavior of the code.
+**Black Box Testing:** Black Box Testing is a fundamental testing methodology in Test-Driven Development (TDD) that centers on evaluating the external functionality of a software application without delving into its internal code structure. In this approach, you treat the software as an opaque entity, focusing solely on inputs and observing outputs, akin to a "black box" where the internal workings remain concealed. The primary objective of Black Box Testing is to validate that the software behaves according to specified requirements and meets its intended functionality.
 
-While TDD can be a powerful approach, it requires discipline and a shift in mindset for developers. Writing tests before code can feel counterintuitive to some, but the benefits in terms of code quality, maintainability, and bug prevention can be significant. TDD is commonly associated with agile and iterative development methodologies.
+**White Box Testing:** In contrast to Black Box Testing, White Box Testing, also known as clear box or structural testing, delves into the internal logic and code structure of the software. You write these tests after you have written the code, based on what kind of data structure or code logic you have written. (e.g. you have used an array, and you index ```i, i+1 and i+2``` you deduce that your current code works only if there are at least three elements, you write a new test convering the edge case (for example a case where there are two elements, you are now in the red))
+
+In addition to White Box and Black Box Testing, you can also classify tests in two categories Unit Tests and Integration Tests.
+
+**Unit Tests:** Unit Tests target individual units or components of the software often focusing on isolated functions or methods. The objective is to verify that each unit performs as expected in isolation, facilitating early detection of defects and supporting modular development practices. Unit Tests are crucial in TDD, acting as the building blocks for validating the correctness of the smallest units of code. Unit tests need to be integrated in the source code, generally as additional test classes in Java.
+
+**Integration Tests:** Integration Tests assess the collaboration and interaction between different components or modules within a software system. These tests ensure that various units work seamlessly together when integrated, revealing potential issues that may arise during the assembly of different parts. Integration Tests play a pivotal role in validating the overall system architecture and its ability to function cohesively as a unified whole. In our case it means testing the system from an outside perspective once it is compiled, answering the question of does pandora.jar behaves as expected.
+
+Read more about Test-Driven-Development on the[ wikipedia page](https://en.wikipedia.org/wiki/Test-driven_development)
+
+# In the Pandora Project
+
+For the Pandora project you are encouraged to experiment as much as possible with Test-Driven-Development.
+
+- Your final grade is influenced by Black Box Integration Test that are run automatically on the code you push on Github when you do a [Release](Release.md).
+
+**We require however that you produce Black Box Integration Tests for all the features you develop** by completing the file ```test/testSuite.json``` and adding corresponding flight records into the ```test/resources``` folder.
+
+the **testSuite** should respect the following schema
+
+```json 
+[
+	testDescription,
+	...
+	testDescription
+]
+```
+
+a **test description** should respect the following schema
+
+```json 
+{
+    "id": <uniqueId:number>,
+    "feature": <feature:string>,
+    "milestone": <milestone:number>,
+    "mode": <"full"|"feature">,  
+    "file": <flightRecordPath:Path>,
+    "result": <expectedResult:number|string>
+}
+```
+
+The fields of a test description are
+
+- **id**: a unique number in your testSuite
+- **feature**: the feature your are testing, this should be the exact name that is passed to the ```-o``` option. e.g. ```maxAlt```
+- **milestone**: the number of the milestone corresponding to the feature you are testing. For Grouping purposes in the output
+- **mode**:
+	- feature: test with the -o set to the given feature
+	- full: generate the full report and parse it to find the feature in the report
+- **file**: the file passed to pandora, the path should be relative to the overall project ```test/resources/.../flight.frd```
+- **result**: the expected result. Currently, the autograder is in strict comparison.
