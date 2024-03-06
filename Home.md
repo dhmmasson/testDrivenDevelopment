@@ -33,7 +33,7 @@ You will be automatically evaluated based on
 	- **Minimum Required: 3 validated milestones**, meaning on the ```release``` branch at least 80% of the the tests for at least three milestones.
 - Group Grade: Test Driven development:
 	- **Minimum required:** On the ```release``` branch, the file ```test/testSuite.json``` contains valid tests for at least 3 milestones
-- Group Grade: Number of Successful Releases:
+- Group Grade: Number of Successful [Release](Release):
 - Individual Contribution: You have made a meaningful and
 	- **Minimum required:** At least 10% of the commits of your groups, at least 50% of them (excluding Merge commits) follow [Conventional Commits](Conventional%20Commits)
 
@@ -71,10 +71,9 @@ Features are represented by issues open in your git repository. They are organiz
 
 ## First Steps
 
-
-1. \<group action\> Copy the [Issues](Issues) corresponding to the [Features](Features) to implement on your Github repository. 
+1. \<group action\> Copy the [Issues](Issues) corresponding to the [Features](Features) to implement on your Github repository.
 2. Clone the project locally on each member computer
 3. Open the project with your java editor of choice [Eclipse](Eclipse) or [vscode](vscode) and run the maven build script to compile the bare version of the project (a program that output "pandora@v1.0.0")
-4. Read the wiki documentation about 
+4. Read the wiki documentation about
 	1. what is [Test-Driven-Development](Test-Driven-Development)
-	2. What are conventional Commits 
+	2. What are conventional Commits
