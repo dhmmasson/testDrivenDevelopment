@@ -18,6 +18,7 @@
 	- [Plagiat](Plagiat)
 - :mortar_board: Tools
     - [Eclipse (import, run, and test)](Eclipse)
+    - [vscode](vscode)
     - [Git Client](Git-Clients)
     - [:school_satchel: Git Introduction / Refresher](git-101)
 
