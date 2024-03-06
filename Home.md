@@ -4,7 +4,7 @@ This is the wiki for the Estia Advanced Programming class.
 
 # Updates
 
-Latest news here: [CHANGELOG](CHANGELOG.md)
+Latest news here: [CHANGELOG](CHANGELOG)
 
 > **Outline**
 
@@ -35,9 +35,9 @@ You will be automatically evaluated based on
 	- **Minimum required:** On the ```release``` branch, the file ```test/testSuite.json``` contains valid tests for at least 3 milestones
 - Group Grade: Number of Successful Releases:
 - Individual Contribution: You have made a meaningful and
-	- **Minimum required:** At least 10% of the commits of your groups, at least 50% of them (excluding Merge commits) follow [Conventional Commits](Conventional%20Commits.md)
+	- **Minimum required:** At least 10% of the commits of your groups, at least 50% of them (excluding Merge commits) follow [Conventional Commits](Conventional%20Commits)
 
-You can check by yourself how many tests your program passed or failed every time you [Release](Release.md) commit your current version on GitHub.  
+You can check by yourself how many tests your program passed or failed every time you [Release](Release) commit your current version on GitHub.  
 A Continuous Integration is set up in your git repository. This means that the tests will check if your new version passes new tests, but also previous ones (to prevent regression). The tests simply consist in a text-based comparison between:
 
  - The output your program generates (e.g. java -jar pandora.jar -o avgAltitude file1.dfr ==> 1234.56) and,
@@ -72,9 +72,9 @@ Features are represented by issues open in your git repository. They are organiz
 ## First Steps
 
 
-1. \<group action\> Copy the [Issues](Issues.md) corresponding to the [Features](Features.md) to implement on your Github repository. 
+1. \<group action\> Copy the [Issues](Issues) corresponding to the [Features](Features) to implement on your Github repository. 
 2. Clone the project locally on each member computer
-3. Open the project with your java editor of choice [Eclipse](Eclipse.md) or [vscode](vscode.md) and run the maven build script to compile the bare version of the project (a program that output "pandora@v1.0.0")
+3. Open the project with your java editor of choice [Eclipse](Eclipse) or [vscode](vscode) and run the maven build script to compile the bare version of the project (a program that output "pandora@v1.0.0")
 4. Read the wiki documentation about 
-	1. what is [Test-Driven-Development](Test-Driven-Development.md)
+	1. what is [Test-Driven-Development](Test-Driven-Development)
 	2. What are conventional Commits 

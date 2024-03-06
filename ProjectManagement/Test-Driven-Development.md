@@ -12,7 +12,7 @@ Test-Driven Development (TDD) is a software development approach in which tests 
     - After the test has passed, you should refactor the code to improve its structure, readability, or performance without making the test fail (nor previous tests).
     - Commit the changes (e.g. ```refactor: improve feature X by skipping empty row``` or ```docs: add [Javadoc](Javadoc) to function Y```)
 
-Add the meaningful change to your [Changelog](ProjectManagement/Changelog.md), if your team feel that it has done enough change create a new [release](Semantic-Versioning#)
+Add the meaningful change to your [Changelog](ProjectManagement/Changelog), if your team feel that it has done enough change create a new [release](Semantic-Versioning#)
 
 There are several strategies and kind of tests you could develop to test your project:
 
@@ -32,7 +32,7 @@ Read more about Test-Driven-Development on the[ wikipedia page](https://en.wikip
 
 For the Pandora project you are encouraged to experiment as much as possible with Test-Driven-Development.
 
-- Your final grade is influenced by Black Box Integration Test that are run automatically on the code you push on Github when you do a [Release](Release.md).
+- Your final grade is influenced by Black Box Integration Test that are run automatically on the code you push on Github when you do a [Release](Release).
 
 **We require however that you produce Black Box Integration Tests for all the features you develop** by completing the file ```test/testSuite.json``` and adding corresponding flight records into the ```test/resources``` folder.
 

@@ -10,12 +10,12 @@
 	- [Flight-Phases](Flight-Phases)
 	- [Error-Handling](Error-Handling)
 - Project Management
-	- [Test-Driven-Development](Test-Driven-Development.md)
-	- [How to make proper commits](Conventional%20Commits.md)
-	- [How to version pandora](Semantic-Versioning.md)
-	- [How to release a new version for evaluation](Release.md)
-	- [Documenting your project](Javadoc.md)
-	- [Plagiat](Plagiat.md)
+	- [Test-Driven-Development](Test-Driven-Development)
+	- [How to make proper commits](Conventional%20Commits)
+	- [How to version pandora](Semantic-Versioning)
+	- [How to release a new version for evaluation](Release)
+	- [Documenting your project](Javadoc)
+	- [Plagiat](Plagiat)
 - :mortar_board: Tools
     - [Eclipse (import, run, and test)](Eclipse)
     - [Git Client](Git-Clients)
