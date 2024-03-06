@@ -1,6 +1,6 @@
 # Name
 
-pandora - a tool to analyze [Flight-records](Flight-Records) data to provide summary and high-level information based on low-level sensor data (e.g., fighter jet position).
+pandora - a [CLI](CLI) tool to analyze [Flight-records](Flight-Records) data to provide summary and high-level information based on low-level sensor data (e.g., fighter jet position).
 
 # Synopsis
 

@@ -9,6 +9,7 @@
 	- [Flight Records](Flight-Records)
 	- [Flight-Phases](Flight-Phases)
 	- [Error-Handling](Error-Handling)
+	- [CLI](CLI)
 - Project Management
 	- [Test-Driven-Development](Test-Driven-Development)
 	- [How to make proper commits](Conventional%20Commits)
