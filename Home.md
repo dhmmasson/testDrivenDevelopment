@@ -4,7 +4,7 @@ This is the wiki for the Estia Advanced Programming class.
 
 # Updates
 
-Latest news here: [Update](./Update)
+Latest news here: [CHANGELOG](CHANGELOG.md)
 
 > **Outline**
 
@@ -68,3 +68,13 @@ The tool will produce multiple flight analyses depending on the `output` option 
 ### Features to Develop
 
 Features are represented by issues open in your git repository. They are organized according to milestones. A list of features and milestones can be found [here](Features)
+
+## First Steps
+
+
+1. \<group action\> Copy the [Issues](Issues.md) corresponding to the [Features](Features.md) to implement on your Github repository. 
+2. Clone the project locally on each member computer
+3. Open the project with your java editor of choice [Eclipse](Eclipse.md) or [vscode](vscode.md) and run the maven build script to compile the bare version of the project (a program that output "pandora@v1.0.0")
+4. Read the wiki documentation about 
+	1. what is [Test-Driven-Development](Test-Driven-Development.md)
+	2. What are conventional Commits 

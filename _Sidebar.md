@@ -1,14 +1,21 @@
 # _Sidebar
 
 - [:house: Home](./Home)
-- [:exclamation: **Updates**!](./Update )
+- [:exclamation: **CHANGELOG**!](CHANGELOG.md )
 - :vhs: [Pandora](Pandora)
-	- [man page](Pandora)
-	- [Constants](Constants)
+	- [manual page of pandora](Pandora)
 	- [Features](Features)
+	- [Constants used in the project](Constants)
 	- [Flight Records](Flight-Records)
 	- [Flight-Phases](Flight-Phases)
 	- [Error-Handling](Error-Handling)
+- Project Management
+	- [Test-Driven-Development](Test-Driven-Development.md)
+	- [How to make proper commits](Conventional%20Commits.md)
+	- [How to version pandora](Semantic-Versioning.md)
+	- [How to release a new version for evaluation](Release.md)
+	- [Documenting your project](Javadoc.md)
+	- [Plagiat](Plagiat.md)
 - :mortar_board: Tools
     - [Eclipse (import, run, and test)](Eclipse)
     - [Git Client](Git-Clients)
