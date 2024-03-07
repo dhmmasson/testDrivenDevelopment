@@ -12,10 +12,11 @@
 	- [CLI](CLI)
 - Project Management
 	- [Test-Driven-Development](Test-Driven-Development)
-	- [How to make proper commits](Conventional%20Commits)
-	- [How to version pandora](Semantic-Versioning)
-	- [How to release a new version for evaluation](Release)
+	- [How to make proper **commits**](Conventional%20Commits)
+	- [How to **version** pandora](Semantic-Versioning)
+	- [How to **release** a new version for evaluation](Release)
 	- [Documenting your project](Javadoc)
+	- [:exclamation: **Synchronize update from the starterpack**](Synchronize-Update-From-The-Starterpack)
 	- [Plagiat](Plagiat)
 - :mortar_board: Tools
     - [Eclipse (import, run, and test)](Eclipse)
