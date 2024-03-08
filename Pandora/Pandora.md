@@ -13,8 +13,8 @@ OPTIONS o:m:bhvd
 -b, --batch,            Batch Mode - process all files in the source folder one by one
 -d, --debug,            Debug - print additional debug information on Unhandled 
 -h, --help,             Help - print this help message
--m arg, --metadata arg  Metadata - Print the value of the specified metadata
--o arg, --output arg,   output - Print only the specified feature at the end
+-m <metadata>, --metadata <metadata>  Metadata - Print the value of the specified metadata
+-o <feature>, --output <feature>,   output - Print only the specified feature at the end
 -p, --parameters        Parameters - List in alphabetical order the parameters presents in the source
 -v, --version,          Version - print the version of the application 
 
@@ -30,6 +30,15 @@ Print the [Semantic-Versioning](Semantic-Versioning) of the pandora project:
 ```bash
 $ java -jar pandora.jar --version 
 pandora@1.0.1
+```
+
+print the filenames
+
+```bash
+$ java -jar pandora.jar -o filenames d.frd b.frd a
+a
+b.frd
+d.frd
 ```
 
 Print the maximum altitude reached during a given flight:

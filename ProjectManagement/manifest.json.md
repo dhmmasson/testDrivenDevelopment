@@ -2,6 +2,7 @@
 
 ## Examples
 
+your first manifest
 ```json
 {
   "version" : "1.1.0",
