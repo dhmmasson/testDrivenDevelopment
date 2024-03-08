@@ -15,6 +15,7 @@
 	- [How to make proper **commits**](Conventional%20Commits)
 	- [How to **version** pandora](Semantic-Versioning)
 	- [How to **release** a new version for evaluation](Release)
+	- [manifest.json](manifest.json)
 	- [Documenting your project](Javadoc)
 	- [:exclamation: **Synchronize update from the starterpack**](Synchronize-Update-From-The-Starterpack)
 	- [Plagiat](Plagiat)

@@ -21,7 +21,7 @@ Each release you publish on github will be evaluated by the teacher testSuite. E
 ## Release Process
 
 - Update in your code the version number so that ```java -jar pandora.jar --version``` outputs the correct version
-- **Update the manifest.json with the new version number and the implemented features**
+- **Update the [manifest.json](manifest.json) with the new version number and the implemented features**
 - Update the [Changelog](ProjectManagement/Changelog) file explaining what change you have introduced since the last version.
 	- The features you have implemented
 	- The bugs you have fixed  
