@@ -1,7 +1,7 @@
 # _Sidebar
 
 - [:house: Home](./Home)
-- [:exclamation: **CHANGELOG**!](CHANGELOG.md )
+- [:exclamation: **CHANGELOG**!](CHANGELOG)
 - :vhs: [Pandora](Pandora)
 	- [manual page of pandora](Pandora)
 	- [Features](Features)
