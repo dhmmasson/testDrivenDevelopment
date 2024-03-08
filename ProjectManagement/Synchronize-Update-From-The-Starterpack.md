@@ -30,5 +30,5 @@ git checkout -
 
 ```bash
 git fetch starterPack --prune
-git merge starterPack/main -X theirs
+git merge starterPack/main -X theirs -m chore(update): merge modification from starter pack
 ```
