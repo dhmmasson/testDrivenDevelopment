@@ -17,6 +17,7 @@
 	- [How to **release** a new version for evaluation](Release)
 	- [manifest.json](manifest.json)
 	- [Documenting your project](Javadoc)
+	- [File Management](File%20Management)
 	- [:exclamation: **Synchronize update from the starterpack**](Synchronize-Update-From-The-Starterpack)
 	- [Plagiat](Plagiat)
 - :mortar_board: Tools

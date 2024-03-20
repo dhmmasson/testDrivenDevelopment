@@ -2,7 +2,8 @@
 
 ## Examples
 
-your first manifest
+your first manifest could be:
+
 ```json
 {
   "version" : "1.1.0",
@@ -16,6 +17,8 @@ your first manifest
   ]
 }
 ```
+
+Your second manifest after implementing the features ```avgAlt``` and ```maxAlt```
 
 ```json
 {
