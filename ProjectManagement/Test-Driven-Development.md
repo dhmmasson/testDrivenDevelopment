@@ -12,7 +12,7 @@ Test-Driven Development (TDD) is a software development approach in which tests 
     - After the test has passed, you should refactor the code to improve its structure, readability, or performance without making the test fail (nor previous tests).
     - Commit the changes (e.g. ```refactor: improve feature X by skipping empty row``` or ```docs: add [Javadoc](Javadoc) to function Y```)
 
-Add the meaningful change to your [Changelog](Changelog), if your team feel that it has done enough change create a new [release](Semantic-Versioning#)
+Add the meaningful change to your [Keep-A-Changelog](Keep-A-Changelog), if your team feel that it has done enough change create a new [release](Semantic-Versioning#)
 
 There are several strategies and kind of tests you could develop to test your project:
 
