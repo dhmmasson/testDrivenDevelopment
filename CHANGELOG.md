@@ -1,12 +1,10 @@
 # CHANGELOG
 
-This Changelog tracks the change relative to the Advanced Programming Class. It does not follow the instructions from  [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) nor does the version follow [Semantic-Versioning](Semantic-Versioning).
-
-
+This Changelog tracks the change relative to the Advanced Programming Class. It does not follow the instructions from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) nor does the version follow [Semantic-Versioning](Semantic-Versioning).
 
 # 2024
 
-
+- 2023-03-20 - Update the documentation about test-driven-developement, add a tester for milestone 0 in the starterpack
 - 2023-03-07 - [Synchronize-Update-From-The-Starterpack](Synchronize-Update-From-The-Starterpack) to help you merge the modification from the teachers
 
 # 2023
