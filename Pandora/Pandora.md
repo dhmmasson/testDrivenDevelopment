@@ -25,12 +25,14 @@ Implemented Features
 
 # EXAMPLES
 
+## Version
 Print the [Semantic-Versioning](Semantic-Versioning) of the pandora project:
 
 ```bash
 $ java -jar pandora.jar --version 
 pandora@1.0.1
 ```
+## Option flag
 
 print the filenames
 
@@ -47,7 +49,7 @@ Print the maximum altitude reached during a given flight:
 $ java -jar pandora.jar -o maxAlt test/resources/0_201_MiG-23MLD.frd
 14321
 ```
-
+## Full Report
 With no option pandora produce a Full report
 
 ```bash 
