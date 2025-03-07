@@ -49,6 +49,12 @@ Print the maximum altitude reached during a given flight:
 $ java -jar pandora.jar -o maxAlt test/resources/0_201_MiG-23MLD.frd
 14321
 ```
+
+```bash
+$ java -jar pandora.jar -m flight_id test/resources/0_201_MiG-23MLD.frd
+201
+```
+
 ## Full Report
 With no option pandora produce a Full report
 
