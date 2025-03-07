@@ -50,6 +50,8 @@ $ java -jar pandora.jar -o maxAlt test/resources/0_201_MiG-23MLD.frd
 14321
 ```
 
+Get the metadata "flight_id" from a flight records:
+
 ```bash
 $ java -jar pandora.jar -m flight_id test/resources/0_201_MiG-23MLD.frd
 201
