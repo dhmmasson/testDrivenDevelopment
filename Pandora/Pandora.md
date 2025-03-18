@@ -85,7 +85,7 @@ avgTemp: 25.30
 cruise: start=04:00:32 / end=04:13:03
 fastJetAlt: 7878.79: 762.91
 fastWindAlt: 7801.41: 122.69
-flightDistance: 246.63
+flightDistance: 243863.92
 flightDistanceCruise: 246.04
 flightDistanceLanding: 0.56
 flightDistanceTakeOff: 0.03
