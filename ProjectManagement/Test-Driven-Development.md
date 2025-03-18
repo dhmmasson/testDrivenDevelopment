@@ -88,7 +88,7 @@ The fields of a test description are
 - **milestone**: the number of the milestone corresponding to the feature you are testing. For Grouping purposes in the output
 - **mode**:
 	- feature: test with the -o set to the given feature
-	- full: generate the full report and parse it to find the feature in the report
+	- full: generate the full report and parse it to find the feature in the report (see [full report format](https://github.com/Estia-advanced-programming/pandora-public/wiki/Pandora#full-report)
 - **file**: the file passed to pandora, the path should be relative to the overall project ```test/resources/.../flight.frd```
 - **result**: the expected result. Currently, the autograder is in strict comparison.
 
