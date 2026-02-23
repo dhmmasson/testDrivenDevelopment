@@ -1,323 +1,111 @@
 # Features
 
-* **Milestone 0: Getting Started and CLI Options**
-
-    * Description: Start exploring the CLI options and get started with the project
-
-    * Number of features: 7
-
-    * List:
-
-        * Version >> CLI option:: --version (or -v)
-
-        * Help >> CLI option:: --help (or -h)
-
-        * Filenames >> CLI option:: -o filenames
-
-        * Metadata >> CLI option:: -m metadata_name
-
-        * Parameters >> CLI option:: --parameters (or -p)
-
-        * Number of records >> CLI option:: --number, -n
-
-        * Starting time >> CLI option:: -o start_time
-
-* **Milestone 1: Mono RU Flight Description**
-
-    * Description: Provide basic descriptive summary data of a Russian fighter jet flight
-
-    * Number of features: 7
-
-    * List:
-
-        * Average Altitude >> CLI option:: -o avgAlt
-
-        * Max Altitude >> CLI option:: -o maxAlt
-
-        * Average Air Speed >> CLI option:: -o avgAirSpeed
-
-        * Max Air Speed >> CLI option:: -o maxAirSpeed
-
-        * Average Engine Power >> CLI option:: -o avgEnginePower
-
-        * Max Engine Power >> CLI option:: -o maxEnginePower
-
-        * Milestone 0 Full Report >> CLI option:  
-
-* **Milestone 2: Mono RU Cockpit Description**
-
-    * Description: Provide basic descriptive summary data of a Russian cockpit during a flight
-
-    * Number of features: 17
-
-    * List:
-
-        * Average Temperature >> CLI option:: -o avgTemp
-
-        * Min Temperature >> CLI option:: -o minTemp
-
-        * Max Temperature >> CLI option:: -o maxTemp
-
-        * Average Pressure >> CLI option:: -o avgPressure
-
-        * Max Pressure >> CLI option:: -o maxPressure
-
-        * Minimum Pressure >> CLI option:: -o minPressure
-
-        * Average Relative Humidity >> CLI option:: -o avgHumidity
-
-        * Max Relative Humidity >> CLI option:: -o maxHumidity
-
-        * Min Relative Humidity >> CLI option:: -o minHumidity
-
-        * Average Heart Rate >> CLI option:: -o avgHeartRate
-
-        * Max Heart Rate >> CLI option:: -o maxHeartRate
-
-        * Min Heart Rate >> CLI option:: -o minHeartRate
-
-        * Average Oxygen Concentration >> CLI option:: -o avgOxygen
-
-        * Min Oxygen Concentration >> CLI option:: -o minOxygen
-
-        * Max Oxygen Concentration >> CLI option:: -o maxOxygen
-
-        * Milestone 1 Full Report >> CLI option:  
-
-        * Milestone 9 Full Report >> CLI option:  
-
-* **Milestone 3: Mono RU Flight Computation**
-
-    * Description: Provide simple computed data about a Russian jet flight
-
-    * Number of features: 9
-
-    * List:
-
-        * Flight Duration >> CLI option:: -o flightDuration
-
-        * Flight Distance >> CLI option:: -o flightDistance
-
-        * Average Acceleration >> CLI option:: -o avgAcceleration
-
-        * Max Acceleration >> CLI option:: -o maxAcceleration
-
-        * Wind Speed >> CLI option:: -o windSpeed
-
-        * Average Mach Speed >> CLI option:: -o avgMachSpeed
-
-        * Max Mach Speed >> CLI option:: -o maxMachSpeed
-
-        * Max Acceleration in G >> CLI option:: -o maxAccelG
-
-        * Milestone 2 Full Report >> CLI option:  
-
-* **Milestone 4: Mono RU Flight Analysis**
-
-    * Description: Extract high-level information from data
-
-    * Number of features: 7
-
-    * List:
-
-        * Reaching 80% Max Altitude >> CLI option:: -o reachAlt
-
-        * Reaching 80% Total Distance >> CLI option:: -o reachDist
-
-        * Altitude with Fastest Wind >> CLI option:: -o fastWindAlt
-
-        * Altitude with Highest Aircraft Speed >> CLI option:: -o fastJetAlt
-
-        * Noise of Temperature Sensors >> CLI option:: -o noiseTemp
-
-        * Stressed Pilot >> CLI option:: -o stressedPilot We consider a stress pilot if her/his heart rate jumps more than ±10 bpm.
-
-        * Milestone 3 Full Report >> CLI option:  
-
-* **Milestone 5: File Handling**
-
-    * Description: Handle batch option and US fighter jet files
-
-    * Number of features: 6
-
-    * List:
-
-        * US files Parser >> CLI option:  
-
-        * Mono US Flight Description >> CLI option:  
-
-        * Mono US Cockpit Description >> CLI option:  
-
-        * Mono US Flight Computation >> CLI option:  
-
-        * Mono US Flight Analysis >> CLI option:  
-
-        * Batch Option >> CLI option:  
-
-* **Milestone 6: Error Management**
-
-    * Description: Handle Errors
-
-    * Number of features: 13
-
-    * List:
-
-        * Invalid Command Line Options >> CLI option:  
-
-        * Missing Command Line Parameters >> CLI option:  
-
-        * Not Implemented Handling >> CLI option:  
-
-        * Missing Files >> CLI option:  
-
-        * Encoding Problems >> CLI option:  
-
-        * Corrupted Files >> CLI option:  
-
-        * Missing Header >> CLI option:  
-
-        * Incomplete Header >> CLI option:  
-
-        * Missing Columns >> CLI option:  
-
-        * Missing Column Names >> CLI option:  
-
-        * Incorrect Timestamp Ordering >> CLI option:  
-
-        * Incorrect Input >> CLI option:  
-
-        * Milestone 5 Full Report >> CLI option:  
-
-* **Milestone 7: Multiple Flights Computations**
-
-    * Description: Perform computations using multiple flights data
-
-    * Number of features: 19
-
-    * List:
-
-        * Total Cumulative Flight Duration >> CLI option:: -o cumulDuration
-
-        * Total Cumulative Flight Distance >> CLI option:: -o cumulDistance
-
-        * Most Used Airport (Take Off) >> CLI option:: -o airportTakeOff
-
-        * Most Used Airport (Landing) >> CLI option:: -o airportLanding
-
-        * Highest Drag Coef >> CLI option:: -o highestDrag
-
-        * Smallest Drag Coef >> CLI option:: -o smallestDrag
-
-        * Highest Lift Coef >> CLI option:: -o highestLift
-
-        * Smallest Lift Coef >> CLI option:: -o smallestLift
-
-        * Highest Average Speed >> CLI option:: -o highestSpeed
-
-        * Slowest Average Speed >> CLI option:: -o slowestSpeed
-
-        * Highest Altitude >> CLI option:: -o highestAltitude
-
-        * Longest Flight Duration >> CLI option:: -o longestDuration
-
-        * First Landing >> CLI option:: -o firstLanding
-
-        * Last Landing >> CLI option:: -o lastLanding
-
-        * Highest Average Engine Power >> CLI option:: -o highestPower
-
-        * Highest Average Oxygen >> CLI option:: -o highestOxygen
-
-        * Highest Average Heart Beat >> CLI option:: -o highestHeartBeat
-
-        * Lowest Average Heart Beat >> CLI option:: -o lowestHeartBeat
-
-        * Milestone 6 Full Report >> CLI option:  
-
-* **Milestone 8: Multiple Flights Analysis**
-
-    * Description: Extract high-level information about multiple flights
-
-    * Number of features: 4
-
-    * List:
-
-        * Flight Closeness >> CLI option:: -o closeFlight
-
-        * Flight Closeness (Same origin) >> CLI option:: -o closeFlightSameOri
-
-        * Flight Closeness (Different origin) >> CLI option:: -o closeFlightDiffOri
-
-        * Milestone 7 Full Report >> CLI option:  
-
-* **Milestone 9: Mono RU Flight Phases**
-
-    * Description: Extrapolate flight phases from data
-
-    * Number of features: 32
-
-    * List:
-
-        * Take Off Phase Detection >> CLI option:: -o takeOff
-
-        * Cruise Phase Detection >> CLI option:: -o cruise
-
-        * Landing Phase Detection >> CLI option:: -o landing
-
-        * Ratio Distance >> CLI option:: -o ratioDistance
-
-        * Average Air Speed (Take Off) >> CLI option:: -o avgAirSpeedTakeOff
-
-        * Max Air Speed (Take Off) >> CLI option:: -o maxAirSpeedTakeOff
-
-        * Average Engine Power (Take Off) >> CLI option:: -o avgEnginePowerTakeOff
-
-        * Max Engine Power (Take Off) >> CLI option:: -o maxEnginePowerTakeOff
-
-        * Average Air Speed (Cruise) >> CLI option:: -o avgAirSpeedCruise
-
-        * Max Air Speed (Cruise) >> CLI option:: -o maxAirSpeedCruise
-
-        * Average Engine Power (Cruise) >> CLI option:: -o avgEnginePowerCruise
-
-        * Max Engine Power (Cruise) >> CLI option:: -o maxEnginePowerCruise
-
-        * Average Air Speed (Landing) >> CLI option:: -o avgAirSpeedLanding
-
-        * Max Air Speed (Landing) >> CLI option:: -o maxAirSpeedLanding
-
-        * Average Engine Power (Landing) >> CLI option:: -o avgEnginePowerLanding
-
-        * Max Engine Power (Landing) >> CLI option:: -o maxEnginePowerLanding
-
-        * Flight Distance (Take Off) >> CLI option:: -o flightDistanceTakeOff
-
-        * Average Acceleration (Take Off) >> CLI option:: -o avgAccelerationTakeOff
-
-        * Max Acceleration (Take Off) >> CLI option:: -o maxAccelerationTakeOff
-
-        * Wind Speed (Take Off) >> CLI option:: -o windSpeedTakeOff
-
-        * Flight Distance (Cruise) >> CLI option:: -o flightDistanceCruise
-
-        * Average Acceleration (Cruise) >> CLI option:: -o avgAccelerationCruise
-
-        * Max Acceleration (Cruise) >> CLI option:: -o maxAccelerationCruise
-
-        * Wind Speed (Cruise) >> CLI option:: -o windSpeedCruise
-
-        * Flight Distance (Landing) >> CLI option:: -o flightDistanceLanding
-
-        * Average Acceleration (Landing) >> CLI option:: -o avgAccelerationLanding
-
-        * Max Acceleration (Landing) >> CLI option:: -o maxAccelerationLanding
-
-        * Wind Speed (Landing) >> CLI option:: -o windSpeedLanding
-
-        * Most Demanding Phase - Engine Power >> CLI option:: -o mostPowerPhase
-
-        * Most Demanding Phase - Stress >> CLI option:: -o mostStressPhase
-
-        * Most Demanding Phase - Horizontal Acceleration >> CLI option:: -o mostAccelPhase
-
-        * 50% Oxygen Phase >> CLI option:: -o oxygenPhase
+| Option | CLI Option | Description |
+|---|---|---|
+| **CLI Options** | | 
+| Version | `--version` / `-v` | Pandora version |
+| Help | `--help` / `-h` | Pandora help message |
+| Metadata | `-m metadata_name` | Print the value of a metadata field (e.g., `-m jet_id`) |
+| Parameters | `--parameters` / `-p` | Print the parameters presented in the flight record file(s) |
+| Number of records | `--number` / `-n` | Print the number of records in the flight record file(s) |
+| unit | `--unit metric\|imperial` / `-u metric\|imperial` | Choose the output unit system (metric or imperial) |
+| metric | `--metric` / `-M` | Similar to `--unit metric` |
+| imperial | `--imperial` / `-I` | Similar to `--unit imperial` |
+| batch mode | `--batch` / `-b` | Process all flight record files in a folder and print the results in a single output file |
+| Debug mode | `--debug` / `-d` | Use to print debug information during the execution of the program |
+
+| Feature | CLI option | Input | Description | Output | Unit | Version |
+|---|---|---|---|---|---|---|
+| **Single Flight Computations** | | | | | | |
+| Starting time | `-o start_time` | | | | | |
+| Filenames | `-o filenames` | | | | | |
+| Average Altitude | `-o avgAlt` | a flight record file | the average altitude during the flight | altitude | m | |
+| Max Altitude | `-o maxAlt` | a flight record file | the maximum altitude during the flight | altitude | m | |
+| Average Air Speed | `-o avgAirSpeed` | a flight record file | the average air speed during the flight | speed | m/s | |
+| Max Air Speed | `-o maxAirSpeed` | a flight record file | the maximum air speed during the flight | speed | m/s | |
+| Average Engine Power | `-o avgEnginePower` | a flight record file | the average total engine power during the flight | power | W | |
+| Max Engine Power | `-o maxEnginePower` | a flight record file | the maximum total engine power during the flight | power | W | |
+| Average Temperature | `-o avgTemp` | a flight record file | the average temperature in the cockpit during the flight | temperature | ℃ | |
+| Min Temperature | `-o minTemp` | a flight record file | the minimum temperature in the cockpit during the flight | temperature | ℃ | |
+| Max Temperature | `-o maxTemp` | a flight record file | the maximum temperature in the cockpit during the flight | temperature | ℃ | |
+| Average Pressure | `-o avgPressure` | a flight record file | the average pressure in the cockpit during the flight | pressure | Pa | |
+| Max Pressure | `-o maxPressure` | a flight record file | the maximum pressure in the cockpit during the flight | pressure | Pa | |
+| Minimum Pressure | `-o minPressure` | a flight record file | the minimum pressure in the cockpit during the flight | pressure | Pa | |
+| Average Relative Humidity | `-o avgHumidity` | a flight record file | the average relative humidity in the cockpit during the flight | humidity | % | |
+| Max Relative Humidity | `-o maxHumidity` | a flight record file | the maximum relative humidity in the cockpit during the flight | humidity | % | |
+| Min Relative Humidity | `-o minHumidity` | a flight record file | the minimum relative humidity in the cockpit during the flight | humidity | % | |
+| Average Heart Rate | `-o avgHeartRate` | a flight record file | the average pilot's heart rate during the flight | heart rate | bpm | |
+| Max Heart Rate | `-o maxHeartRate` | a flight record file | the maximum pilot's heart rate during the flight | heart rate | bpm | |
+| Min Heart Rate | `-o minHeartRate` | a flight record file | the minimum pilot's heart rate during the flight | heart rate | bpm | |
+| Average Oxygen Concentration | `-o avgOxygen` | a flight record file | the average oxygen concentration delivered by the pilot's mask during the flight | concentration | % | |
+| Min Oxygen Concentration | `-o minOxygen` | a flight record file | the minimum oxygen concentration delivered by the pilot's mask during the flight | concentration | % | |
+| Max Oxygen Concentration | `-o maxOxygen` | a flight record file | the maximum oxygen concentration delivered by the pilot's mask during the flight | concentration | % | |
+| Flight Duration | `-o flightDuration` | a flight record file | the total flight duration | HH:mm:ss | | |
+| Flight Distance | `-o flightDistance` | a flight record file | the total flight distance | distance | m | |
+| Average Acceleration | `-o avgAcceleration` | a flight record file | the average acceleration during the flight | acceleration | m/s² | |
+| Max Acceleration | `-o maxAcceleration` | a flight record file | the maximum acceleration during the flight | acceleration | m/s² | |
+| Wind Speed | `-o windSpeed` | a flight record file | the average wind speed during the flight | speed | m/s | |
+| Average Mach Speed | `-o avgMachSpeed` | a flight record file | the average speed in Mach during the flight | Mach | | |
+| Max Mach Speed | `-o maxMachSpeed` | a flight record file | the maximum speed in Mach during the flight | Mach | | |
+| Max Acceleration in G | `-o maxAccelG` | a flight record file | the maximum acceleration during the flight | acceleration | G | |
+| Reaching 80% Max Altitude | `-o reachAlt` | a flight record file | the time to reach 80% of maximum altitude during the flight | time / max_altitude | min / m | |
+| Reaching 80% Total Distance | `-o reachDist` | a flight record file | the time to arrive at 80% of total flight distance | time / total_distance | min / km | |
+| Altitude with Fastest Wind | `-o fastWindAlt` | a flight record file | the altitude with the fastest wind outside the aircraft over a 5 min window | altitude: avg_5min_wind_speed | m: m/s | |
+| Altitude with Highest Aircraft Speed | `-o fastJetAlt` | a flight record file | the altitude at which the jet had its fastest speed over a 5 min window | altitude: avg_5min_jet_speed | m: m/s | |
+| Noise of Temperature Sensors | `-o noiseTemp` | a flight record file | the average noise in the temperature data assuming a reference temperature of 25℃ | noise_value | ℃ | |
+| Stressed Pilot | `-o stressedPilot` | a flight record file | whether the pilot had a stress attack | y/n | | |
+| 50% Oxygen Phase | `-o oxygenPhase` | a flight record file | which phase required more than 50% oxygen concentration in the mask | phase_name | | |
+| **Flight Phases** | | | | | | |
+| Take Off Phase Detection | `-o takeOff` | a flight record file | the start and end time of the take off phase | start=HH:mm:ss / end=HH:mm:ss | | |
+| Cruise Phase Detection | `-o cruise` | a flight record file | the start and end time of the cruise phase | start=HH:mm:ss / end=HH:mm:ss | | |
+| Landing Phase Detection | `-o landing` | a flight record file | the start and end time of the landing phase | start=HH:mm:ss / end=HH:mm:ss | | |
+| Ratio Distance | `-o ratioDistance` | a flight record file | the ratio between the distance actually flown and the point-to-point distance between take off and landing | ratio | | |
+| Average Air Speed (Take Off) | `-o avgAirSpeedTakeOff` | a flight record file | the average air speed during the take off phase | speed | m/s | Deprecated in v2 — use `--phase takeOff` with `-o avgAirSpeed` |
+| Max Air Speed (Take Off) | `-o maxAirSpeedTakeOff` | a flight record file | the maximum air speed during the take off phase | speed | m/s | Deprecated in v2 — use `--phase takeOff` with `-o maxAirSpeed` |
+| Average Engine Power (Take Off) | `-o avgEnginePowerTakeOff` | a flight record file | the average total engine power during the take off phase | power | W | Deprecated in v2 — use `--phase takeOff` with `-o avgEnginePower` |
+| Max Engine Power (Take Off) | `-o maxEnginePowerTakeOff` | a flight record file | the maximum total engine power during the take off phase | power | W | Deprecated in v2 — use `--phase takeOff` with `-o maxEnginePower` |
+| Average Air Speed (Cruise) | `-o avgAirSpeedCruise` | a flight record file | the average air speed during the cruise phase | speed | m/s | Deprecated in v2 — use `--phase Cruise` with `-o avgAirSpeed` |
+| Max Air Speed (Cruise) | `-o maxAirSpeedCruise` | a flight record file | the maximum air speed during the cruise phase | speed | m/s | Deprecated in v2 — use `--phase Cruise` with `-o maxAirSpeed` |
+| Average Engine Power (Cruise) | `-o avgEnginePowerCruise` | a flight record file | the average total engine power during the cruise phase | power | W | Deprecated in v2 — use `--phase Cruise` with `-o avgEnginePower` |
+| Max Engine Power (Cruise) | `-o maxEnginePowerCruise` | a flight record file | the maximum total engine power during the cruise phase | power | W | Deprecated in v2 — use `--phase Cruise` with `-o maxEnginePower` |
+| Average Air Speed (Landing) | `-o avgAirSpeedLanding` | a flight record file | the average air speed during the landing phase | speed | m/s | Deprecated in v2 — use `--phase Landing` with `-o avgAirSpeed` |
+| Max Air Speed (Landing) | `-o maxAirSpeedLanding` | a flight record file | the maximum air speed during the landing phase | speed | m/s | Deprecated in v2 — use `--phase Landing` with `-o maxAirSpeed` |
+| Average Engine Power (Landing) | `-o avgEnginePowerLanding` | a flight record file | the average total engine power during the landing phase | power | W | Deprecated in v2 — use `--phase Landing` with `-o avgEnginePower` |
+| Max Engine Power (Landing) | `-o maxEnginePowerLanding` | a flight record file | the maximum total engine power during the landing phase | power | W | Deprecated in v2 — use `--phase Landing` with `-o maxEnginePower` |
+| Flight Distance (Take Off) | `-o flightDistanceTakeOff` | a flight record file | the total flight distance during the take off phase | distance | km | Deprecated in v2 — use `--phase takeOff` with `-o flightDistance` |
+| Average Acceleration (Take Off) | `-o avgAccelerationTakeOff` | a flight record file | the average acceleration during the take off phase | acceleration | m/s² | Deprecated in v2 — use `--phase takeOff` with `-o avgAcceleration` |
+| Max Acceleration (Take Off) | `-o maxAccelerationTakeOff` | a flight record file | the maximum acceleration during the take off phase | acceleration | m/s² | Deprecated in v2 — use `--phase takeOff` with `-o maxAcceleration` |
+| Wind Speed (Take Off) | `-o windSpeedTakeOff` | a flight record file | the average wind speed during the take off phase | speed | m/s | Deprecated in v2 — use `--phase takeOff` with `-o windSpeed` |
+| Flight Distance (Cruise) | `-o flightDistanceCruise` | a flight record file | the total flight distance during the cruise phase | distance | km | |
+| Average Acceleration (Cruise) | `-o avgAccelerationCruise` | a flight record file | the average acceleration during the cruise phase | acceleration | m/s² | Deprecated in v2 — use `--phase Cruise` with `-o avgAcceleration` |
+| Max Acceleration (Cruise) | `-o maxAccelerationCruise` | a flight record file | the maximum acceleration during the cruise phase | acceleration | m/s² | Deprecated in v2 — use `--phase Cruise` with `-o maxAcceleration` |
+| Wind Speed (Cruise) | `-o windSpeedCruise` | a flight record file | the average wind speed during the cruise phase | speed | m/s | Deprecated in v2 — use `--phase Cruise` with `-o windSpeed` |
+| Flight Distance (Landing) | `-o flightDistanceLanding` | a flight record file | the total flight distance during the landing phase | distance | km | Deprecated in v2 — use `--phase Landing` with `-o flightDistance` |
+| Average Acceleration (Landing) | `-o avgAccelerationLanding` | a flight record file | the average acceleration during the landing phase | acceleration | m/s² | Deprecated in v2 — use `--phase Landing` with `-o avgAcceleration` |
+| Max Acceleration (Landing) | `-o maxAccelerationLanding` | a flight record file | the maximum acceleration during the landing phase | acceleration | m/s² | Deprecated in v2 — use `--phase Landing` with `-o maxAcceleration` |
+| Wind Speed (Landing) | `-o windSpeedLanding` | a flight record file | the average wind speed during the landing phase | speed | m/s | Deprecated in v2 — use `--phase Landing` with `-o windSpeed` |
+| Most Demanding Phase — Engine Power | `-o mostPowerPhase` | a flight record file | the phase which required the most average engine power | phase_name:power | W | |
+| Most Demanding Phase — Stress | `-o mostStressPhase` | a flight record file | the phase which provoked the highest average heart rate | phase_name:heart_beat | bpm | |
+| Most Demanding Phase — Horizontal Acceleration | `-o mostAccelPhase` | a flight record file | the phase with the highest average horizontal acceleration | phase_name:acceleration | m/s² | |
+| **Cross Flights Computations** | | | | | | |
+| Total Cumulative Flight Duration | `-o cumulDuration` | a folder containing flight record file(s) | the cumulative flight duration across all files | HH:mm:ss | | |
+| Total Cumulative Flight Distance | `-o cumulDistance` | a folder containing flight record file(s) | the cumulative flight distance across all files | distance | km | |
+| Most Used Airport (Take Off) | `-o airportTakeOff` | a folder containing flight record file(s) | the airport most often used for take off | airport_name | | |
+| Most Used Airport (Landing) | `-o airportLanding` | a folder containing flight record file(s) | the airport most often used for landing | airport_name | | |
+| Highest Drag Coef | `-o highestDrag` | a folder containing flight record file(s) | the fighter jet with the highest drag coefficient | jet_id:drag_coef | | |
+| Smallest Drag Coef | `-o smallestDrag` | a folder containing flight record file(s) | the fighter jet with the smallest drag coefficient | jet_id:drag_coef | | |
+| Highest Lift Coef | `-o highestLift` | a folder containing flight record file(s) | the fighter jet with the highest lift coefficient | jet_id:lift_coef | | |
+| Smallest Lift Coef | `-o smallestLift` | a folder containing flight record file(s) | the fighter jet with the smallest lift coefficient | jet_id:lift_coef | | |
+| Highest Average Speed | `-o highestSpeed` | a folder containing flight record file(s) | the fighter jet with the fastest average speed during its flight | jet_id:speed | km/h | |
+| Slowest Average Speed | `-o slowestSpeed` | a folder containing flight record file(s) | the fighter jet with the slowest average speed during its flight | jet_id:speed | km/h | |
+| Highest Altitude | `-o highestAltitude` | a folder containing flight record file(s) | the fighter jet which flew the highest | jet_id:max_altitude | m | |
+| Longest Flight Duration | `-o longestDuration` | a folder containing flight record file(s) | the fighter jet which flew the longest | jet_id:duration | HH:mm:ss | |
+| First Landing | `-o firstLanding` | a folder containing flight record file(s) | the fighter jet which landed first | jet_id:airport_name:landing_time | HH:mm:ss | |
+| Last Landing | `-o lastLanding` | a folder containing flight record file(s) | the fighter jet which landed last | jet_id:airport_name:landing_time | HH:mm:ss | |
+| Highest Average Engine Power | `-o highestPower` | a folder containing flight record file(s) | the fighter jet which used the highest average engine power | jet_id:power | W | |
+| Highest Average Oxygen | `-o highestOxygen` | a folder containing flight record file(s) | the fighter jet which used the highest average oxygen concentration | jet_id:oxygen | % | |
+| Highest Average Heart Beat | `-o highestHeartBeat` | a folder containing flight record file(s) | the fighter jet whose pilot had the highest average heart beat | jet_id:beat | bpm | |
+| Lowest Average Heart Beat | `-o lowestHeartBeat` | a folder containing flight record file(s) | the fighter jet whose pilot had the lowest average heart beat | jet_id:beat | bpm | |
+| Flight Closeness | `-o closeFlight` | a folder containing flight record file(s) | jets that flew less than 50 km from each other | [jet_id1, jet_id2]:min_distance (alphabetical order) | km | |
+| Flight Closeness (Same origin) | `-o closeFlightSameOri` | a folder containing flight record file(s) | jets that flew less than 50 km from each other and share the same origin (US/RU) | [jet_id1, jet_id2]:min_distance (alphabetical order) | km | |
+| Flight Closeness (Different origin) | `-o closeFlightDiffOri` | a folder containing flight record file(s) | jets that flew less than 50 km from each other and are from different origins (US/RU) | [jet_id1, jet_id2]:min_distance (alphabetical order) | km | |
