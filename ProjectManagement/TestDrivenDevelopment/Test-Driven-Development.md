@@ -4,7 +4,7 @@ Test-Driven Development (TDD) is a software development approach in which tests 
 
 1. **Red: Write a Failing Test**
     - Before writing any code, you write a test that should validate a new feature. In the Pandora project that would be one of the features described in the issues. This initial test should fail (Most test suites output the failing test in red, hence Red) since the corresponding code hasn't been implemented yet.
-    - [Commit](../Versioning/Conventional%20Commits.md) that test (test: add a test for feature X)
+    - [Commit](../Versioning/Conventional-Commits.md) that test (test: add a test for feature X)
 2. **Green: Write the Minimum Code to Pass the Test**
     - You then write the minimum amount of code necessary to make the test pass. The focus is on making the test successful.
     - commit your code (```feat: implement feature X```)

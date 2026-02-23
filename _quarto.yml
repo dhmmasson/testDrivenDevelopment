@@ -52,6 +52,8 @@ website:
             text: "Release"
           - href: ProjectManagement/Versioning/Keep-A-Changelog.md
             text: "Keep a Changelog" 
+          - href: ProjectManagement/Versioning/Configuration-git.md
+            text: "Git User Configuration"
         - href: ProjectManagement/manifest.json.md
           text: "manifest.json"
         - href: ProjectManagement/Javadoc.md
@@ -62,7 +64,6 @@ website:
           text: "Issues"
         - href: ProjectManagement/Debug.md
           text: "Debug"
-
         - href: ProjectManagement/Synchronize-Update-From-The-Starterpack.md
           text: "❗ Sync from Starterpack"
         - href: ProjectManagement/Plagiat.md

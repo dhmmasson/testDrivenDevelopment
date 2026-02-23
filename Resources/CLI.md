@@ -111,7 +111,7 @@ $ cp file1.txt directory/
 
 In this example, `file1.txt` and `directory/` are arguments for the `cp` (copy) command. The command copies `file1.txt` to the specified directory.
 
-for pandora the arguments are either the [Flight-Records](../Pandora/Flight-Records) to parse or one folder that contain the [Flight-Records](../Pandora/Flight-Records)
+for pandora the arguments are either the [Flight-Records](../Pandora/Flight-Records.md) to parse or one folder that contain the [Flight-Records](../Pandora/Flight-Records.md)
 
 ```bash
 $ pandora test/resources/0_201_MiG-23MLD.frd

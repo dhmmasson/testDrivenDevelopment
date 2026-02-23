@@ -1,6 +1,6 @@
 # Release
 
-Releasing is the _act_ of publishing a new [version](Semantic-Versioning) (major, minor, patch) publicly. In the context of the project, releasing a new version allows you to be graded by the automatic grade evaluation. While you could release each new feature as a minor and each bug fix as a patch, aim for quality rather than quantity. For example:
+Releasing is the _act_ of publishing a new [version](Semantic-Versioning.md) (major, minor, patch) publicly. In the context of the project, releasing a new version allows you to be graded by the automatic grade evaluation. While you could release each new feature as a minor and each bug fix as a patch, aim for quality rather than quantity. For example:
 
 - release 1.7.0 could be the altitude release (feature maxAlt and avgAlt)
 - release 1.12.0 the outside conditions (all the temperature, pressure and humidity functions)
@@ -22,7 +22,7 @@ Each release you publish on github will be evaluated by the teacher testSuite. E
 
 - Update in your code the version number so that ```java -jar pandora.jar --version``` outputs the correct version
 - **Update the [manifest.json](../manifest.json) with the new version number and the implemented features**
-- Update the [Keep-A-Changelog](Keep-A-Changelog) file explaining what change you have introduced since the last version.
+- Update the [Keep-A-Changelog](Keep-A-Changelog.md) file explaining what change you have introduced since the last version.
 	- The features you have implemented
 	- The bugs you have fixed  
 - Commits the updated source code, manifest.json and Changelog under ```chore(release): release vX.Y.Z```

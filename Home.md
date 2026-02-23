@@ -38,7 +38,7 @@ Your program will be run against the teacher's test suite. Grading is based on:
 
 You are graded on the quality of your development workflow:
 
-- Use of [Conventional Commits](ProjectManagement/Versioning/Conventional%20Commits.md) for all commits
+- Use of [Conventional Commits](ProjectManagement/Versioning/Conventional-Commits.md) for all commits
 - Proper [Semantic Versioning](ProjectManagement/Versioning/Semantic-Versioning.md) for each release tag
 - A maintained [CHANGELOG](ProjectManagement/Versioning/Keep-A-Changelog.md) following the Keep a Changelog format
 
@@ -53,7 +53,7 @@ You must produce a test suite (`test/testSuite.json`) that:
 ## Individual Grade
 
 - Contribute at least **30% of the group's commits**
-- At least **50% of your commits** (excluding merge commits) follow [Conventional Commits](ProjectManagement/Versioning/Conventional%20Commits.md)
+- At least **50% of your commits** (excluding merge commits) follow [Conventional Commits](ProjectManagement/Versioning/Conventional-Commits.md)
 - **QCM during the last session** — individual written assessment on the course content
 
 # Pandora - a Flight Data Recorder Analyzer

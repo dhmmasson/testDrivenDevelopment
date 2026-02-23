@@ -1,6 +1,6 @@
 # Name
 
-pandora - a [CLI](../Resources/CLI) tool to analyze [Flight-records](Flight-Records) data to provide summary and high-level information based on low-level sensor data (e.g., fighter jet position).
+pandora - a [CLI](../Resources/CLI.md) tool to analyze [Flight-records](Flight-Records.md) data to provide summary and high-level information based on low-level sensor data (e.g., fighter jet position).
 
 # Synopsis
 
@@ -34,7 +34,7 @@ the main usage of pandora is to parse one or several flight records and to outpu
 
 # EXAMPLES
 
-Print the [Semantic-Versioning](../ProjectManagement/Versioning/Semantic-Versioning) of the pandora project:
+Print the [Semantic-Versioning](../ProjectManagement/Versioning/Semantic-Versioning.md) of the pandora project:
 
 ```bash
 $ java -jar pandora.jar --version 
@@ -135,7 +135,7 @@ windSpeedTakeOff : 3.44
 ```
 
 ## Version
-Print the [Semantic-Versioning](../ProjectManagement/Versioning/Semantic-Versioning) of the pandora project:
+Print the [Semantic-Versioning](../ProjectManagement/Versioning/Semantic-Versioning.md) of the pandora project:
 
 ```bash
 $ java -jar pandora.jar --version 
@@ -179,7 +179,7 @@ $ java -jar pandora.jar -m flight_id test/resources/0_201_MiG-23MLD.frd
 - -m arg, --metadata arg  
   **Metadata** - Print the value of the specified metadata
 - -o \<feature\>, --output \<feature\>  
-  **Output** - Print only the result of the specified [Feature](Features) on the command line
+  **Output** - Print only the result of the specified [Feature](Features.md) on the command line
 - -p, --parameters  
   **Parameters** - List in alphabetical order the parameters presents in the source
 - -v, --version,  
@@ -196,4 +196,4 @@ $ java -jar pandora.jar -m flight_id test/resources/0_201_MiG-23MLD.frd
 
 ## Features
  
-See [Features](Features) for the list of implemented features and their corresponding CLI options.
+See [Features](Features.md) for the list of implemented features and their corresponding CLI options.

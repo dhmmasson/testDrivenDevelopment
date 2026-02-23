@@ -8,7 +8,7 @@ For those interested, you can read research paper [1] or thesis [2] for free.
 
 In this project, we will implement a very simplistic heuristic: we will simply look at the `yaw` value. If it is relatively constant, it is a **cruise** phase. Whatever happens before the first cruise phase is the **take off** phase, whatever remains after the last cruise phase is the **landing** phase.
 
-![alt text](phases.png "Phases illustration")
+![alt text](../images/phases.png)
 
 > _Fig. 1 Illustration of flight phases simple heuristic in our project.  
  Top: Flight path.  

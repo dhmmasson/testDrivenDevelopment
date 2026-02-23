@@ -71,6 +71,6 @@ Coverage is a **lower bound on test quality**, not an upper bound. Use it to fin
 
 ## See Also
 
-- [Unit-Test](Unit-Test) — where to write your unit tests
-- [Integration-Test](Integration-Test) — black-box tests that also contribute to coverage
-- [Test-Driven-Development](../Test-Driven-Development) — the overall TDD workflow
+- [Unit-Test](Unit-Test.md) — where to write your unit tests
+- [Integration-Test](Integration-Test.md) — black-box tests that also contribute to coverage
+- [Test-Driven-Development](../Test-Driven-Development.md) — the overall TDD workflow

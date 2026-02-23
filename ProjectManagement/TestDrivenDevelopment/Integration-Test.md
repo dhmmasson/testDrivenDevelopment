@@ -64,11 +64,11 @@ All integration tests must be described in `test/testSuite.json`. The file is a 
 | `file` | string | Path to the flight record, relative to the project root |
 | `result` | string \| number | Expected output, must match exactly |
 
-> The autograder does a **strict string comparison** between the program output and `result`. Follow the [output format](../../Pandora/Constants) precisely (decimal separator, number of digits, units).
+> The autograder does a **strict string comparison** between the program output and `result`. Follow the [output format](../../Pandora/Constants.md) precisely (decimal separator, number of digits, units).
 
 ### One Test Per Feature Minimum
 
-You must have at least one test for **every feature and CLI option** you claim to have implemented. The feature name in `testSuite.json` must match the `-o` option name from the [Features](../../Pandora/Features) table exactly.
+You must have at least one test for **every feature and CLI option** you claim to have implemented. The feature name in `testSuite.json` must match the `-o` option name from the [Features](../../Pandora/Features.md) table exactly.
 
 ## Running Your Test Suite
 
@@ -111,8 +111,8 @@ Integration tests slot into the Red–Green–Refactor cycle at the **Red** step
 
 ## See Also
 
-- [Unit-Test](Unit-Test) — for testing individual methods in isolation
-- [Code-Coverage](Code-Coverage) — measuring how much of your code is exercised
-- [Test-Driven-Development](../Test-Driven-Development) — the overall TDD workflow
+- [Unit-Test](Unit-Test.md) — for testing individual methods in isolation
+- [Code-Coverage](Code-Coverage.md) — measuring how much of your code is exercised
+- [Test-Driven-Development](../Test-Driven-Development.md) — the overall TDD workflow
 - [manifest.json](../manifest.json) — declares which features are implemented
-- [Constants](../../Pandora/Constants) — output format rules the autograder enforces
+- [Constants](../../Pandora/Constants.md) — output format rules the autograder enforces
