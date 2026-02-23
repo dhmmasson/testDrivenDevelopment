@@ -1,6 +1,6 @@
 # Name
 
-pandora - a [CLI](CLI) tool to analyze [Flight-records](Flight-Records) data to provide summary and high-level information based on low-level sensor data (e.g., fighter jet position).
+pandora - a [CLI](../Resources/CLI) tool to analyze [Flight-records](Flight-Records) data to provide summary and high-level information based on low-level sensor data (e.g., fighter jet position).
 
 # Synopsis
 
@@ -34,7 +34,7 @@ the main usage of pandora is to parse one or several flight records and to outpu
 
 # EXAMPLES
 
-Print the [Semantic-Versioning](Semantic-Versioning) of the pandora project:
+Print the [Semantic-Versioning](../ProjectManagement/Versioning/Semantic-Versioning) of the pandora project:
 
 ```bash
 $ java -jar pandora.jar --version 
@@ -135,7 +135,7 @@ windSpeedTakeOff : 3.44
 ```
 
 ## Version
-Print the [Semantic-Versioning](Semantic-Versioning) of the pandora project:
+Print the [Semantic-Versioning](../ProjectManagement/Versioning/Semantic-Versioning) of the pandora project:
 
 ```bash
 $ java -jar pandora.jar --version 
@@ -196,4 +196,4 @@ $ java -jar pandora.jar -m flight_id test/resources/0_201_MiG-23MLD.frd
 
 ## Features
  
-See [Features](Features.md) for the list of implemented features and their corresponding CLI options.
+See [Features](Features) for the list of implemented features and their corresponding CLI options.

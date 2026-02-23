@@ -1,14 +1,5 @@
 # Flight Records V1.1.0
 
-> **Outline**
->
-> - [Test files](#test-files)
-> - [File Structure](#file-structure)
-> - [Metadata Section](#list-of-metadata-fields)
-> - [Data Section](#data-section)  
->       - [RU](#russian-fighter-jets-ru)  
->       - [US](#american-fighter-jets-us)
-
 A flight records is a text file describing a flight. It contains global information about the flight (flight id, origin,... [complete list](#metadata-section)), as well as parameters values recorded during the flight (GPS coordinates, air speed,... [complete list](#parameters-list))
 
 # Test Files

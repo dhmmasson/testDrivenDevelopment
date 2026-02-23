@@ -12,7 +12,7 @@ Prompt Command Parameters1 ... ParametersN
 
 - The prompt is given by the shell or terminal you are using, for example in the terminal in vscode it is something like this:
 
-	```bash
+```bash
 
 username:path$  
 	```
@@ -111,7 +111,7 @@ $ cp file1.txt directory/
 
 In this example, `file1.txt` and `directory/` are arguments for the `cp` (copy) command. The command copies `file1.txt` to the specified directory.
 
-for pandora the arguments are either the [Flight-Records](Flight-Records) to parse or one folder that contain the [Flight-Records](Flight-Records)
+for pandora the arguments are either the [Flight-Records](../Pandora/Flight-Records) to parse or one folder that contain the [Flight-Records](../Pandora/Flight-Records)
 
 ```bash
 $ pandora test/resources/0_201_MiG-23MLD.frd

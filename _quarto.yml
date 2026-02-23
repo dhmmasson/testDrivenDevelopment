@@ -32,35 +32,40 @@ website:
           text: "CLI Reference"
     - section: "Project Management"
       contents:
-        - href: "ProjectManagement/Test-Driven-Development.md"
-          text: "Test-Driven Development"
-        - section: "TDD Deep Dive"
+        - section: "Test-Driven-Development"
           contents:
-            - href: "ProjectManagement/TestDrivenDevelopment/Unit-Test.md"
+            - href: ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.md
+              text: "What is Test-Driven Development?"
+            - href: ProjectManagement/TestDrivenDevelopment/Unit-Test.md
               text: "Unit Tests"
-            - href: "ProjectManagement/TestDrivenDevelopment/Integration-Test.md"
+            - href: ProjectManagement/TestDrivenDevelopment/Integration-Test.md
               text: "Integration Tests"
-        - href: "ProjectManagement/Conventional Commits.md"
-          text: "Conventional Commits"
-        - href: "ProjectManagement/Semantic-Versioning.md"
-          text: "Semantic Versioning"
-        - href: "ProjectManagement/Release.md"
-          text: "Release"
-        - href: "ProjectManagement/manifest.json.md"
+            - href: ProjectManagement/TestDrivenDevelopment/Code-Coverage.md
+              text: "Code Coverage"
+        - section: "Versioning and Releasing"
+          contents:
+          - href: ProjectManagement/Versioning/Conventional Commits.md
+            text: "Conventional Commits"
+          - href: ProjectManagement/Versioning/Semantic-Versioning.md
+            text: "Semantic Versioning"
+          - href: ProjectManagement/Versioning/Release.md
+            text: "Release"
+          - href: ProjectManagement/Versioning/Keep-A-Changelog.md
+            text: "Keep a Changelog" 
+        - href: ProjectManagement/manifest.json.md
           text: "manifest.json"
-        - href: "ProjectManagement/Javadoc.md"
+        - href: ProjectManagement/Javadoc.md
           text: "Javadoc"
-        - href: "ProjectManagement/File Management.md"
+        - href: ProjectManagement/File Management.md
           text: "File Management"
-        - href: "ProjectManagement/Issues.md"
+        - href: ProjectManagement/Issues.md
           text: "Issues"
-        - href: "ProjectManagement/Debug.md"
+        - href: ProjectManagement/Debug.md
           text: "Debug"
-        - href: "ProjectManagement/Keep-A-Changelog.md"
-          text: "Keep a Changelog"
-        - href: "ProjectManagement/Synchronize-Update-From-The-Starterpack.md"
+
+        - href: ProjectManagement/Synchronize-Update-From-The-Starterpack.md
           text: "❗ Sync from Starterpack"
-        - href: "ProjectManagement/Plagiat.md"
+        - href: ProjectManagement/Plagiat.md
           text: "Plagiat"
     - section: "🎓 Tools"
       contents:
@@ -72,8 +77,6 @@ website:
           text: "Git Clients"
         - href: tools/maven.md
           text: "Maven"
-        - href: git-101/git-101.md
-          text: "🎒 Git Introduction"
 
   
 

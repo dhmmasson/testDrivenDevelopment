@@ -4,15 +4,15 @@ Test-Driven Development (TDD) is a software development approach in which tests 
 
 1. **Red: Write a Failing Test**
     - Before writing any code, you write a test that should validate a new feature. In the Pandora project that would be one of the features described in the issues. This initial test should fail (Most test suites output the failing test in red, hence Red) since the corresponding code hasn't been implemented yet.
-    - [Commit](Conventional%20Commits) that test (test: add a test for feature X)
+    - [Commit](../Versioning/Conventional%20Commits.md) that test (test: add a test for feature X)
 2. **Green: Write the Minimum Code to Pass the Test**
     - You then write the minimum amount of code necessary to make the test pass. The focus is on making the test successful.
     - commit your code (```feat: implement feature X```)
 3. **Refactor: Improve Code Without Changing Functionality**
     - After the test has passed, you should refactor the code to improve its structure, readability, or performance without making the test fail (nor previous tests).
-    - Commit the changes (e.g. ```refactor: improve feature X by skipping empty row``` or ```docs: add [Javadoc](Javadoc) to function Y```)
+    - Commit the changes (e.g. ```refactor: improve feature X by skipping empty row``` or ```docs: add [Javadoc](../Javadoc.md) to function Y```)
 
-Add the meaningful change to your [Keep-A-Changelog](Keep-A-Changelog), if your team feel that it has done enough change create a new [release](Semantic-Versioning#)
+Add the meaningful change to your [Keep-A-Changelog](../Versioning/Keep-A-Changelog.md), if your team feel that it has done enough change create a new [release](../Versioning/Semantic-Versioning.md)
 
 There are several strategies and kind of tests you could develop to test your project:
 
@@ -22,7 +22,7 @@ There are several strategies and kind of tests you could develop to test your pr
 
 In addition to White Box and Black Box Testing, you can also classify tests in two categories Unit Tests and Integration Tests.
 
-**[Unit Test](Unit-Test)s:** Unit Tests target individual units or components of the software often focusing on isolated functions or methods. The objective is to verify that each unit performs as expected in isolation, facilitating early detection of defects and supporting modular development practices. Unit Tests are crucial in TDD, acting as the building blocks for validating the correctness of the smallest units of code. Unit tests need to be integrated in the source code, generally as additional test classes in Java.
+**[Unit Test](Unit-Test.md)s:** Unit Tests target individual units or components of the software often focusing on isolated functions or methods. The objective is to verify that each unit performs as expected in isolation, facilitating early detection of defects and supporting modular development practices. Unit Tests are crucial in TDD, acting as the building blocks for validating the correctness of the smallest units of code. Unit tests need to be integrated in the source code, generally as additional test classes in Java.
 
 **Integration Tests:** Integration Tests assess the collaboration and interaction between different components or modules within a software system. These tests ensure that various units work seamlessly together when integrated, revealing potential issues that may arise during the assembly of different parts. Integration Tests play a pivotal role in validating the overall system architecture and its ability to function cohesively as a unified whole. In our case it means testing the system from an outside perspective once it is compiled, answering the question of does pandora.jar behaves as expected.
 
@@ -32,27 +32,32 @@ Read more about Test-Driven-Development on the[ wikipedia page](https://en.wikip
 
 For the Pandora project you are encouraged to experiment as much as possible with Test-Driven-Development.
 
-- Your final grade is influenced by Black Box Integration Test that are run automatically on the code you push on Github when you do a [Release](Release).
+- Your final grade is influenced by Black Box Integration Tests. When you do a [Release](../Versioning/Release.md), the teacher team will pull your project and run the test suite.
 
 ## Automated Tests
 
-You can run your test manually, for example you could write a test procedure that explain what command to run to validate each milestone, but that would quickly be to slow for any practical use. Instead you should automate your tests. There are two things to know regarding automated tests for Pandora:
+Running tests manually quickly becomes impractical. Instead, you should automate them from the start using the `test/autograder.py` script provided in the starter pack.
 
-- Remote automated tests for the evaluation (github actions). The final evaluation of your project is done through automated tests. These tests **currently** run only for milestones 1,2,3, and 4.
-	- For Milestone 0, there are no automatic test yet.
-	- For Milestone 1,2,3,4 there are automatic tests on release on github, they are the same as for the final evaluation. They are two kinds of runs:
-		- the 1,2,3,4 run on custom-made test files and each test one feature with the ```-o``` feature respectively for milestone 1,2,3,4
-		- the a1, a2, a3, a4 run actual flight-records and collect the values from the full report respectively for milestone 1,2,3 and 4.
-	- The automatic system is subject to evolve to take into account the manifest.json.
-	- The automatic tester use a ```testSuite.json``` to describe its tests. The automatic tester should be able to take your own testSuite and run it against other pandora project (other teams, and previous years)
-- Local Automated tests. In order to test locally your project we provide two scripts to help you automate your test.
-	- Locally for milestone 0 you can use the script ```test/milestone0Tester.ps1```, this is a very basic tester, if you want to extend it, create a new one.
-	- For the other milestones you can use the scripts ```test/autograder.py```. This script requires Python to run. The script is more advance it read a testSuite.json and the manifest.json to run the test on your pandora project.  
-	  usage: ```usage: python autograder.py -t <path_test_suit> -m <path_manifest> <pathToPandora>```
+There are **no automated tests on GitHub** — no CI pipeline, no GitHub Actions. Instead, the teacher team will **regularly pull your repository** and run:
 
-	  ```bash 
-		  python test/autograder.py -t test/testSuite.json -m ./manifest.json target/pandora.jar	
-	  ````
+- the **teacher's own test suite** against your `pandora.jar`
+- **your test suite** against other teams' `pandora.jar`
+
+This means the quality and coverage of `test/testSuite.json` is part of your final evaluation. A test suite that catches real bugs in other teams' projects is rewarded.
+
+### Running Tests Locally
+
+Use `test/autograder.py` for all features. The script requires Python and reads `testSuite.json` and `manifest.json` to run each test against your jar:
+
+```bash
+python test/autograder.py -t test/testSuite.json -m ./manifest.json target/pandora.jar
+```
+
+You can also run your suite against another team's jar by replacing the last argument:
+
+```bash
+python test/autograder.py -t test/testSuite.json -m path/to/their/manifest.json path/to/their/pandora.jar
+```
 
 ## TestSuite
 
@@ -85,7 +90,7 @@ The fields of a test description are
 
 - **id**: a unique number in your testSuite
 - **feature**: the feature your are testing, this should be the exact name that is passed to the ```-o``` option. e.g. ```maxAlt```
-- **milestone**: the number of the milestone corresponding to the feature you are testing. For Grouping purposes in the output
+- **milestone**: the number of the milestone corresponding to the feature you are testing. For Grouping purposes in the output. (deprecated use milestone:1,2,3,4 to group the tests)
 - **mode**:
 	- feature: test with the -o set to the given feature
 	- full: generate the full report and parse it to find the feature in the report (see [full report format](https://github.com/Estia-advanced-programming/pandora-public/wiki/Pandora#full-report)
