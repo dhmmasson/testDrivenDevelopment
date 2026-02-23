@@ -1,0 +1,1124 @@
+[
+  {
+    "objectID": "ProjectManagement/manifest.json.html",
+    "href": "ProjectManagement/manifest.json.html",
+    "title": "manifest.json",
+    "section": "",
+    "text": "your first manifest could be:\n{\n  \"version\" : \"1.1.0\",\n  \"features\" : [\n      \"version\",\n      \"help\",\n      \"version\",\n      \"filenames\",\n      \"parameters\",\n      \"debug\",\n  ]\n}\nYour second manifest after implementing the features avgAlt and maxAlt\n{\n  \"version\" : \"1.2.0\",\n  \"features\" : [\n      \"version\",\n      \"help\",\n      \"version\",\n      \"filenames\",\n      \"parameters\",\n      \"debug\",\n      \"avgAlt\",\n      \"maxAlt\"\n  ]\n}",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "manifest.json"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/manifest.json.html#examples",
+    "href": "ProjectManagement/manifest.json.html#examples",
+    "title": "manifest.json",
+    "section": "",
+    "text": "your first manifest could be:\n{\n  \"version\" : \"1.1.0\",\n  \"features\" : [\n      \"version\",\n      \"help\",\n      \"version\",\n      \"filenames\",\n      \"parameters\",\n      \"debug\",\n  ]\n}\nYour second manifest after implementing the features avgAlt and maxAlt\n{\n  \"version\" : \"1.2.0\",\n  \"features\" : [\n      \"version\",\n      \"help\",\n      \"version\",\n      \"filenames\",\n      \"parameters\",\n      \"debug\",\n      \"avgAlt\",\n      \"maxAlt\"\n  ]\n}",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "manifest.json"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Plagiat.html",
+    "href": "ProjectManagement/Plagiat.html",
+    "title": "Plagiat",
+    "section": "",
+    "text": "Plagiat\nAll the code you submit at all times on Github should be yours and yours only.\nAn Anti-Plagiarism software will be run on all source code present on Github at the end of the project. In a project of this size with the variability of possible design choice, coding style and so on, no two Projects should have similar code.\nAntiplagiarism will also be run against previous year solutions\n\n\nBetween Group Help\nYou can ask for general help from other people, the same way you can ask the teachers about a specific problem. If you ask for a solution and you implement someone else solution you run the risk of plagiarism.\n\n\nUse of LLM (ChatGPT, Bard, Gemini, Copilot,…)\nWhile the use of these tools is the future of coding, you should strive to learn to first know how to produce code yourself before pasting generated code.\nUsing LLM generates the risk that your code will be similar to someone else (source X problem: you are both similar to some unknown source resulting in you appearing similar to the anti-plagiarism code)",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Plagiat"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Javadoc.html",
+    "href": "ProjectManagement/Javadoc.html",
+    "title": "Code Documentation",
+    "section": "",
+    "text": "Javadoc is a documentation generation tool in Java that utilizes specially formatted comments to document classes, methods, and other elements of Java code. These comments not only serve as a valuable resource for developers but also enable the automatic generation of comprehensive documentation for Java projects.\nThe use of Javadoc style comments enhances code readability and facilitates collaboration among developers.\n\n\n\n\nJavadoc comments enable the automatic generation of documentation in HTML format. This documentation provides insights into the purpose, functionality, and usage of classes and methods, making it an invaluable reference for developers and stakeholders. Currently We haven’t introduced Doxygen or other documentation generation tools, but might introduce them during the project\n\n\n\nIntegrated Development Environments (IDEs) leverage Javadoc comments to generate tooltips that appear when developers hover over a class, method, or parameter. These tooltips offer quick access to relevant information, fostering a more efficient and informed coding experience.\n\n\n\n\nJavadoc comments are denoted by /**... */ and are placed immediately before the declaration of the class, method, or other code elements. Note the double ** after the first /\nThe generic structure of a Javadoc comment includes the following elements:\n/**\n * Description of the class or method.\n * Additional details and usage information.\n *\n * @author Author's name\n * @version Version number\n * @param parameterName Description of the parameter\n * @return Description of the return value (for methods)\n * @throws ExceptionType Description of the exception (if applicable)\n */\n\nDescription: A concise and informative summary of the class or method’s purpose and functionality.\nAuthor: The name of the author or contributor.\nVersion: The version number of the class or method.\nParameters: Descriptions of parameters for methods, including their names and purposes.\nReturn: Description of the value returned by a method.\nThrows: Documentation for exceptions that the method may throw.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Javadoc"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Javadoc.html#benefits",
+    "href": "ProjectManagement/Javadoc.html#benefits",
+    "title": "Code Documentation",
+    "section": "",
+    "text": "Javadoc comments enable the automatic generation of documentation in HTML format. This documentation provides insights into the purpose, functionality, and usage of classes and methods, making it an invaluable reference for developers and stakeholders. Currently We haven’t introduced Doxygen or other documentation generation tools, but might introduce them during the project\n\n\n\nIntegrated Development Environments (IDEs) leverage Javadoc comments to generate tooltips that appear when developers hover over a class, method, or parameter. These tooltips offer quick access to relevant information, fostering a more efficient and informed coding experience.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Javadoc"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Javadoc.html#generic-format-of-javadoc-comments",
+    "href": "ProjectManagement/Javadoc.html#generic-format-of-javadoc-comments",
+    "title": "Code Documentation",
+    "section": "",
+    "text": "Javadoc comments are denoted by /**... */ and are placed immediately before the declaration of the class, method, or other code elements. Note the double ** after the first /\nThe generic structure of a Javadoc comment includes the following elements:\n/**\n * Description of the class or method.\n * Additional details and usage information.\n *\n * @author Author's name\n * @version Version number\n * @param parameterName Description of the parameter\n * @return Description of the return value (for methods)\n * @throws ExceptionType Description of the exception (if applicable)\n */\n\nDescription: A concise and informative summary of the class or method’s purpose and functionality.\nAuthor: The name of the author or contributor.\nVersion: The version number of the class or method.\nParameters: Descriptions of parameters for methods, including their names and purposes.\nReturn: Description of the value returned by a method.\nThrows: Documentation for exceptions that the method may throw.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Javadoc"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Unit-Test.html",
+    "href": "ProjectManagement/TestDrivenDevelopment/Unit-Test.html",
+    "title": "Unit-Test",
+    "section": "",
+    "text": "Unit tests are released into the code repository along with the code they test.\nUnit Tests target individual units or components of the software often focusing on isolated functions or methods. The objective is to verify that each unit performs as expected in isolation, facilitating early detection of defects and supporting modular development practices. Unit Tests are crucial in TDD, acting as the building blocks for validating the correctness of the smallest units of code. Unit tests need to be integrated in the source code, generally as additional test classes in Java.\n\n\n\nA unit test executes fast — blazing fast! Sub-millisecond, please.\nA unit test can be executed concurrently without affecting other tests.\nA unit test should not utilize resources from the outside world.\n\nNo file system access.\nNo web service calls.\nNo e-mails.\nNo cross-thread communication.\nNo cross-process communication.\nNo SQL and no database connectivity.\n\nA unit tests verifies the public behavior of that unit conforms to a requirement.\n\nIn the java project you can write them in the src/test/java/ folder.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "TDD Deep Dive",
+      "Unit Tests"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Unit-Test.html#properties",
+    "href": "ProjectManagement/TestDrivenDevelopment/Unit-Test.html#properties",
+    "title": "Unit-Test",
+    "section": "",
+    "text": "A unit test executes fast — blazing fast! Sub-millisecond, please.\nA unit test can be executed concurrently without affecting other tests.\nA unit test should not utilize resources from the outside world.\n\nNo file system access.\nNo web service calls.\nNo e-mails.\nNo cross-thread communication.\nNo cross-process communication.\nNo SQL and no database connectivity.\n\nA unit tests verifies the public behavior of that unit conforms to a requirement.\n\nIn the java project you can write them in the src/test/java/ folder.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "TDD Deep Dive",
+      "Unit Tests"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Conventional Commits.html",
+    "href": "ProjectManagement/Conventional Commits.html",
+    "title": "Conventional Commits",
+    "section": "",
+    "text": "Conventional Commits represent a standardized convention for writing version control commit messages, providing a structured and semantic approach to tracking changes in a software project. Adopting a clear and consistent commit message format aids in automated release notes generation, versioning, and facilitates better communication within development teams. The convention defines a set of conventional keywords like “feat” for new features, “fix” for bug fixes, and “chore” for routine tasks, enabling developers to convey the nature of changes concisely.\n\n\nThe commit message should be structured as follows:\n&lt;type&gt;[optional scope]: &lt;description&gt;\n\n[optional body]\n\n[optional footer(s)]\n\n\n\nfeat: A new feature\nfix: A bug fix\ndocs: Documentation only changes\nstyle: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)\nrefactor: A code change that neither fixes a bug nor adds a feature\nperf: A code change that improves performance\ntest: Adding missing tests or correcting existing tests\nchore: Other changes that don’t modify src or test files (e.g. chore(release): release v1.0.1)\n\nless useful for you in the pandora project\n\nbuild: Changes that affect the build system or external dependencies (change to maven. You should not do that)\nci: Changes to our CI configuration files and scripts (change in the.github repository. You should not do that)\nrevert: Reverts a previous commit",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Conventional Commits"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Conventional Commits.html#structure",
+    "href": "ProjectManagement/Conventional Commits.html#structure",
+    "title": "Conventional Commits",
+    "section": "",
+    "text": "The commit message should be structured as follows:\n&lt;type&gt;[optional scope]: &lt;description&gt;\n\n[optional body]\n\n[optional footer(s)]\n\n\n\nfeat: A new feature\nfix: A bug fix\ndocs: Documentation only changes\nstyle: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)\nrefactor: A code change that neither fixes a bug nor adds a feature\nperf: A code change that improves performance\ntest: Adding missing tests or correcting existing tests\nchore: Other changes that don’t modify src or test files (e.g. chore(release): release v1.0.1)\n\nless useful for you in the pandora project\n\nbuild: Changes that affect the build system or external dependencies (change to maven. You should not do that)\nci: Changes to our CI configuration files and scripts (change in the.github repository. You should not do that)\nrevert: Reverts a previous commit",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Conventional Commits"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Semantic-Versioning.html",
+    "href": "ProjectManagement/Semantic-Versioning.html",
+    "title": "See also",
+    "section": "",
+    "text": "While git is a version control system, and each commit is a new version of your software, these versions are too granular to be meaningful for end-users of your software. In particular because the commit number or hash is seemingly random it is difficult to know if commit abc34ef is more recent than commit 32ff76a 1 and if an update is required. To address this, versioning schemes propose assigning meaningful numbers to incremental software versions.\nSemantic versioning, often abbreviated as semver, is one of the possible versioning schemes for a project. It provides a systematic way of conveying changes and updates in a software project through a three-part version number, consisting of &lt;Major&gt;.&lt;Minor&gt;.&lt;Patch&gt; components (e.g., 1.2.3).\nThe key principle behind semantic versioning is to communicate the nature of changes succinctly: a change in the major version indicates incompatible API alterations, a minor version signals backward-compatible feature additions, and a patch version denotes backward-compatible bug fixes.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Semantic Versioning"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Semantic-Versioning.html#footnotes",
+    "href": "ProjectManagement/Semantic-Versioning.html#footnotes",
+    "title": "See also",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nin reality a commit hash is 40 character long: ca82a6dff817ec66f44342007202690a93763949↩︎",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Semantic Versioning"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/File Management.html",
+    "href": "ProjectManagement/File Management.html",
+    "title": "File Management and Class Management",
+    "section": "",
+    "text": "File Management and Class Management\n\nYou CAN create as many classes as you wish.\nYou SHOULD create multiple classes to organize your code, for instance, you could follow MVC model, with classes to model the Data, classes to format the output, classes to control the process.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "File Management"
+    ]
+  },
+  {
+    "objectID": "Pandora/Constants.html",
+    "href": "Pandora/Constants.html",
+    "title": "Constants",
+    "section": "",
+    "text": "Since we want to compare computed values between your program and ours for every tests, we need to set up some ground rules. You will need constants. We list here some constant values you might need.\nImportant: If you need another constant, let us know. Call us, or even better, use the git repository to open an issue. We will then update this page so that everyone can use the same values.\n\n\nMake sure to use the String.format(\"%.2f\", variableName) solution to display your results with a 0.01 precision.\n\n\n\n\n\nDistances:\n\n1 m = 3.281 ft\n\nWeights:\n\n1 kg = 2.205 lbs\n\nPower:\n\n1 hp = 754.7 W\n\nTemperature:\n\n1 K = ℃ - 273.15\n\nPressure\n\n1 psi = 6894.76 Pa\n\nSpeed:\n\n1 kts = 1.852 km/h\n1 mph = 1.609 km/h\n1225 km/h = 1 Mach\nClassification:\n\nSubsonic: Mach &lt; 1.0\nTransonic: Mach = 1.0\nSupersomic: Mach &gt; 1.0\nHypersonic: Mach &gt; 5.0\n\n1 g = 9.80665 m/s2\n\nEarth radius: 6,371 km\n\n\n\n\n\nDistance between 2 longitude/latitude coordinates: see this link (uses the haversine formula)\nApproximation for speed and acceleration data for the first point (respectively the first two points): repeat the first value\n℃ to radian conversion: Use the Java built-in method Math.toRadians(...)\n\n\n\n\nYou can convert double values to Instant Java objects.\nIn this case, you can access quick display options (via DateTimeFormatter). For this, you need to define a zone. Use the .withZone(ZoneId.systemDefault()). (Check this forum thread for more examples).\n\n\nAll flights happened around 8:00am in a particular timezone. With your system timezone, these flights should be around 4:00am.\n\n\n\n\n\nif a phase is not detected, report: phase_name: not detected\nif no phase has a O2 concentration &gt; 50%, report oxygenPhase: none",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Constants"
+    ]
+  },
+  {
+    "objectID": "Pandora/Constants.html#number-precision",
+    "href": "Pandora/Constants.html#number-precision",
+    "title": "Constants",
+    "section": "",
+    "text": "Make sure to use the String.format(\"%.2f\", variableName) solution to display your results with a 0.01 precision.",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Constants"
+    ]
+  },
+  {
+    "objectID": "Pandora/Constants.html#constant-values",
+    "href": "Pandora/Constants.html#constant-values",
+    "title": "Constants",
+    "section": "",
+    "text": "Distances:\n\n1 m = 3.281 ft\n\nWeights:\n\n1 kg = 2.205 lbs\n\nPower:\n\n1 hp = 754.7 W\n\nTemperature:\n\n1 K = ℃ - 273.15\n\nPressure\n\n1 psi = 6894.76 Pa\n\nSpeed:\n\n1 kts = 1.852 km/h\n1 mph = 1.609 km/h\n1225 km/h = 1 Mach\nClassification:\n\nSubsonic: Mach &lt; 1.0\nTransonic: Mach = 1.0\nSupersomic: Mach &gt; 1.0\nHypersonic: Mach &gt; 5.0\n\n1 g = 9.80665 m/s2\n\nEarth radius: 6,371 km",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Constants"
+    ]
+  },
+  {
+    "objectID": "Pandora/Constants.html#computations",
+    "href": "Pandora/Constants.html#computations",
+    "title": "Constants",
+    "section": "",
+    "text": "Distance between 2 longitude/latitude coordinates: see this link (uses the haversine formula)\nApproximation for speed and acceleration data for the first point (respectively the first two points): repeat the first value\n℃ to radian conversion: Use the Java built-in method Math.toRadians(...)",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Constants"
+    ]
+  },
+  {
+    "objectID": "Pandora/Constants.html#timestamp",
+    "href": "Pandora/Constants.html#timestamp",
+    "title": "Constants",
+    "section": "",
+    "text": "You can convert double values to Instant Java objects.\nIn this case, you can access quick display options (via DateTimeFormatter). For this, you need to define a zone. Use the .withZone(ZoneId.systemDefault()). (Check this forum thread for more examples).\n\n\nAll flights happened around 8:00am in a particular timezone. With your system timezone, these flights should be around 4:00am.",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Constants"
+    ]
+  },
+  {
+    "objectID": "Pandora/Constants.html#special-situations",
+    "href": "Pandora/Constants.html#special-situations",
+    "title": "Constants",
+    "section": "",
+    "text": "if a phase is not detected, report: phase_name: not detected\nif no phase has a O2 concentration &gt; 50%, report oxygenPhase: none",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Constants"
+    ]
+  },
+  {
+    "objectID": "Pandora/Error-Handling.html",
+    "href": "Pandora/Error-Handling.html",
+    "title": "Error Handling",
+    "section": "",
+    "text": "Each errors should be reported according to a standard.\nAn error should start with: “ERROR”, followed by the name of the error, a minus symbol “-”, and finally its details. For example, if the test file ‘file1.xyz’ is missing ‘origin’ and ‘date’ from its header, and ‘file2.xyz’ is missing ‘flight id’, the program output will be:\n**\n\nERROR: INCOMPLETE_HEADER - file1.xyz=[date,origin] file2.xyz=[flight id]\n\n**\nImportant: In case of multiple files and multiple parameters, the output is organized alphabetically.\n\n\n\n\n\n\n\n\n\n\n\n\n\nError\nDescription\nError Name\nError Detail(s)\nExample\n\n\n\n\nInvalid option\nUnrecognized option given to the program\nINVALID_OPTION\nthe requested option\nERROR: Invalid Option -o x (or –ouput x) is not recognized\n\n\nMissing command line parameters\nRequired parameter(s) given options are missing\nINVALID_OPTION\nthe requested parameter\nERROR: Invalid Option -o x (or –ouput x) is missing a parameter\n\n\nNot implemented\nAn option is not (yet) implemented\nINVALID_OPTION\nthe requested option\nERROR: Invalid Option -o x (or –ouput x) has not been implemented yet\n\n\nInvalid Metadata\nThe requested metadata is invalid\nINVALID_OPTION\nthe requested metadata\nERROR: Invalid Option -m (or –output xxxx) is not a valid metadata\n\n\nMissing file\nA file given as an input is not found\nMISSING_FILE\nthe file name(s)\nERROR: MISSING_FILE - file1 file2 file3\n\n\nEncoding problem\nThe content of a file has encoding problems (ascii, utf-8, etc)\nENCODING\nthe file name(s)\nERROR: ENCODING - file1 file2 file3\n\n\nCorrupted file\nThe file cannot be open because of incorrect binary data\nCORRUPTED\nthe file name(s)\nERROR: CORRUPTED - file1 file2 file3\n\n\nMissing header\nThe header section is not in the file\nMISSING_HEADER\nThe file name(s)\nERROR: MISSING_HEADER - file1 file2\n\n\nIncomplete header\nThe header is missing some information\nINCOMPLETE_HEADER\nfile_name=[info1, info2…]\nERROR: INCOMPLETE_HEADER - file1=[origin,flight id] file2=[date]\n\n\nMissing columns\nSome required columns are not in the file\nMISSING_COLUMN\nfile_name=[col1,col2]\nERROR: MISSING_COLUMN - file1=[timestamp] file2=[longitude,latitude]\n\n\nMissing column names\nThe log file does not contain the column names\nMISSING_COLNAMES\nthe file name(s)\nERROR: MISSING_COLNAMES - file1 file2 file3\n\n\nIncorrect timestamp ordering\nThe log file is not presenting data lines in a timely ordered way\nORDERING\nThe file name(s)\nERROR: ORDERING - file1 file2 file3",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Error Handling"
+    ]
+  },
+  {
+    "objectID": "Pandora/Error-Handling.html#list-of-potential-errors",
+    "href": "Pandora/Error-Handling.html#list-of-potential-errors",
+    "title": "Error Handling",
+    "section": "",
+    "text": "Error\nDescription\nError Name\nError Detail(s)\nExample\n\n\n\n\nInvalid option\nUnrecognized option given to the program\nINVALID_OPTION\nthe requested option\nERROR: Invalid Option -o x (or –ouput x) is not recognized\n\n\nMissing command line parameters\nRequired parameter(s) given options are missing\nINVALID_OPTION\nthe requested parameter\nERROR: Invalid Option -o x (or –ouput x) is missing a parameter\n\n\nNot implemented\nAn option is not (yet) implemented\nINVALID_OPTION\nthe requested option\nERROR: Invalid Option -o x (or –ouput x) has not been implemented yet\n\n\nInvalid Metadata\nThe requested metadata is invalid\nINVALID_OPTION\nthe requested metadata\nERROR: Invalid Option -m (or –output xxxx) is not a valid metadata\n\n\nMissing file\nA file given as an input is not found\nMISSING_FILE\nthe file name(s)\nERROR: MISSING_FILE - file1 file2 file3\n\n\nEncoding problem\nThe content of a file has encoding problems (ascii, utf-8, etc)\nENCODING\nthe file name(s)\nERROR: ENCODING - file1 file2 file3\n\n\nCorrupted file\nThe file cannot be open because of incorrect binary data\nCORRUPTED\nthe file name(s)\nERROR: CORRUPTED - file1 file2 file3\n\n\nMissing header\nThe header section is not in the file\nMISSING_HEADER\nThe file name(s)\nERROR: MISSING_HEADER - file1 file2\n\n\nIncomplete header\nThe header is missing some information\nINCOMPLETE_HEADER\nfile_name=[info1, info2…]\nERROR: INCOMPLETE_HEADER - file1=[origin,flight id] file2=[date]\n\n\nMissing columns\nSome required columns are not in the file\nMISSING_COLUMN\nfile_name=[col1,col2]\nERROR: MISSING_COLUMN - file1=[timestamp] file2=[longitude,latitude]\n\n\nMissing column names\nThe log file does not contain the column names\nMISSING_COLNAMES\nthe file name(s)\nERROR: MISSING_COLNAMES - file1 file2 file3\n\n\nIncorrect timestamp ordering\nThe log file is not presenting data lines in a timely ordered way\nORDERING\nThe file name(s)\nERROR: ORDERING - file1 file2 file3",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Error Handling"
+    ]
+  },
+  {
+    "objectID": "Pandora/Pandora.html",
+    "href": "Pandora/Pandora.html",
+    "title": "Name",
+    "section": "",
+    "text": "pandora - a CLI tool to analyze Flight-records data to provide summary and high-level information based on low-level sensor data (e.g., fighter jet position).",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Manual page"
+    ]
+  },
+  {
+    "objectID": "Pandora/Pandora.html#usage",
+    "href": "Pandora/Pandora.html#usage",
+    "title": "Name",
+    "section": "Usage",
+    "text": "Usage\nthe main usage of pandora is to parse one or several flight records and to output on the command line some computed values. The default mode is to output a full report of all the Features (see example). The other mode is the single feature output mode triggered by the -o or --output option, in that mode only the value of the requested feature is printed (with no prefix, nor units)",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Manual page"
+    ]
+  },
+  {
+    "objectID": "Pandora/Pandora.html#version",
+    "href": "Pandora/Pandora.html#version",
+    "title": "Name",
+    "section": "Version",
+    "text": "Version\nPrint the Semantic-Versioning of the pandora project:\n$ java -jar pandora.jar --version \npandora@2.0.0",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Manual page"
+    ]
+  },
+  {
+    "objectID": "Pandora/Pandora.html#option-flag",
+    "href": "Pandora/Pandora.html#option-flag",
+    "title": "Name",
+    "section": "Option flag",
+    "text": "Option flag\nprint the filenames\n$ java -jar pandora.jar -o filenames d.frd b.frd a\na\nb.frd\nd.frd\nPrint the maximum altitude reached during a given flight:\n$ java -jar pandora.jar -o maxAlt test/resources/0_201_MiG-23MLD.frd\n14321\nGet the metadata “flight_id” from a flight records:\n$ java -jar pandora.jar -m flight_id test/resources/0_201_MiG-23MLD.frd\n201",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Manual page"
+    ]
+  },
+  {
+    "objectID": "Pandora/Pandora.html#features",
+    "href": "Pandora/Pandora.html#features",
+    "title": "Name",
+    "section": "Features",
+    "text": "Features\nSee Features for the list of implemented features and their corresponding CLI options.",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Manual page"
+    ]
+  },
+  {
+    "objectID": "Pandora/File.html",
+    "href": "Pandora/File.html",
+    "title": "File",
+    "section": "",
+    "text": "File\nHow to handle path"
+  },
+  {
+    "objectID": "grade/grade-2023.html",
+    "href": "grade/grade-2023.html",
+    "title": "Current Standing of the Teams for the 2023 Edition",
+    "section": "",
+    "text": "Score were computed on the version of your code present on the branch master on the 07/04/2023 at around ten.\nScore per milestone and total are normalized on a 20-point scale for an easier reading. However milestone 1 contains 6 features, milestone 2 contains 15 features, milestone 3 contains 8 features, milestone 4 contains 36 features et milestone 5 contains 29 features.\nCourse success only means that you have already reached the minimum requirement of completing milestone 1 and 2 and 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTeams\nMilestone 1\nMilestone 2\nMilestone 3\nMilestone 4\nMilestone 5\nCourse Success\n\n\n\n\nthe-blissful-blossoms\n20.0\n20.0\n19.8\n17.3\n10.2\n🟩Pass\n\n\nthe-wonderful-waterfalls\n20.0\n19.9\n17.6\n0.4\n14.3\n🟩Pass\n\n\nthe-radiant-sunflowers\n20.0\n20.0\n18.7\n0.3\n7.3\n🟩Pass\n\n\nthe-Tranquil-Lakes\n19.3\n19.5\n19.6\n0.3\n7.3\n🟩Pass\n\n\nthe-fabulous-fairies\n18.2\n20.0\n15.6\n0.3\n7.3\n🟩Pass\n\n\nthe-gracious-gazelles\n19.9\n20.0\n11.3\n2.5\n7.3\n🟩Pass\n\n\nthe-golden-harvests\n20.0\n16.0\n15.8\n1.0\n7.7\n🟩Pass\n\n\nthe-vivid-rainbows\n20.0\n20.0\n12.7\n0.3\n7.3\n🟩Pass\n\n\nthe-playful-dolphins\n19.0\n20.0\n11.2\n0.5\n7.3\n🟩Pass\n\n\nthe-Harmonious-Waves\n19.9\n20.0\n5.7\n0.3\n7.4\n🟧Almost\n\n\nthe-sparkling-gems\n19.9\n20.0\n4.6\n0.3\n6.9\n🟧Almost\n\n\nthe-majestic-mountains\n19.8\n18.6\n1.1\n0.3\n5.6\n🟧Almost\n\n\nthe-brave-lions\n11.7\n12.3\n3.4\n0.3\n4.8\n🟧Almost\n\n\nthe-Mighty-Elephants\n13.3\n8.0\n2.3\n0.3\n2.8\n🟥Fail\n\n\nthe-superb-sunsets\n0.0\n0.0\n0.0\n0.3\n0.0\n🟥Fail\n\n\n\n\n\n\n\nFor the 6 teams with a 🟥Fail in course success, you still have two scheduled work sessions but you should probably work in between.\nFor the 5 teams with an 🟧Almost in course success, you are on the right track, continue your effort.\n\nFor the 4 teams with a 🟩Pass in course success, The final grade will depends on how many more feature you can complete, so the competition is still on.\n\n\n\n\n\n\n\n\n\n\n\n\n\nTeams\nMilestone 1\nMilestone 2\nMilestone 3\nMilestone 4\nMilestone 5\nCourse success\n\n\n\n\nthe-blissful-blossoms\n20.0\n20.0\n15.4\n10.8\n7.3\n🟩Pass\n\n\nthe-Tranquil-Lakes.log\n19.3\n19.5\n19.6\n0.3\n7.3\n🟩Pass Previous commit did not compile\n\n\nthe-golden-harvests\n20.0\n16.0\n15.8\n1.0\n7.7\n🟩Pass, you have some failure on milestone 2\n\n\nthe-gracious-gazelles\n19.9\n20.0\n11.3\n2.5\n7.3\n🟩Pass\n\n\nthe-wonderful-waterfalls\n20.0\n20.0\n5.5\n0.3\n12.5\n🟧Almost\n\n\nthe-Harmonious-Waves\n19.9\n20.0\n5.7\n0.3\n7.4\n🟧Almost\n\n\nthe-vivid-rainbows\n20.0\n20.0\n5.9\n0.3\n7.3\n🟧Almost\n\n\nthe-playful-dolphins\n19.9\n20.0\n5.4\n0.3\n7.2\n🟧Almost\n\n\nthe-sparkling-gems\n19.9\n20.0\n4.6\n0.3\n6.9\n🟧Almost\n\n\nthe-brave-lions\n5.0\n2.8\n3.4\n0.3\n2.7\n🟥Fail\n\n\nthe-Mighty-Elephants\n13.3\n0.0\n1.7\n0.3\n0.5\n🟥Fail\n\n\nthe-fabulous-fairies\n0.0\n0.0\n1.1\n0.3\n0.0\n🟥Fail\n\n\nthe-majestic-mountains\n0.0\n0.0\n1.1\n0.3\n0.0\n🟥Fail\n\n\nthe-radiant-sunflowers\n0.0\n0.0\n1.1\n0.3\n0.0\n🟥Fail\n\n\nthe-superb-sunsets\n0.0\n0.0\n0.0\n0.3\n0.0\n🟥Fail"
+  },
+  {
+    "objectID": "grade/grade-2023.html#april-the-11th",
+    "href": "grade/grade-2023.html#april-the-11th",
+    "title": "Current Standing of the Teams for the 2023 Edition",
+    "section": "",
+    "text": "Teams\nMilestone 1\nMilestone 2\nMilestone 3\nMilestone 4\nMilestone 5\nCourse Success\n\n\n\n\nthe-blissful-blossoms\n20.0\n20.0\n19.8\n17.3\n10.2\n🟩Pass\n\n\nthe-wonderful-waterfalls\n20.0\n19.9\n17.6\n0.4\n14.3\n🟩Pass\n\n\nthe-radiant-sunflowers\n20.0\n20.0\n18.7\n0.3\n7.3\n🟩Pass\n\n\nthe-Tranquil-Lakes\n19.3\n19.5\n19.6\n0.3\n7.3\n🟩Pass\n\n\nthe-fabulous-fairies\n18.2\n20.0\n15.6\n0.3\n7.3\n🟩Pass\n\n\nthe-gracious-gazelles\n19.9\n20.0\n11.3\n2.5\n7.3\n🟩Pass\n\n\nthe-golden-harvests\n20.0\n16.0\n15.8\n1.0\n7.7\n🟩Pass\n\n\nthe-vivid-rainbows\n20.0\n20.0\n12.7\n0.3\n7.3\n🟩Pass\n\n\nthe-playful-dolphins\n19.0\n20.0\n11.2\n0.5\n7.3\n🟩Pass\n\n\nthe-Harmonious-Waves\n19.9\n20.0\n5.7\n0.3\n7.4\n🟧Almost\n\n\nthe-sparkling-gems\n19.9\n20.0\n4.6\n0.3\n6.9\n🟧Almost\n\n\nthe-majestic-mountains\n19.8\n18.6\n1.1\n0.3\n5.6\n🟧Almost\n\n\nthe-brave-lions\n11.7\n12.3\n3.4\n0.3\n4.8\n🟧Almost\n\n\nthe-Mighty-Elephants\n13.3\n8.0\n2.3\n0.3\n2.8\n🟥Fail\n\n\nthe-superb-sunsets\n0.0\n0.0\n0.0\n0.3\n0.0\n🟥Fail"
+  },
+  {
+    "objectID": "grade/grade-2023.html#april-7th",
+    "href": "grade/grade-2023.html#april-7th",
+    "title": "Current Standing of the Teams for the 2023 Edition",
+    "section": "",
+    "text": "For the 6 teams with a 🟥Fail in course success, you still have two scheduled work sessions but you should probably work in between.\nFor the 5 teams with an 🟧Almost in course success, you are on the right track, continue your effort.\n\nFor the 4 teams with a 🟩Pass in course success, The final grade will depends on how many more feature you can complete, so the competition is still on.\n\n\n\n\n\n\n\n\n\n\n\n\n\nTeams\nMilestone 1\nMilestone 2\nMilestone 3\nMilestone 4\nMilestone 5\nCourse success\n\n\n\n\nthe-blissful-blossoms\n20.0\n20.0\n15.4\n10.8\n7.3\n🟩Pass\n\n\nthe-Tranquil-Lakes.log\n19.3\n19.5\n19.6\n0.3\n7.3\n🟩Pass Previous commit did not compile\n\n\nthe-golden-harvests\n20.0\n16.0\n15.8\n1.0\n7.7\n🟩Pass, you have some failure on milestone 2\n\n\nthe-gracious-gazelles\n19.9\n20.0\n11.3\n2.5\n7.3\n🟩Pass\n\n\nthe-wonderful-waterfalls\n20.0\n20.0\n5.5\n0.3\n12.5\n🟧Almost\n\n\nthe-Harmonious-Waves\n19.9\n20.0\n5.7\n0.3\n7.4\n🟧Almost\n\n\nthe-vivid-rainbows\n20.0\n20.0\n5.9\n0.3\n7.3\n🟧Almost\n\n\nthe-playful-dolphins\n19.9\n20.0\n5.4\n0.3\n7.2\n🟧Almost\n\n\nthe-sparkling-gems\n19.9\n20.0\n4.6\n0.3\n6.9\n🟧Almost\n\n\nthe-brave-lions\n5.0\n2.8\n3.4\n0.3\n2.7\n🟥Fail\n\n\nthe-Mighty-Elephants\n13.3\n0.0\n1.7\n0.3\n0.5\n🟥Fail\n\n\nthe-fabulous-fairies\n0.0\n0.0\n1.1\n0.3\n0.0\n🟥Fail\n\n\nthe-majestic-mountains\n0.0\n0.0\n1.1\n0.3\n0.0\n🟥Fail\n\n\nthe-radiant-sunflowers\n0.0\n0.0\n1.1\n0.3\n0.0\n🟥Fail\n\n\nthe-superb-sunsets\n0.0\n0.0\n0.0\n0.3\n0.0\n🟥Fail"
+  },
+  {
+    "objectID": "grade/grade-2021.html",
+    "href": "grade/grade-2021.html",
+    "title": "Grade-2021",
+    "section": "",
+    "text": "Grade-2021\nI graded all released versions (on master on the 23rd at 18:49) of your pandora projects:\nCurrently only 6 groups have a milestone 1 and 2:ok: and have a passing grade. 4 groups have one of the milestone:ok:.\n\n\n\n\n\n\n\n\n\n\n\n\nteam\nmilestone 1\nmilestone 2\nmilestone 3\nmilestone 4\n“note /20”\nPassing grade\n\n\n\n\nGroupe_K\n100%\n100%\n77%\n1%\n13,9\n:ok:\n\n\nEquipe_F\n100%\n100%\n1%\n1%\n10,1\n:ok:\n\n\nGroupe_H\n79%\n100%\n13%\n2%\n9,7\n:ok:\n\n\nEquipe_P_W\n86%\n100%\n0%\n1%\n9,4\n:ok:\n\n\ngroupe_I\n83%\n100%\n1%\n1%\n9,2\n:ok:\n\n\nGroupe_J\n100%\n80%\n0%\n1%\n9,1\n:ok:\n\n\nM\n69%\n79%\n1%\n1%\n7,5\n:wavy_dash:\n\n\nGroupe_D\n51%\n90%\n1%\n1%\n7,2\n:wavy_dash:\n\n\nGroupe_G\n52%\n82%\n1%\n1%\n6,8\n:wavy_dash:\n\n\nBalcells,_Bertin,_Boix\n52%\n55%\n10%\n1%\n5,9\n:no_entry_sign:\n\n\nGroupe_N\n51%\n41%\n13%\n1%\n5,3\n:no_entry_sign:\n\n\nGroupe_A\n0%\n97%\n0%\n1%\n4,9\n:wavy_dash:\n\n\nMoulet,Ruaux,Oko\n50%\n0%\n2%\n1%\n2,7\n:no_entry_sign:\n\n\nEquipe_E\n37%\n10%\n1%\n1%\n2,4\n:no_entry_sign:\n\n\nGroupeC\n0%\n0%\n1%\n1%\n0,1\n:no_entry_sign:\n\n\nGroupe_O\n0%\n0%\n1%\n1%\n0,1\n:no_entry_sign:"
+  },
+  {
+    "objectID": "FAQ.html",
+    "href": "FAQ.html",
+    "title": "FAQ",
+    "section": "",
+    "text": "When and what to commit ?\nWhen and where should I push my commits to the remote repository (GitHub) ?\nWhen Should I Create a branch ?\nWhen should I not create a branch ?\nWhen to create a pull request ?\nMy code is completly broken and I want some help\n\n\n\n\n\nRegularly! You should make small commits that you could sum up in a few line. Remember that the first line of the commit will appears as a title, it should be significant and memorable to you and others. You can use a keyword in brackets [] to indicate if the commit add a new Feature, Fix a bug, Clean the code (fixing the indentation, using proper names for variables and methods), Document or add some comment to your code.\nThe code you commit should normally compile and run without to many issues. If you commit something that is broken it should be made extra clear for the other.\nSome example of good commits:\n\nwhenever you add a new methods: create a commit with a title like\n  [Feature #28] Added method formatDuration to analysis.java\n\n  Created a new function that format a duration to the format HH:mm:ss by dividing by 60 multiple time and taking the reminder.\n\n  adding close and the issue number will automatically close the issue when the pull request is merged\n  Close #28\nCorrect a bug:\n  [Fix] Removed bug in format in -o flightDuration\n\n  flight duration was returned in seconds instead of HH:mm:ss\nComment some code, clean some code\nImprove, optimize some code\nMove, remove some files. These operations are complicated to merge (e.g. if someone try to modify a file that has been removed)\n\n\n\n\n\n\nYou should push your commits when you want to share your contributions with the rest of the team or you want someone to review your code.\nYou can push multiple commits at the same time.\nYou should never commit directly to the branch master\n\nIn general you should push your commits to a branch that is named yourName/Feature, then create a pull request from your branch to the branch you want to merge into.\nSome examples:\nAlice wants to work on flightDistance in the milestone 3. She create locally a branch that she names Alice/flightDistance. She adds some code to Computation.java, and runs it. She creates a commit locally.\n  [Feature #28] Add methods to computation.java\n\n\n  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nShe also adds some new test files to verify her code and commits that locally\n  [Test] Add some new tests to validate flightDistance\n\n  flight_distance101.frd is a flight with a distance of 101m\n  flight_distance0.frd is a flight with a distance of 0m\nShe then push her local branch Alice/flightDistance to the remote (GitHub).\nOn Github she creates a pull request named [WIP] flightDistance from her branch to the branch milestone3 to inform the other that she has been working on the feature flightDistance.\nFrom the pull request, she can request reviews from the other, help from the teacher or merge into milestone3 if the others contributors agree.\n\n\n\n\nA branch is just a label that point to a particular commit. you can create branch locally and then push them to GitHub, you can also create branch on GitHub and pull them into your local repository.\nYou should create branches whenever you are starting something new or you want to test something:\n\nYou are starting to work on a new feature, create a local branch yourName/featureX\nYou want to clean up some previous code, and intend to change multiple files.\nYou want to prepare for the next release/milestone. Create a branch milestoneX on GitHub. Then merge feature branches with pull requests into it until you have a complete milestone. When you think your milestone branch is ready create a pull request against the master branch. This will trigger the auto-evaluation. You can see in the details of the Milestone Assessement there is an artifact named score-report.\n\n\n\n\n\nYou are improving something, for instance you are adding some tests to a feature, you are adding some comments, you are cleaning\n\n\n\n\nYou want to share some progress: create a branch with\n\n\n\n\n\nCreate a branch with an appropriate name. ex: YouName/flightDuration\nMake a commit with an appropriate name tag: [Broken] NullPointerException with feature flightDuration on f201_ru.frd (or make multiple commits if you can)\nCreate a pull Request with an appropriate name [WIP] flightDuration between your branch and"
+  },
+  {
+    "objectID": "FAQ.html#when-and-what-to-commit",
+    "href": "FAQ.html#when-and-what-to-commit",
+    "title": "FAQ",
+    "section": "",
+    "text": "Regularly! You should make small commits that you could sum up in a few line. Remember that the first line of the commit will appears as a title, it should be significant and memorable to you and others. You can use a keyword in brackets [] to indicate if the commit add a new Feature, Fix a bug, Clean the code (fixing the indentation, using proper names for variables and methods), Document or add some comment to your code.\nThe code you commit should normally compile and run without to many issues. If you commit something that is broken it should be made extra clear for the other.\nSome example of good commits:\n\nwhenever you add a new methods: create a commit with a title like\n  [Feature #28] Added method formatDuration to analysis.java\n\n  Created a new function that format a duration to the format HH:mm:ss by dividing by 60 multiple time and taking the reminder.\n\n  adding close and the issue number will automatically close the issue when the pull request is merged\n  Close #28\nCorrect a bug:\n  [Fix] Removed bug in format in -o flightDuration\n\n  flight duration was returned in seconds instead of HH:mm:ss\nComment some code, clean some code\nImprove, optimize some code\nMove, remove some files. These operations are complicated to merge (e.g. if someone try to modify a file that has been removed)"
+  },
+  {
+    "objectID": "FAQ.html#when-and-where-should-i-push-my-commits-to-the-remote-repository-github",
+    "href": "FAQ.html#when-and-where-should-i-push-my-commits-to-the-remote-repository-github",
+    "title": "FAQ",
+    "section": "",
+    "text": "You should push your commits when you want to share your contributions with the rest of the team or you want someone to review your code.\nYou can push multiple commits at the same time.\nYou should never commit directly to the branch master\n\nIn general you should push your commits to a branch that is named yourName/Feature, then create a pull request from your branch to the branch you want to merge into.\nSome examples:\nAlice wants to work on flightDistance in the milestone 3. She create locally a branch that she names Alice/flightDistance. She adds some code to Computation.java, and runs it. She creates a commit locally.\n  [Feature #28] Add methods to computation.java\n\n\n  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nShe also adds some new test files to verify her code and commits that locally\n  [Test] Add some new tests to validate flightDistance\n\n  flight_distance101.frd is a flight with a distance of 101m\n  flight_distance0.frd is a flight with a distance of 0m\nShe then push her local branch Alice/flightDistance to the remote (GitHub).\nOn Github she creates a pull request named [WIP] flightDistance from her branch to the branch milestone3 to inform the other that she has been working on the feature flightDistance.\nFrom the pull request, she can request reviews from the other, help from the teacher or merge into milestone3 if the others contributors agree."
+  },
+  {
+    "objectID": "FAQ.html#when-should-i-create-a-branch",
+    "href": "FAQ.html#when-should-i-create-a-branch",
+    "title": "FAQ",
+    "section": "",
+    "text": "A branch is just a label that point to a particular commit. you can create branch locally and then push them to GitHub, you can also create branch on GitHub and pull them into your local repository.\nYou should create branches whenever you are starting something new or you want to test something:\n\nYou are starting to work on a new feature, create a local branch yourName/featureX\nYou want to clean up some previous code, and intend to change multiple files.\nYou want to prepare for the next release/milestone. Create a branch milestoneX on GitHub. Then merge feature branches with pull requests into it until you have a complete milestone. When you think your milestone branch is ready create a pull request against the master branch. This will trigger the auto-evaluation. You can see in the details of the Milestone Assessement there is an artifact named score-report."
+  },
+  {
+    "objectID": "FAQ.html#when-should-i-not-create-a-branch",
+    "href": "FAQ.html#when-should-i-not-create-a-branch",
+    "title": "FAQ",
+    "section": "",
+    "text": "You are improving something, for instance you are adding some tests to a feature, you are adding some comments, you are cleaning"
+  },
+  {
+    "objectID": "FAQ.html#when-to-create-a-pull-request",
+    "href": "FAQ.html#when-to-create-a-pull-request",
+    "title": "FAQ",
+    "section": "",
+    "text": "You want to share some progress: create a branch with"
+  },
+  {
+    "objectID": "FAQ.html#my-code-is-completely-broken-and-i-want-some-help",
+    "href": "FAQ.html#my-code-is-completely-broken-and-i-want-some-help",
+    "title": "FAQ",
+    "section": "",
+    "text": "Create a branch with an appropriate name. ex: YouName/flightDuration\nMake a commit with an appropriate name tag: [Broken] NullPointerException with feature flightDuration on f201_ru.frd (or make multiple commits if you can)\nCreate a pull Request with an appropriate name [WIP] flightDuration between your branch and"
+  },
+  {
+    "objectID": "Untitled.html",
+    "href": "Untitled.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "Untitled"
+  },
+  {
+    "objectID": "CHANGELOG.html",
+    "href": "CHANGELOG.html",
+    "title": "CHANGELOG",
+    "section": "",
+    "text": "CHANGELOG\nThis Changelog tracks the change relative to the Advanced Programming Class. It does not follow the instructions from Keep a Changelog nor does the version follow Semantic-Versioning.\n\n\n2024\n\n2024-04-05 - Update the milestone-evaluation to work on tags and not on only branch\n2024-04-05 - Update the autograder.py to use . as the decimal point to ensure that testSuite.json expected values can be wrote as 10.23 and not 10,23 which is not a valid number in json.\n2024-03-20 - Update the documentation about test-driven-developement, add a tester for milestone 0 in the starterpack\n2024-03-07 - Synchronize-Update-From-The-Starterpack to help you merge the modification from the teachers\n\n\n\n2023\n\n17/03/2023 - 14:22: For features fastJetAlt and fastWindAlt, forget about the 5min window. Just return the first altitude at which the maximum is encountered. You should hence simply have altitude (m): max_wind_speed (m/s) and altitude (m): max_jet_speed (m/s).\n\n\n\n2022\n\n08/03/2022 - 12:23: Updated a mistake in the template / skeleton code where flightDuration was stored as an int. Teams should merge immediately the pull request Correction for first pandora run by williamDelamare.\n\n\n\n2021\n\n24/03/2021 - 10:16: New algorithm for phase detection in instructions.\n09/03/2021 - 10:16: Common Eclipse configuration issue. If could not find or load Pandora main class error, simply clean the project.\n\n\n\n2020\n\n20/03/2020 - 19:09: New detail: maxAcceleration should consider negative values as well (e.g., max([-3.2, -0.1, 0.5, 2.9]) = -3.2)\n20/03/2020 - 12:34: Updated tests up to milestone 3, reference version of pandora.jar updated\n20/03/2020 - 00:02: Added required values for the metadata section in instructions\n19/03/2020 - 15:27: Added conversion values for Temperature and Pressure in instructions\n19/03/2020 - 15:27: Added conversion values for power (1 hp = 754.7 W) in instructions\n19/03/2020 - 15:00: add new tests for milestone 1 and 2 to check your code\n19/03/2020 - 15:00: updated pandora.jar in the release folder v1.5\n18/03/2020 - 23:56: We added more information in case of special situations\n18/03/2020 - 20:06: Issue #99. We consider a stress pilot if her/his heart rate jumps more than ±10 bpm.\n18/03/2020 - 18:06: Issue #100. If multiple phases required an oxygen concentration &gt; 50%, list them in alphabetical order, and separate the names with coma.\n18/03/2020 - 17:40: Issues #96 and #97. Discard the average part. Just report the altitude at which the max (wind speed for #96 and aircraft speed for #97) occurs.\n18/03/2020 - 15:42: Flights should be around 4:00 am with your local time zone timestamp\n17/03/2020 - 17:25: We added some more information about using timestamp in your program\n17/03/2020 - 15:26: We added a simple heuristic to find flight phases in the instructions along with a pseudo-code in python\n17/03/2020 - 12:18: If you want us to look to a specific problem in your code follow this procedure\n16/03/2020 - 10:46: Regarding the precision of printed numbers (issue), use String.format(\"%.2f\", variableName); instead of String.valueOf(variableName); to add your resuls into the featureValues dictionary\n16/03/2020 - 10:15: I have opened chat on moodle\n\n13/03/2020 - 15:00: you can find more about tests files here (US jet files, files with various errors, files with several jet engines, etc)",
+    "crumbs": [
+      "Home",
+      "❗ CHANGELOG"
+    ]
+  },
+  {
+    "objectID": "git-101/git-101-Ex2.html#close-the-issue",
+    "href": "git-101/git-101-Ex2.html#close-the-issue",
+    "title": "Exercice 2",
+    "section": "Close the issue",
+    "text": "Close the issue\nYou are done, go back to your project management project page on github, close the issue and move it to Done."
+  },
+  {
+    "objectID": "git-101/git-101.html",
+    "href": "git-101/git-101.html",
+    "title": "Git Tutorial",
+    "section": "",
+    "text": "Skip to this tutorial if you have enrolled in SGV in Estia 1a.",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "🎒 Git Introduction"
+    ]
+  },
+  {
+    "objectID": "git-101/git-101.html#the-problem",
+    "href": "git-101/git-101.html#the-problem",
+    "title": "Git Tutorial",
+    "section": "The Problem",
+    "text": "The Problem\nUp until now, How did you manage modifications while working on a collaborative project? Did you name the same file: internship_report.pdf, internship_report_v1.pdf, internship_report_v2.pdf, internship_report_v2_Final.pdf? Then did you send this file to Alice Martin just to receive internship_report_v2_Final_AM.pdf, and went on having internship_report_v1_Final_AM_2.pdf,… internship_report_v1_Final_AM_2_Finale.pdf…\nMaybe you used google drive, or Microsoft OneDrive, to manage the different version of your files. You have shared a file in the cloud that automagically save every changes made by you and your collaborators. Maybe you know about a revision system that tracks individual change, and you came back on a previous version. But working concurrently on a same section or on different files is not easy.\nAll the previous systems (saving backups, using cloud solutions) are version control system, albeit not very good ones a software development project.\n\nFrom the Git handbook:\nA version control system, or VCS, is a system that tracks the history of changes as people and teams collaborate on a project together. As the project evolves, teams can run tests, fix bugs, and contribute new code with the confidence that any version can be recovered at any time. Developers can review project history to find out: - Which changes were made? - Who made the changes? - When were the changes made? - Why were changes needed?\n\nA distributed version control system (DVCS) is a type of version control where the complete codebase — including its full version history — is mirrored on every developer’s computer. It’s abbreviated DVCS.\n\nFrom the Git handbook:\nGit is an example of a distributed version control system (DVCS) commonly used for open source and commercial software development. DVCSs allow full access to every file, branch, and iteration of a project, and allows every user access to a full and self-contained history of all changes. Unlike once popular centralized version control systems, DVCSs like Git don’t need a constant connection to a central repository. Developers can work anywhere and collaborate asynchronously from any time zone.",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "🎒 Git Introduction"
+    ]
+  },
+  {
+    "objectID": "git-101/git-101.html#resources",
+    "href": "git-101/git-101.html#resources",
+    "title": "Git Tutorial",
+    "section": "Resources",
+    "text": "Resources\nSome of the resources used to create this page,\nGit handbook",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "🎒 Git Introduction"
+    ]
+  },
+  {
+    "objectID": "git-101/git-101.html#objectives",
+    "href": "git-101/git-101.html#objectives",
+    "title": "Git Tutorial",
+    "section": "Objectives",
+    "text": "Objectives\nLearn how to change something in the project and publish the change to the world.\nAt the end you will know:\n\nCreate an group repository\nCreate a local repository\nMake and stage your modifications\nCommit your progress with a message.\nPush your commit to a group repository",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "🎒 Git Introduction"
+    ]
+  },
+  {
+    "objectID": "git-101/git-101.html#instructions",
+    "href": "git-101/git-101.html#instructions",
+    "title": "Git Tutorial",
+    "section": "Instructions",
+    "text": "Instructions\ngit-101-Ex1",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "🎒 Git Introduction"
+    ]
+  },
+  {
+    "objectID": "git-101/git-101.html#instructions-1",
+    "href": "git-101/git-101.html#instructions-1",
+    "title": "Git Tutorial",
+    "section": "Instructions",
+    "text": "Instructions\nDetailed Instructions can be found there",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "🎒 Git Introduction"
+    ]
+  },
+  {
+    "objectID": "git-101/git-101.html#instructions-2",
+    "href": "git-101/git-101.html#instructions-2",
+    "title": "Git Tutorial",
+    "section": "Instructions",
+    "text": "Instructions\nDetailed Instructions can be found there\nSome references additional references:\ngit flow",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "🎒 Git Introduction"
+    ]
+  },
+  {
+    "objectID": "tools/Eclipse.html",
+    "href": "tools/Eclipse.html",
+    "title": "Pandora Java Project",
+    "section": "",
+    "text": "You already cloned the application skeleton on your computer. This means you are ready to start working on a local version of the program.\n\nFirst, open Eclipse\nSelect ‘File’, and ‘import…’\nSelect the ‘existing maven project’ under the ‘maven’ directory\nLocate the project you cloned from GitHub\n\nAnd everything should (nearly) be ready to run.\n\n\n\nIn order to run, the program expects some arguments. For instance, the command java -jar pandora.jar -o flightDuration./src/test/resources/flightReport_fl12.frd will output the total flight duration logged in the flightReport_fl12.frd file (dummy example).\nIn order to do so via Eclipse, you should:\n\nClick on run configuration (menu when clicking on the right of the little run green icon) (Fig. 1 - 1)\nSelect the Java Application (Fig. 1 - 2) and click on the ‘New’ icon (Fig. 1 -3)\nName it, and click on the arguments tab (Fig. 1 -4)\nType ./src/test/resources/0_201_MiG-23MLD.frd\nClick run\n\nYou should see the program running!\n\n\n\nalt text\n\n\n\nFig. 1 Eclipse screenshot for running configuration\n\nIt can be cumbersome to run several configurations. You can of course save your configuration, but also create launch group in which you can include as many configuration you set up in sequential order. Otherwise, you can also omit the output option parameter -o. In this case every output will be printed.\nAt this point, note that there is nothing else implemented.\nA list of options (more than 100) to implement is available, and this is your job to complete the program.\n\n\n\nIt can be cumbersome to change the Eclipse run settings every time you want to run Pandora on a new file or a new feature.\nWe hence provide a second main method in the fr.estia.pandora.test package: MultiTest.java.\nTo use it, simply\n1- Create a custom test file\n1- Add the test command line and expected output in the ./src/test/resources/custom/multitest.config file.\n\n\nLet’s imagine we want to try our maxAlt feature (issue #5) with a file my-test-alt-1.csv that contains only 1 line.\nThis line has the Altitude value set to 42.\nWe then:\n\nAdd our my-test-alt-1.csv file in the ./src/test/resources/custom/feature5/ folder\nEdit the multitest.config file to add our test:\n\n# this line is a comment\n# useful to know what the test is about!\n# test 1: simple example for the maxAlt feature\ncmd: -o maxAlt ./src/test/resources/custom/feature5/my-test-alt-1.csv\noutput:\n42\n---\n\n\nRun the MultiTest main program and check its outputs\n\n\n\n\nThe goal is to complete this file as the project goes forward.\nThis is a simple solution to see if any new changes involve previous tests failure.\nIn the end, with an average of 5 tests / feature, this file should contain around 500 tests blocks.\nA test is simply a series of lines including:\n\na comment (starting with #)\nthe command line to send to Pandora (starting with cmd:)\nthe expected output (starting with output: and the output line(s) on a new line)\nan ending block ---\n\n# test X: a comment\ncmd: -o &lt;featureName&gt; &lt;file&gt;\noutput:\n&lt;expected_output&gt;\n---\n\n# test X+1: a comment\ncmd: -o &lt;featureName&gt; &lt;file&gt;\noutput:\n&lt;expected_output&gt;\n---\n\netc.",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "Eclipse"
+    ]
+  },
+  {
+    "objectID": "tools/Eclipse.html#eclipse",
+    "href": "tools/Eclipse.html#eclipse",
+    "title": "Pandora Java Project",
+    "section": "",
+    "text": "You already cloned the application skeleton on your computer. This means you are ready to start working on a local version of the program.\n\nFirst, open Eclipse\nSelect ‘File’, and ‘import…’\nSelect the ‘existing maven project’ under the ‘maven’ directory\nLocate the project you cloned from GitHub\n\nAnd everything should (nearly) be ready to run.",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "Eclipse"
+    ]
+  },
+  {
+    "objectID": "tools/Eclipse.html#running-pandora",
+    "href": "tools/Eclipse.html#running-pandora",
+    "title": "Pandora Java Project",
+    "section": "",
+    "text": "In order to run, the program expects some arguments. For instance, the command java -jar pandora.jar -o flightDuration./src/test/resources/flightReport_fl12.frd will output the total flight duration logged in the flightReport_fl12.frd file (dummy example).\nIn order to do so via Eclipse, you should:\n\nClick on run configuration (menu when clicking on the right of the little run green icon) (Fig. 1 - 1)\nSelect the Java Application (Fig. 1 - 2) and click on the ‘New’ icon (Fig. 1 -3)\nName it, and click on the arguments tab (Fig. 1 -4)\nType ./src/test/resources/0_201_MiG-23MLD.frd\nClick run\n\nYou should see the program running!\n\n\n\nalt text\n\n\n\nFig. 1 Eclipse screenshot for running configuration\n\nIt can be cumbersome to run several configurations. You can of course save your configuration, but also create launch group in which you can include as many configuration you set up in sequential order. Otherwise, you can also omit the output option parameter -o. In this case every output will be printed.\nAt this point, note that there is nothing else implemented.\nA list of options (more than 100) to implement is available, and this is your job to complete the program.",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "Eclipse"
+    ]
+  },
+  {
+    "objectID": "tools/Eclipse.html#running-multiple-tests-in-one-go",
+    "href": "tools/Eclipse.html#running-multiple-tests-in-one-go",
+    "title": "Pandora Java Project",
+    "section": "",
+    "text": "It can be cumbersome to change the Eclipse run settings every time you want to run Pandora on a new file or a new feature.\nWe hence provide a second main method in the fr.estia.pandora.test package: MultiTest.java.\nTo use it, simply\n1- Create a custom test file\n1- Add the test command line and expected output in the ./src/test/resources/custom/multitest.config file.\n\n\nLet’s imagine we want to try our maxAlt feature (issue #5) with a file my-test-alt-1.csv that contains only 1 line.\nThis line has the Altitude value set to 42.\nWe then:\n\nAdd our my-test-alt-1.csv file in the ./src/test/resources/custom/feature5/ folder\nEdit the multitest.config file to add our test:\n\n# this line is a comment\n# useful to know what the test is about!\n# test 1: simple example for the maxAlt feature\ncmd: -o maxAlt ./src/test/resources/custom/feature5/my-test-alt-1.csv\noutput:\n42\n---\n\n\nRun the MultiTest main program and check its outputs\n\n\n\n\nThe goal is to complete this file as the project goes forward.\nThis is a simple solution to see if any new changes involve previous tests failure.\nIn the end, with an average of 5 tests / feature, this file should contain around 500 tests blocks.\nA test is simply a series of lines including:\n\na comment (starting with #)\nthe command line to send to Pandora (starting with cmd:)\nthe expected output (starting with output: and the output line(s) on a new line)\nan ending block ---\n\n# test X: a comment\ncmd: -o &lt;featureName&gt; &lt;file&gt;\noutput:\n&lt;expected_output&gt;\n---\n\n# test X+1: a comment\ncmd: -o &lt;featureName&gt; &lt;file&gt;\noutput:\n&lt;expected_output&gt;\n---\n\netc.",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "Eclipse"
+    ]
+  },
+  {
+    "objectID": "tools/maven.html",
+    "href": "tools/maven.html",
+    "title": "Add the following Favorite to Vscode",
+    "section": "",
+    "text": "Add the following Favorite to Vscode\nmaven: add a Favorites",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "Maven"
+    ]
+  },
+  {
+    "objectID": "tools/Git-Clients.html",
+    "href": "tools/Git-Clients.html",
+    "title": "Git Clients",
+    "section": "",
+    "text": "You can use several git clients to manage your project\n\nStandalone Git client (an external program)\n\nSmartGit: the one presented in first year during the SGV and Project Génie Info Classes. You must update the software and use the license provided on moodle\nGithub Desktop: Simple to use, it only lack the graph view\n\nIntegrated\n\nvscode: vscode comes with a git client and some support for github\neclipse: egit\n\n\n\n\n\nCreate a user account on GitHub\nimportant Make sure to disable notifications in your settings. We will create more than 100 issues that you will have to take care of (i.e. implement features, functionalities) and mark them as complete. During the creation, you might get an email for each one of them if you don’t disable the notifications!\nInstall a git client (e.g., GitHub Desktop)\n\n\n\n\nGithub Desktop client\n\n\n\nFig.1 A basic Git Desktop client\n\n\nClick on “clone a repository from the internet”\n\n\n\n\nalt text\n\n\n\nFig.2 Cloning a repository\n\n\nSelect the project that has been created for your group project. The url is something like https://github.com/Estia-advanced-programming/pandora-2020-group1-GROUPENAME.git\nSelect the location you want the download to happen on your computer. Remember this location, you will need it to import the project in Eclipse later.\nClick “clone”\n\n\n\n\nAnother possibility is to get everything in one place! (Repository, code, issues, tasks, etc). Check out this tutorial.\nBasically, you need to understand that Git can be used with several projects, not only Java and Eclipse. If you understood that, then we can start to look at how some tools (e.g., Eclipse, Visual Studio, etc) integrates Git tools.\nFor Eclipse, it is called EGit. It can be useful to have a quick access to milestones and issues (Fig.3 - 1) or the branches history (Fig.3 - 2). You can quickly open / close issues, switch branches, commit, push, pull, go back to a previous version just by right-clicking on the project (or just one file), finding the Team menu item, and browsing the options.\n\n\n\nalt text\n\n\n\nFig.3 Git in Eclipse\n\nIf you already have Git in Eclipse, you should have the Team option when right-clicking on your project (and see some yellow icons to indicate that the project is under version control). If this is the case, just go to the configuration section. Otherwise, perform the install.\n\n\n\nIn Eclipse, click Help and Install new software...\nClick Add source (Fig.4 - 1), then name it egit (or whatever) and write the location to http://download.eclipse.org/egit/updates (Fig.4 - 2)\n\n\n\n\nalt text\n\n\n\nFig.4 Adding an install source in Eclipse\n\n\nNow select this newly added items, check all packages, and continue the installation.\n\n\n\n\nEgit should already know what is going on in your repository: the tool looks into your.git folder, where everything is already configured (remote repository, etc). You might only need to input your login/password the first few times you will trigger commands.\nFor the task view, you need an additional package.\n\nAs in the install section, add a new package repository with a name (e.g., mylin) and this location http://download.eclipse.org/egit/github/updates.\nFinish the installation of the package\nThen, you can finally set up your tasks repository (or issues, etc) by following this tutorial",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "Git Clients"
+    ]
+  },
+  {
+    "objectID": "tools/Git-Clients.html#github-desktop",
+    "href": "tools/Git-Clients.html#github-desktop",
+    "title": "Git Clients",
+    "section": "",
+    "text": "Create a user account on GitHub\nimportant Make sure to disable notifications in your settings. We will create more than 100 issues that you will have to take care of (i.e. implement features, functionalities) and mark them as complete. During the creation, you might get an email for each one of them if you don’t disable the notifications!\nInstall a git client (e.g., GitHub Desktop)\n\n\n\n\nGithub Desktop client\n\n\n\nFig.1 A basic Git Desktop client\n\n\nClick on “clone a repository from the internet”\n\n\n\n\nalt text\n\n\n\nFig.2 Cloning a repository\n\n\nSelect the project that has been created for your group project. The url is something like https://github.com/Estia-advanced-programming/pandora-2020-group1-GROUPENAME.git\nSelect the location you want the download to happen on your computer. Remember this location, you will need it to import the project in Eclipse later.\nClick “clone”",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "Git Clients"
+    ]
+  },
+  {
+    "objectID": "tools/Git-Clients.html#egit-the-eclipse-git-plugin",
+    "href": "tools/Git-Clients.html#egit-the-eclipse-git-plugin",
+    "title": "Git Clients",
+    "section": "",
+    "text": "Another possibility is to get everything in one place! (Repository, code, issues, tasks, etc). Check out this tutorial.\nBasically, you need to understand that Git can be used with several projects, not only Java and Eclipse. If you understood that, then we can start to look at how some tools (e.g., Eclipse, Visual Studio, etc) integrates Git tools.\nFor Eclipse, it is called EGit. It can be useful to have a quick access to milestones and issues (Fig.3 - 1) or the branches history (Fig.3 - 2). You can quickly open / close issues, switch branches, commit, push, pull, go back to a previous version just by right-clicking on the project (or just one file), finding the Team menu item, and browsing the options.\n\n\n\nalt text\n\n\n\nFig.3 Git in Eclipse\n\nIf you already have Git in Eclipse, you should have the Team option when right-clicking on your project (and see some yellow icons to indicate that the project is under version control). If this is the case, just go to the configuration section. Otherwise, perform the install.\n\n\n\nIn Eclipse, click Help and Install new software...\nClick Add source (Fig.4 - 1), then name it egit (or whatever) and write the location to http://download.eclipse.org/egit/updates (Fig.4 - 2)\n\n\n\n\nalt text\n\n\n\nFig.4 Adding an install source in Eclipse\n\n\nNow select this newly added items, check all packages, and continue the installation.\n\n\n\n\nEgit should already know what is going on in your repository: the tool looks into your.git folder, where everything is already configured (remote repository, etc). You might only need to input your login/password the first few times you will trigger commands.\nFor the task view, you need an additional package.\n\nAs in the install section, add a new package repository with a name (e.g., mylin) and this location http://download.eclipse.org/egit/github/updates.\nFinish the installation of the package\nThen, you can finally set up your tasks repository (or issues, etc) by following this tutorial",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "Git Clients"
+    ]
+  },
+  {
+    "objectID": "tools/Git-Clients.html#master-branch",
+    "href": "tools/Git-Clients.html#master-branch",
+    "title": "Git Clients",
+    "section": "Master Branch",
+    "text": "Master Branch\nThe master branch is usually the one where everything works fine. This is the branch we will use to test your program.\nIt is common to merge and push your current work on ‘Master’ only when you are sure that:\n1- There is no conflict\nMake sure you Pull the master branch before trying to push your work. Resolve every potential conflicts locally. With this in mind, you will always push a clean version that any new comers could clone and run.\n2- Your current task is complete\nIt is usually not every 5 minutes that people push on the Master branch. You save your work locally (commit), and push on GitHub on your branch when you reached (or think your reached) a consequent step. You can then merge the branch you were working on with Master when the task at hand is completed. You can then ask your team to review your code and accept the merging via a Pull request.",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "Git Clients"
+    ]
+  },
+  {
+    "objectID": "tools/Git-Clients.html#pull-request",
+    "href": "tools/Git-Clients.html#pull-request",
+    "title": "Git Clients",
+    "section": "Pull Request",
+    "text": "Pull Request",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "Git Clients"
+    ]
+  },
+  {
+    "objectID": "tools/vscode.html",
+    "href": "tools/vscode.html",
+    "title": "Vscode",
+    "section": "",
+    "text": "Vscode\n\n\nExtensions\nYou should install:\n\nMaven. Unzip it somewhere safe. Then enter the path of the mvn.cmd file in vscode settings (under Maven path)\n\n\n\nBuild\n\nctrl + shift + p &gt;type: maven execute command &gt; package\nctrl + shift + B Build\n\n\n\nTests\n\nctrl + shift + p &gt;type: maven execute command &gt; test\nIf the test does not work, check the error messages\nif python is not found, try changing “python3” to “python” in the pom.xml file",
+    "crumbs": [
+      "Home",
+      "🎓 Tools",
+      "VS Code"
+    ]
+  },
+  {
+    "objectID": "git-101/git-101-Ex3.html",
+    "href": "git-101/git-101-Ex3.html",
+    "title": "Exercice 3",
+    "section": "",
+    "text": "As in the Ex 2, every members will edit the same file. But this time, you will create branches to minimize conflict and facilitate merging."
+  },
+  {
+    "objectID": "git-101/git-101-Ex3.html#description",
+    "href": "git-101/git-101-Ex3.html#description",
+    "title": "Exercice 3",
+    "section": "",
+    "text": "As in the Ex 2, every members will edit the same file. But this time, you will create branches to minimize conflict and facilitate merging."
+  },
+  {
+    "objectID": "git-101/git-101-Ex1.html",
+    "href": "git-101/git-101-Ex1.html",
+    "title": "Exercice 1",
+    "section": "",
+    "text": "Learn how to change something in the project and publish the change to the world.\n\n\nGo to github and create an account, or login to an existing account. You may use any address to use GitHub for Free. If you use your @net.estia.fr you will be eligible for a student Developer Pack, which offers free access to tools and services used by professional developers. If you already have an account you can link it to your estia address.\nTo use git on your computer, you’ll need a client:\n\nhttps://desktop.github.com/\nSettings modification remove emails spam\n\nCheckout the tutorial\n\n\n\nThere are two ways to start a Git project. You could start locally to track change of a project and at some point decide to share it with collaborators, creating a remote repository onto which you would push your history.\nOr you can start by creating a non empty remote repository and clone it locally (either by starting with a template repository, or by forking (duplicating) someone else project).\nyou will start from a template repository created specifically for this class.\n\n\nIn a normal setting you would go to your github page to create a repository and then share it with collaborators. For this course will use the following link that will create a repository for your team, and populate it with a starter code. Once the repository created go to the home page and bookmark it for future reference.\nBefore we create our local repositories will look around the github user interface.\n\n\n\nFrom the github page of your project, click on the menu Projects. Projects are boards (like trello or planner) to organize your team task.\n\nCreate a new project\n\nCall it project management\nSet a description: Project board for the pandora project\nSet it to: Automatic Kanban\n\n\nIn the background, a special task for the project has been created : it will create more than an hundred issues (it may take some times). Each issue is related to a task you have to do in this project. Most of them are Features to implement, some relate to the start up exercices. Having a lot of issues makes it hard to find the ones you care about. Milestones, labels, and assignees allows to filter and categorize issues.\n\nDiscover the milestone for the start up exercices\n\nFrom the Github project page, click on the menu Issues\nFind the issues related to the exercice 1, 2, 3.\n\nThey should have the label good first issues\nThey should be part of the milestone Initiation to Git.\n\nOpen the Exercice 1 issue, read it and from the menu on the right\n\nAssign Members to the Issues.\nAdd them to the project\n\n\n\n\n\n\nEach member will need is own local repository to contribute. In a DVCS ( Distributed Version Control System ) like git, each contributor as a local copy of the revision tree that they synchronize with the remote repository.\n\n\n\n\nOne member will make some change to the project and publish them for the rest of the group to see.\n\nOpen with a text editor of your choice the file README.md.\nAdd the following\n# Group Members\n\n- &lt; Firstname LastName of first member of the group &gt;\n- &lt; Firstname LastName of second member of the group &gt;\n- &lt; Firstname LastName of third member of the group &gt;\nGo to github desktop.\nStage the change: Select the modifications you want to add to the next commit.\nCommit with a message explaining your change (e.g. Added project members to the README)\nPush your commit to the remote repository.\n\n\n\n\n\nOn the github webpage\n\nGo to the Code tab (the home page)\nClick on the menu Commits (in the Code menu bar, located below the main menu) to see the commits\n\npropagate the change with a pull from the other local repositories (member2 and 3)\n\nOn each github desktop pull changes\n\n\n\n\n\nGo back to your project management project page on github, close the issue and move it to Done.\nYou now know :\n\nHow to create a group repository\nHow to create a local repository\nHow to make and stage your modifications\nHow to commit your progress with a message\nHow to push your commit to a group repository"
+  },
+  {
+    "objectID": "git-101/git-101-Ex1.html#create-a-github-account---download-git",
+    "href": "git-101/git-101-Ex1.html#create-a-github-account---download-git",
+    "title": "Exercice 1",
+    "section": "",
+    "text": "Go to github and create an account, or login to an existing account. You may use any address to use GitHub for Free. If you use your @net.estia.fr you will be eligible for a student Developer Pack, which offers free access to tools and services used by professional developers. If you already have an account you can link it to your estia address.\nTo use git on your computer, you’ll need a client:\n\nhttps://desktop.github.com/\nSettings modification remove emails spam\n\nCheckout the tutorial"
+  },
+  {
+    "objectID": "git-101/git-101-Ex1.html#create-repositories",
+    "href": "git-101/git-101-Ex1.html#create-repositories",
+    "title": "Exercice 1",
+    "section": "",
+    "text": "There are two ways to start a Git project. You could start locally to track change of a project and at some point decide to share it with collaborators, creating a remote repository onto which you would push your history.\nOr you can start by creating a non empty remote repository and clone it locally (either by starting with a template repository, or by forking (duplicating) someone else project).\nyou will start from a template repository created specifically for this class.\n\n\nIn a normal setting you would go to your github page to create a repository and then share it with collaborators. For this course will use the following link that will create a repository for your team, and populate it with a starter code. Once the repository created go to the home page and bookmark it for future reference.\nBefore we create our local repositories will look around the github user interface.\n\n\n\nFrom the github page of your project, click on the menu Projects. Projects are boards (like trello or planner) to organize your team task.\n\nCreate a new project\n\nCall it project management\nSet a description: Project board for the pandora project\nSet it to: Automatic Kanban\n\n\nIn the background, a special task for the project has been created : it will create more than an hundred issues (it may take some times). Each issue is related to a task you have to do in this project. Most of them are Features to implement, some relate to the start up exercices. Having a lot of issues makes it hard to find the ones you care about. Milestones, labels, and assignees allows to filter and categorize issues.\n\nDiscover the milestone for the start up exercices\n\nFrom the Github project page, click on the menu Issues\nFind the issues related to the exercice 1, 2, 3.\n\nThey should have the label good first issues\nThey should be part of the milestone Initiation to Git.\n\nOpen the Exercice 1 issue, read it and from the menu on the right\n\nAssign Members to the Issues.\nAdd them to the project\n\n\n\n\n\n\nEach member will need is own local repository to contribute. In a DVCS ( Distributed Version Control System ) like git, each contributor as a local copy of the revision tree that they synchronize with the remote repository."
+  },
+  {
+    "objectID": "git-101/git-101-Ex1.html#be-the-change-that-you-wish-to-see-in-the-world",
+    "href": "git-101/git-101-Ex1.html#be-the-change-that-you-wish-to-see-in-the-world",
+    "title": "Exercice 1",
+    "section": "",
+    "text": "One member will make some change to the project and publish them for the rest of the group to see.\n\nOpen with a text editor of your choice the file README.md.\nAdd the following\n# Group Members\n\n- &lt; Firstname LastName of first member of the group &gt;\n- &lt; Firstname LastName of second member of the group &gt;\n- &lt; Firstname LastName of third member of the group &gt;\nGo to github desktop.\nStage the change: Select the modifications you want to add to the next commit.\nCommit with a message explaining your change (e.g. Added project members to the README)\nPush your commit to the remote repository."
+  },
+  {
+    "objectID": "git-101/git-101-Ex1.html#discover-change",
+    "href": "git-101/git-101-Ex1.html#discover-change",
+    "title": "Exercice 1",
+    "section": "",
+    "text": "On the github webpage\n\nGo to the Code tab (the home page)\nClick on the menu Commits (in the Code menu bar, located below the main menu) to see the commits\n\npropagate the change with a pull from the other local repositories (member2 and 3)\n\nOn each github desktop pull changes"
+  },
+  {
+    "objectID": "git-101/git-101-Ex1.html#close-the-issue",
+    "href": "git-101/git-101-Ex1.html#close-the-issue",
+    "title": "Exercice 1",
+    "section": "",
+    "text": "Go back to your project management project page on github, close the issue and move it to Done.\nYou now know :\n\nHow to create a group repository\nHow to create a local repository\nHow to make and stage your modifications\nHow to commit your progress with a message\nHow to push your commit to a group repository"
+  },
+  {
+    "objectID": "Configuration-git.html",
+    "href": "Configuration-git.html",
+    "title": "wiki",
+    "section": "",
+    "text": "in the terminal (ctrl + j) check that your git configuration has the correct name and email address (either your estia or the email address in https://github.com/settings/emails), the name should either be your name or your github handle\n$ git config user.name\ndhmmasson\n$ git config user.email\n5263585+dhmmasson@users.noreply.github.com\nIf you want to update your email :\n$ git config user.email 5263585+dhmmasson@users.noreply.github.com"
+  },
+  {
+    "objectID": "Resources/CLI.html",
+    "href": "Resources/CLI.html",
+    "title": "Command Line Interface (CLI)",
+    "section": "",
+    "text": "A Command Line Interface (CLI) is a text-based interface that allows users to interact with a computer by typing commands. Unlike Graphical User Interfaces (GUI), which rely on visual elements, a CLI requires users to enter text commands to perform tasks. This enables the use of the CLI in scripts for system administration, programming, and software development.\nEach line of a command line can be decomposed in several parts\nPrompt Command Parameters1 ... ParametersN\n\nThe prompt is given by the shell or terminal you are using, for example in the terminal in vscode it is something like this:\n```bash\n\nusername:path$\n```\n\nThe command is the program you are executing, for example to compile the project we use maven whose command is mvn, to launch a java program we use java.\nThe parameters or arguments are values that are transmitted to the program to parametrize its execution. The parameters depend on the command used (e.g. the parameter for mvn are not the same as the parameter for the java command). Parameters can either be options or arguments.\n\nOptions modify the behavior of a command. They are preceded by a hyphen (-) and can be single-letter or full words. Some options take a parameters.\nArguments are the inputs provided to a command. They can be filenames, directories, or other data needed for the command to operate on.\n\n\nExample to compile and execute the pandora project from the command line:\n$ mvn -B --file pom.xml package\nthe first line call the program mvn which is the CLI for maven (Maven is a software project management tool by Apache that manage a project’s build, reporting and documentation from a single project object model (POM)). We gave to mvn two options -B (batch) and --file pom.xml and one argument package.\nthe man for the mvn command explain what each of this options does, it also tell us that the last argument is the goal (here: package - Compile and package the compiled code in its distributable format, such as a jar)\nExample to call your pandora program:\n$ java -jar target/pandora.jar\n$ java -jar target/pandora.jar --version\nthe java command launches a java program, the -jar instruct the command that the main class is in the given.jar file (here target/pandora.jar) all the remaining arguments are given to the target java program (–version is an argument to your pandora program and not to the java command)\nto make it clearer we can use an alias to rename java -jar target/pandora.jar to pandora\n$ alias pandora='java -jar target/pandora.jar'\n$ pandora --version\n\n\n\nOptions in the command line are flags or switches that modify the behavior of a command. They can be categorized into short options (single-character) and long options (multi-character). Options can sometimes take parameters to provide additional information to the command.\n\n\nShort options consist of a single character preceded by a hyphen (-). They are often used for quick, one-character modifications.\nExample:\n$ ls -l\nIn this example, the -l option is used with the ls command to display detailed information about files and directories.\nshort options that don’t take a parameters can be combined\nExample:\n$ ls -al\n$ ls -a -l\n\n\n\nLong options are more descriptive and consist of multiple characters preceded by two hyphens (–). They provide a clearer understanding of their purpose.\nExample:\n$ git commit --message \"Fix bug in feature X\"\nHere, the --message option is used with the git commit command to include a specific commit message.\n\n\n\nSome options require additional parameters to provide more specific information. These parameters are specified immediately after the option.\nExample:\n$ curl -o output.txt https://example.com/file.txt\nIn this command, the -o option is used to specify the output file (output.txt) for the data retrieved by the curl command.\nfor pandora\n\n\n\n\nArguments in the command line are inputs provided to a command to perform a specific operation. They follow the command and options.\nExample:\n$ cp file1.txt directory/\nIn this example, file1.txt and directory/ are arguments for the cp (copy) command. The command copies file1.txt to the specified directory.\nfor pandora the arguments are either the Flight-Records to parse or one folder that contain the Flight-Records\n$ pandora test/resources/0_201_MiG-23MLD.frd\n$ pandora test/resources/0_201_MiG-23MLD.frd test/resources/0_301_Su-25T.frd\n$ pandora test/resources",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "CLI Reference"
+    ]
+  },
+  {
+    "objectID": "Resources/CLI.html#definition",
+    "href": "Resources/CLI.html#definition",
+    "title": "Command Line Interface (CLI)",
+    "section": "",
+    "text": "A Command Line Interface (CLI) is a text-based interface that allows users to interact with a computer by typing commands. Unlike Graphical User Interfaces (GUI), which rely on visual elements, a CLI requires users to enter text commands to perform tasks. This enables the use of the CLI in scripts for system administration, programming, and software development.\nEach line of a command line can be decomposed in several parts\nPrompt Command Parameters1 ... ParametersN\n\nThe prompt is given by the shell or terminal you are using, for example in the terminal in vscode it is something like this:\n```bash\n\nusername:path$\n```\n\nThe command is the program you are executing, for example to compile the project we use maven whose command is mvn, to launch a java program we use java.\nThe parameters or arguments are values that are transmitted to the program to parametrize its execution. The parameters depend on the command used (e.g. the parameter for mvn are not the same as the parameter for the java command). Parameters can either be options or arguments.\n\nOptions modify the behavior of a command. They are preceded by a hyphen (-) and can be single-letter or full words. Some options take a parameters.\nArguments are the inputs provided to a command. They can be filenames, directories, or other data needed for the command to operate on.\n\n\nExample to compile and execute the pandora project from the command line:\n$ mvn -B --file pom.xml package\nthe first line call the program mvn which is the CLI for maven (Maven is a software project management tool by Apache that manage a project’s build, reporting and documentation from a single project object model (POM)). We gave to mvn two options -B (batch) and --file pom.xml and one argument package.\nthe man for the mvn command explain what each of this options does, it also tell us that the last argument is the goal (here: package - Compile and package the compiled code in its distributable format, such as a jar)\nExample to call your pandora program:\n$ java -jar target/pandora.jar\n$ java -jar target/pandora.jar --version\nthe java command launches a java program, the -jar instruct the command that the main class is in the given.jar file (here target/pandora.jar) all the remaining arguments are given to the target java program (–version is an argument to your pandora program and not to the java command)\nto make it clearer we can use an alias to rename java -jar target/pandora.jar to pandora\n$ alias pandora='java -jar target/pandora.jar'\n$ pandora --version",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "CLI Reference"
+    ]
+  },
+  {
+    "objectID": "Resources/CLI.html#options-in-cli",
+    "href": "Resources/CLI.html#options-in-cli",
+    "title": "Command Line Interface (CLI)",
+    "section": "",
+    "text": "Options in the command line are flags or switches that modify the behavior of a command. They can be categorized into short options (single-character) and long options (multi-character). Options can sometimes take parameters to provide additional information to the command.\n\n\nShort options consist of a single character preceded by a hyphen (-). They are often used for quick, one-character modifications.\nExample:\n$ ls -l\nIn this example, the -l option is used with the ls command to display detailed information about files and directories.\nshort options that don’t take a parameters can be combined\nExample:\n$ ls -al\n$ ls -a -l\n\n\n\nLong options are more descriptive and consist of multiple characters preceded by two hyphens (–). They provide a clearer understanding of their purpose.\nExample:\n$ git commit --message \"Fix bug in feature X\"\nHere, the --message option is used with the git commit command to include a specific commit message.\n\n\n\nSome options require additional parameters to provide more specific information. These parameters are specified immediately after the option.\nExample:\n$ curl -o output.txt https://example.com/file.txt\nIn this command, the -o option is used to specify the output file (output.txt) for the data retrieved by the curl command.\nfor pandora",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "CLI Reference"
+    ]
+  },
+  {
+    "objectID": "Resources/CLI.html#arguments-in-cli",
+    "href": "Resources/CLI.html#arguments-in-cli",
+    "title": "Command Line Interface (CLI)",
+    "section": "",
+    "text": "Arguments in the command line are inputs provided to a command to perform a specific operation. They follow the command and options.\nExample:\n$ cp file1.txt directory/\nIn this example, file1.txt and directory/ are arguments for the cp (copy) command. The command copies file1.txt to the specified directory.\nfor pandora the arguments are either the Flight-Records to parse or one folder that contain the Flight-Records\n$ pandora test/resources/0_201_MiG-23MLD.frd\n$ pandora test/resources/0_201_MiG-23MLD.frd test/resources/0_301_Su-25T.frd\n$ pandora test/resources",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "CLI Reference"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Advanced Programming",
+    "section": "",
+    "text": "This is the wiki for the Estia Advanced Programming class.",
+    "crumbs": [
+      "Home",
+      "🏠 Home"
+    ]
+  },
+  {
+    "objectID": "index.html#educational-goals-of-the-class",
+    "href": "index.html#educational-goals-of-the-class",
+    "title": "Advanced Programming",
+    "section": "Educational Goals of the Class",
+    "text": "Educational Goals of the Class\n\nStart and manage a software development project following some Agile project management\n\nOrganize features to be developed\nSet up milestones to reach\n\nFollow a Test-Driven-Development approach to develop software\n\nWrite tests before writing the code to implement a feature\nMake sure that all tests are passing before releasing a new version of the software\nMake sure that all code is covered by tests\n\nUse of a version control system",
+    "crumbs": [
+      "Home",
+      "🏠 Home"
+    ]
+  },
+  {
+    "objectID": "index.html#group-grade",
+    "href": "index.html#group-grade",
+    "title": "Advanced Programming",
+    "section": "Group Grade",
+    "text": "Group Grade\n\nImplementation (tests)\nYour program will be run against the teacher’s test suite. Grading is based on:\n\nHow many tests you pass: there are multiple tests per feature and CLI option. Each test consists in a text-based comparison between your program’s output and the reference output.\nMake sure to follow the output format instructions precisely.\nPerformance: your program will be run against long flight record files and must execute as fast as possible. Avoid unnecessary computation and I/O.\nCode quality: no dead code. Test coverage should reach the vast majority of your codebase.\n\n\n\nDevelopment Process\nYou are graded on the quality of your development workflow:\n\nUse of Conventional Commits for all commits\nProper Semantic Versioning for each release tag\nA maintained CHANGELOG following the Keep a Changelog format\n\n\n\nTest-Driven Development\nYou must produce a test suite (test/testSuite.json) that:\n\nValidates your own implementation: at least one test per feature and per CLI option\nDiscriminates other projects: other groups’ programs will be run against your test suite. Your results should agree with the teacher’s — if a team passes or fails a feature, your test suite should detect it consistently\nCovers your code: your tests should exercise most of your implementation",
+    "crumbs": [
+      "Home",
+      "🏠 Home"
+    ]
+  },
+  {
+    "objectID": "index.html#individual-grade",
+    "href": "index.html#individual-grade",
+    "title": "Advanced Programming",
+    "section": "Individual Grade",
+    "text": "Individual Grade\n\nContribute at least 30% of the group’s commits\nAt least 50% of your commits (excluding merge commits) follow Conventional Commits\nQCM during the last session — individual written assessment on the course content",
+    "crumbs": [
+      "Home",
+      "🏠 Home"
+    ]
+  },
+  {
+    "objectID": "index.html#project-description",
+    "href": "index.html#project-description",
+    "title": "Advanced Programming",
+    "section": "Project Description",
+    "text": "Project Description\nPlanes are equipped with Flight Recorder or black box to track many parameters during a flight to help during the investigation of accident. This project aims to emulate a software that would read and extract information from the flight data recorder.\nWe will in this class take some liberties on how the data are stored and extracted to simplify the process.\n\nFlight Data Records\nRecords about a flight will be stored in a text file. Specifications can be found here\n\n\nFlight Analysis\nThe tool will produce multiple flight analyses depending on the output option it receives as a Command Line Option. It can:\n\nCompute and display a single value (e.g., average altitude during the whole flight), as well as multiple values (e.g., a full report)\nConsider a single file (e.g., the average altitude of a given flight), several files (e.g., the average altitude of each flight), and multiple files (e.g., the maximum average altitude of a flight among others).\n\n\n\nFeatures to Develop\nFeatures are represented by issues open in your git repository. They are organized according to milestones. A list of features and milestones can be found here",
+    "crumbs": [
+      "Home",
+      "🏠 Home"
+    ]
+  },
+  {
+    "objectID": "index.html#first-steps",
+    "href": "index.html#first-steps",
+    "title": "Advanced Programming",
+    "section": "First Steps",
+    "text": "First Steps\n\n&lt;group action&gt; Copy the Issues corresponding to the Features to implement on your Github repository.\nClone the project locally on each member computer\nOpen the project with your java editor of choice Eclipse or vscode and run the maven build script to compile the bare version of the project (a program that output “pandora@v1.0.0”)\nRead the wiki documentation about\n\nwhat is Test-Driven-Development\nWhat are conventional Commits",
+    "crumbs": [
+      "Home",
+      "🏠 Home"
+    ]
+  },
+  {
+    "objectID": "grade/grade-2022.html",
+    "href": "grade/grade-2022.html",
+    "title": "Current Standing of the Teams for the 2022 Edition",
+    "section": "",
+    "text": "Score were computed on the version of your code present on the branch master on the 14/03/2022 at around midnight.\nScore per milestone and total are normalized on a 20-point scale for an easier reading. However milestone 1 contains 6 features, milestone 2 contains 15 features and milestone 3 contains 8 features. Total score is currently a simple average and does not reflect the final grade.\nCourse success only means that you have already reached the minimum requirement of completing milestone 1 and 2.\n\nFor the 10 teams with a 🟥Fail in course success, you still have two scheduled work sessions but you should probably work in between.\nFor the 1 team with an 🟧Almost in course success, you are on the right track, continue your effort.\n\nFor the 5 teams with a 🟩Pass in course success, The final grade will depends on how many more feature you can complete, so the competition is still on.\n\n\n\n\nTeam\nMilestone 1\nMilestone 2\nMilestone 3\nTotal\nCourse success\n\n\n\n\nestiaerofusex_2021\n19.98\n19.97\n2.68\n14.21\n🟩Pass\n\n\naled_2021\n19.98\n18.73\n1.05\n13.25\n🟩Pass\n\n\ngroupe_seghir_zyat_zhao_2021\n17.56\n19.97\n1.05\n12.86\n🟩Pass\n\n\nblackmailbox_2021\n19.26\n15.98\n0.97\n12.07\n🟩Pass\n\n\nmeg_2021\n13.33\n19.97\n0.91\n11.40\n🟩Pass\n\n\ng1_mcjdtt_2021\n19.18\n7.95\n2.93\n10.02\n🟧Almost\n\n\nteam-abc_2021\n13.2\n0\n1.05\n4.75\n🟥Fail\n\n\ngroupe_duthel_sqalli-adoui_2021\n0.55\n0\n1.05\n0.53\n🟥Fail\n\n\ndops_2021\n0\n0\n1.05\n0.35\n🟥Fail\n\n\nferhat-mansour_2021\n0\n0\n1.05\n0.35\n🟥Fail\n\n\ngroupe_ameel_huang_2021\n0\n0\n1.05\n0.35\n🟥Fail\n\n\nmsz-team_2021\n0\n0\n1.05\n0.35\n🟥Fail\n\n\ntakeoff_2021\n0\n0\n0.97\n0.32\n🟥Fail\n\n\ngroupe_ouchqi_2021\n0\n0\n0\n0\n🟥Fail\n\n\ngroupe_somane_wang_2021\n0\n0\n0\n0\n🟥Fail\n\n\ngroupe_fadli_faidi_addiche_2021\n0\n0\n0\n0\n🟥Fail\n\n\n\n\n\n\nScores are based only on milestone 1 on branch master as of 11/03/2022. They may not reflect where your team really is if you have not yet merged some pull request.\n\n\n\n\n\n\n\n\n\nTeam\nmilestone 1 - Unit Test\nmilestone a1 - Full test on actual flight\nScore Milestone 1 / 20\n\n\n\n\naled_2021\n5.99\n6\n20\n\n\nblackmailbox_2021\n5.42\n5\n17\n\n\ngroupe_seghir_zyat_zhao_2021\n4.34\n4.2\n14\n\n\nteam-abc_2021\n4.04\n3.88\n13\n\n\ng1_mcjdtt_2021\n1.95\n2.83\n8\n\n\nmeg_2021\n0.34\n3.02\n6\n\n\nestiaerofusex_2021\n2\n1\n5\n\n\ngroupe_duthel_sqalli-adoui_2021\n0.33\n0\n1\n\n\ndops_2021\n0\n0\n0\n\n\nferhat-mansour_2021\n0\n0\n0\n\n\ngroupe_ameel_huang_2021\n0\n0\n0\n\n\ngroupe_ouchqi_2021\n0\n0\n0\n\n\ngroupe_somane_wang_2021\n0\n0\n0\n\n\nmsz-team_2021\n0\n0\n0\n\n\ntakeoff_2021\n0\n0\n0\n\n\ngroupe_fadli_faidi_addiche_20211\n0\n0\n0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTeam name\ntotal commits\nissues opened\nMember 1\nMember 2\nMember 3\nMilestone 1\nMilestone 2\nMilestone 3\n\n\n\n\nALED\n22 Commits\n114\nDr-droide 8 Commits\nKillianGuiguen 5 Commits\nRobinHilliet 7 Commits\nN/A\nN/A\nN/A\n\n\nBlackMailBox\n22 Commits\n116\nLordSinheart 7 Commits\nMaximeGierlowski 10 Commits\nlneveu17 3 Commits\nN/A\nN/A\nN/A\n\n\nDOPS\n12 Commits\n118\nBaptisteFournie 5 Commits\nbriceedrs 3 Commits\nrmambound 3 Commits\nN/A\nN/A\nN/A\n\n\nestiaeroFUSEX\n2 Commits\n117\nSterparra 1 Commits\nMazaud501 0 Commits\nanthonyMazmanian 0 Commits\nN/A\nN/A\nN/A\n\n\nG1_MCJDTT\n22 Commits\n118\nMaxChevrier 5 Commits\n250700 11 Commits\ntteiva 5 Commits\nN/A\nN/A\nN/A\n\n\nGroupe_AMEEL_HUANG\n15 Commits\n117\nJingOceane 6 Commits\nRECTO007 8 Commits\nMarianneAMEEL 0 Commits\nN/A\nN/A\nN/A\n\n\nGroupe_DUTHEL_SQALLI ADOUI\n22 Commits\n114\nPierrickDu 10 Commits\nAbdelkarimsqalli 6 Commits\nefefasqcf 5 Commits\nN/A\nN/A\nN/A\n\n\nGroupe_Fadli_Faidi_Addiche\n37 Commits\n121\nHichamfaidi 11 Commits\naymanfad 10 Commits\nLaila136 15 Commits\nN/A\nN/A\nN/A\n\n\nGroupe_Seghir_Zyat_Zhao\n14 Commits\n115\nrighes 6 Commits\nHoudaZyatKhalid 6 Commits\nliangweiZ 1 Commits\nN/A\nN/A\nN/A\n\n\nGroupe_SOMANE_WANG\n1 Commits\n118\n1223812789 0 Commits\nGanique 0 Commits\nv0itex 0 Commits\nN/A\nN/A\nN/A\n\n\nMEG\n16 Commits\n118\nJulianPenner 3 Commits\nOldElPachot 9 Commits\nkcenterre 3 Commits\nN/A\nN/A\nN/A\n\n\nMSZ Team\n18 Commits\n118\nelassilsalaheddine 5 Commits\nElMehdiCHEIKH 6 Commits\nZinebjerrari 6 Commits\nN/A\nN/A\nN/A\n\n\nTAKEOFF\n1 Commits\n118\nNgilles010101 0 Commits\nAlexandre40510 0 Commits\nyoanclabaut 0 Commits\nN/A\nN/A\nN/A\n\n\nTeam ABC\n14 Commits\n118\nEnes-Callak 1 Commits\nThibaultAncele 7 Commits\nMrBachelet 5 Commits\nN/A\nN/A\nN/A"
+  },
+  {
+    "objectID": "grade/grade-2022.html#monday-march-the-14h---2355",
+    "href": "grade/grade-2022.html#monday-march-the-14h---2355",
+    "title": "Current Standing of the Teams for the 2022 Edition",
+    "section": "",
+    "text": "Score were computed on the version of your code present on the branch master on the 14/03/2022 at around midnight.\nScore per milestone and total are normalized on a 20-point scale for an easier reading. However milestone 1 contains 6 features, milestone 2 contains 15 features and milestone 3 contains 8 features. Total score is currently a simple average and does not reflect the final grade.\nCourse success only means that you have already reached the minimum requirement of completing milestone 1 and 2.\n\nFor the 10 teams with a 🟥Fail in course success, you still have two scheduled work sessions but you should probably work in between.\nFor the 1 team with an 🟧Almost in course success, you are on the right track, continue your effort.\n\nFor the 5 teams with a 🟩Pass in course success, The final grade will depends on how many more feature you can complete, so the competition is still on.\n\n\n\n\nTeam\nMilestone 1\nMilestone 2\nMilestone 3\nTotal\nCourse success\n\n\n\n\nestiaerofusex_2021\n19.98\n19.97\n2.68\n14.21\n🟩Pass\n\n\naled_2021\n19.98\n18.73\n1.05\n13.25\n🟩Pass\n\n\ngroupe_seghir_zyat_zhao_2021\n17.56\n19.97\n1.05\n12.86\n🟩Pass\n\n\nblackmailbox_2021\n19.26\n15.98\n0.97\n12.07\n🟩Pass\n\n\nmeg_2021\n13.33\n19.97\n0.91\n11.40\n🟩Pass\n\n\ng1_mcjdtt_2021\n19.18\n7.95\n2.93\n10.02\n🟧Almost\n\n\nteam-abc_2021\n13.2\n0\n1.05\n4.75\n🟥Fail\n\n\ngroupe_duthel_sqalli-adoui_2021\n0.55\n0\n1.05\n0.53\n🟥Fail\n\n\ndops_2021\n0\n0\n1.05\n0.35\n🟥Fail\n\n\nferhat-mansour_2021\n0\n0\n1.05\n0.35\n🟥Fail\n\n\ngroupe_ameel_huang_2021\n0\n0\n1.05\n0.35\n🟥Fail\n\n\nmsz-team_2021\n0\n0\n1.05\n0.35\n🟥Fail\n\n\ntakeoff_2021\n0\n0\n0.97\n0.32\n🟥Fail\n\n\ngroupe_ouchqi_2021\n0\n0\n0\n0\n🟥Fail\n\n\ngroupe_somane_wang_2021\n0\n0\n0\n0\n🟥Fail\n\n\ngroupe_fadli_faidi_addiche_2021\n0\n0\n0\n0\n🟥Fail"
+  },
+  {
+    "objectID": "grade/grade-2022.html#friday-march-11th---1800",
+    "href": "grade/grade-2022.html#friday-march-11th---1800",
+    "title": "Current Standing of the Teams for the 2022 Edition",
+    "section": "",
+    "text": "Scores are based only on milestone 1 on branch master as of 11/03/2022. They may not reflect where your team really is if you have not yet merged some pull request.\n\n\n\n\n\n\n\n\n\nTeam\nmilestone 1 - Unit Test\nmilestone a1 - Full test on actual flight\nScore Milestone 1 / 20\n\n\n\n\naled_2021\n5.99\n6\n20\n\n\nblackmailbox_2021\n5.42\n5\n17\n\n\ngroupe_seghir_zyat_zhao_2021\n4.34\n4.2\n14\n\n\nteam-abc_2021\n4.04\n3.88\n13\n\n\ng1_mcjdtt_2021\n1.95\n2.83\n8\n\n\nmeg_2021\n0.34\n3.02\n6\n\n\nestiaerofusex_2021\n2\n1\n5\n\n\ngroupe_duthel_sqalli-adoui_2021\n0.33\n0\n1\n\n\ndops_2021\n0\n0\n0\n\n\nferhat-mansour_2021\n0\n0\n0\n\n\ngroupe_ameel_huang_2021\n0\n0\n0\n\n\ngroupe_ouchqi_2021\n0\n0\n0\n\n\ngroupe_somane_wang_2021\n0\n0\n0\n\n\nmsz-team_2021\n0\n0\n0\n\n\ntakeoff_2021\n0\n0\n0\n\n\ngroupe_fadli_faidi_addiche_20211\n0\n0\n0"
+  },
+  {
+    "objectID": "grade/grade-2022.html#monday-march-7th",
+    "href": "grade/grade-2022.html#monday-march-7th",
+    "title": "Current Standing of the Teams for the 2022 Edition",
+    "section": "",
+    "text": "Team name\ntotal commits\nissues opened\nMember 1\nMember 2\nMember 3\nMilestone 1\nMilestone 2\nMilestone 3\n\n\n\n\nALED\n22 Commits\n114\nDr-droide 8 Commits\nKillianGuiguen 5 Commits\nRobinHilliet 7 Commits\nN/A\nN/A\nN/A\n\n\nBlackMailBox\n22 Commits\n116\nLordSinheart 7 Commits\nMaximeGierlowski 10 Commits\nlneveu17 3 Commits\nN/A\nN/A\nN/A\n\n\nDOPS\n12 Commits\n118\nBaptisteFournie 5 Commits\nbriceedrs 3 Commits\nrmambound 3 Commits\nN/A\nN/A\nN/A\n\n\nestiaeroFUSEX\n2 Commits\n117\nSterparra 1 Commits\nMazaud501 0 Commits\nanthonyMazmanian 0 Commits\nN/A\nN/A\nN/A\n\n\nG1_MCJDTT\n22 Commits\n118\nMaxChevrier 5 Commits\n250700 11 Commits\ntteiva 5 Commits\nN/A\nN/A\nN/A\n\n\nGroupe_AMEEL_HUANG\n15 Commits\n117\nJingOceane 6 Commits\nRECTO007 8 Commits\nMarianneAMEEL 0 Commits\nN/A\nN/A\nN/A\n\n\nGroupe_DUTHEL_SQALLI ADOUI\n22 Commits\n114\nPierrickDu 10 Commits\nAbdelkarimsqalli 6 Commits\nefefasqcf 5 Commits\nN/A\nN/A\nN/A\n\n\nGroupe_Fadli_Faidi_Addiche\n37 Commits\n121\nHichamfaidi 11 Commits\naymanfad 10 Commits\nLaila136 15 Commits\nN/A\nN/A\nN/A\n\n\nGroupe_Seghir_Zyat_Zhao\n14 Commits\n115\nrighes 6 Commits\nHoudaZyatKhalid 6 Commits\nliangweiZ 1 Commits\nN/A\nN/A\nN/A\n\n\nGroupe_SOMANE_WANG\n1 Commits\n118\n1223812789 0 Commits\nGanique 0 Commits\nv0itex 0 Commits\nN/A\nN/A\nN/A\n\n\nMEG\n16 Commits\n118\nJulianPenner 3 Commits\nOldElPachot 9 Commits\nkcenterre 3 Commits\nN/A\nN/A\nN/A\n\n\nMSZ Team\n18 Commits\n118\nelassilsalaheddine 5 Commits\nElMehdiCHEIKH 6 Commits\nZinebjerrari 6 Commits\nN/A\nN/A\nN/A\n\n\nTAKEOFF\n1 Commits\n118\nNgilles010101 0 Commits\nAlexandre40510 0 Commits\nyoanclabaut 0 Commits\nN/A\nN/A\nN/A\n\n\nTeam ABC\n14 Commits\n118\nEnes-Callak 1 Commits\nThibaultAncele 7 Commits\nMrBachelet 5 Commits\nN/A\nN/A\nN/A"
+  },
+  {
+    "objectID": "grade/grade-2022.html#footnotes",
+    "href": "grade/grade-2022.html#footnotes",
+    "title": "Current Standing of the Teams for the 2022 Edition",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThe source code on master does not compile be careful↩︎"
+  },
+  {
+    "objectID": "Home.html",
+    "href": "Home.html",
+    "title": "Advanced Programming",
+    "section": "",
+    "text": "This is the wiki for the Estia Advanced Programming class."
+  },
+  {
+    "objectID": "Home.html#educational-goals-of-the-class",
+    "href": "Home.html#educational-goals-of-the-class",
+    "title": "Advanced Programming",
+    "section": "Educational Goals of the Class",
+    "text": "Educational Goals of the Class\n\nStart and manage a software development project following some Agile project management\n\nOrganize features to be developed\nSet up milestones to reach\n\nFollow a Test-Driven-Development approach to develop software\n\nWrite tests before writing the code to implement a feature\nMake sure that all tests are passing before releasing a new version of the software\nMake sure that all code is covered by tests\n\nUse of a version control system"
+  },
+  {
+    "objectID": "Home.html#group-grade",
+    "href": "Home.html#group-grade",
+    "title": "Advanced Programming",
+    "section": "Group Grade",
+    "text": "Group Grade\n\nImplementation (tests)\nYour program will be run against the teacher’s test suite. Grading is based on:\n\nHow many tests you pass: there are multiple tests per feature and CLI option. Each test consists in a text-based comparison between your program’s output and the reference output.\nMake sure to follow the output format instructions precisely.\nPerformance: your program will be run against long flight record files and must execute as fast as possible. Avoid unnecessary computation and I/O.\nCode quality: no dead code. Test coverage should reach the vast majority of your codebase.\n\n\n\nDevelopment Process\nYou are graded on the quality of your development workflow:\n\nUse of Conventional Commits for all commits\nProper Semantic Versioning for each release tag\nA maintained CHANGELOG following the Keep a Changelog format\n\n\n\nTest-Driven Development\nYou must produce a test suite (test/testSuite.json) that:\n\nValidates your own implementation: at least one test per feature and per CLI option\nDiscriminates other projects: other groups’ programs will be run against your test suite. Your results should agree with the teacher’s — if a team passes or fails a feature, your test suite should detect it consistently\nCovers your code: your tests should exercise most of your implementation"
+  },
+  {
+    "objectID": "Home.html#individual-grade",
+    "href": "Home.html#individual-grade",
+    "title": "Advanced Programming",
+    "section": "Individual Grade",
+    "text": "Individual Grade\n\nContribute at least 30% of the group’s commits\nAt least 50% of your commits (excluding merge commits) follow Conventional Commits\nQCM during the last session — individual written assessment on the course content"
+  },
+  {
+    "objectID": "Home.html#project-description",
+    "href": "Home.html#project-description",
+    "title": "Advanced Programming",
+    "section": "Project Description",
+    "text": "Project Description\nPlanes are equipped with Flight Recorder or black box to track many parameters during a flight to help during the investigation of accident. This project aims to emulate a software that would read and extract information from the flight data recorder.\nWe will in this class take some liberties on how the data are stored and extracted to simplify the process.\n\nFlight Data Records\nRecords about a flight will be stored in a text file. Specifications can be found here\n\n\nFlight Analysis\nThe tool will produce multiple flight analyses depending on the output option it receives as a Command Line Option. It can:\n\nCompute and display a single value (e.g., average altitude during the whole flight), as well as multiple values (e.g., a full report)\nConsider a single file (e.g., the average altitude of a given flight), several files (e.g., the average altitude of each flight), and multiple files (e.g., the maximum average altitude of a flight among others).\n\n\n\nFeatures to Develop\nFeatures are represented by issues open in your git repository. They are organized according to milestones. A list of features and milestones can be found here"
+  },
+  {
+    "objectID": "Home.html#first-steps",
+    "href": "Home.html#first-steps",
+    "title": "Advanced Programming",
+    "section": "First Steps",
+    "text": "First Steps\n\n&lt;group action&gt; Copy the Issues corresponding to the Features to implement on your Github repository.\nClone the project locally on each member computer\nOpen the project with your java editor of choice Eclipse or vscode and run the maven build script to compile the bare version of the project (a program that output “pandora@v1.0.0”)\nRead the wiki documentation about\n\nwhat is Test-Driven-Development\nWhat are conventional Commits"
+  },
+  {
+    "objectID": "Pandora/Flight-Records.html",
+    "href": "Pandora/Flight-Records.html",
+    "title": "Flight Records V1.1.0",
+    "section": "",
+    "text": "Outline\n\nTest files\nFile Structure\nMetadata Section\nData Section\n- RU\n- US\n\n\nA flight records is a text file describing a flight. It contains global information about the flight (flight id, origin,… complete list), as well as parameters values recorded during the flight (GPS coordinates, air speed,… complete list)",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Flight Records"
+    ]
+  },
+  {
+    "objectID": "Pandora/Flight-Records.html#metadata-section",
+    "href": "Pandora/Flight-Records.html#metadata-section",
+    "title": "Flight Records V1.1.0",
+    "section": "Metadata Section",
+    "text": "Metadata Section\nThe metadata section of the flight record file contains information relative to the plane and the flight. Header fields are colon-separated key-value pairs in clear-text string format, terminated by a carriage return (CR) and line feed (LF) character sequence. The end of the metadata section is indicated by an empty line, resulting in the transmission of two consecutive CR-LF pairs.\n\nfield:value\n....\nfield:value\nFig.2 The metadata section is a list of colon-separated key-value pairs\n\n\nList of Metadata Fields\n\n\n\nParameter name\nPresence\nData Type\nUnit/format\nDescription\nExample\n\n\n\n\nflight id\nrequired\nString\n\nA unique identifier for the flig\n601\n\n\nflight code\nrequired\nString\n\nThe code name of the fighter jet\nF-14A\n\n\norigin\nrequired\nString\nUS/RU\nThe origin of the fighter jet (US or RU)\nUS\n\n\ndate\nrequired\nString\nyyyy-mm-dd\nThe date of the flight\n2011-06-01\n\n\nfrom\nrequired\nString\n\nThe take off airport name\nkrasnodar pashkovsky\n\n\nto\nrequired\nString\n\nThe landing airport name\ntbilissi-lochini\n\n\nmotor(s)\nrequired\nNumber\nnone\nThe number of engines the jet has\n2\n\n\nmass aircraft\nOptional\nNumber\nkg in RU files, lbs in US files.\nThe mass of the fighter jet\n41780\n\n\nmass fuel\nOptional\nNumber\nkg in RU files, lbs in US files.\nThe mass of fuel at take off in the fighter jet\n41780\n\n\nlift coef\nOptional\nDecimal\n\nThe (overall) lift coefficient of the fighter jet\n1.9650056483374456\n\n\ndrag coef\nOptional\nDevimal\n\nThe (overall) drag coefficient of the fighter jet\n0.010121101720646569\n\n\nversion\nOptional\nstring\n\nVersion of the format used. By default v1.1.0\nv1.1.0",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Flight Records"
+    ]
+  },
+  {
+    "objectID": "Pandora/Flight-Records.html#data-section",
+    "href": "Pandora/Flight-Records.html#data-section",
+    "title": "Flight Records V1.1.0",
+    "section": "Data Section",
+    "text": "Data Section\nThe Data structure contains the information recorded during the flights. Parameters are recorded in a CSV format. The first line is the header indicating the content of the data lines (column names).\n\nHeader\nData record\n...\nData record\nFig.4 Data section is a csv table of parameters values describing a flight\n\n\nColumn Names\nThe line with column names is located at the top of the data section. It indicates which parameters were recorded for this flight. The complete list of possible parameters can be found there. Some parameters are mandatory and will always be in the same position (e.g. timestamp is always first). Some parameters are optional and depends mostly on the plane (e.g. there will be as many engine thrust columns as there are engine on the plane).\n\nTimestamp,Parameter,...,Parameter\nfig.5 The header line\n\n\n\nData Record\nA data line represents one point in time (denoted by the timestamp) during the flight. It is a record of all the parameters at this moment.\n\nValue,Value,...,Value\nfig.6 the record structure",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Flight Records"
+    ]
+  },
+  {
+    "objectID": "Pandora/Flight-Records.html#parameters-list",
+    "href": "Pandora/Flight-Records.html#parameters-list",
+    "title": "Flight Records V1.1.0",
+    "section": "Parameters List",
+    "text": "Parameters List\nRU and US fighter jets do not use the same Units when logging their data.\n\nRussian Fighter Jets (RU)\n\n\n\n\n\n\n\n\n\n\n\nParameter name\nPresence\nData Type\nUnit\nDescription\nExample\n\n\n\n\ntimestamp\nRequired First\nDecimal\ns\nElapsed time in second since 01/01/1970\n1583010425910.56\n\n\nlongitude\nRequired\nDecimal\nDecimal Degrees (°)\nLocation longitude. Positive values are toward the north and east directions.\n2.9382915\n\n\nlatitude\nRequired\nDecimal\nDecimal Degrees (°)\nLocation latitude. Positive values are toward the north and east directions.\n79.982\n\n\naltitude\nRequired\nDecimal\nMeter (m)\nHeight above sea level\n2985.9909092\n\n\nroll\nOptional\nDecimal\nDecimal Degrees (°)\nRoll is positive when rolling the aircraft to the right\n0.8\n\n\npitch\nOptional\nDecimal\nDecimal Degrees (°)\nPitch is positive when taking-off\n1.5\n\n\nyaw\nOptional\nDecimal\nDecimal Degrees (°)\nYaw is clockwise relative to the true north\n224.8\n\n\nheading\nOptional\nDecimal\nDecimal Degrees (°)\nHeading is the yaw relative to the true north of the flat world. It is required because the native world north usually does not match spherical world north because of projection errors.\n224.8\n\n\nair_speed\nRequired\nDecimal\nMeter per second (m/s)\nWind speed reported by external sensors\n516.6514247099457\n\n\nengine_X\nRequired\nDecimal\nWatt (W)\nPower of engine number X\n30565986.61627765\n\n\ntemperature_in\nRequired\nDecimal\nCelsius Degree (℃)\nCockpit temperature\n27.156045641442\n\n\nhumidity_in\nRequired\nDecimal\nPercentage (%)\nRelative humidity\n45.971654984\n\n\npressure_in\nRequired\nDecimal\nPascal (Pa)\nCockpit pressure\n27.156045641442\n\n\nheart_rate\nRequired\nDecimal\nBeats per Minute (bpm)\nPilot’s heart beats\n80.00\n\n\noxygen_mask\nRequired\nDecimal\nPercentage (%)\nOxygen concentration sent to the pilot\n78.3458795665\n\n\n\n\n\nAmerican Fighter Jets (US)\n\n\n\n\n\n\n\n\n\n\n\nParameter name\nPresence\nData Type\nUnit\nDescription\nExample\n\n\n\n\ntimestamp\nRequired First\nDecimal\ns\nElapsed time in second since 01/01/1970\n1583010425910.56\n\n\nlongitude\nRequired\nDecimal\nDecimal Degrees (°)\nLocation longitude. Positive values are toward the north and east directions.\n2.9382915\n\n\nlatitude\nRequired\nDecimal\nDecimal Degrees (°)\nLocation latitude. Positive values are toward the north and east directions.\n79.982\n\n\naltitude\nRequired\nDecimal\nFeet (ft)\nHeight above sea level\n2985.9909092\n\n\nroll\nOptional\nDecimal\nDecimal Degrees (°)\nRoll is positive when rolling the aircraft to the right\n0.8\n\n\npitch\nOptional\nDecimal\nDecimal Degrees (°)\nPitch is positive when taking-off\n1.5\n\n\nyaw\nOptional\nDecimal\nDecimal Degrees (°)\nYaw is clockwise relative to the true north\n224.8\n\n\nheading\nOptional\nDecimal\nDecimal Degrees (°)\nHeading is the yaw relative to the true north of the flat world. It is required because the native world north usually does not match spherical world north because of projection errors.\n224.8\n\n\nair_speed\nRequired\nDecimal\nMiles per Hour (mph)\nWind speed reported by external sensors\n516.6514247099457\n\n\nengine_X\nRequired\nDecimal\nHorsePower (hp)\nPower of engine number X\n30565986.61627765\n\n\ntemperature_in\nRequired\nDecimal\nKelvin Degree (K)\nCockpit temperature\n27.156045641442\n\n\nhumidity_in\nRequired\nDecimal\nPercentage (/100)\nRelative humidity\n0.45971654984\n\n\npressure_in\nRequired\nDecimal\nPound-Force per Square Inch (psi)\nCockpit pressure\n27.156045641442\n\n\nheart_rate\nRequired\nNumber\nBeats per Minute (bpm)\nPilot’s heart beats\n80\n\n\noxygen_mask\nRequired\nDecimal\nPercentage (/100)\nOxygen concentration sent to the pilot\n0.783458795665",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Flight Records"
+    ]
+  },
+  {
+    "objectID": "Pandora/Features.html",
+    "href": "Pandora/Features.html",
+    "title": "Features",
+    "section": "",
+    "text": "Features\n\n\n\n\n\n\n\n\nOption\nCLI Option\nDescription\n\n\n\n\nCLI Options\n\n\n\n\nVersion\n--version / -v\nPandora version\n\n\nHelp\n--help / -h\nPandora help message\n\n\nMetadata\n-m metadata_name\nPrint the value of a metadata field (e.g., -m jet_id)\n\n\nParameters\n--parameters / -p\nPrint the parameters presented in the flight record file(s)\n\n\nNumber of records\n--number / -n\nPrint the number of records in the flight record file(s)\n\n\nunit\n--unit metric\\|imperial / -u metric\\|imperial\nChoose the output unit system (metric or imperial)\n\n\nmetric\n--metric / -M\nSimilar to --unit metric\n\n\nimperial\n--imperial / -I\nSimilar to --unit imperial\n\n\nbatch mode\n--batch / -b\nProcess all flight record files in a folder and print the results in a single output file\n\n\nDebug mode\n--debug / -d\nUse to print debug information during the execution of the program\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeature\nCLI option\nInput\nDescription\nOutput\nUnit\nVersion\n\n\n\n\nSingle Flight Computations\n\n\n\n\n\n\n\n\nStarting time\n-o start_time\n\n\n\n\n\n\n\nFilenames\n-o filenames\n\n\n\n\n\n\n\nAverage Altitude\n-o avgAlt\na flight record file\nthe average altitude during the flight\naltitude\nm\n\n\n\nMax Altitude\n-o maxAlt\na flight record file\nthe maximum altitude during the flight\naltitude\nm\n\n\n\nAverage Air Speed\n-o avgAirSpeed\na flight record file\nthe average air speed during the flight\nspeed\nm/s\n\n\n\nMax Air Speed\n-o maxAirSpeed\na flight record file\nthe maximum air speed during the flight\nspeed\nm/s\n\n\n\nAverage Engine Power\n-o avgEnginePower\na flight record file\nthe average total engine power during the flight\npower\nW\n\n\n\nMax Engine Power\n-o maxEnginePower\na flight record file\nthe maximum total engine power during the flight\npower\nW\n\n\n\nAverage Temperature\n-o avgTemp\na flight record file\nthe average temperature in the cockpit during the flight\ntemperature\n℃\n\n\n\nMin Temperature\n-o minTemp\na flight record file\nthe minimum temperature in the cockpit during the flight\ntemperature\n℃\n\n\n\nMax Temperature\n-o maxTemp\na flight record file\nthe maximum temperature in the cockpit during the flight\ntemperature\n℃\n\n\n\nAverage Pressure\n-o avgPressure\na flight record file\nthe average pressure in the cockpit during the flight\npressure\nPa\n\n\n\nMax Pressure\n-o maxPressure\na flight record file\nthe maximum pressure in the cockpit during the flight\npressure\nPa\n\n\n\nMinimum Pressure\n-o minPressure\na flight record file\nthe minimum pressure in the cockpit during the flight\npressure\nPa\n\n\n\nAverage Relative Humidity\n-o avgHumidity\na flight record file\nthe average relative humidity in the cockpit during the flight\nhumidity\n%\n\n\n\nMax Relative Humidity\n-o maxHumidity\na flight record file\nthe maximum relative humidity in the cockpit during the flight\nhumidity\n%\n\n\n\nMin Relative Humidity\n-o minHumidity\na flight record file\nthe minimum relative humidity in the cockpit during the flight\nhumidity\n%\n\n\n\nAverage Heart Rate\n-o avgHeartRate\na flight record file\nthe average pilot’s heart rate during the flight\nheart rate\nbpm\n\n\n\nMax Heart Rate\n-o maxHeartRate\na flight record file\nthe maximum pilot’s heart rate during the flight\nheart rate\nbpm\n\n\n\nMin Heart Rate\n-o minHeartRate\na flight record file\nthe minimum pilot’s heart rate during the flight\nheart rate\nbpm\n\n\n\nAverage Oxygen Concentration\n-o avgOxygen\na flight record file\nthe average oxygen concentration delivered by the pilot’s mask during the flight\nconcentration\n%\n\n\n\nMin Oxygen Concentration\n-o minOxygen\na flight record file\nthe minimum oxygen concentration delivered by the pilot’s mask during the flight\nconcentration\n%\n\n\n\nMax Oxygen Concentration\n-o maxOxygen\na flight record file\nthe maximum oxygen concentration delivered by the pilot’s mask during the flight\nconcentration\n%\n\n\n\nFlight Duration\n-o flightDuration\na flight record file\nthe total flight duration\nHH:mm:ss\n\n\n\n\nFlight Distance\n-o flightDistance\na flight record file\nthe total flight distance\ndistance\nm\n\n\n\nAverage Acceleration\n-o avgAcceleration\na flight record file\nthe average acceleration during the flight\nacceleration\nm/s²\n\n\n\nMax Acceleration\n-o maxAcceleration\na flight record file\nthe maximum acceleration during the flight\nacceleration\nm/s²\n\n\n\nWind Speed\n-o windSpeed\na flight record file\nthe average wind speed during the flight\nspeed\nm/s\n\n\n\nAverage Mach Speed\n-o avgMachSpeed\na flight record file\nthe average speed in Mach during the flight\nMach\n\n\n\n\nMax Mach Speed\n-o maxMachSpeed\na flight record file\nthe maximum speed in Mach during the flight\nMach\n\n\n\n\nMax Acceleration in G\n-o maxAccelG\na flight record file\nthe maximum acceleration during the flight\nacceleration\nG\n\n\n\nReaching 80% Max Altitude\n-o reachAlt\na flight record file\nthe time to reach 80% of maximum altitude during the flight\ntime / max_altitude\nmin / m\n\n\n\nReaching 80% Total Distance\n-o reachDist\na flight record file\nthe time to arrive at 80% of total flight distance\ntime / total_distance\nmin / km\n\n\n\nAltitude with Fastest Wind\n-o fastWindAlt\na flight record file\nthe altitude with the fastest wind outside the aircraft over a 5 min window\naltitude: avg_5min_wind_speed\nm: m/s\n\n\n\nAltitude with Highest Aircraft Speed\n-o fastJetAlt\na flight record file\nthe altitude at which the jet had its fastest speed over a 5 min window\naltitude: avg_5min_jet_speed\nm: m/s\n\n\n\nNoise of Temperature Sensors\n-o noiseTemp\na flight record file\nthe average noise in the temperature data assuming a reference temperature of 25℃\nnoise_value\n℃\n\n\n\nStressed Pilot\n-o stressedPilot\na flight record file\nwhether the pilot had a stress attack\ny/n\n\n\n\n\n50% Oxygen Phase\n-o oxygenPhase\na flight record file\nwhich phase required more than 50% oxygen concentration in the mask\nphase_name\n\n\n\n\nFlight Phases\n\n\n\n\n\n\n\n\nTake Off Phase Detection\n-o takeOff\na flight record file\nthe start and end time of the take off phase\nstart=HH:mm:ss / end=HH:mm:ss\n\n\n\n\nCruise Phase Detection\n-o cruise\na flight record file\nthe start and end time of the cruise phase\nstart=HH:mm:ss / end=HH:mm:ss\n\n\n\n\nLanding Phase Detection\n-o landing\na flight record file\nthe start and end time of the landing phase\nstart=HH:mm:ss / end=HH:mm:ss\n\n\n\n\nRatio Distance\n-o ratioDistance\na flight record file\nthe ratio between the distance actually flown and the point-to-point distance between take off and landing\nratio\n\n\n\n\nAverage Air Speed (Take Off)\n-o avgAirSpeedTakeOff\na flight record file\nthe average air speed during the take off phase\nspeed\nm/s\nDeprecated in v2 — use --phase takeOff with -o avgAirSpeed\n\n\nMax Air Speed (Take Off)\n-o maxAirSpeedTakeOff\na flight record file\nthe maximum air speed during the take off phase\nspeed\nm/s\nDeprecated in v2 — use --phase takeOff with -o maxAirSpeed\n\n\nAverage Engine Power (Take Off)\n-o avgEnginePowerTakeOff\na flight record file\nthe average total engine power during the take off phase\npower\nW\nDeprecated in v2 — use --phase takeOff with -o avgEnginePower\n\n\nMax Engine Power (Take Off)\n-o maxEnginePowerTakeOff\na flight record file\nthe maximum total engine power during the take off phase\npower\nW\nDeprecated in v2 — use --phase takeOff with -o maxEnginePower\n\n\nAverage Air Speed (Cruise)\n-o avgAirSpeedCruise\na flight record file\nthe average air speed during the cruise phase\nspeed\nm/s\nDeprecated in v2 — use --phase Cruise with -o avgAirSpeed\n\n\nMax Air Speed (Cruise)\n-o maxAirSpeedCruise\na flight record file\nthe maximum air speed during the cruise phase\nspeed\nm/s\nDeprecated in v2 — use --phase Cruise with -o maxAirSpeed\n\n\nAverage Engine Power (Cruise)\n-o avgEnginePowerCruise\na flight record file\nthe average total engine power during the cruise phase\npower\nW\nDeprecated in v2 — use --phase Cruise with -o avgEnginePower\n\n\nMax Engine Power (Cruise)\n-o maxEnginePowerCruise\na flight record file\nthe maximum total engine power during the cruise phase\npower\nW\nDeprecated in v2 — use --phase Cruise with -o maxEnginePower\n\n\nAverage Air Speed (Landing)\n-o avgAirSpeedLanding\na flight record file\nthe average air speed during the landing phase\nspeed\nm/s\nDeprecated in v2 — use --phase Landing with -o avgAirSpeed\n\n\nMax Air Speed (Landing)\n-o maxAirSpeedLanding\na flight record file\nthe maximum air speed during the landing phase\nspeed\nm/s\nDeprecated in v2 — use --phase Landing with -o maxAirSpeed\n\n\nAverage Engine Power (Landing)\n-o avgEnginePowerLanding\na flight record file\nthe average total engine power during the landing phase\npower\nW\nDeprecated in v2 — use --phase Landing with -o avgEnginePower\n\n\nMax Engine Power (Landing)\n-o maxEnginePowerLanding\na flight record file\nthe maximum total engine power during the landing phase\npower\nW\nDeprecated in v2 — use --phase Landing with -o maxEnginePower\n\n\nFlight Distance (Take Off)\n-o flightDistanceTakeOff\na flight record file\nthe total flight distance during the take off phase\ndistance\nkm\nDeprecated in v2 — use --phase takeOff with -o flightDistance\n\n\nAverage Acceleration (Take Off)\n-o avgAccelerationTakeOff\na flight record file\nthe average acceleration during the take off phase\nacceleration\nm/s²\nDeprecated in v2 — use --phase takeOff with -o avgAcceleration\n\n\nMax Acceleration (Take Off)\n-o maxAccelerationTakeOff\na flight record file\nthe maximum acceleration during the take off phase\nacceleration\nm/s²\nDeprecated in v2 — use --phase takeOff with -o maxAcceleration\n\n\nWind Speed (Take Off)\n-o windSpeedTakeOff\na flight record file\nthe average wind speed during the take off phase\nspeed\nm/s\nDeprecated in v2 — use --phase takeOff with -o windSpeed\n\n\nFlight Distance (Cruise)\n-o flightDistanceCruise\na flight record file\nthe total flight distance during the cruise phase\ndistance\nkm\n\n\n\nAverage Acceleration (Cruise)\n-o avgAccelerationCruise\na flight record file\nthe average acceleration during the cruise phase\nacceleration\nm/s²\nDeprecated in v2 — use --phase Cruise with -o avgAcceleration\n\n\nMax Acceleration (Cruise)\n-o maxAccelerationCruise\na flight record file\nthe maximum acceleration during the cruise phase\nacceleration\nm/s²\nDeprecated in v2 — use --phase Cruise with -o maxAcceleration\n\n\nWind Speed (Cruise)\n-o windSpeedCruise\na flight record file\nthe average wind speed during the cruise phase\nspeed\nm/s\nDeprecated in v2 — use --phase Cruise with -o windSpeed\n\n\nFlight Distance (Landing)\n-o flightDistanceLanding\na flight record file\nthe total flight distance during the landing phase\ndistance\nkm\nDeprecated in v2 — use --phase Landing with -o flightDistance\n\n\nAverage Acceleration (Landing)\n-o avgAccelerationLanding\na flight record file\nthe average acceleration during the landing phase\nacceleration\nm/s²\nDeprecated in v2 — use --phase Landing with -o avgAcceleration\n\n\nMax Acceleration (Landing)\n-o maxAccelerationLanding\na flight record file\nthe maximum acceleration during the landing phase\nacceleration\nm/s²\nDeprecated in v2 — use --phase Landing with -o maxAcceleration\n\n\nWind Speed (Landing)\n-o windSpeedLanding\na flight record file\nthe average wind speed during the landing phase\nspeed\nm/s\nDeprecated in v2 — use --phase Landing with -o windSpeed\n\n\nMost Demanding Phase — Engine Power\n-o mostPowerPhase\na flight record file\nthe phase which required the most average engine power\nphase_name:power\nW\n\n\n\nMost Demanding Phase — Stress\n-o mostStressPhase\na flight record file\nthe phase which provoked the highest average heart rate\nphase_name:heart_beat\nbpm\n\n\n\nMost Demanding Phase — Horizontal Acceleration\n-o mostAccelPhase\na flight record file\nthe phase with the highest average horizontal acceleration\nphase_name:acceleration\nm/s²\n\n\n\nCross Flights Computations\n\n\n\n\n\n\n\n\nTotal Cumulative Flight Duration\n-o cumulDuration\na folder containing flight record file(s)\nthe cumulative flight duration across all files\nHH:mm:ss\n\n\n\n\nTotal Cumulative Flight Distance\n-o cumulDistance\na folder containing flight record file(s)\nthe cumulative flight distance across all files\ndistance\nkm\n\n\n\nMost Used Airport (Take Off)\n-o airportTakeOff\na folder containing flight record file(s)\nthe airport most often used for take off\nairport_name\n\n\n\n\nMost Used Airport (Landing)\n-o airportLanding\na folder containing flight record file(s)\nthe airport most often used for landing\nairport_name\n\n\n\n\nHighest Drag Coef\n-o highestDrag\na folder containing flight record file(s)\nthe fighter jet with the highest drag coefficient\njet_id:drag_coef\n\n\n\n\nSmallest Drag Coef\n-o smallestDrag\na folder containing flight record file(s)\nthe fighter jet with the smallest drag coefficient\njet_id:drag_coef\n\n\n\n\nHighest Lift Coef\n-o highestLift\na folder containing flight record file(s)\nthe fighter jet with the highest lift coefficient\njet_id:lift_coef\n\n\n\n\nSmallest Lift Coef\n-o smallestLift\na folder containing flight record file(s)\nthe fighter jet with the smallest lift coefficient\njet_id:lift_coef\n\n\n\n\nHighest Average Speed\n-o highestSpeed\na folder containing flight record file(s)\nthe fighter jet with the fastest average speed during its flight\njet_id:speed\nkm/h\n\n\n\nSlowest Average Speed\n-o slowestSpeed\na folder containing flight record file(s)\nthe fighter jet with the slowest average speed during its flight\njet_id:speed\nkm/h\n\n\n\nHighest Altitude\n-o highestAltitude\na folder containing flight record file(s)\nthe fighter jet which flew the highest\njet_id:max_altitude\nm\n\n\n\nLongest Flight Duration\n-o longestDuration\na folder containing flight record file(s)\nthe fighter jet which flew the longest\njet_id:duration\nHH:mm:ss\n\n\n\nFirst Landing\n-o firstLanding\na folder containing flight record file(s)\nthe fighter jet which landed first\njet_id:airport_name:landing_time\nHH:mm:ss\n\n\n\nLast Landing\n-o lastLanding\na folder containing flight record file(s)\nthe fighter jet which landed last\njet_id:airport_name:landing_time\nHH:mm:ss\n\n\n\nHighest Average Engine Power\n-o highestPower\na folder containing flight record file(s)\nthe fighter jet which used the highest average engine power\njet_id:power\nW\n\n\n\nHighest Average Oxygen\n-o highestOxygen\na folder containing flight record file(s)\nthe fighter jet which used the highest average oxygen concentration\njet_id:oxygen\n%\n\n\n\nHighest Average Heart Beat\n-o highestHeartBeat\na folder containing flight record file(s)\nthe fighter jet whose pilot had the highest average heart beat\njet_id:beat\nbpm\n\n\n\nLowest Average Heart Beat\n-o lowestHeartBeat\na folder containing flight record file(s)\nthe fighter jet whose pilot had the lowest average heart beat\njet_id:beat\nbpm\n\n\n\nFlight Closeness\n-o closeFlight\na folder containing flight record file(s)\njets that flew less than 50 km from each other\n[jet_id1, jet_id2]:min_distance (alphabetical order)\nkm\n\n\n\nFlight Closeness (Same origin)\n-o closeFlightSameOri\na folder containing flight record file(s)\njets that flew less than 50 km from each other and share the same origin (US/RU)\n[jet_id1, jet_id2]:min_distance (alphabetical order)\nkm\n\n\n\nFlight Closeness (Different origin)\n-o closeFlightDiffOri\na folder containing flight record file(s)\njets that flew less than 50 km from each other and are from different origins (US/RU)\n[jet_id1, jet_id2]:min_distance (alphabetical order)\nkm",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Features"
+    ]
+  },
+  {
+    "objectID": "Pandora/Flight-Phases.html",
+    "href": "Pandora/Flight-Phases.html",
+    "title": "Flight-Phases",
+    "section": "",
+    "text": "For those interested, you can read research paper [1] or thesis [2] for free.\n\n\nIn this project, we will implement a very simplistic heuristic: we will simply look at the yaw value. If it is relatively constant, it is a cruise phase. Whatever happens before the first cruise phase is the take off phase, whatever remains after the last cruise phase is the landing phase.\n\n\n\nalt text\n\n\n\nFig. 1 Illustration of flight phases simple heuristic in our project.\nTop: Flight path.\nMiddle: Yaw values. A green line indicates the beginning of a plateau. A red line indicates the end of a plateau. (Note that the green and red lines in the middle are merged on this example)\nBottom: Yaw delta values\n\n\n\n\n\nTake the yaw values\nTake the delta values (simple difference between i and i-1)\nConsider delta values that are\n\nsmaller than 1\nfor yaw values that are different from -1 (default values when the sensors are not turned on yet)\nafter at least 10 delta values were greater than 1 (To make sure we do not get first plateau happening before any yaw consequent modification)\n\nA plateau is defined as a portion in time for which values delta values are &lt; 1 and for at least 60 seconds\n\n\nNote\nWith this pseudo-algorithm and its heuristics, most flight analyses make sense.\nOnly one flight (RU) will have an undetected take off phase.\n\ndef findPlateaux(values, timestamp) :\n    \n    ## PREPARE THE DATA #########################\n\n    # get the delta\n    delta = delta(values)               # no need for delta time division\n    # get the indexes we are interested in\n    # we want the index for which\n    #       * yaw values != -1\n    #       * delta values &lt; 1\n    #       * after at least 10 deltas &gt; 1 happened (to make sure the sensors were correctly switched on!)\n    indexes = delta.where(&lt;1 and values != -1 and turbulences_happened = True)                  # !Important: threshold of 1 \n    # get the distance between these indexes\n    distance_index = diff(indexes)\n    start, end  = None\n    array = []\n\n    ## MAIN LOOP #########################\n    loop on i:\n        if start_plateau_detected:\n            save(start)\n        if end_plateau_detected:\n            save(end)\n            save_in_array([start, end])\n\n    ## FILTERING #########################\n    # filter the saved plateaus to know if they \n    # are long enough in time to be considered\n    for start, end in array:\n        if time_between(start, end) &gt; 60            # !Important: threshold of 60\n        save_in_results([start, end])\n    return results\n\n\ndef OtherFuntion(...)\n    plateaus = findPlateaux(yaws, timestamp)\n\n    take_off = before(plateaus.first())\n    landing = after(plateaus.last())\n    cruise = plateaus.first.start() to plateaus.last.end()\n\n\n[1] Goblet, Valentine & Fala, Nicoletta & Marais, Karen. (2015). Identifying Phases of Flight in General Aviation Operations. 10.2514/6.2015-2851. link\n[2] Goblet, Valentine Pascale. “Phase of flight identification in general aviation operations.” (2016). link",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Flight Phases"
+    ]
+  },
+  {
+    "objectID": "Pandora/Flight-Phases.html#flight-phases-1",
+    "href": "Pandora/Flight-Phases.html#flight-phases-1",
+    "title": "Flight-Phases",
+    "section": "",
+    "text": "For those interested, you can read research paper [1] or thesis [2] for free.\n\n\nIn this project, we will implement a very simplistic heuristic: we will simply look at the yaw value. If it is relatively constant, it is a cruise phase. Whatever happens before the first cruise phase is the take off phase, whatever remains after the last cruise phase is the landing phase.\n\n\n\nalt text\n\n\n\nFig. 1 Illustration of flight phases simple heuristic in our project.\nTop: Flight path.\nMiddle: Yaw values. A green line indicates the beginning of a plateau. A red line indicates the end of a plateau. (Note that the green and red lines in the middle are merged on this example)\nBottom: Yaw delta values\n\n\n\n\n\nTake the yaw values\nTake the delta values (simple difference between i and i-1)\nConsider delta values that are\n\nsmaller than 1\nfor yaw values that are different from -1 (default values when the sensors are not turned on yet)\nafter at least 10 delta values were greater than 1 (To make sure we do not get first plateau happening before any yaw consequent modification)\n\nA plateau is defined as a portion in time for which values delta values are &lt; 1 and for at least 60 seconds\n\n\nNote\nWith this pseudo-algorithm and its heuristics, most flight analyses make sense.\nOnly one flight (RU) will have an undetected take off phase.\n\ndef findPlateaux(values, timestamp) :\n    \n    ## PREPARE THE DATA #########################\n\n    # get the delta\n    delta = delta(values)               # no need for delta time division\n    # get the indexes we are interested in\n    # we want the index for which\n    #       * yaw values != -1\n    #       * delta values &lt; 1\n    #       * after at least 10 deltas &gt; 1 happened (to make sure the sensors were correctly switched on!)\n    indexes = delta.where(&lt;1 and values != -1 and turbulences_happened = True)                  # !Important: threshold of 1 \n    # get the distance between these indexes\n    distance_index = diff(indexes)\n    start, end  = None\n    array = []\n\n    ## MAIN LOOP #########################\n    loop on i:\n        if start_plateau_detected:\n            save(start)\n        if end_plateau_detected:\n            save(end)\n            save_in_array([start, end])\n\n    ## FILTERING #########################\n    # filter the saved plateaus to know if they \n    # are long enough in time to be considered\n    for start, end in array:\n        if time_between(start, end) &gt; 60            # !Important: threshold of 60\n        save_in_results([start, end])\n    return results\n\n\ndef OtherFuntion(...)\n    plateaus = findPlateaux(yaws, timestamp)\n\n    take_off = before(plateaus.first())\n    landing = after(plateaus.last())\n    cruise = plateaus.first.start() to plateaus.last.end()\n\n\n[1] Goblet, Valentine & Fala, Nicoletta & Marais, Karen. (2015). Identifying Phases of Flight in General Aviation Operations. 10.2514/6.2015-2851. link\n[2] Goblet, Valentine Pascale. “Phase of flight identification in general aviation operations.” (2016). link",
+    "crumbs": [
+      "Home",
+      "🎞 Pandora",
+      "Flight Phases"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Debug.html",
+    "href": "ProjectManagement/Debug.html",
+    "title": "Debug",
+    "section": "",
+    "text": "Pandora should not output anything but the requested output or full report. In particular, all your debug messages should be hidden unless you pass the -d option to the CLI",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Debug"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Keep-A-Changelog.html",
+    "href": "ProjectManagement/Keep-A-Changelog.html",
+    "title": "Changelog",
+    "section": "",
+    "text": "Changelog\nA changelog is a document or record that provides a chronological log of significant changes made to a software project. It serves as a valuable communication tool between developers, users, and other stakeholders, detailing the evolution of a software application over time.\nYou can find in your project folder a file name CHANGELOG.md, you should update this file every time you make a Release\nThe information present in this file and more can be found from this source Keep a Changelog",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Keep a Changelog"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Test-Driven-Development.html",
+    "href": "ProjectManagement/Test-Driven-Development.html",
+    "title": "Test Driven Development",
+    "section": "",
+    "text": "Test-Driven Development (TDD) is a software development approach in which tests are written before the actual code that needs to be implemented. The TDD process typically follows these steps, often referred to as the “Red-Green-Refactor” cycle:\n\nRed: Write a Failing Test\n\nBefore writing any code, you write a test that should validate a new feature. In the Pandora project that would be one of the features described in the issues. This initial test should fail (Most test suites output the failing test in red, hence Red) since the corresponding code hasn’t been implemented yet.\nCommit that test (test: add a test for feature X)\n\nGreen: Write the Minimum Code to Pass the Test\n\nYou then write the minimum amount of code necessary to make the test pass. The focus is on making the test successful.\ncommit your code (feat: implement feature X)\n\nRefactor: Improve Code Without Changing Functionality\n\nAfter the test has passed, you should refactor the code to improve its structure, readability, or performance without making the test fail (nor previous tests).\nCommit the changes (e.g. refactor: improve feature X by skipping empty row or docs: add [Javadoc](Javadoc) to function Y)\n\n\nAdd the meaningful change to your Keep-A-Changelog, if your team feel that it has done enough change create a new release\nThere are several strategies and kind of tests you could develop to test your project:\nBlack Box Testing: Black Box Testing is a fundamental testing methodology in Test-Driven Development (TDD) that centers on evaluating the external functionality of a software application without delving into its internal code structure. In this approach, you treat the software as an opaque entity, focusing solely on inputs and observing outputs, akin to a “black box” where the internal workings remain concealed. The primary objective of Black Box Testing is to validate that the software behaves according to specified requirements and meets its intended functionality.\nWhite Box Testing: In contrast to Black Box Testing, White Box Testing, also known as clear box or structural testing, delves into the internal logic and code structure of the software. You write these tests after you have written the code, based on what kind of data structure or code logic you have written. (e.g. you have used an array, and you index i, i+1 and i+2 you deduce that your current code works only if there are at least three elements, you write a new test convering the edge case (for example a case where there are two elements, you are now in the red))\nIn addition to White Box and Black Box Testing, you can also classify tests in two categories Unit Tests and Integration Tests.\nUnit Tests: Unit Tests target individual units or components of the software often focusing on isolated functions or methods. The objective is to verify that each unit performs as expected in isolation, facilitating early detection of defects and supporting modular development practices. Unit Tests are crucial in TDD, acting as the building blocks for validating the correctness of the smallest units of code. Unit tests need to be integrated in the source code, generally as additional test classes in Java.\nIntegration Tests: Integration Tests assess the collaboration and interaction between different components or modules within a software system. These tests ensure that various units work seamlessly together when integrated, revealing potential issues that may arise during the assembly of different parts. Integration Tests play a pivotal role in validating the overall system architecture and its ability to function cohesively as a unified whole. In our case it means testing the system from an outside perspective once it is compiled, answering the question of does pandora.jar behaves as expected.\nRead more about Test-Driven-Development on thewikipedia page",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Test-Driven Development"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Test-Driven-Development.html#automated-tests",
+    "href": "ProjectManagement/Test-Driven-Development.html#automated-tests",
+    "title": "Test Driven Development",
+    "section": "Automated Tests",
+    "text": "Automated Tests\nYou can run your test manually, for example you could write a test procedure that explain what command to run to validate each milestone, but that would quickly be to slow for any practical use. Instead you should automate your tests. There are two things to know regarding automated tests for Pandora:\n\nRemote automated tests for the evaluation (github actions). The final evaluation of your project is done through automated tests. These tests currently run only for milestones 1,2,3, and 4.\n\nFor Milestone 0, there are no automatic test yet.\nFor Milestone 1,2,3,4 there are automatic tests on release on github, they are the same as for the final evaluation. They are two kinds of runs:\n\nthe 1,2,3,4 run on custom-made test files and each test one feature with the -o feature respectively for milestone 1,2,3,4\nthe a1, a2, a3, a4 run actual flight-records and collect the values from the full report respectively for milestone 1,2,3 and 4.\n\nThe automatic system is subject to evolve to take into account the manifest.json.\nThe automatic tester use a testSuite.json to describe its tests. The automatic tester should be able to take your own testSuite and run it against other pandora project (other teams, and previous years)\n\nLocal Automated tests. In order to test locally your project we provide two scripts to help you automate your test.\n\nLocally for milestone 0 you can use the script test/milestone0Tester.ps1, this is a very basic tester, if you want to extend it, create a new one.\nFor the other milestones you can use the scripts test/autograder.py. This script requires Python to run. The script is more advance it read a testSuite.json and the manifest.json to run the test on your pandora project.\nusage: usage: python autograder.py -t &lt;path_test_suit&gt; -m &lt;path_manifest&gt; &lt;pathToPandora&gt;\n    python test/autograder.py -t test/testSuite.json -m ./manifest.json target/pandora.jar",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Test-Driven Development"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Test-Driven-Development.html#testsuite",
+    "href": "ProjectManagement/Test-Driven-Development.html#testsuite",
+    "title": "Test Driven Development",
+    "section": "TestSuite",
+    "text": "TestSuite\nWe require however that you produce Black Box Integration Tests for all the features you develop by completing the file test/testSuite.json and adding corresponding flight records into the test/resources folder.\nthe testSuite should respect the following schema\n[\n    testDescription,\n    ...\n    testDescription\n]\na test description should respect the following schema\n{\n    \"id\": &lt;uniqueId:number&gt;,\n    \"feature\": &lt;feature:string&gt;,\n    \"milestone\": &lt;milestone:number&gt;,\n    \"mode\": &lt;\"full\"|\"feature\"&gt;,  \n    \"file\": &lt;flightRecordPath:Path&gt;,\n    \"result\": &lt;expectedResult:number|string&gt;\n}\nThe fields of a test description are\n\nid: a unique number in your testSuite\nfeature: the feature your are testing, this should be the exact name that is passed to the -o option. e.g. maxAlt\nmilestone: the number of the milestone corresponding to the feature you are testing. For Grouping purposes in the output\nmode:\n\nfeature: test with the -o set to the given feature\nfull: generate the full report and parse it to find the feature in the report (see full report format\n\nfile: the file passed to pandora, the path should be relative to the overall project test/resources/.../flight.frd\nresult: the expected result. Currently, the autograder is in strict comparison.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Test-Driven Development"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Integration-Test.html",
+    "href": "ProjectManagement/TestDrivenDevelopment/Integration-Test.html",
+    "title": "Integration-Test",
+    "section": "",
+    "text": "Integration-Test",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "TDD Deep Dive",
+      "Integration Tests"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Release.html",
+    "href": "ProjectManagement/Release.html",
+    "title": "Release",
+    "section": "",
+    "text": "Releasing is the act of publishing a new version (major, minor, patch) publicly. In the context of the project, releasing a new version allows you to be graded by the automatic grade evaluation. While you could release each new feature as a minor and each bug fix as a patch, aim for quality rather than quantity. For example:\n\nrelease 1.7.0 could be the altitude release (feature maxAlt and avgAlt)\nrelease 1.12.0 the outside conditions (all the temperature, pressure and humidity functions)\nrelease 1.12.1 the outside conditions with the correction for the negative temperatures.\n\nEach release you publish on github will be evaluated by the teacher testSuite. Each Evaluation will contribute to your final grade:\n\na successful release will count positively\n\nall the features declared in the manifest.json pass\nminor version bump and at least one more feature in the manifest.json\n\nan unsuccessful release will count slightly negatively\n\nOne of the newly declared features failed\n\nA successful patch will offset an unsuccessful release\n\npatch bump and fix the previous unsuccessful release\n\na regression release will count negatively\n\nalready validated features are now broken\n\n\n\n\n\nUpdate in your code the version number so that java -jar pandora.jar --version outputs the correct version\nUpdate the manifest.json with the new version number and the implemented features\nUpdate the Keep-A-Changelog file explaining what change you have introduced since the last version.\n\nThe features you have implemented\nThe bugs you have fixed\n\n\nCommits the updated source code, manifest.json and Changelog under chore(release): release vX.Y.Z\nTag the commit vX.Y.Y\nPush the commit and the tag to Github",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Release"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Release.html#release-process",
+    "href": "ProjectManagement/Release.html#release-process",
+    "title": "Release",
+    "section": "",
+    "text": "Update in your code the version number so that java -jar pandora.jar --version outputs the correct version\nUpdate the manifest.json with the new version number and the implemented features\nUpdate the Keep-A-Changelog file explaining what change you have introduced since the last version.\n\nThe features you have implemented\nThe bugs you have fixed\n\n\nCommits the updated source code, manifest.json and Changelog under chore(release): release vX.Y.Z\nTag the commit vX.Y.Y\nPush the commit and the tag to Github",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Release"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Issues.html",
+    "href": "ProjectManagement/Issues.html",
+    "title": "Issues",
+    "section": "",
+    "text": "Issues\nGitHub Issues are items you can create in a repository to plan, discuss and track work. You can use issues to track work, give or receive feedback, collaborate on ideas or tasks, and efficiently communicate with others. (see for a generic overview of Github Issue here). You can do a lot of thing with the github issues to handle your project management. For instance the project tab allows you to plan your feature development using a Kanban. See https://github.com/features/issues for more information\nIn the pandora project, we have created for you an issue for each of the feature you have to implement. To import them into your repository you should run the issue-updater workflow:\n\nFrom your repository page, go in the “Actions” tab (in the top bar)\nIn the workflows (left navigation) Select the Import issues from template\nin the blue banner in the middle of the screen click run workflow",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Issues"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html",
+    "href": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html",
+    "title": "Synchronize Update from the Starter Pack",
+    "section": "",
+    "text": "The teacher team will sometimes update the base repository with new update",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "❗ Sync from Starterpack"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html#add-the-starterpack-as-a-remote-to-do-once",
+    "href": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html#add-the-starterpack-as-a-remote-to-do-once",
+    "title": "Synchronize Update from the Starter Pack",
+    "section": "Add the starterPack as a Remote (to do-once)",
+    "text": "Add the starterPack as a Remote (to do-once)\nIt is not necessary to create a local branch, but i\n# Add the startpack as a remote\ngit remote add starterPack https://github.com/Estia-advanced-programming/pandora-starterpack.git\ngit fetch starterPack --prune\nOptionally you can have a local branch to see the change locally.\n# Create a local branch that track the main \ngit checkout -B temp\ngit checkout -B starterPack-main --track starterPack/main\ngit \ngit checkout -",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "❗ Sync from Starterpack"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html#merge-updates-from-starterpack",
+    "href": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html#merge-updates-from-starterpack",
+    "title": "Synchronize Update from the Starter Pack",
+    "section": "Merge Updates from Starterpack",
+    "text": "Merge Updates from Starterpack\ngit fetch starterPack --prune\ngit merge starterPack/main -X theirs -m 'chore(update): merge modification from starter pack'",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "❗ Sync from Starterpack"
+    ]
+  }
+]

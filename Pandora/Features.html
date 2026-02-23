@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>features – wiki</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">wiki</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../CHANGELOG.html"> 
+<span class="menu-text">CHANGELOG</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Pandora/Pandora.html">🎞 Pandora</a></li><li class="breadcrumb-item"><a href="../Pandora/Features.html">Features</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🏠 Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../CHANGELOG.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">❗ CHANGELOG</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">🎞 Pandora</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pandora/Pandora.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Manual page</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pandora/Features.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Features</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pandora/Constants.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Constants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pandora/Flight-Records.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Flight Records</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pandora/Flight-Phases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Flight Phases</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pandora/Error-Handling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Error Handling</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Resources/CLI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CLI Reference</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Project Management</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ProjectManagement/Test-Driven-Development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Test-Driven Development</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">TDD Deep Dive</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ProjectManagement/TestDrivenDevelopment/Unit-Test.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit Tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ProjectManagement/TestDrivenDevelopment/Integration-Test.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Integration Tests</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ProjectManagement/Conventional Commits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conventional Commits</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ProjectManagement/Semantic-Versioning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Semantic Versioning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ProjectManagement/Release.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Release</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ProjectManagement/manifest.json.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">manifest.json</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ProjectManagement/Javadoc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Javadoc</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ProjectManagement/File Management.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">File Management</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ProjectManagement/Issues.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Issues</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ProjectManagement/Debug.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Debug</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ProjectManagement/Keep-A-Changelog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Keep a Changelog</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ProjectManagement/Synchronize-Update-From-The-Starterpack.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">❗ Sync from Starterpack</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ProjectManagement/Plagiat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plagiat</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">🎓 Tools</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tools/Eclipse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Eclipse</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tools/vscode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VS Code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tools/Git-Clients.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Git Clients</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tools/maven.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maven</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../git-101/git-101.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🎒 Git Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#features" id="toc-features" class="nav-link active" data-scroll-target="#features">Features</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Pandora/Pandora.html">🎞 Pandora</a></li><li class="breadcrumb-item"><a href="../Pandora/Features.html">Features</a></li></ol></nav></header>
+
+
+
+
+<section id="features" class="level1">
+<h1>Features</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Option</th>
+<th>CLI Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>CLI Options</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Version</td>
+<td><code>--version</code> / <code>-v</code></td>
+<td>Pandora version</td>
+</tr>
+<tr class="odd">
+<td>Help</td>
+<td><code>--help</code> / <code>-h</code></td>
+<td>Pandora help message</td>
+</tr>
+<tr class="even">
+<td>Metadata</td>
+<td><code>-m metadata_name</code></td>
+<td>Print the value of a metadata field (e.g., <code>-m jet_id</code>)</td>
+</tr>
+<tr class="odd">
+<td>Parameters</td>
+<td><code>--parameters</code> / <code>-p</code></td>
+<td>Print the parameters presented in the flight record file(s)</td>
+</tr>
+<tr class="even">
+<td>Number of records</td>
+<td><code>--number</code> / <code>-n</code></td>
+<td>Print the number of records in the flight record file(s)</td>
+</tr>
+<tr class="odd">
+<td>unit</td>
+<td><code>--unit metric\|imperial</code> / <code>-u metric\|imperial</code></td>
+<td>Choose the output unit system (metric or imperial)</td>
+</tr>
+<tr class="even">
+<td>metric</td>
+<td><code>--metric</code> / <code>-M</code></td>
+<td>Similar to <code>--unit metric</code></td>
+</tr>
+<tr class="odd">
+<td>imperial</td>
+<td><code>--imperial</code> / <code>-I</code></td>
+<td>Similar to <code>--unit imperial</code></td>
+</tr>
+<tr class="even">
+<td>batch mode</td>
+<td><code>--batch</code> / <code>-b</code></td>
+<td>Process all flight record files in a folder and print the results in a single output file</td>
+</tr>
+<tr class="odd">
+<td>Debug mode</td>
+<td><code>--debug</code> / <code>-d</code></td>
+<td>Use to print debug information during the execution of the program</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>CLI option</th>
+<th>Input</th>
+<th>Description</th>
+<th>Output</th>
+<th>Unit</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Single Flight Computations</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Starting time</td>
+<td><code>-o start_time</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Filenames</td>
+<td><code>-o filenames</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Average Altitude</td>
+<td><code>-o avgAlt</code></td>
+<td>a flight record file</td>
+<td>the average altitude during the flight</td>
+<td>altitude</td>
+<td>m</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Max Altitude</td>
+<td><code>-o maxAlt</code></td>
+<td>a flight record file</td>
+<td>the maximum altitude during the flight</td>
+<td>altitude</td>
+<td>m</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Average Air Speed</td>
+<td><code>-o avgAirSpeed</code></td>
+<td>a flight record file</td>
+<td>the average air speed during the flight</td>
+<td>speed</td>
+<td>m/s</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Max Air Speed</td>
+<td><code>-o maxAirSpeed</code></td>
+<td>a flight record file</td>
+<td>the maximum air speed during the flight</td>
+<td>speed</td>
+<td>m/s</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Average Engine Power</td>
+<td><code>-o avgEnginePower</code></td>
+<td>a flight record file</td>
+<td>the average total engine power during the flight</td>
+<td>power</td>
+<td>W</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Max Engine Power</td>
+<td><code>-o maxEnginePower</code></td>
+<td>a flight record file</td>
+<td>the maximum total engine power during the flight</td>
+<td>power</td>
+<td>W</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Average Temperature</td>
+<td><code>-o avgTemp</code></td>
+<td>a flight record file</td>
+<td>the average temperature in the cockpit during the flight</td>
+<td>temperature</td>
+<td>℃</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Min Temperature</td>
+<td><code>-o minTemp</code></td>
+<td>a flight record file</td>
+<td>the minimum temperature in the cockpit during the flight</td>
+<td>temperature</td>
+<td>℃</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Max Temperature</td>
+<td><code>-o maxTemp</code></td>
+<td>a flight record file</td>
+<td>the maximum temperature in the cockpit during the flight</td>
+<td>temperature</td>
+<td>℃</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Average Pressure</td>
+<td><code>-o avgPressure</code></td>
+<td>a flight record file</td>
+<td>the average pressure in the cockpit during the flight</td>
+<td>pressure</td>
+<td>Pa</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Max Pressure</td>
+<td><code>-o maxPressure</code></td>
+<td>a flight record file</td>
+<td>the maximum pressure in the cockpit during the flight</td>
+<td>pressure</td>
+<td>Pa</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Minimum Pressure</td>
+<td><code>-o minPressure</code></td>
+<td>a flight record file</td>
+<td>the minimum pressure in the cockpit during the flight</td>
+<td>pressure</td>
+<td>Pa</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Average Relative Humidity</td>
+<td><code>-o avgHumidity</code></td>
+<td>a flight record file</td>
+<td>the average relative humidity in the cockpit during the flight</td>
+<td>humidity</td>
+<td>%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Max Relative Humidity</td>
+<td><code>-o maxHumidity</code></td>
+<td>a flight record file</td>
+<td>the maximum relative humidity in the cockpit during the flight</td>
+<td>humidity</td>
+<td>%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Min Relative Humidity</td>
+<td><code>-o minHumidity</code></td>
+<td>a flight record file</td>
+<td>the minimum relative humidity in the cockpit during the flight</td>
+<td>humidity</td>
+<td>%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Average Heart Rate</td>
+<td><code>-o avgHeartRate</code></td>
+<td>a flight record file</td>
+<td>the average pilot’s heart rate during the flight</td>
+<td>heart rate</td>
+<td>bpm</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Max Heart Rate</td>
+<td><code>-o maxHeartRate</code></td>
+<td>a flight record file</td>
+<td>the maximum pilot’s heart rate during the flight</td>
+<td>heart rate</td>
+<td>bpm</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Min Heart Rate</td>
+<td><code>-o minHeartRate</code></td>
+<td>a flight record file</td>
+<td>the minimum pilot’s heart rate during the flight</td>
+<td>heart rate</td>
+<td>bpm</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Average Oxygen Concentration</td>
+<td><code>-o avgOxygen</code></td>
+<td>a flight record file</td>
+<td>the average oxygen concentration delivered by the pilot’s mask during the flight</td>
+<td>concentration</td>
+<td>%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Min Oxygen Concentration</td>
+<td><code>-o minOxygen</code></td>
+<td>a flight record file</td>
+<td>the minimum oxygen concentration delivered by the pilot’s mask during the flight</td>
+<td>concentration</td>
+<td>%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Max Oxygen Concentration</td>
+<td><code>-o maxOxygen</code></td>
+<td>a flight record file</td>
+<td>the maximum oxygen concentration delivered by the pilot’s mask during the flight</td>
+<td>concentration</td>
+<td>%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Flight Duration</td>
+<td><code>-o flightDuration</code></td>
+<td>a flight record file</td>
+<td>the total flight duration</td>
+<td>HH:mm:ss</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Flight Distance</td>
+<td><code>-o flightDistance</code></td>
+<td>a flight record file</td>
+<td>the total flight distance</td>
+<td>distance</td>
+<td>m</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Average Acceleration</td>
+<td><code>-o avgAcceleration</code></td>
+<td>a flight record file</td>
+<td>the average acceleration during the flight</td>
+<td>acceleration</td>
+<td>m/s²</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Max Acceleration</td>
+<td><code>-o maxAcceleration</code></td>
+<td>a flight record file</td>
+<td>the maximum acceleration during the flight</td>
+<td>acceleration</td>
+<td>m/s²</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Wind Speed</td>
+<td><code>-o windSpeed</code></td>
+<td>a flight record file</td>
+<td>the average wind speed during the flight</td>
+<td>speed</td>
+<td>m/s</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Average Mach Speed</td>
+<td><code>-o avgMachSpeed</code></td>
+<td>a flight record file</td>
+<td>the average speed in Mach during the flight</td>
+<td>Mach</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Max Mach Speed</td>
+<td><code>-o maxMachSpeed</code></td>
+<td>a flight record file</td>
+<td>the maximum speed in Mach during the flight</td>
+<td>Mach</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Max Acceleration in G</td>
+<td><code>-o maxAccelG</code></td>
+<td>a flight record file</td>
+<td>the maximum acceleration during the flight</td>
+<td>acceleration</td>
+<td>G</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Reaching 80% Max Altitude</td>
+<td><code>-o reachAlt</code></td>
+<td>a flight record file</td>
+<td>the time to reach 80% of maximum altitude during the flight</td>
+<td>time / max_altitude</td>
+<td>min / m</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Reaching 80% Total Distance</td>
+<td><code>-o reachDist</code></td>
+<td>a flight record file</td>
+<td>the time to arrive at 80% of total flight distance</td>
+<td>time / total_distance</td>
+<td>min / km</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Altitude with Fastest Wind</td>
+<td><code>-o fastWindAlt</code></td>
+<td>a flight record file</td>
+<td>the altitude with the fastest wind outside the aircraft over a 5 min window</td>
+<td>altitude: avg_5min_wind_speed</td>
+<td>m: m/s</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Altitude with Highest Aircraft Speed</td>
+<td><code>-o fastJetAlt</code></td>
+<td>a flight record file</td>
+<td>the altitude at which the jet had its fastest speed over a 5 min window</td>
+<td>altitude: avg_5min_jet_speed</td>
+<td>m: m/s</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Noise of Temperature Sensors</td>
+<td><code>-o noiseTemp</code></td>
+<td>a flight record file</td>
+<td>the average noise in the temperature data assuming a reference temperature of 25℃</td>
+<td>noise_value</td>
+<td>℃</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Stressed Pilot</td>
+<td><code>-o stressedPilot</code></td>
+<td>a flight record file</td>
+<td>whether the pilot had a stress attack</td>
+<td>y/n</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>50% Oxygen Phase</td>
+<td><code>-o oxygenPhase</code></td>
+<td>a flight record file</td>
+<td>which phase required more than 50% oxygen concentration in the mask</td>
+<td>phase_name</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Flight Phases</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Take Off Phase Detection</td>
+<td><code>-o takeOff</code></td>
+<td>a flight record file</td>
+<td>the start and end time of the take off phase</td>
+<td>start=HH:mm:ss / end=HH:mm:ss</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Cruise Phase Detection</td>
+<td><code>-o cruise</code></td>
+<td>a flight record file</td>
+<td>the start and end time of the cruise phase</td>
+<td>start=HH:mm:ss / end=HH:mm:ss</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Landing Phase Detection</td>
+<td><code>-o landing</code></td>
+<td>a flight record file</td>
+<td>the start and end time of the landing phase</td>
+<td>start=HH:mm:ss / end=HH:mm:ss</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ratio Distance</td>
+<td><code>-o ratioDistance</code></td>
+<td>a flight record file</td>
+<td>the ratio between the distance actually flown and the point-to-point distance between take off and landing</td>
+<td>ratio</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Average Air Speed (Take Off)</td>
+<td><code>-o avgAirSpeedTakeOff</code></td>
+<td>a flight record file</td>
+<td>the average air speed during the take off phase</td>
+<td>speed</td>
+<td>m/s</td>
+<td>Deprecated in v2 — use <code>--phase takeOff</code> with <code>-o avgAirSpeed</code></td>
+</tr>
+<tr class="even">
+<td>Max Air Speed (Take Off)</td>
+<td><code>-o maxAirSpeedTakeOff</code></td>
+<td>a flight record file</td>
+<td>the maximum air speed during the take off phase</td>
+<td>speed</td>
+<td>m/s</td>
+<td>Deprecated in v2 — use <code>--phase takeOff</code> with <code>-o maxAirSpeed</code></td>
+</tr>
+<tr class="odd">
+<td>Average Engine Power (Take Off)</td>
+<td><code>-o avgEnginePowerTakeOff</code></td>
+<td>a flight record file</td>
+<td>the average total engine power during the take off phase</td>
+<td>power</td>
+<td>W</td>
+<td>Deprecated in v2 — use <code>--phase takeOff</code> with <code>-o avgEnginePower</code></td>
+</tr>
+<tr class="even">
+<td>Max Engine Power (Take Off)</td>
+<td><code>-o maxEnginePowerTakeOff</code></td>
+<td>a flight record file</td>
+<td>the maximum total engine power during the take off phase</td>
+<td>power</td>
+<td>W</td>
+<td>Deprecated in v2 — use <code>--phase takeOff</code> with <code>-o maxEnginePower</code></td>
+</tr>
+<tr class="odd">
+<td>Average Air Speed (Cruise)</td>
+<td><code>-o avgAirSpeedCruise</code></td>
+<td>a flight record file</td>
+<td>the average air speed during the cruise phase</td>
+<td>speed</td>
+<td>m/s</td>
+<td>Deprecated in v2 — use <code>--phase Cruise</code> with <code>-o avgAirSpeed</code></td>
+</tr>
+<tr class="even">
+<td>Max Air Speed (Cruise)</td>
+<td><code>-o maxAirSpeedCruise</code></td>
+<td>a flight record file</td>
+<td>the maximum air speed during the cruise phase</td>
+<td>speed</td>
+<td>m/s</td>
+<td>Deprecated in v2 — use <code>--phase Cruise</code> with <code>-o maxAirSpeed</code></td>
+</tr>
+<tr class="odd">
+<td>Average Engine Power (Cruise)</td>
+<td><code>-o avgEnginePowerCruise</code></td>
+<td>a flight record file</td>
+<td>the average total engine power during the cruise phase</td>
+<td>power</td>
+<td>W</td>
+<td>Deprecated in v2 — use <code>--phase Cruise</code> with <code>-o avgEnginePower</code></td>
+</tr>
+<tr class="even">
+<td>Max Engine Power (Cruise)</td>
+<td><code>-o maxEnginePowerCruise</code></td>
+<td>a flight record file</td>
+<td>the maximum total engine power during the cruise phase</td>
+<td>power</td>
+<td>W</td>
+<td>Deprecated in v2 — use <code>--phase Cruise</code> with <code>-o maxEnginePower</code></td>
+</tr>
+<tr class="odd">
+<td>Average Air Speed (Landing)</td>
+<td><code>-o avgAirSpeedLanding</code></td>
+<td>a flight record file</td>
+<td>the average air speed during the landing phase</td>
+<td>speed</td>
+<td>m/s</td>
+<td>Deprecated in v2 — use <code>--phase Landing</code> with <code>-o avgAirSpeed</code></td>
+</tr>
+<tr class="even">
+<td>Max Air Speed (Landing)</td>
+<td><code>-o maxAirSpeedLanding</code></td>
+<td>a flight record file</td>
+<td>the maximum air speed during the landing phase</td>
+<td>speed</td>
+<td>m/s</td>
+<td>Deprecated in v2 — use <code>--phase Landing</code> with <code>-o maxAirSpeed</code></td>
+</tr>
+<tr class="odd">
+<td>Average Engine Power (Landing)</td>
+<td><code>-o avgEnginePowerLanding</code></td>
+<td>a flight record file</td>
+<td>the average total engine power during the landing phase</td>
+<td>power</td>
+<td>W</td>
+<td>Deprecated in v2 — use <code>--phase Landing</code> with <code>-o avgEnginePower</code></td>
+</tr>
+<tr class="even">
+<td>Max Engine Power (Landing)</td>
+<td><code>-o maxEnginePowerLanding</code></td>
+<td>a flight record file</td>
+<td>the maximum total engine power during the landing phase</td>
+<td>power</td>
+<td>W</td>
+<td>Deprecated in v2 — use <code>--phase Landing</code> with <code>-o maxEnginePower</code></td>
+</tr>
+<tr class="odd">
+<td>Flight Distance (Take Off)</td>
+<td><code>-o flightDistanceTakeOff</code></td>
+<td>a flight record file</td>
+<td>the total flight distance during the take off phase</td>
+<td>distance</td>
+<td>km</td>
+<td>Deprecated in v2 — use <code>--phase takeOff</code> with <code>-o flightDistance</code></td>
+</tr>
+<tr class="even">
+<td>Average Acceleration (Take Off)</td>
+<td><code>-o avgAccelerationTakeOff</code></td>
+<td>a flight record file</td>
+<td>the average acceleration during the take off phase</td>
+<td>acceleration</td>
+<td>m/s²</td>
+<td>Deprecated in v2 — use <code>--phase takeOff</code> with <code>-o avgAcceleration</code></td>
+</tr>
+<tr class="odd">
+<td>Max Acceleration (Take Off)</td>
+<td><code>-o maxAccelerationTakeOff</code></td>
+<td>a flight record file</td>
+<td>the maximum acceleration during the take off phase</td>
+<td>acceleration</td>
+<td>m/s²</td>
+<td>Deprecated in v2 — use <code>--phase takeOff</code> with <code>-o maxAcceleration</code></td>
+</tr>
+<tr class="even">
+<td>Wind Speed (Take Off)</td>
+<td><code>-o windSpeedTakeOff</code></td>
+<td>a flight record file</td>
+<td>the average wind speed during the take off phase</td>
+<td>speed</td>
+<td>m/s</td>
+<td>Deprecated in v2 — use <code>--phase takeOff</code> with <code>-o windSpeed</code></td>
+</tr>
+<tr class="odd">
+<td>Flight Distance (Cruise)</td>
+<td><code>-o flightDistanceCruise</code></td>
+<td>a flight record file</td>
+<td>the total flight distance during the cruise phase</td>
+<td>distance</td>
+<td>km</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Average Acceleration (Cruise)</td>
+<td><code>-o avgAccelerationCruise</code></td>
+<td>a flight record file</td>
+<td>the average acceleration during the cruise phase</td>
+<td>acceleration</td>
+<td>m/s²</td>
+<td>Deprecated in v2 — use <code>--phase Cruise</code> with <code>-o avgAcceleration</code></td>
+</tr>
+<tr class="odd">
+<td>Max Acceleration (Cruise)</td>
+<td><code>-o maxAccelerationCruise</code></td>
+<td>a flight record file</td>
+<td>the maximum acceleration during the cruise phase</td>
+<td>acceleration</td>
+<td>m/s²</td>
+<td>Deprecated in v2 — use <code>--phase Cruise</code> with <code>-o maxAcceleration</code></td>
+</tr>
+<tr class="even">
+<td>Wind Speed (Cruise)</td>
+<td><code>-o windSpeedCruise</code></td>
+<td>a flight record file</td>
+<td>the average wind speed during the cruise phase</td>
+<td>speed</td>
+<td>m/s</td>
+<td>Deprecated in v2 — use <code>--phase Cruise</code> with <code>-o windSpeed</code></td>
+</tr>
+<tr class="odd">
+<td>Flight Distance (Landing)</td>
+<td><code>-o flightDistanceLanding</code></td>
+<td>a flight record file</td>
+<td>the total flight distance during the landing phase</td>
+<td>distance</td>
+<td>km</td>
+<td>Deprecated in v2 — use <code>--phase Landing</code> with <code>-o flightDistance</code></td>
+</tr>
+<tr class="even">
+<td>Average Acceleration (Landing)</td>
+<td><code>-o avgAccelerationLanding</code></td>
+<td>a flight record file</td>
+<td>the average acceleration during the landing phase</td>
+<td>acceleration</td>
+<td>m/s²</td>
+<td>Deprecated in v2 — use <code>--phase Landing</code> with <code>-o avgAcceleration</code></td>
+</tr>
+<tr class="odd">
+<td>Max Acceleration (Landing)</td>
+<td><code>-o maxAccelerationLanding</code></td>
+<td>a flight record file</td>
+<td>the maximum acceleration during the landing phase</td>
+<td>acceleration</td>
+<td>m/s²</td>
+<td>Deprecated in v2 — use <code>--phase Landing</code> with <code>-o maxAcceleration</code></td>
+</tr>
+<tr class="even">
+<td>Wind Speed (Landing)</td>
+<td><code>-o windSpeedLanding</code></td>
+<td>a flight record file</td>
+<td>the average wind speed during the landing phase</td>
+<td>speed</td>
+<td>m/s</td>
+<td>Deprecated in v2 — use <code>--phase Landing</code> with <code>-o windSpeed</code></td>
+</tr>
+<tr class="odd">
+<td>Most Demanding Phase — Engine Power</td>
+<td><code>-o mostPowerPhase</code></td>
+<td>a flight record file</td>
+<td>the phase which required the most average engine power</td>
+<td>phase_name:power</td>
+<td>W</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Most Demanding Phase — Stress</td>
+<td><code>-o mostStressPhase</code></td>
+<td>a flight record file</td>
+<td>the phase which provoked the highest average heart rate</td>
+<td>phase_name:heart_beat</td>
+<td>bpm</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Most Demanding Phase — Horizontal Acceleration</td>
+<td><code>-o mostAccelPhase</code></td>
+<td>a flight record file</td>
+<td>the phase with the highest average horizontal acceleration</td>
+<td>phase_name:acceleration</td>
+<td>m/s²</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Cross Flights Computations</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Total Cumulative Flight Duration</td>
+<td><code>-o cumulDuration</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the cumulative flight duration across all files</td>
+<td>HH:mm:ss</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Total Cumulative Flight Distance</td>
+<td><code>-o cumulDistance</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the cumulative flight distance across all files</td>
+<td>distance</td>
+<td>km</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Most Used Airport (Take Off)</td>
+<td><code>-o airportTakeOff</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the airport most often used for take off</td>
+<td>airport_name</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Most Used Airport (Landing)</td>
+<td><code>-o airportLanding</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the airport most often used for landing</td>
+<td>airport_name</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Highest Drag Coef</td>
+<td><code>-o highestDrag</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the fighter jet with the highest drag coefficient</td>
+<td>jet_id:drag_coef</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Smallest Drag Coef</td>
+<td><code>-o smallestDrag</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the fighter jet with the smallest drag coefficient</td>
+<td>jet_id:drag_coef</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Highest Lift Coef</td>
+<td><code>-o highestLift</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the fighter jet with the highest lift coefficient</td>
+<td>jet_id:lift_coef</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Smallest Lift Coef</td>
+<td><code>-o smallestLift</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the fighter jet with the smallest lift coefficient</td>
+<td>jet_id:lift_coef</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Highest Average Speed</td>
+<td><code>-o highestSpeed</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the fighter jet with the fastest average speed during its flight</td>
+<td>jet_id:speed</td>
+<td>km/h</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Slowest Average Speed</td>
+<td><code>-o slowestSpeed</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the fighter jet with the slowest average speed during its flight</td>
+<td>jet_id:speed</td>
+<td>km/h</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Highest Altitude</td>
+<td><code>-o highestAltitude</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the fighter jet which flew the highest</td>
+<td>jet_id:max_altitude</td>
+<td>m</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Longest Flight Duration</td>
+<td><code>-o longestDuration</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the fighter jet which flew the longest</td>
+<td>jet_id:duration</td>
+<td>HH:mm:ss</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>First Landing</td>
+<td><code>-o firstLanding</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the fighter jet which landed first</td>
+<td>jet_id:airport_name:landing_time</td>
+<td>HH:mm:ss</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Last Landing</td>
+<td><code>-o lastLanding</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the fighter jet which landed last</td>
+<td>jet_id:airport_name:landing_time</td>
+<td>HH:mm:ss</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Highest Average Engine Power</td>
+<td><code>-o highestPower</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the fighter jet which used the highest average engine power</td>
+<td>jet_id:power</td>
+<td>W</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Highest Average Oxygen</td>
+<td><code>-o highestOxygen</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the fighter jet which used the highest average oxygen concentration</td>
+<td>jet_id:oxygen</td>
+<td>%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Highest Average Heart Beat</td>
+<td><code>-o highestHeartBeat</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the fighter jet whose pilot had the highest average heart beat</td>
+<td>jet_id:beat</td>
+<td>bpm</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Lowest Average Heart Beat</td>
+<td><code>-o lowestHeartBeat</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>the fighter jet whose pilot had the lowest average heart beat</td>
+<td>jet_id:beat</td>
+<td>bpm</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Flight Closeness</td>
+<td><code>-o closeFlight</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>jets that flew less than 50 km from each other</td>
+<td>[jet_id1, jet_id2]:min_distance (alphabetical order)</td>
+<td>km</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Flight Closeness (Same origin)</td>
+<td><code>-o closeFlightSameOri</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>jets that flew less than 50 km from each other and share the same origin (US/RU)</td>
+<td>[jet_id1, jet_id2]:min_distance (alphabetical order)</td>
+<td>km</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Flight Closeness (Different origin)</td>
+<td><code>-o closeFlightDiffOri</code></td>
+<td>a folder containing flight record file(s)</td>
+<td>jets that flew less than 50 km from each other and are from different origins (US/RU)</td>
+<td>[jet_id1, jet_id2]:min_distance (alphabetical order)</td>
+<td>km</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
