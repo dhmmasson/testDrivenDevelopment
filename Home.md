@@ -20,30 +20,51 @@ Latest news here: [CHANGELOG](CHANGELOG)
 
 ## Educational Goals of the Class
 
-- Start and manage a software development project following some Agile project management and [Test-Driven-Development](Test-Driven-Development) principles
+- Start and manage a software development project following some Agile project management 
   - Organize [features](Features) to be developed
-  - Set up [milestones](./project-management:Milestones) to reach  
+  - Set up [milestones](./project-management:Milestones) to reach
+- Follow a [Test-Driven-Development](Test-Driven-Development) approach to develop software
+  - Write tests before writing the code to implement a feature
+  - Make sure that all tests are passing before releasing a new version of the software
+  - Make sure that all code is covered by tests
 - Use of a version control system
 
 # Evaluation
 
-You will be automatically evaluated based on
+You must implement **Pandora v2** according to the [man page](Pandora/Pandora) and the [Features](Pandora/Features) specification.
 
-- Group Grade: How many functionalities you have developed:
-	- **Minimum Required: 3 validated milestones**, meaning on the ```release``` branch at least 80% of the the tests for at least three milestones.
-- Group Grade: Test Driven development:
-	- **Minimum required:** On the ```release``` branch, the file ```test/testSuite.json``` contains valid tests for at least 3 milestones
-- Group Grade: Number of Successful [Release](Release):
-- Individual Contribution: You have made a meaningful and
-	- **Minimum required:** At least 10% of the commits of your groups, at least 50% of them (excluding Merge commits) follow [Conventional Commits](Conventional%20Commits)
+## Group Grade
 
-You can check by yourself how many tests your program passed or failed every time you [Release](Release) commit your current version on GitHub.  
-A Continuous Integration is set up in your git repository. This means that the tests will check if your new version passes new tests, but also previous ones (to prevent regression). The tests simply consist in a text-based comparison between:
+### Implementation (tests)
 
- - The output your program generates (e.g. java -jar pandora.jar -o avgAltitude file1.dfr ==> 1234.56) and,
- - The output of our program for the same test.
+Your program will be run against the teacher's test suite. Grading is based on:
 
-If it is different, someone has an error. Make sure to follow the [instructions](Constants). If you think our version is having a problem, do not hesitate to [open an issue](https://github.com/Estia-advanced-programming/pandora-public/issues) so that we can investigate further.
+- **How many tests you pass**: there are multiple tests per feature and CLI option. Each test consists in a text-based comparison between your program's output and the reference output.  
+  Make sure to follow the [output format instructions](Pandora/Constants) precisely.
+- **Performance**: your program will be run against long flight record files and must execute as fast as possible. Avoid unnecessary computation and I/O.
+- **Code quality**: no dead code. Test coverage should reach the vast majority of your codebase.
+
+### Development Process
+
+You are graded on the quality of your development workflow:
+
+- Use of [Conventional Commits](ProjectManagement/Conventional%20Commits) for all commits
+- Proper [Semantic Versioning](ProjectManagement/Semantic-Versioning) for each release tag
+- A maintained [CHANGELOG](ProjectManagement/Keep-A-Changelog) following the Keep a Changelog format
+
+### Test-Driven Development
+
+You must produce a test suite (`test/testSuite.json`) that:
+
+- **Validates your own implementation**: at least one test per feature and per CLI option
+- **Discriminates other projects**: other groups' programs will be run against your test suite. Your results should agree with the teacher's — if a team passes or fails a feature, your test suite should detect it consistently
+- **Covers your code**: your tests should exercise most of your implementation
+
+## Individual Grade
+
+- Contribute at least **30% of the group's commits**
+- At least **50% of your commits** (excluding merge commits) follow [Conventional Commits](ProjectManagement/Conventional%20Commits)
+- **QCM during the last session** — individual written assessment on the course content
 
 # Pandora - a Flight Data Recorder Analyzer
 
