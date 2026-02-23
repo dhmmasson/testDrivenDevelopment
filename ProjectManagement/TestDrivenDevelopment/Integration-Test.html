@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -111,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../ProjectManagement/Test-Driven-Development.html">Project Management</a></li><li class="breadcrumb-item"><a href="../../ProjectManagement/TestDrivenDevelopment/Unit-Test.html">TDD Deep Dive</a></li><li class="breadcrumb-item"><a href="../../ProjectManagement/TestDrivenDevelopment/Integration-Test.html">Integration Tests</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Project Management</li><li class="breadcrumb-item"><a href="../../ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html">Test-Driven-Development</a></li><li class="breadcrumb-item"><a href="../../ProjectManagement/TestDrivenDevelopment/Integration-Test.html">Integration Tests</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -201,21 +236,21 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../ProjectManagement/Test-Driven-Development.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Test-Driven Development</span></a>
-  </div>
-</li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">TDD Deep Dive</span></a>
+ <span class="menu-text">Test-Driven-Development</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What is Test-Driven Development?</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../ProjectManagement/TestDrivenDevelopment/Unit-Test.html" class="sidebar-item-text sidebar-link">
@@ -228,26 +263,55 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Integration Tests</span></a>
   </div>
 </li>
-      </ul>
-  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../ProjectManagement/Conventional Commits.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/TestDrivenDevelopment/Code-Coverage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code Coverage</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Versioning and Releasing</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ProjectManagement/Versioning/Conventional-Commits.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conventional Commits</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../ProjectManagement/Semantic-Versioning.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/Versioning/Semantic-Versioning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Semantic Versioning</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../ProjectManagement/Release.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/Versioning/Release.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Release</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ProjectManagement/Versioning/Keep-A-Changelog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Keep a Changelog</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ProjectManagement/Versioning/Configuration-git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Git User Configuration</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../ProjectManagement/manifest.json.html" class="sidebar-item-text sidebar-link">
@@ -280,12 +344,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../ProjectManagement/Keep-A-Changelog.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Keep a Changelog</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../ProjectManagement/Synchronize-Update-From-The-Starterpack.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">❗ Sync from Starterpack</span></a>
   </div>
@@ -300,13 +358,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">🎓 Tools</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tools/Eclipse.html" class="sidebar-item-text sidebar-link">
@@ -331,12 +389,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Maven</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../git-101/git-101.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🎒 Git Introduction</span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -349,20 +401,203 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#integration-test" id="toc-integration-test" class="nav-link active" data-scroll-target="#integration-test">Integration-Test</a></li>
+  <li><a href="#integration-test" id="toc-integration-test" class="nav-link active" data-scroll-target="#integration-test">Integration Test</a>
+  <ul class="collapse">
+  <li><a href="#concept-black-box-testing" id="toc-concept-black-box-testing" class="nav-link" data-scroll-target="#concept-black-box-testing">Concept: Black Box Testing</a></li>
+  <li><a href="#test-flight-records" id="toc-test-flight-records" class="nav-link" data-scroll-target="#test-flight-records">Test Flight Records</a></li>
+  <li><a href="#the-testsuite.json-format" id="toc-the-testsuite.json-format" class="nav-link" data-scroll-target="#the-testsuite.json-format">The <code>testSuite.json</code> Format</a>
+  <ul class="collapse">
+  <li><a href="#fields" id="toc-fields" class="nav-link" data-scroll-target="#fields">Fields</a></li>
+  <li><a href="#one-test-per-feature-minimum" id="toc-one-test-per-feature-minimum" class="nav-link" data-scroll-target="#one-test-per-feature-minimum">One Test Per Feature Minimum</a></li>
+  </ul></li>
+  <li><a href="#running-your-test-suite" id="toc-running-your-test-suite" class="nav-link" data-scroll-target="#running-your-test-suite">Running Your Test Suite</a></li>
+  <li><a href="#running-against-another-groups-project" id="toc-running-against-another-groups-project" class="nav-link" data-scroll-target="#running-against-another-groups-project">Running Against Another Group’s Project</a></li>
+  <li><a href="#workflow-in-tdd" id="toc-workflow-in-tdd" class="nav-link" data-scroll-target="#workflow-in-tdd">Workflow in TDD</a></li>
+  <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See Also</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../ProjectManagement/Test-Driven-Development.html">Project Management</a></li><li class="breadcrumb-item"><a href="../../ProjectManagement/TestDrivenDevelopment/Unit-Test.html">TDD Deep Dive</a></li><li class="breadcrumb-item"><a href="../../ProjectManagement/TestDrivenDevelopment/Integration-Test.html">Integration Tests</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Project Management</li><li class="breadcrumb-item"><a href="../../ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html">Test-Driven-Development</a></li><li class="breadcrumb-item"><a href="../../ProjectManagement/TestDrivenDevelopment/Integration-Test.html">Integration Tests</a></li></ol></nav></header>
 
 
 
 
 <section id="integration-test" class="level1">
-<h1>Integration-Test</h1>
+<h1>Integration Test</h1>
+<p>An integration test validates the behaviour of <code>pandora.jar</code> as a whole, from the outside — exactly as the teacher’s grading system does. Rather than testing an internal method in isolation, you run the compiled program against a flight record file and compare its output to an expected value.</p>
+<p>This is the <strong>primary testing strategy</strong> for Pandora.</p>
+<section id="concept-black-box-testing" class="level2">
+<h2 class="anchored" data-anchor-id="concept-black-box-testing">Concept: Black Box Testing</h2>
+<p>You treat <code>pandora.jar</code> as a black box:</p>
+<pre><code>flight_record.frd  ──▶  java -jar pandora.jar -o &lt;feature&gt; file.frd  ──▶  "1234.56"
+                                                                               │
+                                                                          compare to
+                                                                        expected value</code></pre>
+<p>You do not know or care how the value is computed internally. You only check that the output matches the specification. This mirrors exactly what the teacher autograder does, so passing your own test suite is a strong signal that you will pass the teacher’s.</p>
+</section>
+<section id="test-flight-records" class="level2">
+<h2 class="anchored" data-anchor-id="test-flight-records">Test Flight Records</h2>
+<p>You can use two kinds of input files:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Kind</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Existing records</strong> from <code>test/resources/</code></td>
+<td>Quick sanity checks on real data</td>
+</tr>
+<tr class="even">
+<td><strong>Hand-crafted records</strong></td>
+<td>Precise control — design a file where the correct answer is obvious (e.g., 10 records at altitude 100 m → <code>avgAlt</code> must be <code>100.00</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>Hand-crafted files are strongly recommended for edge cases: empty files, single-record flights, zero engine power, extreme values, files with optional columns missing, etc. Place them in <code>test/resources/</code> alongside the existing files.</p>
+</section>
+<section id="the-testsuite.json-format" class="level2">
+<h2 class="anchored" data-anchor-id="the-testsuite.json-format">The <code>testSuite.json</code> Format</h2>
+<p>All integration tests must be described in <code>test/testSuite.json</code>. The file is a JSON array of test descriptions:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"feature"</span><span class="fu">:</span> <span class="st">"avgAlt"</span><span class="fu">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"milestone"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"feature"</span><span class="fu">,</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"file"</span><span class="fu">:</span> <span class="st">"test/resources/0_201_MiG-23MLD.frd"</span><span class="fu">,</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"result"</span><span class="fu">:</span> <span class="st">"1234.56"</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">2</span><span class="fu">,</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"feature"</span><span class="fu">:</span> <span class="st">"maxAlt"</span><span class="fu">,</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"milestone"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"feature"</span><span class="fu">,</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"file"</span><span class="fu">:</span> <span class="st">"test/resources/0_201_MiG-23MLD.frd"</span><span class="fu">,</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"result"</span><span class="fu">:</span> <span class="st">"14321.00"</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="fields" class="level3">
+<h3 class="anchored" data-anchor-id="fields">Fields</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>id</code></td>
+<td>number</td>
+<td>Unique identifier within the suite</td>
+</tr>
+<tr class="even">
+<td><code>feature</code></td>
+<td>string</td>
+<td>The exact value passed to <code>-o</code> (e.g.&nbsp;<code>avgAlt</code>, <code>flightDuration</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>milestone</code></td>
+<td>number</td>
+<td>Milestone number — used for grouping output</td>
+</tr>
+<tr class="even">
+<td><code>mode</code></td>
+<td><code>"feature"</code> | <code>"full"</code></td>
+<td><code>feature</code>: run with <code>-o &lt;feature&gt;</code>; <code>full</code>: parse the full report</td>
+</tr>
+<tr class="odd">
+<td><code>file</code></td>
+<td>string</td>
+<td>Path to the flight record, relative to the project root</td>
+</tr>
+<tr class="even">
+<td><code>result</code></td>
+<td>string | number</td>
+<td>Expected output, must match exactly</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>The autograder does a <strong>strict string comparison</strong> between the program output and <code>result</code>. Follow the <a href="../../Pandora/Constants.html">output format</a> precisely (decimal separator, number of digits, units).</p>
+</blockquote>
+</section>
+<section id="one-test-per-feature-minimum" class="level3">
+<h3 class="anchored" data-anchor-id="one-test-per-feature-minimum">One Test Per Feature Minimum</h3>
+<p>You must have at least one test for <strong>every feature and CLI option</strong> you claim to have implemented. The feature name in <code>testSuite.json</code> must match the <code>-o</code> option name from the <a href="../../Pandora/Features.html">Features</a> table exactly.</p>
+</section>
+</section>
+<section id="running-your-test-suite" class="level2">
+<h2 class="anchored" data-anchor-id="running-your-test-suite">Running Your Test Suite</h2>
+<p>A Python script is provided in the starter pack to run the suite against any <code>pandora.jar</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> test/autograder.py <span class="at">-t</span> test/testSuite.json <span class="at">-m</span> manifest.json target/pandora.jar</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>-t</code></td>
+<td>Path to <code>testSuite.json</code></td>
+</tr>
+<tr class="even">
+<td><code>-m</code></td>
+<td>Path to <code>manifest.json</code></td>
+</tr>
+<tr class="odd">
+<td>last argument</td>
+<td>Path to the jar to test</td>
+</tr>
+</tbody>
+</table>
+<p>The script prints a summary of passed and failed tests grouped by milestone. A green line means your output matched exactly; a red line shows the expected vs.&nbsp;actual diff.</p>
+</section>
+<section id="running-against-another-groups-project" class="level2">
+<h2 class="anchored" data-anchor-id="running-against-another-groups-project">Running Against Another Group’s Project</h2>
+<p>Because the format is standardised, you can run <strong>your</strong> test suite against <strong>another team’s</strong> jar:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> test/autograder.py <span class="at">-t</span> test/testSuite.json <span class="at">-m</span> manifest.json path/to/other/pandora.jar</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This is how your test suite contributes to the grade: it must agree with the teacher’s results. If team B passes feature <code>avgAlt</code> according to the teacher, your suite should also pass it. If team B fails <code>maxAlt</code>, your suite should catch that failure too.</p>
+<p>A good test suite: - Has varied inputs (different files, different flight profiles) - Tests boundary conditions (minimum values, maximum values, empty phases) - Has at least one hand-crafted file per feature where the expected answer is trivially verifiable by hand</p>
+</section>
+<section id="workflow-in-tdd" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-in-tdd">Workflow in TDD</h2>
+<p>Integration tests slot into the Red–Green–Refactor cycle at the <strong>Red</strong> step:</p>
+<ol type="1">
+<li><strong>Red</strong> — write a <code>testSuite.json</code> entry for the feature; run the autograder → it fails (feature not implemented yet)</li>
+<li><strong>Green</strong> — implement the feature; run the autograder → it passes</li>
+<li><strong>Refactor</strong> — clean up the code; run the autograder again to confirm nothing regressed</li>
+</ol>
+</section>
+<section id="see-also" class="level2">
+<h2 class="anchored" data-anchor-id="see-also">See Also</h2>
+<ul>
+<li><a href="../../ProjectManagement/TestDrivenDevelopment/Unit-Test.html">Unit-Test</a> — for testing individual methods in isolation</li>
+<li><a href="../../ProjectManagement/TestDrivenDevelopment/Code-Coverage.html">Code-Coverage</a> — measuring how much of your code is exercised</li>
+<li><a href="../Test-Driven-Development.md">Test-Driven-Development</a> — the overall TDD workflow</li>
+<li><a href="../manifest.json">manifest.json</a> — declares which features are implemented</li>
+<li><a href="../../Pandora/Constants.html">Constants</a> — output format rules the autograder enforces</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -439,7 +674,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/dhmmasson\.github\.io\/testDrivenDevelopment\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
