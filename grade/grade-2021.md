@@ -1,6 +1,8 @@
-I graded all released versions (on master on the 23rd at 18:49) of your pandora projects :
+# Grade-2021
 
-Currently only 6 groups have a milestone 1 and 2 :ok: and have a passing grade. 4 groups have one of the milestone :ok:. 
+I graded all released versions (on master on the 23rd at 18:49) of your pandora projects:
+
+Currently only 6 groups have a milestone 1 and 2:ok: and have a passing grade. 4 groups have one of the milestone:ok:.
 
 |team|milestone 1|milestone 2|milestone 3|milestone 4|"note /20"| Passing grade|
 |-|-|-|-|-|-|-|

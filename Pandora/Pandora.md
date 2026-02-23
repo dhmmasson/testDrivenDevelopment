@@ -5,7 +5,8 @@ pandora - a [CLI](CLI) tool to analyze [Flight-records](Flight-Records) data to 
 # Synopsis
 
 ```
-java -jar pandora.jar [OPTIONS] ...source
+java -jar pandora.jar [-v|-h]
+java -jar pandora.jar [OPTIONS] ...sources
 
 ...source - path to flightRecord files or folder containing flightRecord files
 
@@ -22,6 +23,10 @@ Implemented Features
 
 <Feature List>
 ```
+
+## Usage
+
+the main usage of pandora is to parse one or several flight records and to output on the command line some computed values. The default mode is to output a **full report** of all the [Features](#Features) (see example). The other mode is the **single feature output mode** triggered by the ```-o or --output``` option, in that mode only the value of the requested feature is printed (with no prefix, nor units)
 
 # EXAMPLES
 
@@ -48,7 +53,7 @@ $ java -jar pandora.jar -o maxAlt test/resources/0_201_MiG-23MLD.frd
 14321
 ```
 
-With no option pandora produce a Full report
+With no option pandora produce a **Full report**,
 
 ```bash 
 $ java -jar pandora.jar test/resources/0_201_MiG-23MLD.frd 
@@ -80,6 +85,7 @@ flightDistanceCruise: 246.04
 flightDistanceLanding: 0.56
 flightDistanceTakeOff: 0.03
 flightDuration: 00:12:36
+filename: test/resources/0_201_MiG-23MLD.frd 
 landing: start=04:13:03 / end=04:13:08
 maxAccelG: 27.66
 maxAcceleration: 271.20

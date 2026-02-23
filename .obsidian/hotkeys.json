@@ -1,0 +1,20 @@
+{
+  "quickadd:choice:eb8d5bf5-5340-4884-b3c3-a26008288b39": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "S"
+    }
+  ],
+  "editor:save-file": [],
+  "quickadd:choice:2a3bbac9-5ed6-4f48-89aa-19400455b956": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "S"
+    }
+  ]
+}

@@ -1,13 +1,14 @@
-# Current Standing of the teams for the 2022 edition
+# Current Standing of the Teams for the 2022 Edition
+
 ## Monday March the 14h - 23:55
 
-Score were computed on the version of your code present on the branch `master` on the 14/03/2022 at around midnight. 
-Score per milestone and total are normalized on a 20-point scale for an easier reading. However milestone 1 contains 6 features, milestone 2 contains 15 features and milestone 3 contains 8 features. Total score is currently a _simple_ average and _does not reflect the final grade_.
-Course success only means that you have already reached the minimum requirement of completing milestone 1 and 2. 
+Score were computed on the version of your code present on the branch `master` on the 14/03/2022 at around midnight.  
+Score per milestone and total are normalized on a 20-point scale for an easier reading. However milestone 1 contains 6 features, milestone 2 contains 15 features and milestone 3 contains 8 features. Total score is currently a _simple_ average and _does not reflect the final grade_.  
+Course success only means that you have already reached the minimum requirement of completing milestone 1 and 2.
 
 - For the 10 teams with a 🟥Fail in course success, you still have two scheduled work sessions but you should probably work in between.
 - For the 1 team with an 🟧Almost in course success, you are on the right track, continue your effort.  
-- For the 5 teams with a 🟩Pass in course success, The final grade will depends on how many more feature you can complete, so the competition is still on. 
+- For the 5 teams with a 🟩Pass in course success, The final grade will depends on how many more feature you can complete, so the competition is still on.
 
 Team|Milestone 1|Milestone 2|Milestone 3|Total|Course success
 ----|--|--|--|--------------------------|--------------
@@ -28,7 +29,8 @@ groupe_ouchqi_2021|0|0|0|0|🟥Fail
 groupe_somane_wang_2021|0|0|0|0|🟥Fail
 groupe_fadli_faidi_addiche_2021|0|0|0|0|🟥Fail
 
-## Friday March 11th - 18:00 
+## Friday March 11th - 18:00
+
 Scores are based only on milestone 1 on branch master as of 11/03/2022. They may not reflect where your team really is if you have not yet merged some pull request.
 
 Team|milestone 1 - Unit Test|milestone a1 - Full test on actual flight|Score Milestone 1 / 20
@@ -50,9 +52,10 @@ msz-team_2021|0|0|0
 takeoff_2021|0|0|0
 groupe_fadli_faidi_addiche_2021[^1]|0|0|0
 
-[^1]: The source code on master does not compile be careful 
+[^1]: The source code on master does not compile be careful
 
-## Monday March 7th 
+## Monday March 7th
+
 Team name | total commits | issues opened | Member 1 | Member 2 | Member 3 | Milestone 1 | Milestone 2 | Milestone 3
 ---|---|---|---|---|---|---|---|---
 ALED | 22 Commits | 114 | Dr-droide <br>8 Commits | KillianGuiguen <br>5 Commits | RobinHilliet <br>7 Commits | N/A | N/A | N/A

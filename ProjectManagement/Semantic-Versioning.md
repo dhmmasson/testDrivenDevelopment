@@ -7,7 +7,8 @@ The key principle behind semantic versioning is to communicate the nature of cha
  - **Major Version (X.0.0):** Increased when incompatible API changes are introduced, meaning that [tests](Test-Driven-Development) that previously passed should now be red. It signifies that existing code relying on your CLI may break. (e.g. you change the option ```-o``` to ```-f```) A breaking change also means that the [test suite](Test-Driven-Development) should rewritten.  
    You should not have a major version update in the project unless the teachers decide to change something in the API of Pandora.
 - **Minor Version (1.Y.0):** Increased when new features are introduced. (e.g. you implement the feature -o minHumidity) or for backward-compatible improvement. (e.g. you handle American fighters in addition to Russian ones). A minor version is the result of several [Commits](Conventional%20Commits) at least one of them should be a ```feat: implemented feature X``` but there should be some ```test: add some tests for feature X```, ```refactor: create a class to handle Y``` and ```docs: add the documentation for the method C::X```
-- **Patch Version (1.0.Z):** Raised for backward-compatible bug fixes. It indicates that the code remains compatible, but specific issues have been addressed. (e.g. you have discovered that you have a bug in the [Feature](Features) ```avgTemp``` when the temperature are negative and you fix it. 
+- **Patch Version (1.0.Z):** Raised for backward-compatible bug fixes. It indicates that the code remains compatible, but specific issues have been addressed. (e.g. you have discovered that you have a bug in the [Feature](Features) ```avgTemp``` when the temperature are negative and you fix it.
+
 # See also
 
 Learn everything about [semver](https://semver.org/)

@@ -1,0 +1,133 @@
+{
+  "choices": [
+    {
+      "id": "eb8d5bf5-5340-4884-b3c3-a26008288b39",
+      "name": "saveAndExport",
+      "type": "Macro",
+      "command": true,
+      "macroId": "4982a966-8607-4130-b9ff-ba1f04b0baa0"
+    },
+    {
+      "id": "2a3bbac9-5ed6-4f48-89aa-19400455b956",
+      "name": "saveAllAndExport",
+      "type": "Macro",
+      "command": true,
+      "macroId": "2d52e354-251f-4a0a-973e-8c3e5845aaa9"
+    }
+  ],
+  "macros": [
+    {
+      "name": "saveAndExport",
+      "id": "4982a966-8607-4130-b9ff-ba1f04b0baa0",
+      "commands": [
+        {
+          "name": "Save current file",
+          "type": "Obsidian",
+          "id": "e6bdba31-ab48-4a58-a00a-f0f9446d16f2",
+          "commandId": "editor:save-file"
+        },
+        {
+          "name": "Linter: Lint the current file",
+          "type": "Obsidian",
+          "id": "40373311-7ce2-4bd1-8c61-e4cd4df54abd",
+          "commandId": "obsidian-linter:lint-file"
+        },
+        {
+          "name": "Python Scripter: Run strip.md.py",
+          "type": "Obsidian",
+          "id": "3c30d235-22fc-46d8-90e7-e7f7bdd4d58e",
+          "commandId": "python-scripter:run-strip.md.py"
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "SaveAllAndExport",
+      "id": "2d52e354-251f-4a0a-973e-8c3e5845aaa9",
+      "commands": [
+        {
+          "name": "Save current file",
+          "type": "Obsidian",
+          "id": "40043278-884f-49db-85ac-c1af0b13334d",
+          "commandId": "editor:save-file"
+        },
+        {
+          "name": "Python Scripter: Run stripAll.py",
+          "type": "Obsidian",
+          "id": "07e221bd-0cc5-478d-b2b6-ad54c8e51a7b",
+          "commandId": "python-scripter:run-stripAll.py"
+        },
+        {
+          "name": "Wait",
+          "type": "Wait",
+          "id": "c55edd29-f932-40d2-9784-365ac7bf5e0c",
+          "time": 100
+        },
+        {
+          "name": "Linter: Lint all files in the vault",
+          "type": "Obsidian",
+          "id": "bc79561a-0f42-42a5-a127-a24f749a210c",
+          "commandId": "obsidian-linter:lint-all-files"
+        }
+      ],
+      "runOnStartup": false
+    }
+  ],
+  "inputPrompt": "single-line",
+  "devMode": false,
+  "templateFolderPath": "",
+  "announceUpdates": false,
+  "version": "1.8.1",
+  "disableOnlineFeatures": true,
+  "ai": {
+    "defaultModel": "Ask me",
+    "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",
+    "promptTemplatesFolderPath": "",
+    "showAssistant": true,
+    "providers": [
+      {
+        "name": "OpenAI",
+        "endpoint": "https://api.openai.com/v1",
+        "apiKey": "",
+        "models": [
+          {
+            "name": "gpt-3.5-turbo",
+            "maxTokens": 4096
+          },
+          {
+            "name": "gpt-3.5-turbo-16k",
+            "maxTokens": 16384
+          },
+          {
+            "name": "gpt-3.5-turbo-1106",
+            "maxTokens": 16385
+          },
+          {
+            "name": "gpt-4",
+            "maxTokens": 8192
+          },
+          {
+            "name": "gpt-4-32k",
+            "maxTokens": 32768
+          },
+          {
+            "name": "gpt-4-1106-preview",
+            "maxTokens": 128000
+          },
+          {
+            "name": "text-davinci-003",
+            "maxTokens": 4096
+          }
+        ]
+      }
+    ]
+  },
+  "migrations": {
+    "migrateToMacroIDFromEmbeddedMacro": true,
+    "useQuickAddTemplateFolder": true,
+    "incrementFileNameSettingMoveToDefaultBehavior": true,
+    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
+    "setVersionAfterUpdateModalRelease": true,
+    "addDefaultAIProviders": true
+  }
+}

@@ -1,7 +1,7 @@
-# Current Standing of the teams for the 2023 edition
+# Current Standing of the Teams for the 2023 Edition
 
-Score were computed on the version of your code present on the branch `master` on the 07/04/2023 at around ten. 
-Score per milestone and total are normalized on a 20-point scale for an easier reading. However milestone 1 contains 6 features, milestone 2 contains 15 features, milestone 3 contains 8 features, milestone 4 contains 36 features et milestone 5 contains 29 features.
+Score were computed on the version of your code present on the branch `master` on the 07/04/2023 at around ten.  
+Score per milestone and total are normalized on a 20-point scale for an easier reading. However milestone 1 contains 6 features, milestone 2 contains 15 features, milestone 3 contains 8 features, milestone 4 contains 36 features et milestone 5 contains 29 features.  
 Course success only means that you have already reached the minimum requirement of completing milestone 1 and 2 and 3
 
 ## 2023 April the 11th
@@ -24,10 +24,11 @@ the-brave-lions|11.7|12.3|3.4|0.3|4.8|🟧Almost
 the-Mighty-Elephants|13.3|8.0|2.3|0.3|2.8|🟥Fail
 the-superb-sunsets|0.0|0.0|0.0|0.3|0.0|🟥Fail
 
-## April 7th 
+## April 7th
+
 - For the 6 teams with a 🟥Fail in course success, you still have two scheduled work sessions but you should probably work in between.
 - For the 5 teams with an 🟧Almost in course success, you are on the right track, continue your effort.  
-- For the 4 teams with a 🟩Pass in course success, The final grade will depends on how many more feature you can complete, so the competition is still on. 
+- For the 4 teams with a 🟩Pass in course success, The final grade will depends on how many more feature you can complete, so the competition is still on.
 
 Teams|Milestone 1 |Milestone 2 |Milestone 3|Milestone 4|Milestone 5|Course success
 -|-|-|-|-|-|-
@@ -47,7 +48,6 @@ the-majestic-mountains|0.0|0.0|1.1|0.3|0.0|🟥Fail
 the-radiant-sunflowers|0.0|0.0|1.1|0.3|0.0|🟥Fail
 the-superb-sunsets|0.0|0.0|0.0|0.3|0.0|🟥Fail
 
+# Previous Standings
 
-
-# previous standings : 
 [[grade-2021]]

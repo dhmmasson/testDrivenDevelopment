@@ -1,5 +1,3 @@
-
-
-# Add the following favorite to vscode
+# Add the following Favorite to Vscode
 
 ```maven: add a Favorites```
