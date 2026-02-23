@@ -1,0 +1,92 @@
+project:
+  type: website
+
+website:
+  title: "wiki"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - CHANGELOG.md
+  sidebar: 
+    contents:
+    - href: index.qmd
+      text: "🏠 Home"
+    - href: CHANGELOG.md
+      text: "❗ CHANGELOG"
+    - section: "🎞 Pandora"
+      contents:
+        - href: Pandora/Pandora.md
+          text: "Manual page"
+        - href: Pandora/Features.md
+          text: "Features"
+        - href: Pandora/Constants.md
+          text: "Constants"
+        - href: Pandora/Flight-Records.md
+          text: "Flight Records"
+        - href: Pandora/Flight-Phases.md
+          text: "Flight Phases"
+        - href: Pandora/Error-Handling.md
+          text: "Error Handling"
+        - href: Resources/CLI.md
+          text: "CLI Reference"
+    - section: "Project Management"
+      contents:
+        - href: "ProjectManagement/Test-Driven-Development.md"
+          text: "Test-Driven Development"
+        - section: "TDD Deep Dive"
+          contents:
+            - href: "ProjectManagement/TestDrivenDevelopment/Unit-Test.md"
+              text: "Unit Tests"
+            - href: "ProjectManagement/TestDrivenDevelopment/Integration-Test.md"
+              text: "Integration Tests"
+        - href: "ProjectManagement/Conventional Commits.md"
+          text: "Conventional Commits"
+        - href: "ProjectManagement/Semantic-Versioning.md"
+          text: "Semantic Versioning"
+        - href: "ProjectManagement/Release.md"
+          text: "Release"
+        - href: "ProjectManagement/manifest.json.md"
+          text: "manifest.json"
+        - href: "ProjectManagement/Javadoc.md"
+          text: "Javadoc"
+        - href: "ProjectManagement/File Management.md"
+          text: "File Management"
+        - href: "ProjectManagement/Issues.md"
+          text: "Issues"
+        - href: "ProjectManagement/Debug.md"
+          text: "Debug"
+        - href: "ProjectManagement/Keep-A-Changelog.md"
+          text: "Keep a Changelog"
+        - href: "ProjectManagement/Synchronize-Update-From-The-Starterpack.md"
+          text: "❗ Sync from Starterpack"
+        - href: "ProjectManagement/Plagiat.md"
+          text: "Plagiat"
+    - section: "🎓 Tools"
+      contents:
+        - href: tools/Eclipse.md
+          text: "Eclipse"
+        - href: tools/vscode.md
+          text: "VS Code"
+        - href: tools/Git-Clients.md
+          text: "Git Clients"
+        - href: tools/maven.md
+          text: "Maven"
+        - href: git-101/git-101.md
+          text: "🎒 Git Introduction"
+
+  
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+
+
+metadata-files:
+  - ./_sidebar.yml
+

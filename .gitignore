@@ -1,2 +1,6 @@
 .obsidian/workspace.json
 .venv
+/.quarto/
+**/*.quarto_ipynb
+_site/
+_quarto_cache/
