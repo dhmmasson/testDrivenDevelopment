@@ -130,7 +130,7 @@
 
         * Noise of Temperature Sensors >> CLI option:: -o noiseTemp
 
-        * Stressed Pilot >> CLI option:: -o stressedPilot
+        * Stressed Pilot >> CLI option:: -o stressedPilot We consider a stress pilot if her/his heart rate jumps more than ±10 bpm.
 
         * Milestone 3 Full Report >> CLI option:  
 

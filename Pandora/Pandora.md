@@ -54,6 +54,8 @@ $ java -jar pandora.jar -o maxAlt test/resources/0_201_MiG-23MLD.frd
 ```
 
 With no option pandora produce a **Full report**,
+## Full Report
+With no option pandora produce a Full report
 
 ```bash 
 $ java -jar pandora.jar test/resources/0_201_MiG-23MLD.frd 
@@ -80,7 +82,7 @@ avgTemp: 25.30
 cruise: start=04:00:32 / end=04:13:03
 fastJetAlt: 7878.79: 762.91
 fastWindAlt: 7801.41: 122.69
-flightDistance: 246.63
+flightDistance: 243863.92
 flightDistanceCruise: 246.04
 flightDistanceLanding: 0.56
 flightDistanceTakeOff: 0.03
@@ -127,6 +129,40 @@ windSpeedCruise: 24.05
 windSpeedLanding: 25.96
 windSpeedTakeOff: 3.44
 ```
+
+## Version
+Print the [Semantic-Versioning](Semantic-Versioning) of the pandora project:
+
+```bash
+$ java -jar pandora.jar --version 
+pandora@1.0.1
+```
+## Option flag
+
+print the filenames
+
+```bash
+$ java -jar pandora.jar -o filenames d.frd b.frd a
+a
+b.frd
+d.frd
+```
+
+Print the maximum altitude reached during a given flight:
+
+```bash
+$ java -jar pandora.jar -o maxAlt test/resources/0_201_MiG-23MLD.frd
+14321
+```
+
+Get the metadata "flight_id" from a flight records:
+
+```bash
+$ java -jar pandora.jar -m flight_id test/resources/0_201_MiG-23MLD.frd
+201
+```
+
+
 
 # Options
 
