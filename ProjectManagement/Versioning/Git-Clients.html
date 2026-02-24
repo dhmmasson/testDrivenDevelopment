@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>synchronize-update-from-the-starterpack – wiki</title>
+<title>git-clients – wiki</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,63 +20,28 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../images/favicon.ico" rel="icon">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,37 +70,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light">
@@ -145,9 +81,9 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">wiki</span>
     </a>
   </div>
@@ -158,11 +94,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../CHANGELOG.html"> 
+    <a class="nav-link" href="../../CHANGELOG.html"> 
 <span class="menu-text">CHANGELOG</span></a>
   </li>  
 </ul>
@@ -176,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Project Management</li><li class="breadcrumb-item"><a href="../ProjectManagement/Javadoc.html">Other</a></li><li class="breadcrumb-item"><a href="../ProjectManagement/Synchronize-Update-From-The-Starterpack.html">❗ Sync from Starterpack</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Project Management</li><li class="breadcrumb-item"><a href="../../ProjectManagement/Versioning/Conventional-Commits.html">Versioning and Releasing</a></li><li class="breadcrumb-item"><a href="../../ProjectManagement/Versioning/Git-Clients.html">Git Clients</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -187,26 +123,26 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
+      <a href="../../index.html" class="sidebar-logo-link">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">🏠 Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../CHANGELOG.html" class="sidebar-item-text sidebar-link">
+  <a href="../../CHANGELOG.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">❗ CHANGELOG</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/Plagiat.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/Plagiat.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plagiat and LLM</span></a>
   </div>
 </li>
@@ -221,49 +157,49 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Pandora/Pandora.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Pandora/Pandora.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Manual page</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Pandora/Features.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Pandora/Features.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Features</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Pandora/Constants.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Pandora/Constants.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Constants</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Pandora/Flight-Records.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Pandora/Flight-Records.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Flight Records</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Pandora/Flight-Phases.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Pandora/Flight-Phases.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Flight Phases</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Pandora/Error-Handling.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Pandora/Error-Handling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Error Handling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Resources/CLI.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Resources/CLI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CLI Reference</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/manifest.json.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/manifest.json.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">manifest.json</span></a>
   </div>
 </li>
@@ -280,19 +216,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tools/maven.html" class="sidebar-item-text sidebar-link">
+  <a href="../../tools/maven.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Maven</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tools/vscode.html" class="sidebar-item-text sidebar-link">
+  <a href="../../tools/vscode.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">VS Code</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tools/Eclipse.html" class="sidebar-item-text sidebar-link">
+  <a href="../../tools/Eclipse.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Eclipse</span></a>
   </div>
 </li>
@@ -318,31 +254,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">What is Test-Driven Development?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/TestDrivenDevelopment/Unit-Test.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/TestDrivenDevelopment/Unit-Test.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Unit Tests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/TestDrivenDevelopment/Integration-Test.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/TestDrivenDevelopment/Integration-Test.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Integration Tests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/TestDrivenDevelopment/TestSuite.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/TestDrivenDevelopment/TestSuite.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TestSuite &amp; Autograder</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/TestDrivenDevelopment/Code-Coverage.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/TestDrivenDevelopment/Code-Coverage.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code Coverage</span></a>
   </div>
 </li>
@@ -350,46 +286,46 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Versioning and Releasing</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/Versioning/Conventional-Commits.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/Versioning/Conventional-Commits.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conventional Commits</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/Versioning/Semantic-Versioning.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/Versioning/Semantic-Versioning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Semantic Versioning</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/Versioning/Release.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/Versioning/Release.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Release</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/Versioning/Keep-A-Changelog.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/Versioning/Keep-A-Changelog.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Keep a Changelog</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/Versioning/Git-Clients.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/Versioning/Git-Clients.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Git Clients</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/Versioning/Configuration-git.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/Versioning/Configuration-git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Git User Configuration</span></a>
   </div>
 </li>
@@ -397,40 +333,40 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">Other</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/Javadoc.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/Javadoc.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Javadoc</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/File Management.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/File Management.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">File Management</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/Issues.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/Issues.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Issues</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/Debug.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ProjectManagement/Debug.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Debug</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ProjectManagement/Synchronize-Update-From-The-Starterpack.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../ProjectManagement/Synchronize-Update-From-The-Starterpack.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">❗ Sync from Starterpack</span></a>
   </div>
 </li>
@@ -448,48 +384,166 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#synchronize-update-from-the-starter-pack" id="toc-synchronize-update-from-the-starter-pack" class="nav-link active" data-scroll-target="#synchronize-update-from-the-starter-pack">Synchronize Update from the Starter Pack</a></li>
-  <li><a href="#from-the-terminal" id="toc-from-the-terminal" class="nav-link" data-scroll-target="#from-the-terminal">From the Terminal</a>
+  <li><a href="#git-clients" id="toc-git-clients" class="nav-link active" data-scroll-target="#git-clients">Git Clients</a>
   <ul class="collapse">
-  <li><a href="#add-the-starterpack-as-a-remote-to-do-once" id="toc-add-the-starterpack-as-a-remote-to-do-once" class="nav-link" data-scroll-target="#add-the-starterpack-as-a-remote-to-do-once">Add the starterPack as a Remote (to do-once)</a></li>
-  <li><a href="#merge-updates-from-starterpack" id="toc-merge-updates-from-starterpack" class="nav-link" data-scroll-target="#merge-updates-from-starterpack">Merge Updates from Starterpack</a></li>
+  <li><a href="#github-desktop" id="toc-github-desktop" class="nav-link" data-scroll-target="#github-desktop">Github Desktop</a></li>
+  <li><a href="#egit-the-eclipse-git-plugin" id="toc-egit-the-eclipse-git-plugin" class="nav-link" data-scroll-target="#egit-the-eclipse-git-plugin">EGit, the Eclipse Git Plugin</a>
+  <ul class="collapse">
+  <li><a href="#install" id="toc-install" class="nav-link" data-scroll-target="#install">Install</a></li>
+  <li><a href="#configuration" id="toc-configuration" class="nav-link" data-scroll-target="#configuration">Configuration</a></li>
   </ul></li>
+  </ul></li>
+  <li><a href="#branches" id="toc-branches" class="nav-link" data-scroll-target="#branches">Branches</a>
+  <ul class="collapse">
+  <li><a href="#master-branch" id="toc-master-branch" class="nav-link" data-scroll-target="#master-branch">Master Branch</a></li>
+  <li><a href="#pull-request" id="toc-pull-request" class="nav-link" data-scroll-target="#pull-request">Pull Request</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Project Management</li><li class="breadcrumb-item"><a href="../ProjectManagement/Javadoc.html">Other</a></li><li class="breadcrumb-item"><a href="../ProjectManagement/Synchronize-Update-From-The-Starterpack.html">❗ Sync from Starterpack</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Project Management</li><li class="breadcrumb-item"><a href="../../ProjectManagement/Versioning/Conventional-Commits.html">Versioning and Releasing</a></li><li class="breadcrumb-item"><a href="../../ProjectManagement/Versioning/Git-Clients.html">Git Clients</a></li></ol></nav></header>
 
 
 
 
-<section id="synchronize-update-from-the-starter-pack" class="level1">
-<h1>Synchronize Update from the Starter Pack</h1>
-<p>The teacher team will sometimes update the base repository with new update</p>
+<section id="git-clients" class="level1">
+<h1>Git Clients</h1>
+<p>You can use several git clients to manage your project</p>
+<ul>
+<li>Standalone Git client (an external program)
+<ul>
+<li>SmartGit: the one presented in first year during the SGV and Project Génie Info Classes. You must update the software and use the license provided on moodle</li>
+<li><a href="#Github-Desktop">Github Desktop</a>: Simple to use, it only lack the graph view</li>
+</ul></li>
+<li>Integrated
+<ul>
+<li>vscode: vscode comes with a git client and some support for github</li>
+<li>eclipse: egit</li>
+</ul></li>
+</ul>
+<section id="github-desktop" class="level2">
+<h2 class="anchored" data-anchor-id="github-desktop">Github Desktop</h2>
+<ul>
+<li><p>Create a user account on <a href="#https://github.com/">GitHub</a></p></li>
+<li><p><strong>important</strong> Make sure to disable notifications in your settings. We will create more than 100 issues that you will have to take care of (i.e.&nbsp;implement features, functionalities) and mark them as complete. During the creation, you might get an email for each one of them if you don’t disable the notifications!</p></li>
+<li><p>Install a git client (e.g., <a href="#https://desktop.github.com/">GitHub Desktop</a>)</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img1.png" class="img-fluid figure-img"></p>
+<figcaption>Github Desktop client</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p><em>Fig.1</em> A basic Git Desktop client</p>
+</blockquote>
+<ul>
+<li>Click on “clone a repository from the internet”</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img2.png" title="Clone a repo" class="img-fluid figure-img"></p>
+<figcaption>alt text</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p><em>Fig.2</em> Cloning a repository</p>
+</blockquote>
+<ul>
+<li><p>Select the project that has been created for your group project. The url is something like https://github.com/Estia-advanced-programming/pandora-2020-group1-GROUPENAME.git</p></li>
+<li><p>Select the location you want the download to happen on your computer. Remember this location, you will need it to import the project in <a href="Eclipse">Eclipse</a> later.</p></li>
+<li><p>Click “clone”</p></li>
+</ul>
 </section>
-<section id="from-the-terminal" class="level1">
-<h1>From the Terminal</h1>
-<p>Open the terminal in VScode (<span class="math inline">\(ctrl+j\)</span>) then type the following command</p>
-<section id="add-the-starterpack-as-a-remote-to-do-once" class="level2">
-<h2 class="anchored" data-anchor-id="add-the-starterpack-as-a-remote-to-do-once">Add the starterPack as a Remote (to do-once)</h2>
-<p>It is not necessary to create a local branch, but i</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the startpack as a remote</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add starterPack https://github.com/Estia-advanced-programming/pandora-starterpack.git</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch starterPack <span class="at">--prune</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Optionally you can have a local branch to see the change locally.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a local branch that track the main </span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-B</span> temp</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-B</span> starterPack-main <span class="at">--track</span> starterPack/main</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="egit-the-eclipse-git-plugin" class="level2">
+<h2 class="anchored" data-anchor-id="egit-the-eclipse-git-plugin">EGit, the Eclipse Git Plugin</h2>
+<p>Another possibility is to get everything in one place! (Repository, code, issues, tasks, etc). Check out <a href="https://eclipsesource.com/blogs/2012/08/28/tips-and-tricks-using-eclipse-with-github/">this tutorial</a>.<br>
+Basically, you need to understand that Git can be used with several projects, not only Java and Eclipse. If you understood that, then we can start to look at how some tools (e.g., Eclipse, Visual Studio, etc) integrates Git tools.</p>
+<p>For Eclipse, it is called EGit. It can be useful to have a quick access to milestones and issues (Fig.3 - 1) or the branches history (Fig.3 - 2). You can quickly open / close issues, switch branches, commit, push, pull, go back to a previous version just by right-clicking on the project (or just one file), finding the <code>Team</code> menu item, and browsing the options.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="views.png" title="Git in Eclipse" class="img-fluid figure-img"></p>
+<figcaption>alt text</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p><em>Fig.3</em> Git in Eclipse</p>
+</blockquote>
+<p>If you already have Git in Eclipse, you should have the <code>Team</code> option when right-clicking on your project (and see some yellow icons to indicate that the project is under version control). If this is the case, just go to the <a href="#configuration">configuration</a> section. Otherwise, perform the install.</p>
+<section id="install" class="level3">
+<h3 class="anchored" data-anchor-id="install">Install</h3>
+<ol type="1">
+<li><p>In Eclipse, click <code>Help</code> and <code>Install new software...</code></p></li>
+<li><p>Click <code>Add</code> source (Fig.4 - 1), then <code>name</code> it <code>egit</code> (or whatever) and write the <code>location</code> to <code>http://download.eclipse.org/egit/updates</code> (Fig.4 - 2)</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="add_egit.png" title="Adding an install" class="img-fluid figure-img"></p>
+<figcaption>alt text</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p><em>Fig.4</em> Adding an install source in Eclipse</p>
+</blockquote>
+<ol type="1">
+<li>Now select this newly added items, check all packages, and continue the installation.</li>
+</ol>
 </section>
-<section id="merge-updates-from-starterpack" class="level2">
-<h2 class="anchored" data-anchor-id="merge-updates-from-starterpack">Merge Updates from Starterpack</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch starterPack <span class="at">--prune</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge starterPack/main <span class="at">-X</span> theirs <span class="at">-m</span> <span class="st">'chore(update): merge modification from starter pack'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="configuration" class="level3">
+<h3 class="anchored" data-anchor-id="configuration">Configuration</h3>
+<p>Egit should already know what is going on in your repository: the tool looks into your.git folder, where everything is already configured (remote repository, etc). You might only need to input your login/password the first few times you will trigger commands.</p>
+<p>For the task view, you need an additional package.</p>
+<ol type="1">
+<li><p>As in the <a href="#install">install</a> section, add a new package repository with a name (e.g., <code>mylin</code>) and this location <code>http://download.eclipse.org/egit/github/updates</code>.</p></li>
+<li><p>Finish the installation of the package</p></li>
+<li><p>Then, you can finally set up your tasks repository (or issues, etc) by following this <a href="https://eclipsesource.com/blogs/2012/08/28/tips-and-tricks-using-eclipse-with-github/">tutorial</a></p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="branches" class="level1">
+<h1>Branches</h1>
+<p>When working with git, you can create, add, delete special tags, which will in turn create what is call branching: your next progress will be identified by this tag. In then end, these tags are useful to track which progress (<code>commit</code>) depend on which previous ones.<br>
+This branching is mainly used to develop a feature, a functionality, or anything else that is a little topic on its own. It allows the developer to implement, test, and work on the feature without interfering with the other branches.</p>
+<p>To learn more on Git Branching: <a href="https://learngitbranching.js.org/">see this link</a></p>
+<section id="master-branch" class="level2">
+<h2 class="anchored" data-anchor-id="master-branch">Master Branch</h2>
+<p>The master branch is usually the one where everything works fine. This is the branch we will use to test your program.<br>
+It is common to merge and push your current work on ‘Master’ only when you are sure that:</p>
+<p>1- There is no conflict</p>
+<p>Make sure you Pull the master branch before trying to push your work. Resolve every potential conflicts locally. With this in mind, you will always push a clean version that any new comers could clone and run.</p>
+<p>2- Your current task is complete</p>
+<p>It is usually not every 5 minutes that people push on the Master branch. You save your work locally (commit), and push on GitHub on your branch when you reached (or think your reached) a consequent step. You can then merge the branch you were working on with Master when the task at hand is completed. You can then ask your team to review your code and accept the merging via a Pull request.</p>
+</section>
+<section id="pull-request" class="level2">
+<h2 class="anchored" data-anchor-id="pull-request">Pull Request</h2>
+</section>
+</section>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<ul>
+<li>Create a branch <strong>locally</strong>
+<ul>
+<li>Name it develop_yourName_NameOfTheFeature</li>
+</ul></li>
+<li>Code, code, code… Debug, code, code, code</li>
+<li>Commit locally every time that something run</li>
+<li>When the feature is done: Clean up, Comment</li>
+<li>Pull the remote code</li>
+<li>Resolve any conflict that you might have</li>
+<li>Commit, push, and do a pull request</li>
+<li>Continue</li>
+</ul>
+</section>
+<section id="resources" class="level1">
+<h1>Resources</h1>
+<p>Some of the <a href="https://guides.github.com/">resources</a> used to create this page,<br>
+<a href="https://guides.github.com/introduction/git-handbook/">Git handbook</a></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

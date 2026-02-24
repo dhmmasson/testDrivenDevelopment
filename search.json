@@ -7,7 +7,7 @@
     "text": "your first manifest could be:\n{\n  \"version\" : \"1.1.0\",\n  \"features\" : [\n      \"version\",\n      \"help\",\n      \"version\",\n      \"filenames\",\n      \"parameters\",\n      \"debug\",\n  ]\n}\nYour second manifest after implementing the features avgAlt and maxAlt\n{\n  \"version\" : \"1.2.0\",\n  \"features\" : [\n      \"version\",\n      \"help\",\n      \"version\",\n      \"filenames\",\n      \"parameters\",\n      \"debug\",\n      \"avgAlt\",\n      \"maxAlt\"\n  ]\n}",
     "crumbs": [
       "Home",
-      "Project Management",
+      "🎞 Pandora",
       "manifest.json"
     ]
   },
@@ -19,7 +19,7 @@
     "text": "your first manifest could be:\n{\n  \"version\" : \"1.1.0\",\n  \"features\" : [\n      \"version\",\n      \"help\",\n      \"version\",\n      \"filenames\",\n      \"parameters\",\n      \"debug\",\n  ]\n}\nYour second manifest after implementing the features avgAlt and maxAlt\n{\n  \"version\" : \"1.2.0\",\n  \"features\" : [\n      \"version\",\n      \"help\",\n      \"version\",\n      \"filenames\",\n      \"parameters\",\n      \"debug\",\n      \"avgAlt\",\n      \"maxAlt\"\n  ]\n}",
     "crumbs": [
       "Home",
-      "Project Management",
+      "🎞 Pandora",
       "manifest.json"
     ]
   },
@@ -50,129 +50,261 @@
     ]
   },
   {
-    "objectID": "ProjectManagement/Versioning/Keep-A-Changelog.html",
-    "href": "ProjectManagement/Versioning/Keep-A-Changelog.html",
-    "title": "Changelog",
+    "objectID": "ProjectManagement/Versioning/Semantic-Versioning.html",
+    "href": "ProjectManagement/Versioning/Semantic-Versioning.html",
+    "title": "See also",
     "section": "",
-    "text": "Changelog\nA changelog is a document or record that provides a chronological log of significant changes made to a software project. It serves as a valuable communication tool between developers, users, and other stakeholders, detailing the evolution of a software application over time.\nYou can find in your project folder a file name CHANGELOG.md, you should update this file every time you make a Release\nThe information present in this file and more can be found from this source Keep a Changelog",
+    "text": "While git is a version control system, and each commit is a new version of your software, these versions are too granular to be meaningful for end-users of your software. In particular because the commit number or hash is seemingly random it is difficult to know if commit abc34ef is more recent than commit 32ff76a 1 and if an update is required. To address this, versioning schemes propose assigning meaningful numbers to incremental software versions.\nSemantic versioning, often abbreviated as semver, is one of the possible versioning schemes for a project. It provides a systematic way of conveying changes and updates in a software project through a three-part version number, consisting of &lt;Major&gt;.&lt;Minor&gt;.&lt;Patch&gt; components (e.g., 1.2.3).\nThe key principle behind semantic versioning is to communicate the nature of changes succinctly: a change in the major version indicates incompatible API alterations, a minor version signals backward-compatible feature additions, and a patch version denotes backward-compatible bug fixes.",
     "crumbs": [
       "Home",
       "Project Management",
       "Versioning and Releasing",
-      "Keep a Changelog"
+      "Semantic Versioning"
     ]
   },
   {
-    "objectID": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html",
-    "href": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html",
-    "title": "Synchronize Update from the Starter Pack",
+    "objectID": "ProjectManagement/Versioning/Semantic-Versioning.html#footnotes",
+    "href": "ProjectManagement/Versioning/Semantic-Versioning.html#footnotes",
+    "title": "See also",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nin reality a commit hash is 40 character long: ca82a6dff817ec66f44342007202690a93763949↩︎",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Versioning and Releasing",
+      "Semantic Versioning"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Versioning/Configuration-git.html",
+    "href": "ProjectManagement/Versioning/Configuration-git.html",
+    "title": "wiki",
     "section": "",
-    "text": "The teacher team will sometimes update the base repository with new update",
+    "text": "in the terminal (ctrl + j) check that your git configuration has the correct name and email address (either your estia or the email address in https://github.com/settings/emails), the name should either be your name or your github handle\n$ git config user.name\ndhmmasson\n$ git config user.email\n5263585+dhmmasson@users.noreply.github.com\nIf you want to update your email :\n$ git config user.email 5263585+dhmmasson@users.noreply.github.com",
     "crumbs": [
       "Home",
       "Project Management",
-      "❗ Sync from Starterpack"
+      "Versioning and Releasing",
+      "Git User Configuration"
     ]
   },
   {
-    "objectID": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html#add-the-starterpack-as-a-remote-to-do-once",
-    "href": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html#add-the-starterpack-as-a-remote-to-do-once",
-    "title": "Synchronize Update from the Starter Pack",
-    "section": "Add the starterPack as a Remote (to do-once)",
-    "text": "Add the starterPack as a Remote (to do-once)\nIt is not necessary to create a local branch, but i\n# Add the startpack as a remote\ngit remote add starterPack https://github.com/Estia-advanced-programming/pandora-starterpack.git\ngit fetch starterPack --prune\nOptionally you can have a local branch to see the change locally.\n# Create a local branch that track the main \ngit checkout -B temp\ngit checkout -B starterPack-main --track starterPack/main\ngit \ngit checkout -",
-    "crumbs": [
-      "Home",
-      "Project Management",
-      "❗ Sync from Starterpack"
-    ]
-  },
-  {
-    "objectID": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html#merge-updates-from-starterpack",
-    "href": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html#merge-updates-from-starterpack",
-    "title": "Synchronize Update from the Starter Pack",
-    "section": "Merge Updates from Starterpack",
-    "text": "Merge Updates from Starterpack\ngit fetch starterPack --prune\ngit merge starterPack/main -X theirs -m 'chore(update): merge modification from starter pack'",
-    "crumbs": [
-      "Home",
-      "Project Management",
-      "❗ Sync from Starterpack"
-    ]
-  },
-  {
-    "objectID": "ProjectManagement/Issues.html",
-    "href": "ProjectManagement/Issues.html",
-    "title": "Issues",
+    "objectID": "ProjectManagement/Plagiat.html",
+    "href": "ProjectManagement/Plagiat.html",
+    "title": "Plagiat",
     "section": "",
-    "text": "Issues\nGitHub Issues are items you can create in a repository to plan, discuss and track work. You can use issues to track work, give or receive feedback, collaborate on ideas or tasks, and efficiently communicate with others. (see for a generic overview of Github Issue here). You can do a lot of thing with the github issues to handle your project management. For instance the project tab allows you to plan your feature development using a Kanban. See https://github.com/features/issues for more information\nIn the pandora project, we have created for you an issue for each of the feature you have to implement. To import them into your repository you should run the issue-updater workflow:\n\nFrom your repository page, go in the “Actions” tab (in the top bar)\nIn the workflows (left navigation) Select the Import issues from template\nin the blue banner in the middle of the screen click run workflow",
+    "text": "Plagiat\nAll the code you submit at all times on Github should be yours and yours only.\nAn Anti-Plagiarism software will be run on all source code present on Github at the end of the project. In a project of this size with the variability of possible design choice, coding style and so on, no two Projects should have similar code.\nAntiplagiarism will also be run against previous year solutions\n\n\nBetween Group Help\nYou can ask for general help from other people, the same way you can ask the teachers about a specific problem. If you ask for a solution and you implement someone else solution you run the risk of plagiarism.\n\n\nUse of LLM (ChatGPT, Bard, Gemini, Copilot,…)\nWhile the use of these tools is the future of coding, you should strive to learn to first know how to produce code yourself before pasting generated code.\nUsing LLM generates the risk that your code will be similar to someone else (source X problem: you are both similar to some unknown source resulting in you appearing similar to the anti-plagiarism code)",
     "crumbs": [
       "Home",
-      "Project Management",
-      "Issues"
+      "Plagiat and LLM"
     ]
   },
   {
-    "objectID": "ProjectManagement/TestDrivenDevelopment/Unit-Test.html",
-    "href": "ProjectManagement/TestDrivenDevelopment/Unit-Test.html",
-    "title": "Unit-Test",
+    "objectID": "ProjectManagement/Javadoc.html",
+    "href": "ProjectManagement/Javadoc.html",
+    "title": "Code Documentation",
     "section": "",
-    "text": "Unit tests are released into the code repository along with the code they test.\nUnit Tests target individual units or components of the software often focusing on isolated functions or methods. The objective is to verify that each unit performs as expected in isolation, facilitating early detection of defects and supporting modular development practices. Unit Tests are crucial in TDD, acting as the building blocks for validating the correctness of the smallest units of code. Unit tests need to be integrated in the source code, generally as additional test classes in Java.\n\n\n\nA unit test executes fast — blazing fast! Sub-millisecond, please.\nA unit test can be executed concurrently without affecting other tests.\nA unit test should not utilize resources from the outside world.\n\nNo file system access.\nNo web service calls.\nNo e-mails.\nNo cross-thread communication.\nNo cross-process communication.\nNo SQL and no database connectivity.\n\nA unit tests verifies the public behavior of that unit conforms to a requirement.\n\nIn the java project you can write them in the src/test/java/ folder.",
+    "text": "Javadoc is a documentation generation tool in Java that utilizes specially formatted comments to document classes, methods, and other elements of Java code. These comments not only serve as a valuable resource for developers but also enable the automatic generation of comprehensive documentation for Java projects.\nThe use of Javadoc style comments enhances code readability and facilitates collaboration among developers.\n\n\n\n\nJavadoc comments enable the automatic generation of documentation in HTML format. This documentation provides insights into the purpose, functionality, and usage of classes and methods, making it an invaluable reference for developers and stakeholders. Currently We haven’t introduced Doxygen or other documentation generation tools, but might introduce them during the project\n\n\n\nIntegrated Development Environments (IDEs) leverage Javadoc comments to generate tooltips that appear when developers hover over a class, method, or parameter. These tooltips offer quick access to relevant information, fostering a more efficient and informed coding experience.\n\n\n\n\nJavadoc comments are denoted by /**... */ and are placed immediately before the declaration of the class, method, or other code elements. Note the double ** after the first /\nThe generic structure of a Javadoc comment includes the following elements:\n/**\n * Description of the class or method.\n * Additional details and usage information.\n *\n * @author Author's name\n * @version Version number\n * @param parameterName Description of the parameter\n * @return Description of the return value (for methods)\n * @throws ExceptionType Description of the exception (if applicable)\n */\n\nDescription: A concise and informative summary of the class or method’s purpose and functionality.\nAuthor: The name of the author or contributor.\nVersion: The version number of the class or method.\nParameters: Descriptions of parameters for methods, including their names and purposes.\nReturn: Description of the value returned by a method.\nThrows: Documentation for exceptions that the method may throw.",
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
-      "Unit Tests"
+      "Other",
+      "Javadoc"
     ]
   },
   {
-    "objectID": "ProjectManagement/TestDrivenDevelopment/Unit-Test.html#properties",
-    "href": "ProjectManagement/TestDrivenDevelopment/Unit-Test.html#properties",
-    "title": "Unit-Test",
+    "objectID": "ProjectManagement/Javadoc.html#benefits",
+    "href": "ProjectManagement/Javadoc.html#benefits",
+    "title": "Code Documentation",
     "section": "",
-    "text": "A unit test executes fast — blazing fast! Sub-millisecond, please.\nA unit test can be executed concurrently without affecting other tests.\nA unit test should not utilize resources from the outside world.\n\nNo file system access.\nNo web service calls.\nNo e-mails.\nNo cross-thread communication.\nNo cross-process communication.\nNo SQL and no database connectivity.\n\nA unit tests verifies the public behavior of that unit conforms to a requirement.\n\nIn the java project you can write them in the src/test/java/ folder.",
+    "text": "Javadoc comments enable the automatic generation of documentation in HTML format. This documentation provides insights into the purpose, functionality, and usage of classes and methods, making it an invaluable reference for developers and stakeholders. Currently We haven’t introduced Doxygen or other documentation generation tools, but might introduce them during the project\n\n\n\nIntegrated Development Environments (IDEs) leverage Javadoc comments to generate tooltips that appear when developers hover over a class, method, or parameter. These tooltips offer quick access to relevant information, fostering a more efficient and informed coding experience.",
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
-      "Unit Tests"
+      "Other",
+      "Javadoc"
     ]
   },
   {
-    "objectID": "ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html",
-    "href": "ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html",
-    "title": "Test Driven Development",
+    "objectID": "ProjectManagement/Javadoc.html#generic-format-of-javadoc-comments",
+    "href": "ProjectManagement/Javadoc.html#generic-format-of-javadoc-comments",
+    "title": "Code Documentation",
     "section": "",
-    "text": "Test-Driven Development (TDD) is a software development approach in which tests are written before the actual code that needs to be implemented. The TDD process typically follows these steps, often referred to as the “Red-Green-Refactor” cycle:\n\nRed: Write a Failing Test\n\nBefore writing any code, you write a test that should validate a new feature. In the Pandora project that would be one of the features described in the issues. This initial test should fail (Most test suites output the failing test in red, hence Red) since the corresponding code hasn’t been implemented yet.\nCommit that test (test: add a test for feature X)\n\nGreen: Write the Minimum Code to Pass the Test\n\nYou then write the minimum amount of code necessary to make the test pass. The focus is on making the test successful.\ncommit your code (feat: implement feature X)\n\nRefactor: Improve Code Without Changing Functionality\n\nAfter the test has passed, you should refactor the code to improve its structure, readability, or performance without making the test fail (nor previous tests).\nCommit the changes (e.g. refactor: improve feature X by skipping empty row or docs: add [Javadoc](../Javadoc.md) to function Y)\n\n\nAdd the meaningful change to your Keep-A-Changelog, if your team feel that it has done enough change create a new release\nThere are several strategies and kind of tests you could develop to test your project:\nBlack Box Testing: Black Box Testing is a fundamental testing methodology in Test-Driven Development (TDD) that centers on evaluating the external functionality of a software application without delving into its internal code structure. In this approach, you treat the software as an opaque entity, focusing solely on inputs and observing outputs, akin to a “black box” where the internal workings remain concealed. The primary objective of Black Box Testing is to validate that the software behaves according to specified requirements and meets its intended functionality.\nWhite Box Testing: In contrast to Black Box Testing, White Box Testing, also known as clear box or structural testing, delves into the internal logic and code structure of the software. You write these tests after you have written the code, based on what kind of data structure or code logic you have written. (e.g. you have used an array, and you index i, i+1 and i+2 you deduce that your current code works only if there are at least three elements, you write a new test convering the edge case (for example a case where there are two elements, you are now in the red))\nIn addition to White Box and Black Box Testing, you can also classify tests in two categories Unit Tests and Integration Tests.\nUnit Tests: Unit Tests target individual units or components of the software often focusing on isolated functions or methods. The objective is to verify that each unit performs as expected in isolation, facilitating early detection of defects and supporting modular development practices. Unit Tests are crucial in TDD, acting as the building blocks for validating the correctness of the smallest units of code. Unit tests need to be integrated in the source code, generally as additional test classes in Java.\nIntegration Tests: Integration Tests assess the collaboration and interaction between different components or modules within a software system. These tests ensure that various units work seamlessly together when integrated, revealing potential issues that may arise during the assembly of different parts. Integration Tests play a pivotal role in validating the overall system architecture and its ability to function cohesively as a unified whole. In our case it means testing the system from an outside perspective once it is compiled, answering the question of does pandora.jar behaves as expected.\nRead more about Test-Driven-Development on thewikipedia page",
+    "text": "Javadoc comments are denoted by /**... */ and are placed immediately before the declaration of the class, method, or other code elements. Note the double ** after the first /\nThe generic structure of a Javadoc comment includes the following elements:\n/**\n * Description of the class or method.\n * Additional details and usage information.\n *\n * @author Author's name\n * @version Version number\n * @param parameterName Description of the parameter\n * @return Description of the return value (for methods)\n * @throws ExceptionType Description of the exception (if applicable)\n */\n\nDescription: A concise and informative summary of the class or method’s purpose and functionality.\nAuthor: The name of the author or contributor.\nVersion: The version number of the class or method.\nParameters: Descriptions of parameters for methods, including their names and purposes.\nReturn: Description of the value returned by a method.\nThrows: Documentation for exceptions that the method may throw.",
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
-      "What is Test-Driven Development?"
+      "Other",
+      "Javadoc"
     ]
   },
   {
-    "objectID": "ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html#automated-tests",
-    "href": "ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html#automated-tests",
-    "title": "Test Driven Development",
-    "section": "Automated Tests",
-    "text": "Automated Tests\nRunning tests manually quickly becomes impractical. Instead, you should automate them from the start using the test/autograder.py script provided in the starter pack.\nThere are no automated tests on GitHub — no CI pipeline, no GitHub Actions. Instead, the teacher team will regularly pull your repository and run:\n\nthe teacher’s own test suite against your pandora.jar\nyour test suite against other teams’ pandora.jar\n\nThis means the quality and coverage of test/testSuite.json is part of your final evaluation. A test suite that catches real bugs in other teams’ projects is rewarded.\n\nRunning Tests Locally\nUse test/autograder.py for all features. The script requires Python and reads testSuite.json and manifest.json to run each test against your jar:\npython test/autograder.py -t test/testSuite.json -m ./manifest.json target/pandora.jar\nYou can also run your suite against another team’s jar by replacing the last argument:\npython test/autograder.py -t test/testSuite.json -m path/to/their/manifest.json path/to/their/pandora.jar",
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html",
+    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html",
+    "title": "Code Coverage",
+    "section": "",
+    "text": "Code coverage is a metric that measures how much of your source code is executed when your test suite runs. It helps identify untested paths and dead code.\n\n\nCoverage tools instrument your bytecode and track which lines, branches, and methods are exercised during a test run. The most common metrics are:\n\n\n\n\n\n\n\nMetric\nDescription\n\n\n\n\nLine coverage\nPercentage of source lines executed at least once\n\n\nBranch coverage\nPercentage of decision branches taken (e.g., both sides of an if)\n\n\nMethod coverage\nPercentage of methods called at least once\n\n\n\nFor Pandora, aim for high line and branch coverage — every feature you implement should be reachable by your test suite.\n\n\n\n\nGrading: your code is evaluated on test coverage. Dead code and untested paths lower your score.\nConfidence: high coverage reduces the risk of shipping a feature that only works in the happy path.\nDiscriminating other teams: if your test suite cannot reach a code path, it cannot reveal whether another team’s implementation is correct or not.\n\n\n\n\nJaCoCo is the standard Java coverage tool. It is already configured in the Pandora starter pack.\n\n\nmvn test jacoco:report\nThe HTML report is generated at:\ntarget/site/jacoco/index.html\nOpen it in a browser to see line-by-line coverage for each class.\n\n\n\n\nGreen lines were executed by at least one test.\nYellow lines were partially covered (some branches not taken).\nRed lines were never executed — write a test or remove the dead code.\n\n\n\n\n\n\nRight-click your project → Coverage As → JUnit Test\nEclipse highlights covered (green) and uncovered (red) lines directly in the editor.\nThe Coverage view at the bottom shows percentages per class and package.\n\n\nIf the Coverage As option is missing, install EclEmma: Help → Eclipse Marketplace → search for EclEmma.\n\n\n\n\n\nIntelliJ IDEA: Run → Run with Coverage. Coverage results are shown inline in the gutter.\nVS Code: use the Coverage Gutters extension together with mvn test jacoco:report. Point the extension at target/site/jacoco/jacoco.xml.\n\n\n\n\n\nDelete dead code — if a method or branch is never reached by any test and is not reachable by the program logic, remove it.\nWrite missing tests — for every red block that corresponds to real logic, write a test that exercises it.\nCheck branches — yellow coverage often means you only tested the true branch of a condition. Add a test for the false branch.\n\n\n\n\n100% coverage does not mean your code is correct — it only means every line was executed at least once. A test that calls a method but asserts nothing will push coverage to 100% without providing any value.\nCoverage is a lower bound on test quality, not an upper bound. Use it to find gaps, not to declare victory.\n\n\n\n\nUnit-Test — where to write your unit tests\nIntegration-Test — black-box tests that also contribute to coverage\nTest-Driven-Development — the overall TDD workflow",
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
-      "What is Test-Driven Development?"
+      "<b>Test-Driven-Development</b>",
+      "Code Coverage"
     ]
   },
   {
-    "objectID": "ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html#testsuite",
-    "href": "ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html#testsuite",
-    "title": "Test Driven Development",
-    "section": "TestSuite",
-    "text": "TestSuite\nWe require however that you produce Black Box Integration Tests for all the features you develop by completing the file test/testSuite.json and adding corresponding flight records into the test/resources folder.\nthe testSuite should respect the following schema\n[\n    testDescription,\n    ...\n    testDescription\n]\na test description should respect the following schema\n{\n    \"id\": &lt;uniqueId:number&gt;,\n    \"feature\": &lt;feature:string&gt;,\n    \"milestone\": &lt;milestone:number&gt;,\n    \"mode\": &lt;\"full\"|\"feature\"&gt;,  \n    \"file\": &lt;flightRecordPath:Path&gt;,\n    \"result\": &lt;expectedResult:number|string&gt;\n}\nThe fields of a test description are\n\nid: a unique number in your testSuite\nfeature: the feature your are testing, this should be the exact name that is passed to the -o option. e.g. maxAlt\nmilestone: the number of the milestone corresponding to the feature you are testing. For Grouping purposes in the output. (deprecated use milestone:1,2,3,4 to group the tests)\nmode:\n\nfeature: test with the -o set to the given feature\nfull: generate the full report and parse it to find the feature in the report (see full report format\n\nfile: the file passed to pandora, the path should be relative to the overall project test/resources/.../flight.frd\nresult: the expected result. Currently, the autograder is in strict comparison.",
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#what-is-measured",
+    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#what-is-measured",
+    "title": "Code Coverage",
+    "section": "",
+    "text": "Coverage tools instrument your bytecode and track which lines, branches, and methods are exercised during a test run. The most common metrics are:\n\n\n\n\n\n\n\nMetric\nDescription\n\n\n\n\nLine coverage\nPercentage of source lines executed at least once\n\n\nBranch coverage\nPercentage of decision branches taken (e.g., both sides of an if)\n\n\nMethod coverage\nPercentage of methods called at least once\n\n\n\nFor Pandora, aim for high line and branch coverage — every feature you implement should be reachable by your test suite.",
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
-      "What is Test-Driven Development?"
+      "<b>Test-Driven-Development</b>",
+      "Code Coverage"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#why-it-matters-for-pandora",
+    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#why-it-matters-for-pandora",
+    "title": "Code Coverage",
+    "section": "",
+    "text": "Grading: your code is evaluated on test coverage. Dead code and untested paths lower your score.\nConfidence: high coverage reduces the risk of shipping a feature that only works in the happy path.\nDiscriminating other teams: if your test suite cannot reach a code path, it cannot reveal whether another team’s implementation is correct or not.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "<b>Test-Driven-Development</b>",
+      "Code Coverage"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-vs-code-maven-jacoco",
+    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-vs-code-maven-jacoco",
+    "title": "Code Coverage",
+    "section": "",
+    "text": "JaCoCo is the standard Java coverage tool. It is already configured in the Pandora starter pack.\n\n\nmvn test jacoco:report\nThe HTML report is generated at:\ntarget/site/jacoco/index.html\nOpen it in a browser to see line-by-line coverage for each class.\n\n\n\n\nGreen lines were executed by at least one test.\nYellow lines were partially covered (some branches not taken).\nRed lines were never executed — write a test or remove the dead code.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "<b>Test-Driven-Development</b>",
+      "Code Coverage"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-eclipse",
+    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-eclipse",
+    "title": "Code Coverage",
+    "section": "",
+    "text": "Right-click your project → Coverage As → JUnit Test\nEclipse highlights covered (green) and uncovered (red) lines directly in the editor.\nThe Coverage view at the bottom shows percentages per class and package.\n\n\nIf the Coverage As option is missing, install EclEmma: Help → Eclipse Marketplace → search for EclEmma.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "<b>Test-Driven-Development</b>",
+      "Code Coverage"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-intellij-vs-code",
+    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-intellij-vs-code",
+    "title": "Code Coverage",
+    "section": "",
+    "text": "IntelliJ IDEA: Run → Run with Coverage. Coverage results are shown inline in the gutter.\nVS Code: use the Coverage Gutters extension together with mvn test jacoco:report. Point the extension at target/site/jacoco/jacoco.xml.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "<b>Test-Driven-Development</b>",
+      "Code Coverage"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#what-to-do-with-the-report",
+    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#what-to-do-with-the-report",
+    "title": "Code Coverage",
+    "section": "",
+    "text": "Delete dead code — if a method or branch is never reached by any test and is not reachable by the program logic, remove it.\nWrite missing tests — for every red block that corresponds to real logic, write a test that exercises it.\nCheck branches — yellow coverage often means you only tested the true branch of a condition. Add a test for the false branch.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "<b>Test-Driven-Development</b>",
+      "Code Coverage"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#coverage-is-not-a-goal-in-itself",
+    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#coverage-is-not-a-goal-in-itself",
+    "title": "Code Coverage",
+    "section": "",
+    "text": "100% coverage does not mean your code is correct — it only means every line was executed at least once. A test that calls a method but asserts nothing will push coverage to 100% without providing any value.\nCoverage is a lower bound on test quality, not an upper bound. Use it to find gaps, not to declare victory.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "<b>Test-Driven-Development</b>",
+      "Code Coverage"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#see-also",
+    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#see-also",
+    "title": "Code Coverage",
+    "section": "",
+    "text": "Unit-Test — where to write your unit tests\nIntegration-Test — black-box tests that also contribute to coverage\nTest-Driven-Development — the overall TDD workflow",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "<b>Test-Driven-Development</b>",
+      "Code Coverage"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/TestDrivenDevelopment/TestSuite.html",
+    "href": "ProjectManagement/TestDrivenDevelopment/TestSuite.html",
+    "title": "TestSuite & Autograder",
+    "section": "",
+    "text": "The autograder is a Python script provided in the starter pack that runs a test suite against any pandora.jar. It is the primary tool used by both students and the teacher team to evaluate implementations.\n\n\npython test/autograder.py \\\n  -t &lt;path_test_suite&gt; \\\n  -m &lt;path_manifest&gt; \\\n  -f &lt;json|md&gt; \\\n  -o &lt;output_path&gt; \\\n  -j &lt;jacoco_agent_path&gt; \\\n  &lt;pathToPandora&gt;\n\n\n\n\n\nArgument\nRequired\nDescription\n\n\n\n\n&lt;pathToPandora&gt;\nyes\nPath to the jar to test (e.g. target/pandora.jar)\n\n\n-t &lt;path_test_suite&gt;\nyes\nPath to testSuite.json\n\n\n-m &lt;path_manifest&gt;\nyes\nPath to manifest.json\n\n\n-f &lt;json\\|md&gt;\nno\nOutput format: json (machine-readable) or md (Markdown report). Defaults to terminal output\n\n\n-o &lt;output_path&gt;\nno\nWrite results to this file instead of stdout\n\n\n-j &lt;jacoco_agent_path&gt;\nno\nPath to the JaCoCo agent jar — enables code coverage measurement during the run\n\n\n\n\n\n\nRun your test suite against your own jar:\npython test/autograder.py -t test/testSuite.json -m manifest.json target/pandora.jar\nRun your test suite against another team’s jar:\npython test/autograder.py -t test/testSuite.json -m path/to/their/manifest.json path/to/their/pandora.jar\nSave a Markdown report:\npython test/autograder.py -t test/testSuite.json -m manifest.json -f md -o results.md target/pandora.jar\nRun with code coverage:\npython test/autograder.py -t test/testSuite.json -m manifest.json -j ~/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar target/pandora.jar\nThe script prints a summary grouped by milestone. A passing test is shown in green; a failing test shows the expected vs. actual diff.\n\n\n\n\n\nYou are required to produce Black Box Integration Tests for every feature you implement by filling test/testSuite.json and placing the corresponding flight record files in test/resources/.\n\n\ntest/testSuite.json is a JSON array of test descriptions:\n[\n  {\n    \"id\": 1,\n    \"feature\": \"maxAlt\",\n    \"milestone\": 1,\n    \"mode\": \"feature\",\n    \"file\": \"test/resources/0_201_MiG-23MLD.frd\",\n    \"result\": \"14321.00\"\n  },\n  {\n    \"id\": 2,\n    \"feature\": \"fullReport\",\n    \"milestone\": 1,\n    \"mode\": \"full\",\n    \"file\": \"test/resources/0_201_MiG-23MLD.frd\",\n    \"result\": \"14321.00\"\n  }\n]\n\n\n\n\n\n\nField\nType\nDescription\n\n\n\n\nid\nnumber\nUnique integer within the suite\n\n\nfeature\nstring\nExact value passed to -o (e.g. maxAlt, flightDuration) — must match the Features table\n\n\nmilestone\nnumber\nMilestone number, used for grouping output\n\n\nmode\n\"feature\" | \"full\"\nfeature: run with -o &lt;feature&gt;; full: generate the full report and parse it for the expected value\n\n\nfile\nstring\nPath to the flight record, relative to the project root (e.g. test/resources/my_flight.frd)\n\n\nresult\nstring\nExpected output — the autograder does a strict string comparison\n\n\n\n\nFollow the output format rules precisely — decimal separator, number of digits, and units must all match exactly.\n\n\n\n\n\nAt least one test per feature and per CLI option you have implemented\nFeature mode tests: use a hand-crafted flight record where the correct answer is easy to verify by hand (e.g., 10 records all at 1000 m → avgAlt must be 1000.00)\nVaried inputs: different aircraft, different flight profiles, edge cases (short flight, single record, missing optional columns)\nDiscriminating tests: your suite should catch bugs in other teams’ implementations — if a team doesn’t handle negative temperatures, your suite should fail them\n\nPlace hand-crafted flight records in test/resources/ alongside the provided files. See Integration-Test for guidance on designing test records.\n\n\n\n\n\nIntegration-Test — concept and design of integration tests\nCode-Coverage — measuring coverage during autograder runs\nmanifest.json — declares which features are implemented\nFeatures — list of all feature names and their CLI options",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "<b>Test-Driven-Development</b>",
+      "TestSuite & Autograder"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/TestDrivenDevelopment/TestSuite.html#the-autograder",
+    "href": "ProjectManagement/TestDrivenDevelopment/TestSuite.html#the-autograder",
+    "title": "TestSuite & Autograder",
+    "section": "",
+    "text": "python test/autograder.py \\\n  -t &lt;path_test_suite&gt; \\\n  -m &lt;path_manifest&gt; \\\n  -f &lt;json|md&gt; \\\n  -o &lt;output_path&gt; \\\n  -j &lt;jacoco_agent_path&gt; \\\n  &lt;pathToPandora&gt;\n\n\n\n\n\nArgument\nRequired\nDescription\n\n\n\n\n&lt;pathToPandora&gt;\nyes\nPath to the jar to test (e.g. target/pandora.jar)\n\n\n-t &lt;path_test_suite&gt;\nyes\nPath to testSuite.json\n\n\n-m &lt;path_manifest&gt;\nyes\nPath to manifest.json\n\n\n-f &lt;json\\|md&gt;\nno\nOutput format: json (machine-readable) or md (Markdown report). Defaults to terminal output\n\n\n-o &lt;output_path&gt;\nno\nWrite results to this file instead of stdout\n\n\n-j &lt;jacoco_agent_path&gt;\nno\nPath to the JaCoCo agent jar — enables code coverage measurement during the run\n\n\n\n\n\n\nRun your test suite against your own jar:\npython test/autograder.py -t test/testSuite.json -m manifest.json target/pandora.jar\nRun your test suite against another team’s jar:\npython test/autograder.py -t test/testSuite.json -m path/to/their/manifest.json path/to/their/pandora.jar\nSave a Markdown report:\npython test/autograder.py -t test/testSuite.json -m manifest.json -f md -o results.md target/pandora.jar\nRun with code coverage:\npython test/autograder.py -t test/testSuite.json -m manifest.json -j ~/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar target/pandora.jar\nThe script prints a summary grouped by milestone. A passing test is shown in green; a failing test shows the expected vs. actual diff.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "<b>Test-Driven-Development</b>",
+      "TestSuite & Autograder"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/TestDrivenDevelopment/TestSuite.html#building-your-testsuite",
+    "href": "ProjectManagement/TestDrivenDevelopment/TestSuite.html#building-your-testsuite",
+    "title": "TestSuite & Autograder",
+    "section": "",
+    "text": "You are required to produce Black Box Integration Tests for every feature you implement by filling test/testSuite.json and placing the corresponding flight record files in test/resources/.\n\n\ntest/testSuite.json is a JSON array of test descriptions:\n[\n  {\n    \"id\": 1,\n    \"feature\": \"maxAlt\",\n    \"milestone\": 1,\n    \"mode\": \"feature\",\n    \"file\": \"test/resources/0_201_MiG-23MLD.frd\",\n    \"result\": \"14321.00\"\n  },\n  {\n    \"id\": 2,\n    \"feature\": \"fullReport\",\n    \"milestone\": 1,\n    \"mode\": \"full\",\n    \"file\": \"test/resources/0_201_MiG-23MLD.frd\",\n    \"result\": \"14321.00\"\n  }\n]\n\n\n\n\n\n\nField\nType\nDescription\n\n\n\n\nid\nnumber\nUnique integer within the suite\n\n\nfeature\nstring\nExact value passed to -o (e.g. maxAlt, flightDuration) — must match the Features table\n\n\nmilestone\nnumber\nMilestone number, used for grouping output\n\n\nmode\n\"feature\" | \"full\"\nfeature: run with -o &lt;feature&gt;; full: generate the full report and parse it for the expected value\n\n\nfile\nstring\nPath to the flight record, relative to the project root (e.g. test/resources/my_flight.frd)\n\n\nresult\nstring\nExpected output — the autograder does a strict string comparison\n\n\n\n\nFollow the output format rules precisely — decimal separator, number of digits, and units must all match exactly.\n\n\n\n\n\nAt least one test per feature and per CLI option you have implemented\nFeature mode tests: use a hand-crafted flight record where the correct answer is easy to verify by hand (e.g., 10 records all at 1000 m → avgAlt must be 1000.00)\nVaried inputs: different aircraft, different flight profiles, edge cases (short flight, single record, missing optional columns)\nDiscriminating tests: your suite should catch bugs in other teams’ implementations — if a team doesn’t handle negative temperatures, your suite should fail them\n\nPlace hand-crafted flight records in test/resources/ alongside the provided files. See Integration-Test for guidance on designing test records.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "<b>Test-Driven-Development</b>",
+      "TestSuite & Autograder"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/TestDrivenDevelopment/TestSuite.html#see-also",
+    "href": "ProjectManagement/TestDrivenDevelopment/TestSuite.html#see-also",
+    "title": "TestSuite & Autograder",
+    "section": "",
+    "text": "Integration-Test — concept and design of integration tests\nCode-Coverage — measuring coverage during autograder runs\nmanifest.json — declares which features are implemented\nFeatures — list of all feature names and their CLI options",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "<b>Test-Driven-Development</b>",
+      "TestSuite & Autograder"
     ]
   },
   {
@@ -184,6 +316,7 @@
     "crumbs": [
       "Home",
       "Project Management",
+      "Other",
       "File Management"
     ]
   },
@@ -351,13 +484,6 @@
     "text": "This is the wiki for the Estia Advanced Programming class."
   },
   {
-    "objectID": "Home.html#educational-goals-of-the-class",
-    "href": "Home.html#educational-goals-of-the-class",
-    "title": "Advanced Programming",
-    "section": "Educational Goals of the Class",
-    "text": "Educational Goals of the Class\n\nStart and manage a software development project following some Agile project management\n\nOrganize features to be developed\nSet up milestones to reach\n\nFollow a Test-Driven-Development approach to develop software\n\nWrite tests before writing the code to implement a feature\nMake sure that all tests are passing before releasing a new version of the software\nMake sure that all code is covered by tests\n\nUse of a version control system"
-  },
-  {
     "objectID": "Home.html#group-grade",
     "href": "Home.html#group-grade",
     "title": "Advanced Programming",
@@ -432,17 +558,6 @@
     ]
   },
   {
-    "objectID": "index.html#educational-goals-of-the-class",
-    "href": "index.html#educational-goals-of-the-class",
-    "title": "Advanced Programming",
-    "section": "Educational Goals of the Class",
-    "text": "Educational Goals of the Class\n\nStart and manage a software development project following some Agile project management\n\nOrganize features to be developed\nSet up milestones to reach\n\nFollow a Test-Driven-Development approach to develop software\n\nWrite tests before writing the code to implement a feature\nMake sure that all tests are passing before releasing a new version of the software\nMake sure that all code is covered by tests\n\nUse of a version control system",
-    "crumbs": [
-      "Home",
-      "🏠 Home"
-    ]
-  },
-  {
     "objectID": "index.html#group-grade",
     "href": "index.html#group-grade",
     "title": "Advanced Programming",
@@ -491,7 +606,7 @@
     "href": "Resources/CLI.html",
     "title": "Command Line Interface (CLI)",
     "section": "",
-    "text": "A Command Line Interface (CLI) is a text-based interface that allows users to interact with a computer by typing commands. Unlike Graphical User Interfaces (GUI), which rely on visual elements, a CLI requires users to enter text commands to perform tasks. This enables the use of the CLI in scripts for system administration, programming, and software development.\nEach line of a command line can be decomposed in several parts\nPrompt Command Parameters1 ... ParametersN\n\nThe prompt is given by the shell or terminal you are using, for example in the terminal in vscode it is something like this:\n\n\nusername:path$  \n    ```\n\n- The command is the program you are executing, for example to compile the project we use maven whose command is ```mvn```, to launch a java program we use ```java```.\n- The parameters or arguments are values that are transmitted to the program to parametrize its execution. The parameters depend on the command used (e.g. the parameter for ```mvn``` are not the same as the parameter for the ```java``` command). Parameters can either be options or arguments.  \n    - Options modify the behavior of a command. They are preceded by a hyphen (-) and can be single-letter or full words. Some options take a parameters.\n    - Arguments are the inputs provided to a command. They can be filenames, directories, or other data needed for the command to operate on.\n\nExample to compile and execute the pandora project from the command line:\n\n```bash\n$ mvn -B --file pom.xml package\nthe first line call the program mvn which is the CLI for maven (Maven is a software project management tool by Apache that manage a project’s build, reporting and documentation from a single project object model (POM)). We gave to mvn two options -B (batch) and --file pom.xml and one argument package.\nthe man for the mvn command explain what each of this options does, it also tell us that the last argument is the goal (here: package - Compile and package the compiled code in its distributable format, such as a jar)\nExample to call your pandora program:\n$ java -jar target/pandora.jar\n$ java -jar target/pandora.jar --version\nthe java command launches a java program, the -jar instruct the command that the main class is in the given.jar file (here target/pandora.jar) all the remaining arguments are given to the target java program (–version is an argument to your pandora program and not to the java command)\nto make it clearer we can use an alias to rename java -jar target/pandora.jar to pandora\n$ alias pandora='java -jar target/pandora.jar'\n$ pandora --version\n\n\n\nOptions in the command line are flags or switches that modify the behavior of a command. They can be categorized into short options (single-character) and long options (multi-character). Options can sometimes take parameters to provide additional information to the command.\n\n\nShort options consist of a single character preceded by a hyphen (-). They are often used for quick, one-character modifications.\nExample:\n$ ls -l\nIn this example, the -l option is used with the ls command to display detailed information about files and directories.\nshort options that don’t take a parameters can be combined\nExample:\n$ ls -al\n$ ls -a -l\n\n\n\nLong options are more descriptive and consist of multiple characters preceded by two hyphens (–). They provide a clearer understanding of their purpose.\nExample:\n$ git commit --message \"Fix bug in feature X\"\nHere, the --message option is used with the git commit command to include a specific commit message.\n\n\n\nSome options require additional parameters to provide more specific information. These parameters are specified immediately after the option.\nExample:\n$ curl -o output.txt https://example.com/file.txt\nIn this command, the -o option is used to specify the output file (output.txt) for the data retrieved by the curl command.\nfor pandora\n\n\n\n\nArguments in the command line are inputs provided to a command to perform a specific operation. They follow the command and options.\nExample:\n$ cp file1.txt directory/\nIn this example, file1.txt and directory/ are arguments for the cp (copy) command. The command copies file1.txt to the specified directory.\nfor pandora the arguments are either the Flight-Records to parse or one folder that contain the Flight-Records\n$ pandora test/resources/0_201_MiG-23MLD.frd\n$ pandora test/resources/0_201_MiG-23MLD.frd test/resources/0_301_Su-25T.frd\n$ pandora test/resources",
+    "text": "A Command Line Interface (CLI) is a text-based interface that allows users to interact with a computer by typing commands. Unlike Graphical User Interfaces (GUI), which rely on visual elements, a CLI requires users to enter text commands to perform tasks. This enables the use of the CLI in scripts for system administration, programming, and software development.\nEach line of a command line can be decomposed in several parts\nPrompt Command Parameters1 ... ParametersN\n\nThe prompt is given by the shell or terminal you are using, for example in the terminal in vscode it is something like this:\n\nusername:path$  \n\nThe command is the program you are executing, for example to compile the project we use maven whose command is mvn, to launch a java program we use java.\nThe parameters or arguments are values that are transmitted to the program to parametrize its execution. The parameters depend on the command used (e.g. the parameter for mvn are not the same as the parameter for the java command). Parameters can either be options or arguments.\n\nOptions modify the behavior of a command. They are preceded by a hyphen (-) and can be single-letter or full words. Some options take a parameters.\nArguments are the inputs provided to a command. They can be filenames, directories, or other data needed for the command to operate on.\n\n\nExample to compile and execute the pandora project from the command line:\n$ mvn -B --file pom.xml package\nthe first line call the program mvn which is the CLI for maven (Maven is a software project management tool by Apache that manage a project’s build, reporting and documentation from a single project object model (POM)). We gave to mvn two options -B (batch) and --file pom.xml and one argument package.\nthe man for the mvn command explain what each of this options does, it also tell us that the last argument is the goal (here: package - Compile and package the compiled code in its distributable format, such as a jar)\nExample to call your pandora program:\n$ java -jar target/pandora.jar\n$ java -jar target/pandora.jar --version\nthe java command launches a java program, the -jar instruct the command that the main class is in the given.jar file (here target/pandora.jar) all the remaining arguments are given to the target java program (–version is an argument to your pandora program and not to the java command)\nto make it clearer we can use an alias to rename java -jar target/pandora.jar to pandora\n$ alias pandora='java -jar target/pandora.jar'\n$ pandora --version\n\n\n\nOptions in the command line are flags or switches that modify the behavior of a command. They can be categorized into short options (single-character) and long options (multi-character). Options can sometimes take parameters to provide additional information to the command.\n\n\nShort options consist of a single character preceded by a hyphen (-). They are often used for quick, one-character modifications.\nExample:\n$ ls -l\nIn this example, the -l option is used with the ls command to display detailed information about files and directories.\nshort options that don’t take a parameters can be combined\nExample:\n$ ls -al\n$ ls -a -l\n\n\n\nLong options are more descriptive and consist of multiple characters preceded by two hyphens (–). They provide a clearer understanding of their purpose.\nExample:\n$ git commit --message \"Fix bug in feature X\"\nHere, the --message option is used with the git commit command to include a specific commit message.\n\n\n\nSome options require additional parameters to provide more specific information. These parameters are specified immediately after the option.\nExample:\n$ curl -o output.txt https://example.com/file.txt\nIn this command, the -o option is used to specify the output file (output.txt) for the data retrieved by the curl command.\nfor pandora\n\n\n\n\nArguments in the command line are inputs provided to a command to perform a specific operation. They follow the command and options.\nExample:\n$ cp file1.txt directory/\nIn this example, file1.txt and directory/ are arguments for the cp (copy) command. The command copies file1.txt to the specified directory.\nfor pandora the arguments are either the Flight-Records to parse or one folder that contain the Flight-Records\n$ pandora test/resources/0_201_MiG-23MLD.frd\n$ pandora test/resources/0_201_MiG-23MLD.frd test/resources/0_301_Su-25T.frd\n$ pandora test/resources",
     "crumbs": [
       "Home",
       "🎞 Pandora",
@@ -503,7 +618,7 @@
     "href": "Resources/CLI.html#definition",
     "title": "Command Line Interface (CLI)",
     "section": "",
-    "text": "A Command Line Interface (CLI) is a text-based interface that allows users to interact with a computer by typing commands. Unlike Graphical User Interfaces (GUI), which rely on visual elements, a CLI requires users to enter text commands to perform tasks. This enables the use of the CLI in scripts for system administration, programming, and software development.\nEach line of a command line can be decomposed in several parts\nPrompt Command Parameters1 ... ParametersN\n\nThe prompt is given by the shell or terminal you are using, for example in the terminal in vscode it is something like this:\n\n\nusername:path$  \n    ```\n\n- The command is the program you are executing, for example to compile the project we use maven whose command is ```mvn```, to launch a java program we use ```java```.\n- The parameters or arguments are values that are transmitted to the program to parametrize its execution. The parameters depend on the command used (e.g. the parameter for ```mvn``` are not the same as the parameter for the ```java``` command). Parameters can either be options or arguments.  \n    - Options modify the behavior of a command. They are preceded by a hyphen (-) and can be single-letter or full words. Some options take a parameters.\n    - Arguments are the inputs provided to a command. They can be filenames, directories, or other data needed for the command to operate on.\n\nExample to compile and execute the pandora project from the command line:\n\n```bash\n$ mvn -B --file pom.xml package\nthe first line call the program mvn which is the CLI for maven (Maven is a software project management tool by Apache that manage a project’s build, reporting and documentation from a single project object model (POM)). We gave to mvn two options -B (batch) and --file pom.xml and one argument package.\nthe man for the mvn command explain what each of this options does, it also tell us that the last argument is the goal (here: package - Compile and package the compiled code in its distributable format, such as a jar)\nExample to call your pandora program:\n$ java -jar target/pandora.jar\n$ java -jar target/pandora.jar --version\nthe java command launches a java program, the -jar instruct the command that the main class is in the given.jar file (here target/pandora.jar) all the remaining arguments are given to the target java program (–version is an argument to your pandora program and not to the java command)\nto make it clearer we can use an alias to rename java -jar target/pandora.jar to pandora\n$ alias pandora='java -jar target/pandora.jar'\n$ pandora --version",
+    "text": "A Command Line Interface (CLI) is a text-based interface that allows users to interact with a computer by typing commands. Unlike Graphical User Interfaces (GUI), which rely on visual elements, a CLI requires users to enter text commands to perform tasks. This enables the use of the CLI in scripts for system administration, programming, and software development.\nEach line of a command line can be decomposed in several parts\nPrompt Command Parameters1 ... ParametersN\n\nThe prompt is given by the shell or terminal you are using, for example in the terminal in vscode it is something like this:\n\nusername:path$  \n\nThe command is the program you are executing, for example to compile the project we use maven whose command is mvn, to launch a java program we use java.\nThe parameters or arguments are values that are transmitted to the program to parametrize its execution. The parameters depend on the command used (e.g. the parameter for mvn are not the same as the parameter for the java command). Parameters can either be options or arguments.\n\nOptions modify the behavior of a command. They are preceded by a hyphen (-) and can be single-letter or full words. Some options take a parameters.\nArguments are the inputs provided to a command. They can be filenames, directories, or other data needed for the command to operate on.\n\n\nExample to compile and execute the pandora project from the command line:\n$ mvn -B --file pom.xml package\nthe first line call the program mvn which is the CLI for maven (Maven is a software project management tool by Apache that manage a project’s build, reporting and documentation from a single project object model (POM)). We gave to mvn two options -B (batch) and --file pom.xml and one argument package.\nthe man for the mvn command explain what each of this options does, it also tell us that the last argument is the goal (here: package - Compile and package the compiled code in its distributable format, such as a jar)\nExample to call your pandora program:\n$ java -jar target/pandora.jar\n$ java -jar target/pandora.jar --version\nthe java command launches a java program, the -jar instruct the command that the main class is in the given.jar file (here target/pandora.jar) all the remaining arguments are given to the target java program (–version is an argument to your pandora program and not to the java command)\nto make it clearer we can use an alias to rename java -jar target/pandora.jar to pandora\n$ alias pandora='java -jar target/pandora.jar'\n$ pandora --version",
     "crumbs": [
       "Home",
       "🎞 Pandora",
@@ -553,7 +668,7 @@
     "text": "You already cloned the application skeleton on your computer. This means you are ready to start working on a local version of the program.\n\nFirst, open Eclipse\nSelect ‘File’, and ‘import…’\nSelect the ‘existing maven project’ under the ‘maven’ directory\nLocate the project you cloned from GitHub\n\nAnd everything should (nearly) be ready to run.\n\n\n\nIn order to run, the program expects some arguments. For instance, the command java -jar pandora.jar -o flightDuration./src/test/resources/flightReport_fl12.frd will output the total flight duration logged in the flightReport_fl12.frd file (dummy example).\nIn order to do so via Eclipse, you should:\n\nClick on run configuration (menu when clicking on the right of the little run green icon) (Fig. 1 - 1)\nSelect the Java Application (Fig. 1 - 2) and click on the ‘New’ icon (Fig. 1 -3)\nName it, and click on the arguments tab (Fig. 1 -4)\nType ./src/test/resources/0_201_MiG-23MLD.frd\nClick run\n\nYou should see the program running!\n\n\n\nalt text\n\n\n\nFig. 1 Eclipse screenshot for running configuration\n\nIt can be cumbersome to run several configurations. You can of course save your configuration, but also create launch group in which you can include as many configuration you set up in sequential order. Otherwise, you can also omit the output option parameter -o. In this case every output will be printed.\nAt this point, note that there is nothing else implemented.\nA list of options (more than 100) to implement is available, and this is your job to complete the program.\n\n\n\nIt can be cumbersome to change the Eclipse run settings every time you want to run Pandora on a new file or a new feature.\nWe hence provide a second main method in the fr.estia.pandora.test package: MultiTest.java.\nTo use it, simply\n1- Create a custom test file\n1- Add the test command line and expected output in the ./src/test/resources/custom/multitest.config file.\n\n\nLet’s imagine we want to try our maxAlt feature (issue #5) with a file my-test-alt-1.csv that contains only 1 line.\nThis line has the Altitude value set to 42.\nWe then:\n\nAdd our my-test-alt-1.csv file in the ./src/test/resources/custom/feature5/ folder\nEdit the multitest.config file to add our test:\n\n# this line is a comment\n# useful to know what the test is about!\n# test 1: simple example for the maxAlt feature\ncmd: -o maxAlt ./src/test/resources/custom/feature5/my-test-alt-1.csv\noutput:\n42\n---\n\n\nRun the MultiTest main program and check its outputs\n\n\n\n\nThe goal is to complete this file as the project goes forward.\nThis is a simple solution to see if any new changes involve previous tests failure.\nIn the end, with an average of 5 tests / feature, this file should contain around 500 tests blocks.\nA test is simply a series of lines including:\n\na comment (starting with #)\nthe command line to send to Pandora (starting with cmd:)\nthe expected output (starting with output: and the output line(s) on a new line)\nan ending block ---\n\n# test X: a comment\ncmd: -o &lt;featureName&gt; &lt;file&gt;\noutput:\n&lt;expected_output&gt;\n---\n\n# test X+1: a comment\ncmd: -o &lt;featureName&gt; &lt;file&gt;\noutput:\n&lt;expected_output&gt;\n---\n\netc.",
     "crumbs": [
       "Home",
-      "🎓 Tools",
+      "🔧 Building the Project",
       "Eclipse"
     ]
   },
@@ -565,7 +680,7 @@
     "text": "You already cloned the application skeleton on your computer. This means you are ready to start working on a local version of the program.\n\nFirst, open Eclipse\nSelect ‘File’, and ‘import…’\nSelect the ‘existing maven project’ under the ‘maven’ directory\nLocate the project you cloned from GitHub\n\nAnd everything should (nearly) be ready to run.",
     "crumbs": [
       "Home",
-      "🎓 Tools",
+      "🔧 Building the Project",
       "Eclipse"
     ]
   },
@@ -577,7 +692,7 @@
     "text": "In order to run, the program expects some arguments. For instance, the command java -jar pandora.jar -o flightDuration./src/test/resources/flightReport_fl12.frd will output the total flight duration logged in the flightReport_fl12.frd file (dummy example).\nIn order to do so via Eclipse, you should:\n\nClick on run configuration (menu when clicking on the right of the little run green icon) (Fig. 1 - 1)\nSelect the Java Application (Fig. 1 - 2) and click on the ‘New’ icon (Fig. 1 -3)\nName it, and click on the arguments tab (Fig. 1 -4)\nType ./src/test/resources/0_201_MiG-23MLD.frd\nClick run\n\nYou should see the program running!\n\n\n\nalt text\n\n\n\nFig. 1 Eclipse screenshot for running configuration\n\nIt can be cumbersome to run several configurations. You can of course save your configuration, but also create launch group in which you can include as many configuration you set up in sequential order. Otherwise, you can also omit the output option parameter -o. In this case every output will be printed.\nAt this point, note that there is nothing else implemented.\nA list of options (more than 100) to implement is available, and this is your job to complete the program.",
     "crumbs": [
       "Home",
-      "🎓 Tools",
+      "🔧 Building the Project",
       "Eclipse"
     ]
   },
@@ -589,7 +704,7 @@
     "text": "It can be cumbersome to change the Eclipse run settings every time you want to run Pandora on a new file or a new feature.\nWe hence provide a second main method in the fr.estia.pandora.test package: MultiTest.java.\nTo use it, simply\n1- Create a custom test file\n1- Add the test command line and expected output in the ./src/test/resources/custom/multitest.config file.\n\n\nLet’s imagine we want to try our maxAlt feature (issue #5) with a file my-test-alt-1.csv that contains only 1 line.\nThis line has the Altitude value set to 42.\nWe then:\n\nAdd our my-test-alt-1.csv file in the ./src/test/resources/custom/feature5/ folder\nEdit the multitest.config file to add our test:\n\n# this line is a comment\n# useful to know what the test is about!\n# test 1: simple example for the maxAlt feature\ncmd: -o maxAlt ./src/test/resources/custom/feature5/my-test-alt-1.csv\noutput:\n42\n---\n\n\nRun the MultiTest main program and check its outputs\n\n\n\n\nThe goal is to complete this file as the project goes forward.\nThis is a simple solution to see if any new changes involve previous tests failure.\nIn the end, with an average of 5 tests / feature, this file should contain around 500 tests blocks.\nA test is simply a series of lines including:\n\na comment (starting with #)\nthe command line to send to Pandora (starting with cmd:)\nthe expected output (starting with output: and the output line(s) on a new line)\nan ending block ---\n\n# test X: a comment\ncmd: -o &lt;featureName&gt; &lt;file&gt;\noutput:\n&lt;expected_output&gt;\n---\n\n# test X+1: a comment\ncmd: -o &lt;featureName&gt; &lt;file&gt;\noutput:\n&lt;expected_output&gt;\n---\n\netc.",
     "crumbs": [
       "Home",
-      "🎓 Tools",
+      "🔧 Building the Project",
       "Eclipse"
     ]
   },
@@ -598,71 +713,59 @@
     "href": "tools/maven.html",
     "title": "Add the following Favorite to Vscode",
     "section": "",
-    "text": "Add the following Favorite to Vscode\nmaven: add a Favorites",
+    "text": "from the terminal (use the git bash terminal if you are on windows)\n\n\nthe best way to build the project is to use maven, it will automatically download the dependencies and build the project for you and produce a jar file in the target folder. To build the project with maven, simply run the following command in the terminal:\nmvn package\n\n\n\nyou can then run the project with the following command:\njava -jar target/pandora.jar --version\nor any other options you want to test\n\n\n\nto automatically run the tests, you can use the following command:\ntest/autograder.py -t test/testSuite.json -m ./manifest.json target/pandora.jar\nyou can also use maven to run the tests and produce a coverage report with the following command:\nor if you want the coverage report as well \n```bash\nmvn clean verify\nin target/site/jacoco/index.html you can find the code coverage report in target/autograder-output.md you can find the output of the autograder script\n\n\n\nto generate the coverage report, you can use the following command:\nmvn  clean verify jacoco:report",
     "crumbs": [
       "Home",
-      "🎓 Tools",
+      "🔧 Building the Project",
       "Maven"
     ]
   },
   {
-    "objectID": "tools/Git-Clients.html",
-    "href": "tools/Git-Clients.html",
-    "title": "Git Clients",
+    "objectID": "tools/maven.html#build",
+    "href": "tools/maven.html#build",
+    "title": "Add the following Favorite to Vscode",
     "section": "",
-    "text": "You can use several git clients to manage your project\n\nStandalone Git client (an external program)\n\nSmartGit: the one presented in first year during the SGV and Project Génie Info Classes. You must update the software and use the license provided on moodle\nGithub Desktop: Simple to use, it only lack the graph view\n\nIntegrated\n\nvscode: vscode comes with a git client and some support for github\neclipse: egit\n\n\n\n\n\nCreate a user account on GitHub\nimportant Make sure to disable notifications in your settings. We will create more than 100 issues that you will have to take care of (i.e. implement features, functionalities) and mark them as complete. During the creation, you might get an email for each one of them if you don’t disable the notifications!\nInstall a git client (e.g., GitHub Desktop)\n\n\n\n\nGithub Desktop client\n\n\n\nFig.1 A basic Git Desktop client\n\n\nClick on “clone a repository from the internet”\n\n\n\n\nalt text\n\n\n\nFig.2 Cloning a repository\n\n\nSelect the project that has been created for your group project. The url is something like https://github.com/Estia-advanced-programming/pandora-2020-group1-GROUPENAME.git\nSelect the location you want the download to happen on your computer. Remember this location, you will need it to import the project in Eclipse later.\nClick “clone”\n\n\n\n\nAnother possibility is to get everything in one place! (Repository, code, issues, tasks, etc). Check out this tutorial.\nBasically, you need to understand that Git can be used with several projects, not only Java and Eclipse. If you understood that, then we can start to look at how some tools (e.g., Eclipse, Visual Studio, etc) integrates Git tools.\nFor Eclipse, it is called EGit. It can be useful to have a quick access to milestones and issues (Fig.3 - 1) or the branches history (Fig.3 - 2). You can quickly open / close issues, switch branches, commit, push, pull, go back to a previous version just by right-clicking on the project (or just one file), finding the Team menu item, and browsing the options.\n\n\n\nalt text\n\n\n\nFig.3 Git in Eclipse\n\nIf you already have Git in Eclipse, you should have the Team option when right-clicking on your project (and see some yellow icons to indicate that the project is under version control). If this is the case, just go to the configuration section. Otherwise, perform the install.\n\n\n\nIn Eclipse, click Help and Install new software...\nClick Add source (Fig.4 - 1), then name it egit (or whatever) and write the location to http://download.eclipse.org/egit/updates (Fig.4 - 2)\n\n\n\n\nalt text\n\n\n\nFig.4 Adding an install source in Eclipse\n\n\nNow select this newly added items, check all packages, and continue the installation.\n\n\n\n\nEgit should already know what is going on in your repository: the tool looks into your.git folder, where everything is already configured (remote repository, etc). You might only need to input your login/password the first few times you will trigger commands.\nFor the task view, you need an additional package.\n\nAs in the install section, add a new package repository with a name (e.g., mylin) and this location http://download.eclipse.org/egit/github/updates.\nFinish the installation of the package\nThen, you can finally set up your tasks repository (or issues, etc) by following this tutorial",
+    "text": "the best way to build the project is to use maven, it will automatically download the dependencies and build the project for you and produce a jar file in the target folder. To build the project with maven, simply run the following command in the terminal:\nmvn package",
     "crumbs": [
       "Home",
-      "🎓 Tools",
-      "Git Clients"
+      "🔧 Building the Project",
+      "Maven"
     ]
   },
   {
-    "objectID": "tools/Git-Clients.html#github-desktop",
-    "href": "tools/Git-Clients.html#github-desktop",
-    "title": "Git Clients",
+    "objectID": "tools/maven.html#run",
+    "href": "tools/maven.html#run",
+    "title": "Add the following Favorite to Vscode",
     "section": "",
-    "text": "Create a user account on GitHub\nimportant Make sure to disable notifications in your settings. We will create more than 100 issues that you will have to take care of (i.e. implement features, functionalities) and mark them as complete. During the creation, you might get an email for each one of them if you don’t disable the notifications!\nInstall a git client (e.g., GitHub Desktop)\n\n\n\n\nGithub Desktop client\n\n\n\nFig.1 A basic Git Desktop client\n\n\nClick on “clone a repository from the internet”\n\n\n\n\nalt text\n\n\n\nFig.2 Cloning a repository\n\n\nSelect the project that has been created for your group project. The url is something like https://github.com/Estia-advanced-programming/pandora-2020-group1-GROUPENAME.git\nSelect the location you want the download to happen on your computer. Remember this location, you will need it to import the project in Eclipse later.\nClick “clone”",
+    "text": "you can then run the project with the following command:\njava -jar target/pandora.jar --version\nor any other options you want to test",
     "crumbs": [
       "Home",
-      "🎓 Tools",
-      "Git Clients"
+      "🔧 Building the Project",
+      "Maven"
     ]
   },
   {
-    "objectID": "tools/Git-Clients.html#egit-the-eclipse-git-plugin",
-    "href": "tools/Git-Clients.html#egit-the-eclipse-git-plugin",
-    "title": "Git Clients",
+    "objectID": "tools/maven.html#test",
+    "href": "tools/maven.html#test",
+    "title": "Add the following Favorite to Vscode",
     "section": "",
-    "text": "Another possibility is to get everything in one place! (Repository, code, issues, tasks, etc). Check out this tutorial.\nBasically, you need to understand that Git can be used with several projects, not only Java and Eclipse. If you understood that, then we can start to look at how some tools (e.g., Eclipse, Visual Studio, etc) integrates Git tools.\nFor Eclipse, it is called EGit. It can be useful to have a quick access to milestones and issues (Fig.3 - 1) or the branches history (Fig.3 - 2). You can quickly open / close issues, switch branches, commit, push, pull, go back to a previous version just by right-clicking on the project (or just one file), finding the Team menu item, and browsing the options.\n\n\n\nalt text\n\n\n\nFig.3 Git in Eclipse\n\nIf you already have Git in Eclipse, you should have the Team option when right-clicking on your project (and see some yellow icons to indicate that the project is under version control). If this is the case, just go to the configuration section. Otherwise, perform the install.\n\n\n\nIn Eclipse, click Help and Install new software...\nClick Add source (Fig.4 - 1), then name it egit (or whatever) and write the location to http://download.eclipse.org/egit/updates (Fig.4 - 2)\n\n\n\n\nalt text\n\n\n\nFig.4 Adding an install source in Eclipse\n\n\nNow select this newly added items, check all packages, and continue the installation.\n\n\n\n\nEgit should already know what is going on in your repository: the tool looks into your.git folder, where everything is already configured (remote repository, etc). You might only need to input your login/password the first few times you will trigger commands.\nFor the task view, you need an additional package.\n\nAs in the install section, add a new package repository with a name (e.g., mylin) and this location http://download.eclipse.org/egit/github/updates.\nFinish the installation of the package\nThen, you can finally set up your tasks repository (or issues, etc) by following this tutorial",
+    "text": "to automatically run the tests, you can use the following command:\ntest/autograder.py -t test/testSuite.json -m ./manifest.json target/pandora.jar\nyou can also use maven to run the tests and produce a coverage report with the following command:\nor if you want the coverage report as well \n```bash\nmvn clean verify\nin target/site/jacoco/index.html you can find the code coverage report in target/autograder-output.md you can find the output of the autograder script",
     "crumbs": [
       "Home",
-      "🎓 Tools",
-      "Git Clients"
+      "🔧 Building the Project",
+      "Maven"
     ]
   },
   {
-    "objectID": "tools/Git-Clients.html#master-branch",
-    "href": "tools/Git-Clients.html#master-branch",
-    "title": "Git Clients",
-    "section": "Master Branch",
-    "text": "Master Branch\nThe master branch is usually the one where everything works fine. This is the branch we will use to test your program.\nIt is common to merge and push your current work on ‘Master’ only when you are sure that:\n1- There is no conflict\nMake sure you Pull the master branch before trying to push your work. Resolve every potential conflicts locally. With this in mind, you will always push a clean version that any new comers could clone and run.\n2- Your current task is complete\nIt is usually not every 5 minutes that people push on the Master branch. You save your work locally (commit), and push on GitHub on your branch when you reached (or think your reached) a consequent step. You can then merge the branch you were working on with Master when the task at hand is completed. You can then ask your team to review your code and accept the merging via a Pull request.",
+    "objectID": "tools/maven.html#coverage",
+    "href": "tools/maven.html#coverage",
+    "title": "Add the following Favorite to Vscode",
+    "section": "",
+    "text": "to generate the coverage report, you can use the following command:\nmvn  clean verify jacoco:report",
     "crumbs": [
       "Home",
-      "🎓 Tools",
-      "Git Clients"
-    ]
-  },
-  {
-    "objectID": "tools/Git-Clients.html#pull-request",
-    "href": "tools/Git-Clients.html#pull-request",
-    "title": "Git Clients",
-    "section": "Pull Request",
-    "text": "Pull Request",
-    "crumbs": [
-      "Home",
-      "🎓 Tools",
-      "Git Clients"
+      "🔧 Building the Project",
+      "Maven"
     ]
   },
   {
@@ -670,10 +773,22 @@
     "href": "tools/vscode.html",
     "title": "Vscode",
     "section": "",
-    "text": "Vscode\n\n\nExtensions\nYou should install:\n\nMaven. Unzip it somewhere safe. Then enter the path of the mvn.cmd file in vscode settings (under Maven path)\n\n\n\nBuild\n\nctrl + shift + p &gt;type: maven execute command &gt; package\nctrl + shift + B Build\n\n\n\nTests\n\nctrl + shift + p &gt;type: maven execute command &gt; test\nIf the test does not work, check the error messages\nif python is not found, try changing “python3” to “python” in the pom.xml file",
+    "text": "Vscode can run maven goals from the interface, you can also use the terminal to run maven commands as explained in the maven documentation. You can also use the maven extension for vscode to run maven goals from the interface. You can also install the Java Extension Pack for better Java support in vscode. You can also add the coverage extension to vscode to be able to see the code coverage report directly in vscode with Coverage Gutters for example.",
     "crumbs": [
       "Home",
-      "🎓 Tools",
+      "🔧 Building the Project",
+      "VS Code"
+    ]
+  },
+  {
+    "objectID": "tools/vscode.html#favorite",
+    "href": "tools/vscode.html#favorite",
+    "title": "Vscode",
+    "section": "Favorite",
+    "text": "Favorite\nCreate a favorite in the maven extension for the verify goal to run the tests and generate the coverage report in one click. You can also create a favorite for the package goal to build the project in one click.\n\nctrl + shift + p &gt;type: maven extension &gt; Favorites &gt; Add Favorite &gt; type clean verify jacoco:report for the goals\n\nrun it with\n\nctrl + shift + p &gt;type: maven execute command &gt; favorites &gt; select your favorite",
+    "crumbs": [
+      "Home",
+      "🔧 Building the Project",
       "VS Code"
     ]
   },
@@ -854,6 +969,7 @@
     "crumbs": [
       "Home",
       "Project Management",
+      "Other",
       "Debug"
     ]
   },
@@ -866,7 +982,7 @@
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
+      "<b>Test-Driven-Development</b>",
       "Integration Tests"
     ]
   },
@@ -879,7 +995,7 @@
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
+      "<b>Test-Driven-Development</b>",
       "Integration Tests"
     ]
   },
@@ -892,7 +1008,7 @@
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
+      "<b>Test-Driven-Development</b>",
       "Integration Tests"
     ]
   },
@@ -905,7 +1021,7 @@
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
+      "<b>Test-Driven-Development</b>",
       "Integration Tests"
     ]
   },
@@ -918,7 +1034,7 @@
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
+      "<b>Test-Driven-Development</b>",
       "Integration Tests"
     ]
   },
@@ -931,7 +1047,7 @@
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
+      "<b>Test-Driven-Development</b>",
       "Integration Tests"
     ]
   },
@@ -944,7 +1060,7 @@
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
+      "<b>Test-Driven-Development</b>",
       "Integration Tests"
     ]
   },
@@ -957,212 +1073,190 @@
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
+      "<b>Test-Driven-Development</b>",
       "Integration Tests"
     ]
   },
   {
-    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html",
-    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html",
-    "title": "Code Coverage",
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html",
+    "href": "ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html",
+    "title": "Test Driven Development",
     "section": "",
-    "text": "Code coverage is a metric that measures how much of your source code is executed when your test suite runs. It helps identify untested paths and dead code.\n\n\nCoverage tools instrument your bytecode and track which lines, branches, and methods are exercised during a test run. The most common metrics are:\n\n\n\n\n\n\n\nMetric\nDescription\n\n\n\n\nLine coverage\nPercentage of source lines executed at least once\n\n\nBranch coverage\nPercentage of decision branches taken (e.g., both sides of an if)\n\n\nMethod coverage\nPercentage of methods called at least once\n\n\n\nFor Pandora, aim for high line and branch coverage — every feature you implement should be reachable by your test suite.\n\n\n\n\nGrading: your code is evaluated on test coverage. Dead code and untested paths lower your score.\nConfidence: high coverage reduces the risk of shipping a feature that only works in the happy path.\nDiscriminating other teams: if your test suite cannot reach a code path, it cannot reveal whether another team’s implementation is correct or not.\n\n\n\n\nJaCoCo is the standard Java coverage tool. It is already configured in the Pandora starter pack.\n\n\nmvn test jacoco:report\nThe HTML report is generated at:\ntarget/site/jacoco/index.html\nOpen it in a browser to see line-by-line coverage for each class.\n\n\n\n\nGreen lines were executed by at least one test.\nYellow lines were partially covered (some branches not taken).\nRed lines were never executed — write a test or remove the dead code.\n\n\n\n\n\n\nRight-click your project → Coverage As → JUnit Test\nEclipse highlights covered (green) and uncovered (red) lines directly in the editor.\nThe Coverage view at the bottom shows percentages per class and package.\n\n\nIf the Coverage As option is missing, install EclEmma: Help → Eclipse Marketplace → search for EclEmma.\n\n\n\n\n\nIntelliJ IDEA: Run → Run with Coverage. Coverage results are shown inline in the gutter.\nVS Code: use the Coverage Gutters extension together with mvn test jacoco:report. Point the extension at target/site/jacoco/jacoco.xml.\n\n\n\n\n\nDelete dead code — if a method or branch is never reached by any test and is not reachable by the program logic, remove it.\nWrite missing tests — for every red block that corresponds to real logic, write a test that exercises it.\nCheck branches — yellow coverage often means you only tested the true branch of a condition. Add a test for the false branch.\n\n\n\n\n100% coverage does not mean your code is correct — it only means every line was executed at least once. A test that calls a method but asserts nothing will push coverage to 100% without providing any value.\nCoverage is a lower bound on test quality, not an upper bound. Use it to find gaps, not to declare victory.\n\n\n\n\nUnit-Test — where to write your unit tests\nIntegration-Test — black-box tests that also contribute to coverage\nTest-Driven-Development — the overall TDD workflow",
+    "text": "Test-Driven Development (TDD) is a software development approach in which tests are written before the actual code that needs to be implemented. The TDD process typically follows these steps, often referred to as the “Red-Green-Refactor” cycle:\n\nRed: Write a Failing Test\n\nBefore writing any code, you write a test that should validate a new feature. In the Pandora project that would be one of the features described in the issues. This initial test should fail (Most test suites output the failing test in red, hence Red) since the corresponding code hasn’t been implemented yet.\nCommit that test (test: add a test for feature X)\n\nGreen: Write the Minimum Code to Pass the Test\n\nYou then write the minimum amount of code necessary to make the test pass. The focus is on making the test successful.\ncommit your code (feat: implement feature X)\n\nRefactor: Improve Code Without Changing Functionality\n\nAfter the test has passed, you should refactor the code to improve its structure, readability, or performance without making the test fail (nor previous tests).\nCommit the changes (e.g. refactor: improve feature X by skipping empty row or docs: add [Javadoc](../Javadoc.md) to function Y)\n\n\nAdd the meaningful change to your Keep-A-Changelog, if your team feel that it has done enough change create a new release\nThere are several strategies and kind of tests you could develop to test your project:\nBlack Box Testing: Black Box Testing is a fundamental testing methodology in Test-Driven Development (TDD) that centers on evaluating the external functionality of a software application without delving into its internal code structure. In this approach, you treat the software as an opaque entity, focusing solely on inputs and observing outputs, akin to a “black box” where the internal workings remain concealed. The primary objective of Black Box Testing is to validate that the software behaves according to specified requirements and meets its intended functionality.\nWhite Box Testing: In contrast to Black Box Testing, White Box Testing, also known as clear box or structural testing, delves into the internal logic and code structure of the software. You write these tests after you have written the code, based on what kind of data structure or code logic you have written. (e.g. you have used an array, and you index i, i+1 and i+2 you deduce that your current code works only if there are at least three elements, you write a new test convering the edge case (for example a case where there are two elements, you are now in the red))\nIn addition to White Box and Black Box Testing, you can also classify tests in two categories Unit Tests and Integration Tests.\nUnit Tests: Unit Tests target individual units or components of the software often focusing on isolated functions or methods. The objective is to verify that each unit performs as expected in isolation, facilitating early detection of defects and supporting modular development practices. Unit Tests are crucial in TDD, acting as the building blocks for validating the correctness of the smallest units of code. Unit tests need to be integrated in the source code, generally as additional test classes in Java.\nIntegration Tests: Integration Tests assess the collaboration and interaction between different components or modules within a software system. These tests ensure that various units work seamlessly together when integrated, revealing potential issues that may arise during the assembly of different parts. Integration Tests play a pivotal role in validating the overall system architecture and its ability to function cohesively as a unified whole. In our case it means testing the system from an outside perspective once it is compiled, answering the question of does pandora.jar behaves as expected.\nRead more about Test-Driven-Development on thewikipedia page",
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
-      "Code Coverage"
+      "<b>Test-Driven-Development</b>",
+      "What is Test-Driven Development?"
     ]
   },
   {
-    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#what-is-measured",
-    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#what-is-measured",
-    "title": "Code Coverage",
-    "section": "",
-    "text": "Coverage tools instrument your bytecode and track which lines, branches, and methods are exercised during a test run. The most common metrics are:\n\n\n\n\n\n\n\nMetric\nDescription\n\n\n\n\nLine coverage\nPercentage of source lines executed at least once\n\n\nBranch coverage\nPercentage of decision branches taken (e.g., both sides of an if)\n\n\nMethod coverage\nPercentage of methods called at least once\n\n\n\nFor Pandora, aim for high line and branch coverage — every feature you implement should be reachable by your test suite.",
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html#automated-tests",
+    "href": "ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html#automated-tests",
+    "title": "Test Driven Development",
+    "section": "Automated Tests",
+    "text": "Automated Tests\nRunning tests manually quickly becomes impractical. Instead, you should automate them from the start using the test/autograder.py script provided in the starter pack.\nThere are no automated tests on GitHub — no CI pipeline, no GitHub Actions. Instead, the teacher team will regularly pull your repository and run:\n\nthe teacher’s own test suite against your pandora.jar\nyour test suite against other teams’ pandora.jar\n\nThis means the quality and coverage of test/testSuite.json is part of your final evaluation. A test suite that catches real bugs in other teams’ projects is rewarded.\n\nRunning Tests Locally\nUse test/autograder.py for all features. See the TestSuite & Autograder page for the full usage, all options, and how to write your test/testSuite.json.\npython test/autograder.py -t test/testSuite.json -m manifest.json target/pandora.jar",
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
-      "Code Coverage"
+      "<b>Test-Driven-Development</b>",
+      "What is Test-Driven Development?"
     ]
   },
   {
-    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#why-it-matters-for-pandora",
-    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#why-it-matters-for-pandora",
-    "title": "Code Coverage",
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Unit-Test.html",
+    "href": "ProjectManagement/TestDrivenDevelopment/Unit-Test.html",
+    "title": "Unit-Test",
     "section": "",
-    "text": "Grading: your code is evaluated on test coverage. Dead code and untested paths lower your score.\nConfidence: high coverage reduces the risk of shipping a feature that only works in the happy path.\nDiscriminating other teams: if your test suite cannot reach a code path, it cannot reveal whether another team’s implementation is correct or not.",
+    "text": "Unit tests are released into the code repository along with the code they test.\nUnit Tests target individual units or components of the software often focusing on isolated functions or methods. The objective is to verify that each unit performs as expected in isolation, facilitating early detection of defects and supporting modular development practices. Unit Tests are crucial in TDD, acting as the building blocks for validating the correctness of the smallest units of code. Unit tests need to be integrated in the source code, generally as additional test classes in Java.\n\n\n\nA unit test executes fast — blazing fast! Sub-millisecond, please.\nA unit test can be executed concurrently without affecting other tests.\nA unit test should not utilize resources from the outside world.\n\nNo file system access.\nNo web service calls.\nNo e-mails.\nNo cross-thread communication.\nNo cross-process communication.\nNo SQL and no database connectivity.\n\nA unit tests verifies the public behavior of that unit conforms to a requirement.\n\nIn the java project you can write them in the src/test/java/ folder.",
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
-      "Code Coverage"
+      "<b>Test-Driven-Development</b>",
+      "Unit Tests"
     ]
   },
   {
-    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-vs-code-maven-jacoco",
-    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-vs-code-maven-jacoco",
-    "title": "Code Coverage",
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Unit-Test.html#properties",
+    "href": "ProjectManagement/TestDrivenDevelopment/Unit-Test.html#properties",
+    "title": "Unit-Test",
     "section": "",
-    "text": "JaCoCo is the standard Java coverage tool. It is already configured in the Pandora starter pack.\n\n\nmvn test jacoco:report\nThe HTML report is generated at:\ntarget/site/jacoco/index.html\nOpen it in a browser to see line-by-line coverage for each class.\n\n\n\n\nGreen lines were executed by at least one test.\nYellow lines were partially covered (some branches not taken).\nRed lines were never executed — write a test or remove the dead code.",
+    "text": "A unit test executes fast — blazing fast! Sub-millisecond, please.\nA unit test can be executed concurrently without affecting other tests.\nA unit test should not utilize resources from the outside world.\n\nNo file system access.\nNo web service calls.\nNo e-mails.\nNo cross-thread communication.\nNo cross-process communication.\nNo SQL and no database connectivity.\n\nA unit tests verifies the public behavior of that unit conforms to a requirement.\n\nIn the java project you can write them in the src/test/java/ folder.",
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
-      "Code Coverage"
+      "<b>Test-Driven-Development</b>",
+      "Unit Tests"
     ]
   },
   {
-    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-eclipse",
-    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-eclipse",
-    "title": "Code Coverage",
+    "objectID": "ProjectManagement/Issues.html",
+    "href": "ProjectManagement/Issues.html",
+    "title": "Issues",
     "section": "",
-    "text": "Right-click your project → Coverage As → JUnit Test\nEclipse highlights covered (green) and uncovered (red) lines directly in the editor.\nThe Coverage view at the bottom shows percentages per class and package.\n\n\nIf the Coverage As option is missing, install EclEmma: Help → Eclipse Marketplace → search for EclEmma.",
+    "text": "Issues\nGitHub Issues are items you can create in a repository to plan, discuss and track work. You can use issues to track work, give or receive feedback, collaborate on ideas or tasks, and efficiently communicate with others. (see for a generic overview of Github Issue here). You can do a lot of thing with the github issues to handle your project management. For instance the project tab allows you to plan your feature development using a Kanban. See https://github.com/features/issues for more information\nIn the pandora project, we have created for you an issue for each of the feature you have to implement. To import them into your repository you should run the issue-updater workflow:\n\nFrom your repository page, go in the “Actions” tab (in the top bar)\nIn the workflows (left navigation) Select the Import issues from template\nin the blue banner in the middle of the screen click run workflow",
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
-      "Code Coverage"
+      "Other",
+      "Issues"
     ]
   },
   {
-    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-intellij-vs-code",
-    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-intellij-vs-code",
-    "title": "Code Coverage",
+    "objectID": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html",
+    "href": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html",
+    "title": "Synchronize Update from the Starter Pack",
     "section": "",
-    "text": "IntelliJ IDEA: Run → Run with Coverage. Coverage results are shown inline in the gutter.\nVS Code: use the Coverage Gutters extension together with mvn test jacoco:report. Point the extension at target/site/jacoco/jacoco.xml.",
+    "text": "The teacher team will sometimes update the base repository with new update",
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
-      "Code Coverage"
+      "Other",
+      "❗ Sync from Starterpack"
     ]
   },
   {
-    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#what-to-do-with-the-report",
-    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#what-to-do-with-the-report",
-    "title": "Code Coverage",
-    "section": "",
-    "text": "Delete dead code — if a method or branch is never reached by any test and is not reachable by the program logic, remove it.\nWrite missing tests — for every red block that corresponds to real logic, write a test that exercises it.\nCheck branches — yellow coverage often means you only tested the true branch of a condition. Add a test for the false branch.",
+    "objectID": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html#add-the-starterpack-as-a-remote-to-do-once",
+    "href": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html#add-the-starterpack-as-a-remote-to-do-once",
+    "title": "Synchronize Update from the Starter Pack",
+    "section": "Add the starterPack as a Remote (to do-once)",
+    "text": "Add the starterPack as a Remote (to do-once)\nIt is not necessary to create a local branch, but i\n# Add the startpack as a remote\ngit remote add starterPack https://github.com/Estia-advanced-programming/pandora-starterpack.git\ngit fetch starterPack --prune\nOptionally you can have a local branch to see the change locally.\n# Create a local branch that track the main \ngit checkout -B temp\ngit checkout -B starterPack-main --track starterPack/main\ngit \ngit checkout -",
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
-      "Code Coverage"
+      "Other",
+      "❗ Sync from Starterpack"
     ]
   },
   {
-    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#coverage-is-not-a-goal-in-itself",
-    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#coverage-is-not-a-goal-in-itself",
-    "title": "Code Coverage",
-    "section": "",
-    "text": "100% coverage does not mean your code is correct — it only means every line was executed at least once. A test that calls a method but asserts nothing will push coverage to 100% without providing any value.\nCoverage is a lower bound on test quality, not an upper bound. Use it to find gaps, not to declare victory.",
+    "objectID": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html#merge-updates-from-starterpack",
+    "href": "ProjectManagement/Synchronize-Update-From-The-Starterpack.html#merge-updates-from-starterpack",
+    "title": "Synchronize Update from the Starter Pack",
+    "section": "Merge Updates from Starterpack",
+    "text": "Merge Updates from Starterpack\ngit fetch starterPack --prune\ngit merge starterPack/main -X theirs -m 'chore(update): merge modification from starter pack'",
     "crumbs": [
       "Home",
       "Project Management",
-      "Test-Driven-Development",
-      "Code Coverage"
+      "Other",
+      "❗ Sync from Starterpack"
     ]
   },
   {
-    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#see-also",
-    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#see-also",
-    "title": "Code Coverage",
+    "objectID": "ProjectManagement/Versioning/Keep-A-Changelog.html",
+    "href": "ProjectManagement/Versioning/Keep-A-Changelog.html",
+    "title": "Changelog",
     "section": "",
-    "text": "Unit-Test — where to write your unit tests\nIntegration-Test — black-box tests that also contribute to coverage\nTest-Driven-Development — the overall TDD workflow",
-    "crumbs": [
-      "Home",
-      "Project Management",
-      "Test-Driven-Development",
-      "Code Coverage"
-    ]
-  },
-  {
-    "objectID": "ProjectManagement/Javadoc.html",
-    "href": "ProjectManagement/Javadoc.html",
-    "title": "Code Documentation",
-    "section": "",
-    "text": "Javadoc is a documentation generation tool in Java that utilizes specially formatted comments to document classes, methods, and other elements of Java code. These comments not only serve as a valuable resource for developers but also enable the automatic generation of comprehensive documentation for Java projects.\nThe use of Javadoc style comments enhances code readability and facilitates collaboration among developers.\n\n\n\n\nJavadoc comments enable the automatic generation of documentation in HTML format. This documentation provides insights into the purpose, functionality, and usage of classes and methods, making it an invaluable reference for developers and stakeholders. Currently We haven’t introduced Doxygen or other documentation generation tools, but might introduce them during the project\n\n\n\nIntegrated Development Environments (IDEs) leverage Javadoc comments to generate tooltips that appear when developers hover over a class, method, or parameter. These tooltips offer quick access to relevant information, fostering a more efficient and informed coding experience.\n\n\n\n\nJavadoc comments are denoted by /**... */ and are placed immediately before the declaration of the class, method, or other code elements. Note the double ** after the first /\nThe generic structure of a Javadoc comment includes the following elements:\n/**\n * Description of the class or method.\n * Additional details and usage information.\n *\n * @author Author's name\n * @version Version number\n * @param parameterName Description of the parameter\n * @return Description of the return value (for methods)\n * @throws ExceptionType Description of the exception (if applicable)\n */\n\nDescription: A concise and informative summary of the class or method’s purpose and functionality.\nAuthor: The name of the author or contributor.\nVersion: The version number of the class or method.\nParameters: Descriptions of parameters for methods, including their names and purposes.\nReturn: Description of the value returned by a method.\nThrows: Documentation for exceptions that the method may throw.",
-    "crumbs": [
-      "Home",
-      "Project Management",
-      "Javadoc"
-    ]
-  },
-  {
-    "objectID": "ProjectManagement/Javadoc.html#benefits",
-    "href": "ProjectManagement/Javadoc.html#benefits",
-    "title": "Code Documentation",
-    "section": "",
-    "text": "Javadoc comments enable the automatic generation of documentation in HTML format. This documentation provides insights into the purpose, functionality, and usage of classes and methods, making it an invaluable reference for developers and stakeholders. Currently We haven’t introduced Doxygen or other documentation generation tools, but might introduce them during the project\n\n\n\nIntegrated Development Environments (IDEs) leverage Javadoc comments to generate tooltips that appear when developers hover over a class, method, or parameter. These tooltips offer quick access to relevant information, fostering a more efficient and informed coding experience.",
-    "crumbs": [
-      "Home",
-      "Project Management",
-      "Javadoc"
-    ]
-  },
-  {
-    "objectID": "ProjectManagement/Javadoc.html#generic-format-of-javadoc-comments",
-    "href": "ProjectManagement/Javadoc.html#generic-format-of-javadoc-comments",
-    "title": "Code Documentation",
-    "section": "",
-    "text": "Javadoc comments are denoted by /**... */ and are placed immediately before the declaration of the class, method, or other code elements. Note the double ** after the first /\nThe generic structure of a Javadoc comment includes the following elements:\n/**\n * Description of the class or method.\n * Additional details and usage information.\n *\n * @author Author's name\n * @version Version number\n * @param parameterName Description of the parameter\n * @return Description of the return value (for methods)\n * @throws ExceptionType Description of the exception (if applicable)\n */\n\nDescription: A concise and informative summary of the class or method’s purpose and functionality.\nAuthor: The name of the author or contributor.\nVersion: The version number of the class or method.\nParameters: Descriptions of parameters for methods, including their names and purposes.\nReturn: Description of the value returned by a method.\nThrows: Documentation for exceptions that the method may throw.",
-    "crumbs": [
-      "Home",
-      "Project Management",
-      "Javadoc"
-    ]
-  },
-  {
-    "objectID": "ProjectManagement/Plagiat.html",
-    "href": "ProjectManagement/Plagiat.html",
-    "title": "Plagiat",
-    "section": "",
-    "text": "Plagiat\nAll the code you submit at all times on Github should be yours and yours only.\nAn Anti-Plagiarism software will be run on all source code present on Github at the end of the project. In a project of this size with the variability of possible design choice, coding style and so on, no two Projects should have similar code.\nAntiplagiarism will also be run against previous year solutions\n\n\nBetween Group Help\nYou can ask for general help from other people, the same way you can ask the teachers about a specific problem. If you ask for a solution and you implement someone else solution you run the risk of plagiarism.\n\n\nUse of LLM (ChatGPT, Bard, Gemini, Copilot,…)\nWhile the use of these tools is the future of coding, you should strive to learn to first know how to produce code yourself before pasting generated code.\nUsing LLM generates the risk that your code will be similar to someone else (source X problem: you are both similar to some unknown source resulting in you appearing similar to the anti-plagiarism code)",
-    "crumbs": [
-      "Home",
-      "Project Management",
-      "Plagiat"
-    ]
-  },
-  {
-    "objectID": "ProjectManagement/Versioning/Configuration-git.html",
-    "href": "ProjectManagement/Versioning/Configuration-git.html",
-    "title": "wiki",
-    "section": "",
-    "text": "in the terminal (ctrl + j) check that your git configuration has the correct name and email address (either your estia or the email address in https://github.com/settings/emails), the name should either be your name or your github handle\n$ git config user.name\ndhmmasson\n$ git config user.email\n5263585+dhmmasson@users.noreply.github.com\nIf you want to update your email :\n$ git config user.email 5263585+dhmmasson@users.noreply.github.com",
+    "text": "Changelog\nA changelog is a document or record that provides a chronological log of significant changes made to a software project. It serves as a valuable communication tool between developers, users, and other stakeholders, detailing the evolution of a software application over time.\nYou can find in your project folder a file name CHANGELOG.md, you should update this file every time you make a Release\nThe information present in this file and more can be found from this source Keep a Changelog",
     "crumbs": [
       "Home",
       "Project Management",
       "Versioning and Releasing",
-      "Git User Configuration"
+      "Keep a Changelog"
     ]
   },
   {
-    "objectID": "ProjectManagement/Versioning/Semantic-Versioning.html",
-    "href": "ProjectManagement/Versioning/Semantic-Versioning.html",
-    "title": "See also",
+    "objectID": "ProjectManagement/Versioning/Git-Clients.html",
+    "href": "ProjectManagement/Versioning/Git-Clients.html",
+    "title": "Git Clients",
     "section": "",
-    "text": "While git is a version control system, and each commit is a new version of your software, these versions are too granular to be meaningful for end-users of your software. In particular because the commit number or hash is seemingly random it is difficult to know if commit abc34ef is more recent than commit 32ff76a 1 and if an update is required. To address this, versioning schemes propose assigning meaningful numbers to incremental software versions.\nSemantic versioning, often abbreviated as semver, is one of the possible versioning schemes for a project. It provides a systematic way of conveying changes and updates in a software project through a three-part version number, consisting of &lt;Major&gt;.&lt;Minor&gt;.&lt;Patch&gt; components (e.g., 1.2.3).\nThe key principle behind semantic versioning is to communicate the nature of changes succinctly: a change in the major version indicates incompatible API alterations, a minor version signals backward-compatible feature additions, and a patch version denotes backward-compatible bug fixes.",
+    "text": "You can use several git clients to manage your project\n\nStandalone Git client (an external program)\n\nSmartGit: the one presented in first year during the SGV and Project Génie Info Classes. You must update the software and use the license provided on moodle\nGithub Desktop: Simple to use, it only lack the graph view\n\nIntegrated\n\nvscode: vscode comes with a git client and some support for github\neclipse: egit\n\n\n\n\n\nCreate a user account on GitHub\nimportant Make sure to disable notifications in your settings. We will create more than 100 issues that you will have to take care of (i.e. implement features, functionalities) and mark them as complete. During the creation, you might get an email for each one of them if you don’t disable the notifications!\nInstall a git client (e.g., GitHub Desktop)\n\n\n\n\nGithub Desktop client\n\n\n\nFig.1 A basic Git Desktop client\n\n\nClick on “clone a repository from the internet”\n\n\n\n\nalt text\n\n\n\nFig.2 Cloning a repository\n\n\nSelect the project that has been created for your group project. The url is something like https://github.com/Estia-advanced-programming/pandora-2020-group1-GROUPENAME.git\nSelect the location you want the download to happen on your computer. Remember this location, you will need it to import the project in Eclipse later.\nClick “clone”\n\n\n\n\nAnother possibility is to get everything in one place! (Repository, code, issues, tasks, etc). Check out this tutorial.\nBasically, you need to understand that Git can be used with several projects, not only Java and Eclipse. If you understood that, then we can start to look at how some tools (e.g., Eclipse, Visual Studio, etc) integrates Git tools.\nFor Eclipse, it is called EGit. It can be useful to have a quick access to milestones and issues (Fig.3 - 1) or the branches history (Fig.3 - 2). You can quickly open / close issues, switch branches, commit, push, pull, go back to a previous version just by right-clicking on the project (or just one file), finding the Team menu item, and browsing the options.\n\n\n\nalt text\n\n\n\nFig.3 Git in Eclipse\n\nIf you already have Git in Eclipse, you should have the Team option when right-clicking on your project (and see some yellow icons to indicate that the project is under version control). If this is the case, just go to the configuration section. Otherwise, perform the install.\n\n\n\nIn Eclipse, click Help and Install new software...\nClick Add source (Fig.4 - 1), then name it egit (or whatever) and write the location to http://download.eclipse.org/egit/updates (Fig.4 - 2)\n\n\n\n\nalt text\n\n\n\nFig.4 Adding an install source in Eclipse\n\n\nNow select this newly added items, check all packages, and continue the installation.\n\n\n\n\nEgit should already know what is going on in your repository: the tool looks into your.git folder, where everything is already configured (remote repository, etc). You might only need to input your login/password the first few times you will trigger commands.\nFor the task view, you need an additional package.\n\nAs in the install section, add a new package repository with a name (e.g., mylin) and this location http://download.eclipse.org/egit/github/updates.\nFinish the installation of the package\nThen, you can finally set up your tasks repository (or issues, etc) by following this tutorial",
     "crumbs": [
       "Home",
       "Project Management",
       "Versioning and Releasing",
-      "Semantic Versioning"
+      "Git Clients"
     ]
   },
   {
-    "objectID": "ProjectManagement/Versioning/Semantic-Versioning.html#footnotes",
-    "href": "ProjectManagement/Versioning/Semantic-Versioning.html#footnotes",
-    "title": "See also",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nin reality a commit hash is 40 character long: ca82a6dff817ec66f44342007202690a93763949↩︎",
+    "objectID": "ProjectManagement/Versioning/Git-Clients.html#github-desktop",
+    "href": "ProjectManagement/Versioning/Git-Clients.html#github-desktop",
+    "title": "Git Clients",
+    "section": "",
+    "text": "Create a user account on GitHub\nimportant Make sure to disable notifications in your settings. We will create more than 100 issues that you will have to take care of (i.e. implement features, functionalities) and mark them as complete. During the creation, you might get an email for each one of them if you don’t disable the notifications!\nInstall a git client (e.g., GitHub Desktop)\n\n\n\n\nGithub Desktop client\n\n\n\nFig.1 A basic Git Desktop client\n\n\nClick on “clone a repository from the internet”\n\n\n\n\nalt text\n\n\n\nFig.2 Cloning a repository\n\n\nSelect the project that has been created for your group project. The url is something like https://github.com/Estia-advanced-programming/pandora-2020-group1-GROUPENAME.git\nSelect the location you want the download to happen on your computer. Remember this location, you will need it to import the project in Eclipse later.\nClick “clone”",
     "crumbs": [
       "Home",
       "Project Management",
       "Versioning and Releasing",
-      "Semantic Versioning"
+      "Git Clients"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Versioning/Git-Clients.html#egit-the-eclipse-git-plugin",
+    "href": "ProjectManagement/Versioning/Git-Clients.html#egit-the-eclipse-git-plugin",
+    "title": "Git Clients",
+    "section": "",
+    "text": "Another possibility is to get everything in one place! (Repository, code, issues, tasks, etc). Check out this tutorial.\nBasically, you need to understand that Git can be used with several projects, not only Java and Eclipse. If you understood that, then we can start to look at how some tools (e.g., Eclipse, Visual Studio, etc) integrates Git tools.\nFor Eclipse, it is called EGit. It can be useful to have a quick access to milestones and issues (Fig.3 - 1) or the branches history (Fig.3 - 2). You can quickly open / close issues, switch branches, commit, push, pull, go back to a previous version just by right-clicking on the project (or just one file), finding the Team menu item, and browsing the options.\n\n\n\nalt text\n\n\n\nFig.3 Git in Eclipse\n\nIf you already have Git in Eclipse, you should have the Team option when right-clicking on your project (and see some yellow icons to indicate that the project is under version control). If this is the case, just go to the configuration section. Otherwise, perform the install.\n\n\n\nIn Eclipse, click Help and Install new software...\nClick Add source (Fig.4 - 1), then name it egit (or whatever) and write the location to http://download.eclipse.org/egit/updates (Fig.4 - 2)\n\n\n\n\nalt text\n\n\n\nFig.4 Adding an install source in Eclipse\n\n\nNow select this newly added items, check all packages, and continue the installation.\n\n\n\n\nEgit should already know what is going on in your repository: the tool looks into your.git folder, where everything is already configured (remote repository, etc). You might only need to input your login/password the first few times you will trigger commands.\nFor the task view, you need an additional package.\n\nAs in the install section, add a new package repository with a name (e.g., mylin) and this location http://download.eclipse.org/egit/github/updates.\nFinish the installation of the package\nThen, you can finally set up your tasks repository (or issues, etc) by following this tutorial",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Versioning and Releasing",
+      "Git Clients"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Versioning/Git-Clients.html#master-branch",
+    "href": "ProjectManagement/Versioning/Git-Clients.html#master-branch",
+    "title": "Git Clients",
+    "section": "Master Branch",
+    "text": "Master Branch\nThe master branch is usually the one where everything works fine. This is the branch we will use to test your program.\nIt is common to merge and push your current work on ‘Master’ only when you are sure that:\n1- There is no conflict\nMake sure you Pull the master branch before trying to push your work. Resolve every potential conflicts locally. With this in mind, you will always push a clean version that any new comers could clone and run.\n2- Your current task is complete\nIt is usually not every 5 minutes that people push on the Master branch. You save your work locally (commit), and push on GitHub on your branch when you reached (or think your reached) a consequent step. You can then merge the branch you were working on with Master when the task at hand is completed. You can then ask your team to review your code and accept the merging via a Pull request.",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Versioning and Releasing",
+      "Git Clients"
+    ]
+  },
+  {
+    "objectID": "ProjectManagement/Versioning/Git-Clients.html#pull-request",
+    "href": "ProjectManagement/Versioning/Git-Clients.html#pull-request",
+    "title": "Git Clients",
+    "section": "Pull Request",
+    "text": "Pull Request",
+    "crumbs": [
+      "Home",
+      "Project Management",
+      "Versioning and Releasing",
+      "Git Clients"
     ]
   },
   {

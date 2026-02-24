@@ -9,24 +9,28 @@
     <lastmod>2026-02-23T22:19:54.014Z</lastmod>
   </url>
   <url>
-    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/Versioning/Keep-A-Changelog.html</loc>
-    <lastmod>2026-02-23T22:19:43.490Z</lastmod>
+    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/Versioning/Semantic-Versioning.html</loc>
+    <lastmod>2026-02-23T22:21:17.455Z</lastmod>
   </url>
   <url>
-    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/Synchronize-Update-From-The-Starterpack.html</loc>
+    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/Versioning/Configuration-git.html</loc>
+    <lastmod>2026-02-23T21:22:47.726Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/Plagiat.html</loc>
     <lastmod>2026-02-23T21:22:47.731Z</lastmod>
   </url>
   <url>
-    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/Issues.html</loc>
+    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/Javadoc.html</loc>
     <lastmod>2026-02-23T21:22:47.730Z</lastmod>
   </url>
   <url>
-    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/TestDrivenDevelopment/Unit-Test.html</loc>
-    <lastmod>2026-02-23T21:22:47.732Z</lastmod>
+    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/TestDrivenDevelopment/Code-Coverage.html</loc>
+    <lastmod>2026-02-23T22:18:56.765Z</lastmod>
   </url>
   <url>
-    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html</loc>
-    <lastmod>2026-02-23T22:25:20.786Z</lastmod>
+    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/TestDrivenDevelopment/TestSuite.html</loc>
+    <lastmod>2026-02-24T01:04:45.414Z</lastmod>
   </url>
   <url>
     <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/File Management.html</loc>
@@ -46,7 +50,7 @@
   </url>
   <url>
     <loc>https://dhmmasson.github.io/testDrivenDevelopment/Home.html</loc>
-    <lastmod>2026-02-23T22:27:19.194Z</lastmod>
+    <lastmod>2026-02-24T01:41:33.450Z</lastmod>
   </url>
   <url>
     <loc>https://dhmmasson.github.io/testDrivenDevelopment/grade/grade-2022.html</loc>
@@ -54,11 +58,11 @@
   </url>
   <url>
     <loc>https://dhmmasson.github.io/testDrivenDevelopment/index.html</loc>
-    <lastmod>2026-02-23T22:27:19.194Z</lastmod>
+    <lastmod>2026-02-24T01:41:33.450Z</lastmod>
   </url>
   <url>
     <loc>https://dhmmasson.github.io/testDrivenDevelopment/Resources/CLI.html</loc>
-    <lastmod>2026-02-23T22:22:14.023Z</lastmod>
+    <lastmod>2026-02-23T22:41:36.135Z</lastmod>
   </url>
   <url>
     <loc>https://dhmmasson.github.io/testDrivenDevelopment/CHANGELOG.html</loc>
@@ -70,15 +74,11 @@
   </url>
   <url>
     <loc>https://dhmmasson.github.io/testDrivenDevelopment/tools/maven.html</loc>
-    <lastmod>2026-02-23T21:22:47.749Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dhmmasson.github.io/testDrivenDevelopment/tools/Git-Clients.html</loc>
-    <lastmod>2026-02-23T21:22:47.749Z</lastmod>
+    <lastmod>2026-02-24T01:17:27.867Z</lastmod>
   </url>
   <url>
     <loc>https://dhmmasson.github.io/testDrivenDevelopment/tools/vscode.html</loc>
-    <lastmod>2026-02-23T21:22:47.749Z</lastmod>
+    <lastmod>2026-02-24T01:24:14.610Z</lastmod>
   </url>
   <url>
     <loc>https://dhmmasson.github.io/testDrivenDevelopment/Untitled.html</loc>
@@ -117,24 +117,28 @@
     <lastmod>2026-02-23T22:19:17.252Z</lastmod>
   </url>
   <url>
-    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/TestDrivenDevelopment/Code-Coverage.html</loc>
-    <lastmod>2026-02-23T22:18:56.765Z</lastmod>
+    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html</loc>
+    <lastmod>2026-02-24T01:04:45.414Z</lastmod>
   </url>
   <url>
-    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/Javadoc.html</loc>
+    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/TestDrivenDevelopment/Unit-Test.html</loc>
+    <lastmod>2026-02-23T21:22:47.732Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/Issues.html</loc>
     <lastmod>2026-02-23T21:22:47.730Z</lastmod>
   </url>
   <url>
-    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/Plagiat.html</loc>
+    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/Synchronize-Update-From-The-Starterpack.html</loc>
     <lastmod>2026-02-23T21:22:47.731Z</lastmod>
   </url>
   <url>
-    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/Versioning/Configuration-git.html</loc>
-    <lastmod>2026-02-23T21:22:47.726Z</lastmod>
+    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/Versioning/Keep-A-Changelog.html</loc>
+    <lastmod>2026-02-23T22:19:43.490Z</lastmod>
   </url>
   <url>
-    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/Versioning/Semantic-Versioning.html</loc>
-    <lastmod>2026-02-23T22:21:17.455Z</lastmod>
+    <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/Versioning/Git-Clients.html</loc>
+    <lastmod>2026-02-23T21:22:47.749Z</lastmod>
   </url>
   <url>
     <loc>https://dhmmasson.github.io/testDrivenDevelopment/ProjectManagement/Versioning/Conventional-Commits.html</loc>
