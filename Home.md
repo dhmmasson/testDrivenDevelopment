@@ -2,13 +2,7 @@
 
 This is the wiki for the Estia Advanced Programming class.
 
-# Updates
-
-Latest news here: [CHANGELOG](CHANGELOG.md)
-
-***
-
-## Educational Goals of the Class
+# Educational Goals of the Class
 
 - Start and manage a software development project following some Agile project management 
   - Organize [features](Pandora/Features.md) to be developed
@@ -86,5 +80,5 @@ Features are represented by issues open in your git repository. They are organiz
 2. Clone the project locally on each member computer
 3. Open the project with your java editor of choice [Eclipse](tools/Eclipse.md) or [vscode](tools/vscode.md) and run the maven build script to compile the bare version of the project (a program that output "pandora@v1.0.0")
 4. Read the wiki documentation about
-	1. what is [Test-Driven-Development](ProjectManagement/Test-Driven-Development.md)
+	1. what is [Test-Driven-Development](ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.md)
 	2. What are conventional Commits

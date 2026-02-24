@@ -6,16 +6,15 @@ A Command Line Interface (CLI) is a text-based interface that allows users to in
 
 Each line of a command line can be decomposed in several parts
 
-```
+```bash
 Prompt Command Parameters1 ... ParametersN
 ```
 
 - The prompt is given by the shell or terminal you are using, for example in the terminal in vscode it is something like this:
 
 ```bash
-
 username:path$  
-	```
+```
 
 - The command is the program you are executing, for example to compile the project we use maven whose command is ```mvn```, to launch a java program we use ```java```.
 - The parameters or arguments are values that are transmitted to the program to parametrize its execution. The parameters depend on the command used (e.g. the parameter for ```mvn``` are not the same as the parameter for the ```java``` command). Parameters can either be options or arguments.  

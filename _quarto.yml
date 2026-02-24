@@ -8,12 +8,15 @@ website:
       - href: index.qmd
         text: Home
       - CHANGELOG.md
+  favicon: images/favicon.ico
   sidebar: 
     contents:
     - href: index.qmd
       text: "🏠 Home"
     - href: CHANGELOG.md
       text: "❗ CHANGELOG"
+    - href: ProjectManagement/Plagiat.md
+      text: "Plagiat and LLM"
     - section: "🎞 Pandora"
       contents:
         - href: Pandora/Pandora.md
@@ -30,9 +33,20 @@ website:
           text: "Error Handling"
         - href: Resources/CLI.md
           text: "CLI Reference"
+        - href: ProjectManagement/manifest.json.md
+          text: "manifest.json"
+    - section: "🔧 Building the Project"
+      contents:
+        - href: tools/maven.md
+          text: "Maven"
+        - href: tools/vscode.md
+          text: "VS Code"
+        - href: tools/Eclipse.md
+          text: "Eclipse"
+
     - section: "Project Management"
       contents:
-        - section: "Test-Driven-Development"
+        - section: "<b>Test-Driven-Development</b>"
           contents:
             - href: ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.md
               text: "What is Test-Driven Development?"
@@ -40,44 +54,36 @@ website:
               text: "Unit Tests"
             - href: ProjectManagement/TestDrivenDevelopment/Integration-Test.md
               text: "Integration Tests"
+            - href: ProjectManagement/TestDrivenDevelopment/TestSuite.md
+              text: "TestSuite & Autograder"
             - href: ProjectManagement/TestDrivenDevelopment/Code-Coverage.md
               text: "Code Coverage"
         - section: "Versioning and Releasing"
           contents:
-          - href: ProjectManagement/Versioning/Conventional Commits.md
+          - href: ProjectManagement/Versioning/Conventional-Commits.md
             text: "Conventional Commits"
           - href: ProjectManagement/Versioning/Semantic-Versioning.md
             text: "Semantic Versioning"
           - href: ProjectManagement/Versioning/Release.md
             text: "Release"
           - href: ProjectManagement/Versioning/Keep-A-Changelog.md
-            text: "Keep a Changelog" 
+            text: "Keep a Changelog"
+          - href: ProjectManagement/Versioning/Git-Clients.md
+            text: "Git Clients"
           - href: ProjectManagement/Versioning/Configuration-git.md
             text: "Git User Configuration"
-        - href: ProjectManagement/manifest.json.md
-          text: "manifest.json"
-        - href: ProjectManagement/Javadoc.md
-          text: "Javadoc"
-        - href: ProjectManagement/File Management.md
-          text: "File Management"
-        - href: ProjectManagement/Issues.md
-          text: "Issues"
-        - href: ProjectManagement/Debug.md
-          text: "Debug"
-        - href: ProjectManagement/Synchronize-Update-From-The-Starterpack.md
-          text: "❗ Sync from Starterpack"
-        - href: ProjectManagement/Plagiat.md
-          text: "Plagiat"
-    - section: "🎓 Tools"
-      contents:
-        - href: tools/Eclipse.md
-          text: "Eclipse"
-        - href: tools/vscode.md
-          text: "VS Code"
-        - href: tools/Git-Clients.md
-          text: "Git Clients"
-        - href: tools/maven.md
-          text: "Maven"
+        - section: "Other"
+          contents:
+          - href: ProjectManagement/Javadoc.md
+            text: "Javadoc"
+          - href: ProjectManagement/File Management.md
+            text: "File Management"
+          - href: ProjectManagement/Issues.md
+            text: "Issues"
+          - href: ProjectManagement/Debug.md
+            text: "Debug"
+          - href: ProjectManagement/Synchronize-Update-From-The-Starterpack.md
+            text: "❗ Sync from Starterpack"
 
   
 

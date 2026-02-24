@@ -113,6 +113,6 @@ Integration tests slot into the Red–Green–Refactor cycle at the **Red** step
 
 - [Unit-Test](Unit-Test.md) — for testing individual methods in isolation
 - [Code-Coverage](Code-Coverage.md) — measuring how much of your code is exercised
-- [Test-Driven-Development](../Test-Driven-Development.md) — the overall TDD workflow
+- [Test-Driven-Development](../TestDrivenDevelopment/Test-Driven-Development.md) — the overall TDD workflow
 - [manifest.json](../manifest.json) — declares which features are implemented
 - [Constants](../../Pandora/Constants.md) — output format rules the autograder enforces

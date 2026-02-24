@@ -44,6 +44,12 @@ Open it in a browser to see line-by-line coverage for each class.
 - **Yellow** lines were partially covered (some branches not taken).
 - **Red** lines were never executed — write a test or remove the dead code.
 
+
+## Setting Up Coverage VS Code
+
+
+- **VS Code**: use the [Coverage Gutters](https://marketplace.visualstudio.com/items?itemName=ryanluker.vscode-coverage-gutters) extension together with `mvn test jacoco:report`. Point the extension at `target/site/jacoco/jacoco.xml`.
+
 ## Setting Up Coverage in Eclipse
 
 1. Right-click your project → **Coverage As** → **JUnit Test**
@@ -51,11 +57,6 @@ Open it in a browser to see line-by-line coverage for each class.
 3. The **Coverage** view at the bottom shows percentages per class and package.
 
 > If the **Coverage As** option is missing, install **EclEmma**: Help → Eclipse Marketplace → search for *EclEmma*.
-
-## Setting Up Coverage in IntelliJ / VS Code
-
-- **IntelliJ IDEA**: Run → **Run with Coverage**. Coverage results are shown inline in the gutter.
-- **VS Code**: use the [Coverage Gutters](https://marketplace.visualstudio.com/items?itemName=ryanluker.vscode-coverage-gutters) extension together with `mvn test jacoco:report`. Point the extension at `target/site/jacoco/jacoco.xml`.
 
 ## What to Do With the Report
 
@@ -73,4 +74,4 @@ Coverage is a **lower bound on test quality**, not an upper bound. Use it to fin
 
 - [Unit-Test](Unit-Test.md) — where to write your unit tests
 - [Integration-Test](Integration-Test.md) — black-box tests that also contribute to coverage
-- [Test-Driven-Development](../Test-Driven-Development.md) — the overall TDD workflow
+- [Test-Driven-Development](../TestDrivenDevelopment/Test-Driven-Development.md) — the overall TDD workflow

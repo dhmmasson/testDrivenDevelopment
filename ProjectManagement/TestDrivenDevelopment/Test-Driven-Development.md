@@ -47,55 +47,11 @@ This means the quality and coverage of `test/testSuite.json` is part of your fin
 
 ### Running Tests Locally
 
-Use `test/autograder.py` for all features. The script requires Python and reads `testSuite.json` and `manifest.json` to run each test against your jar:
+Use `test/autograder.py` for all features. See the [TestSuite & Autograder](TestSuite.md) page for the full usage, all options, and how to write your `test/testSuite.json`.
 
 ```bash
-python test/autograder.py -t test/testSuite.json -m ./manifest.json target/pandora.jar
+python test/autograder.py -t test/testSuite.json -m manifest.json target/pandora.jar
 ```
-
-You can also run your suite against another team's jar by replacing the last argument:
-
-```bash
-python test/autograder.py -t test/testSuite.json -m path/to/their/manifest.json path/to/their/pandora.jar
-```
-
-## TestSuite
-
-**We require however that you produce Black Box Integration Tests for all the features you develop** by completing the file ```test/testSuite.json``` and adding corresponding flight records into the ```test/resources``` folder.
-
-the **testSuite** should respect the following schema
-
-```json 
-[
-	testDescription,
-	...
-	testDescription
-]
-```
-
-a **test description** should respect the following schema
-
-```json 
-{
-    "id": <uniqueId:number>,
-    "feature": <feature:string>,
-    "milestone": <milestone:number>,
-    "mode": <"full"|"feature">,  
-    "file": <flightRecordPath:Path>,
-    "result": <expectedResult:number|string>
-}
-```
-
-The fields of a test description are
-
-- **id**: a unique number in your testSuite
-- **feature**: the feature your are testing, this should be the exact name that is passed to the ```-o``` option. e.g. ```maxAlt```
-- **milestone**: the number of the milestone corresponding to the feature you are testing. For Grouping purposes in the output. (deprecated use milestone:1,2,3,4 to group the tests)
-- **mode**:
-	- feature: test with the -o set to the given feature
-	- full: generate the full report and parse it to find the feature in the report (see [full report format](https://github.com/Estia-advanced-programming/pandora-public/wiki/Pandora#full-report)
-- **file**: the file passed to pandora, the path should be relative to the overall project ```test/resources/.../flight.frd```
-- **result**: the expected result. Currently, the autograder is in strict comparison.
 
 # See Also
 
