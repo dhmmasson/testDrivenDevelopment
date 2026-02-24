@@ -419,13 +419,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#add-the-following-favorite-to-vscode" id="toc-add-the-following-favorite-to-vscode" class="nav-link active" data-scroll-target="#add-the-following-favorite-to-vscode">Add the following Favorite to Vscode</a>
+  <li><a href="#maven" id="toc-maven" class="nav-link active" data-scroll-target="#maven">Maven</a>
   <ul class="collapse">
   <li><a href="#build" id="toc-build" class="nav-link" data-scroll-target="#build">Build</a></li>
   <li><a href="#run" id="toc-run" class="nav-link" data-scroll-target="#run">Run</a></li>
   <li><a href="#test" id="toc-test" class="nav-link" data-scroll-target="#test">Test</a></li>
   <li><a href="#coverage" id="toc-coverage" class="nav-link" data-scroll-target="#coverage">Coverage</a></li>
   </ul></li>
+  <li><a href="#install-maven" id="toc-install-maven" class="nav-link" data-scroll-target="#install-maven">Install Maven</a></li>
   </ul>
 </nav>
     </div>
@@ -435,37 +436,53 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="add-the-following-favorite-to-vscode" class="level1">
-<h1>Add the following Favorite to Vscode</h1>
-<p>from the terminal (use the git bash terminal if you are on windows)</p>
+<section id="maven" class="level1">
+<h1>Maven</h1>
+<p>Maven is a build automation tool used primarily for Java projects. It helps manage project dependencies, build processes, and project lifecycle. In this section, we will cover how to use Maven to build, run, test, and generate code coverage reports for your Pandora project. The executable is <code>mvn</code>, and it should be available in your terminal if you have Maven installed and properly set up in your PATH.</p>
+<p>It should be installed on your system. you can check if it is installed by running the following command in your terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mvn</span> <span class="at">-v</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>if you get an error, it might just be missing from your PATH, you can add it to your PATH : see the <a href="#install-maven">installation instructions</a> at the end of this page.</p>
 <section id="build" class="level2">
 <h2 class="anchored" data-anchor-id="build">Build</h2>
 <p>the best way to build the project is to use maven, it will automatically download the dependencies and build the project for you and produce a jar file in the target folder. To build the project with maven, simply run the following command in the terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mvn</span> package</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mvn</span> package</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="run" class="level2">
 <h2 class="anchored" data-anchor-id="run">Run</h2>
 <p>you can then run the project with the following command:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-jar</span> target/pandora.jar <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-jar</span> target/pandora.jar <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>or any other options you want to test</p>
 </section>
 <section id="test" class="level2">
 <h2 class="anchored" data-anchor-id="test">Test</h2>
 <p>to automatically run the tests, you can use the following command:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">test/autograder.py</span> <span class="at">-t</span> test/testSuite.json <span class="at">-m</span> ./manifest.json target/pandora.jar</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">test/autograder.py</span> <span class="at">-t</span> test/testSuite.json <span class="at">-m</span> ./manifest.json target/pandora.jar</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>you can also use maven to run the tests and produce a coverage report with the following command:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">or</span> if you want the coverage report as well </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">```</span><span class="fu">bash</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">mvn</span> clean verify</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">or</span> if you want the coverage report as well </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">```</span><span class="fu">bash</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">mvn</span> clean verify</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>in target/site/jacoco/index.html you can find the code coverage report in target/autograder-output.md you can find the output of the autograder script</p>
 </section>
 <section id="coverage" class="level2">
 <h2 class="anchored" data-anchor-id="coverage">Coverage</h2>
 <p>to generate the coverage report, you can use the following command:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mvn</span>  clean verify jacoco:report</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mvn</span>  clean verify jacoco:report</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
+</section>
+<section id="install-maven" class="level1">
+<h1>Install Maven</h1>
+<ol type="1">
+<li><strong>Locate the maven binaries folder:</strong> In the windows search bar type mvn and right click on the maven application and click on “open file location”. It should be something like <code>C:\Program Files\Apache Maven 3.9.8\bin</code></li>
+<li><strong>Add this path to your PATH environment variable:</strong> In the windows search bar type “environment variables” and click on “Edit the system environment variables”. In the System Properties window, click on the “Environment Variables” button. In the Environment Variables window, under “System variables”, find and select the “Path” variable, then click “Edit”. In the Edit Environment Variable window, click “New” and add the path to the maven binaries folder (e.g., <code>C:\Program Files\Apache Maven 3.9.8\bin</code>). Click “OK” to close all windows.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/mvnPath.png" class="img-fluid figure-img"></p>
+<figcaption>mvnPath</figcaption>
+</figure>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->

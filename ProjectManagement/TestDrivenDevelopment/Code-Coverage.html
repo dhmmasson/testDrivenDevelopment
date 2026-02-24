@@ -428,8 +428,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#run-coverage" id="toc-run-coverage" class="nav-link" data-scroll-target="#run-coverage">Run Coverage</a></li>
   <li><a href="#read-the-report" id="toc-read-the-report" class="nav-link" data-scroll-target="#read-the-report">Read the Report</a></li>
   </ul></li>
+  <li><a href="#setting-up-coverage-vs-code" id="toc-setting-up-coverage-vs-code" class="nav-link" data-scroll-target="#setting-up-coverage-vs-code">Setting Up Coverage VS Code</a></li>
   <li><a href="#setting-up-coverage-in-eclipse" id="toc-setting-up-coverage-in-eclipse" class="nav-link" data-scroll-target="#setting-up-coverage-in-eclipse">Setting Up Coverage in Eclipse</a></li>
-  <li><a href="#setting-up-coverage-in-intellij-vs-code" id="toc-setting-up-coverage-in-intellij-vs-code" class="nav-link" data-scroll-target="#setting-up-coverage-in-intellij-vs-code">Setting Up Coverage in IntelliJ / VS Code</a></li>
   <li><a href="#what-to-do-with-the-report" id="toc-what-to-do-with-the-report" class="nav-link" data-scroll-target="#what-to-do-with-the-report">What to Do With the Report</a></li>
   <li><a href="#coverage-is-not-a-goal-in-itself" id="toc-coverage-is-not-a-goal-in-itself" class="nav-link" data-scroll-target="#coverage-is-not-a-goal-in-itself">Coverage Is Not a Goal in Itself</a></li>
   <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See Also</a></li>
@@ -504,6 +504,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
+<section id="setting-up-coverage-vs-code" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-coverage-vs-code">Setting Up Coverage VS Code</h2>
+<ul>
+<li><strong>VS Code</strong>: use the <a href="https://marketplace.visualstudio.com/items?itemName=ryanluker.vscode-coverage-gutters">Coverage Gutters</a> extension together with <code>mvn test jacoco:report</code>. Point the extension at <code>target/site/jacoco/jacoco.xml</code>.</li>
+</ul>
+</section>
 <section id="setting-up-coverage-in-eclipse" class="level2">
 <h2 class="anchored" data-anchor-id="setting-up-coverage-in-eclipse">Setting Up Coverage in Eclipse</h2>
 <ol type="1">
@@ -514,13 +520,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>If the <strong>Coverage As</strong> option is missing, install <strong>EclEmma</strong>: Help → Eclipse Marketplace → search for <em>EclEmma</em>.</p>
 </blockquote>
-</section>
-<section id="setting-up-coverage-in-intellij-vs-code" class="level2">
-<h2 class="anchored" data-anchor-id="setting-up-coverage-in-intellij-vs-code">Setting Up Coverage in IntelliJ / VS Code</h2>
-<ul>
-<li><strong>IntelliJ IDEA</strong>: Run → <strong>Run with Coverage</strong>. Coverage results are shown inline in the gutter.</li>
-<li><strong>VS Code</strong>: use the <a href="https://marketplace.visualstudio.com/items?itemName=ryanluker.vscode-coverage-gutters">Coverage Gutters</a> extension together with <code>mvn test jacoco:report</code>. Point the extension at <code>target/site/jacoco/jacoco.xml</code>.</li>
-</ul>
 </section>
 <section id="what-to-do-with-the-report" class="level2">
 <h2 class="anchored" data-anchor-id="what-to-do-with-the-report">What to Do With the Report</h2>
@@ -540,7 +539,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><a href="../../ProjectManagement/TestDrivenDevelopment/Unit-Test.html">Unit-Test</a> — where to write your unit tests</li>
 <li><a href="../../ProjectManagement/TestDrivenDevelopment/Integration-Test.html">Integration-Test</a> — black-box tests that also contribute to coverage</li>
-<li><a href="../Test-Driven-Development.md">Test-Driven-Development</a> — the overall TDD workflow</li>
+<li><a href="../../ProjectManagement/TestDrivenDevelopment/Test-Driven-Development.html">Test-Driven-Development</a> — the overall TDD workflow</li>
 </ul>
 
 

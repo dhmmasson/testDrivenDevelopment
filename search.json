@@ -143,7 +143,7 @@
     "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html",
     "title": "Code Coverage",
     "section": "",
-    "text": "Code coverage is a metric that measures how much of your source code is executed when your test suite runs. It helps identify untested paths and dead code.\n\n\nCoverage tools instrument your bytecode and track which lines, branches, and methods are exercised during a test run. The most common metrics are:\n\n\n\n\n\n\n\nMetric\nDescription\n\n\n\n\nLine coverage\nPercentage of source lines executed at least once\n\n\nBranch coverage\nPercentage of decision branches taken (e.g., both sides of an if)\n\n\nMethod coverage\nPercentage of methods called at least once\n\n\n\nFor Pandora, aim for high line and branch coverage — every feature you implement should be reachable by your test suite.\n\n\n\n\nGrading: your code is evaluated on test coverage. Dead code and untested paths lower your score.\nConfidence: high coverage reduces the risk of shipping a feature that only works in the happy path.\nDiscriminating other teams: if your test suite cannot reach a code path, it cannot reveal whether another team’s implementation is correct or not.\n\n\n\n\nJaCoCo is the standard Java coverage tool. It is already configured in the Pandora starter pack.\n\n\nmvn test jacoco:report\nThe HTML report is generated at:\ntarget/site/jacoco/index.html\nOpen it in a browser to see line-by-line coverage for each class.\n\n\n\n\nGreen lines were executed by at least one test.\nYellow lines were partially covered (some branches not taken).\nRed lines were never executed — write a test or remove the dead code.\n\n\n\n\n\n\nRight-click your project → Coverage As → JUnit Test\nEclipse highlights covered (green) and uncovered (red) lines directly in the editor.\nThe Coverage view at the bottom shows percentages per class and package.\n\n\nIf the Coverage As option is missing, install EclEmma: Help → Eclipse Marketplace → search for EclEmma.\n\n\n\n\n\nIntelliJ IDEA: Run → Run with Coverage. Coverage results are shown inline in the gutter.\nVS Code: use the Coverage Gutters extension together with mvn test jacoco:report. Point the extension at target/site/jacoco/jacoco.xml.\n\n\n\n\n\nDelete dead code — if a method or branch is never reached by any test and is not reachable by the program logic, remove it.\nWrite missing tests — for every red block that corresponds to real logic, write a test that exercises it.\nCheck branches — yellow coverage often means you only tested the true branch of a condition. Add a test for the false branch.\n\n\n\n\n100% coverage does not mean your code is correct — it only means every line was executed at least once. A test that calls a method but asserts nothing will push coverage to 100% without providing any value.\nCoverage is a lower bound on test quality, not an upper bound. Use it to find gaps, not to declare victory.\n\n\n\n\nUnit-Test — where to write your unit tests\nIntegration-Test — black-box tests that also contribute to coverage\nTest-Driven-Development — the overall TDD workflow",
+    "text": "Code coverage is a metric that measures how much of your source code is executed when your test suite runs. It helps identify untested paths and dead code.\n\n\nCoverage tools instrument your bytecode and track which lines, branches, and methods are exercised during a test run. The most common metrics are:\n\n\n\n\n\n\n\nMetric\nDescription\n\n\n\n\nLine coverage\nPercentage of source lines executed at least once\n\n\nBranch coverage\nPercentage of decision branches taken (e.g., both sides of an if)\n\n\nMethod coverage\nPercentage of methods called at least once\n\n\n\nFor Pandora, aim for high line and branch coverage — every feature you implement should be reachable by your test suite.\n\n\n\n\nGrading: your code is evaluated on test coverage. Dead code and untested paths lower your score.\nConfidence: high coverage reduces the risk of shipping a feature that only works in the happy path.\nDiscriminating other teams: if your test suite cannot reach a code path, it cannot reveal whether another team’s implementation is correct or not.\n\n\n\n\nJaCoCo is the standard Java coverage tool. It is already configured in the Pandora starter pack.\n\n\nmvn test jacoco:report\nThe HTML report is generated at:\ntarget/site/jacoco/index.html\nOpen it in a browser to see line-by-line coverage for each class.\n\n\n\n\nGreen lines were executed by at least one test.\nYellow lines were partially covered (some branches not taken).\nRed lines were never executed — write a test or remove the dead code.\n\n\n\n\n\n\nVS Code: use the Coverage Gutters extension together with mvn test jacoco:report. Point the extension at target/site/jacoco/jacoco.xml.\n\n\n\n\n\nRight-click your project → Coverage As → JUnit Test\nEclipse highlights covered (green) and uncovered (red) lines directly in the editor.\nThe Coverage view at the bottom shows percentages per class and package.\n\n\nIf the Coverage As option is missing, install EclEmma: Help → Eclipse Marketplace → search for EclEmma.\n\n\n\n\n\nDelete dead code — if a method or branch is never reached by any test and is not reachable by the program logic, remove it.\nWrite missing tests — for every red block that corresponds to real logic, write a test that exercises it.\nCheck branches — yellow coverage often means you only tested the true branch of a condition. Add a test for the false branch.\n\n\n\n\n100% coverage does not mean your code is correct — it only means every line was executed at least once. A test that calls a method but asserts nothing will push coverage to 100% without providing any value.\nCoverage is a lower bound on test quality, not an upper bound. Use it to find gaps, not to declare victory.\n\n\n\n\nUnit-Test — where to write your unit tests\nIntegration-Test — black-box tests that also contribute to coverage\nTest-Driven-Development — the overall TDD workflow",
     "crumbs": [
       "Home",
       "Project Management",
@@ -191,11 +191,11 @@
     ]
   },
   {
-    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-eclipse",
-    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-eclipse",
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-vs-code",
+    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-vs-code",
     "title": "Code Coverage",
     "section": "",
-    "text": "Right-click your project → Coverage As → JUnit Test\nEclipse highlights covered (green) and uncovered (red) lines directly in the editor.\nThe Coverage view at the bottom shows percentages per class and package.\n\n\nIf the Coverage As option is missing, install EclEmma: Help → Eclipse Marketplace → search for EclEmma.",
+    "text": "VS Code: use the Coverage Gutters extension together with mvn test jacoco:report. Point the extension at target/site/jacoco/jacoco.xml.",
     "crumbs": [
       "Home",
       "Project Management",
@@ -204,11 +204,11 @@
     ]
   },
   {
-    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-intellij-vs-code",
-    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-intellij-vs-code",
+    "objectID": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-eclipse",
+    "href": "ProjectManagement/TestDrivenDevelopment/Code-Coverage.html#setting-up-coverage-in-eclipse",
     "title": "Code Coverage",
     "section": "",
-    "text": "IntelliJ IDEA: Run → Run with Coverage. Coverage results are shown inline in the gutter.\nVS Code: use the Coverage Gutters extension together with mvn test jacoco:report. Point the extension at target/site/jacoco/jacoco.xml.",
+    "text": "Right-click your project → Coverage As → JUnit Test\nEclipse highlights covered (green) and uncovered (red) lines directly in the editor.\nThe Coverage view at the bottom shows percentages per class and package.\n\n\nIf the Coverage As option is missing, install EclEmma: Help → Eclipse Marketplace → search for EclEmma.",
     "crumbs": [
       "Home",
       "Project Management",
@@ -711,9 +711,9 @@
   {
     "objectID": "tools/maven.html",
     "href": "tools/maven.html",
-    "title": "Add the following Favorite to Vscode",
+    "title": "Maven",
     "section": "",
-    "text": "from the terminal (use the git bash terminal if you are on windows)\n\n\nthe best way to build the project is to use maven, it will automatically download the dependencies and build the project for you and produce a jar file in the target folder. To build the project with maven, simply run the following command in the terminal:\nmvn package\n\n\n\nyou can then run the project with the following command:\njava -jar target/pandora.jar --version\nor any other options you want to test\n\n\n\nto automatically run the tests, you can use the following command:\ntest/autograder.py -t test/testSuite.json -m ./manifest.json target/pandora.jar\nyou can also use maven to run the tests and produce a coverage report with the following command:\nor if you want the coverage report as well \n```bash\nmvn clean verify\nin target/site/jacoco/index.html you can find the code coverage report in target/autograder-output.md you can find the output of the autograder script\n\n\n\nto generate the coverage report, you can use the following command:\nmvn  clean verify jacoco:report",
+    "text": "Maven is a build automation tool used primarily for Java projects. It helps manage project dependencies, build processes, and project lifecycle. In this section, we will cover how to use Maven to build, run, test, and generate code coverage reports for your Pandora project. The executable is mvn, and it should be available in your terminal if you have Maven installed and properly set up in your PATH.\nIt should be installed on your system. you can check if it is installed by running the following command in your terminal:\nmvn -v\nif you get an error, it might just be missing from your PATH, you can add it to your PATH : see the installation instructions at the end of this page.\n\n\nthe best way to build the project is to use maven, it will automatically download the dependencies and build the project for you and produce a jar file in the target folder. To build the project with maven, simply run the following command in the terminal:\nmvn package\n\n\n\nyou can then run the project with the following command:\njava -jar target/pandora.jar --version\nor any other options you want to test\n\n\n\nto automatically run the tests, you can use the following command:\ntest/autograder.py -t test/testSuite.json -m ./manifest.json target/pandora.jar\nyou can also use maven to run the tests and produce a coverage report with the following command:\nor if you want the coverage report as well \n```bash\nmvn clean verify\nin target/site/jacoco/index.html you can find the code coverage report in target/autograder-output.md you can find the output of the autograder script\n\n\n\nto generate the coverage report, you can use the following command:\nmvn  clean verify jacoco:report",
     "crumbs": [
       "Home",
       "🔧 Building the Project",
@@ -723,7 +723,7 @@
   {
     "objectID": "tools/maven.html#build",
     "href": "tools/maven.html#build",
-    "title": "Add the following Favorite to Vscode",
+    "title": "Maven",
     "section": "",
     "text": "the best way to build the project is to use maven, it will automatically download the dependencies and build the project for you and produce a jar file in the target folder. To build the project with maven, simply run the following command in the terminal:\nmvn package",
     "crumbs": [
@@ -735,7 +735,7 @@
   {
     "objectID": "tools/maven.html#run",
     "href": "tools/maven.html#run",
-    "title": "Add the following Favorite to Vscode",
+    "title": "Maven",
     "section": "",
     "text": "you can then run the project with the following command:\njava -jar target/pandora.jar --version\nor any other options you want to test",
     "crumbs": [
@@ -747,7 +747,7 @@
   {
     "objectID": "tools/maven.html#test",
     "href": "tools/maven.html#test",
-    "title": "Add the following Favorite to Vscode",
+    "title": "Maven",
     "section": "",
     "text": "to automatically run the tests, you can use the following command:\ntest/autograder.py -t test/testSuite.json -m ./manifest.json target/pandora.jar\nyou can also use maven to run the tests and produce a coverage report with the following command:\nor if you want the coverage report as well \n```bash\nmvn clean verify\nin target/site/jacoco/index.html you can find the code coverage report in target/autograder-output.md you can find the output of the autograder script",
     "crumbs": [
@@ -759,7 +759,7 @@
   {
     "objectID": "tools/maven.html#coverage",
     "href": "tools/maven.html#coverage",
-    "title": "Add the following Favorite to Vscode",
+    "title": "Maven",
     "section": "",
     "text": "to generate the coverage report, you can use the following command:\nmvn  clean verify jacoco:report",
     "crumbs": [
@@ -1134,7 +1134,7 @@
     "href": "ProjectManagement/Issues.html",
     "title": "Issues",
     "section": "",
-    "text": "Issues\nGitHub Issues are items you can create in a repository to plan, discuss and track work. You can use issues to track work, give or receive feedback, collaborate on ideas or tasks, and efficiently communicate with others. (see for a generic overview of Github Issue here). You can do a lot of thing with the github issues to handle your project management. For instance the project tab allows you to plan your feature development using a Kanban. See https://github.com/features/issues for more information\nIn the pandora project, we have created for you an issue for each of the feature you have to implement. To import them into your repository you should run the issue-updater workflow:\n\nFrom your repository page, go in the “Actions” tab (in the top bar)\nIn the workflows (left navigation) Select the Import issues from template\nin the blue banner in the middle of the screen click run workflow",
+    "text": "Issues\nGitHub Issues are items you can create in a repository to plan, discuss and track work. You can use issues to track work, give or receive feedback, collaborate on ideas or tasks, and efficiently communicate with others. (see for a generic overview of Github Issue here). You can do a lot of thing with the github issues to handle your project management. For instance the project tab allows you to plan your feature development using a Kanban. See https://github.com/features/issues for more information",
     "crumbs": [
       "Home",
       "Project Management",
