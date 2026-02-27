@@ -390,7 +390,6 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#type" id="toc-type" class="nav-link" data-scroll-target="#type">Type</a></li>
   <li><a href="#short-description" id="toc-short-description" class="nav-link" data-scroll-target="#short-description">Short Description</a></li>
-  <li><a href="#scope" id="toc-scope" class="nav-link" data-scroll-target="#scope">Scope</a></li>
   <li><a href="#footer" id="toc-footer" class="nav-link" data-scroll-target="#footer">Footer</a></li>
   </ul></li>
   </ul></li>
@@ -437,12 +436,13 @@ ul.task-list li input[type="checkbox"] {
 <section id="short-description" class="level3">
 <h3 class="anchored" data-anchor-id="short-description">Short Description</h3>
 <p>The description is a short summary of the commit. It should be concise and to the point, ideally no more than 50 characters. It should start with a verb in the present tense (e.g.&nbsp;“add”, “fix”, “update”, “remove”, etc) and should not end with a period.</p>
-<p><code>fix: correct the parsing of the option -o</code></p>
-</section>
-<section id="scope" class="level3">
-<h3 class="anchored" data-anchor-id="scope">Scope</h3>
-<p>The scope is optional and can be anything specifying the place of the commit change. For example, if you are fixing a bug in the parser you can write:</p>
-<p><code>fix(parser): correct the parsing of the option -o</code></p>
+<p><code>fix: remove the version that is not used anymore in the pom.xml</code></p>
+<pre><code>
+### Scope
+
+The scope is optional and can be anything specifying the place of the commit change. For example, if you are fixing a bug in the parser you can write:
+
+```fix(parser): correct the parsing of the option -o</code></pre>
 <p><code>feat(records): add the feature to count the number of records in a flight record</code></p>
 </section>
 <section id="footer" class="level3">
