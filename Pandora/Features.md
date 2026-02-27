@@ -17,8 +17,8 @@
 | Feature | CLI option | Input | Description | Output | Unit | Version |
 |---|---|---|---|---|---|---|
 | **Single Flight Computations** | | | | | | |
-| Starting time | `-o start_time` | | | | | |
-| Filenames | `-o filenames` | | | | | |
+| Starting time | `-o start_time` | a flight record file | the starting time of the flight | time | HH:mm:ss | |
+| Filenames | `-o filenames` | multiple flight record files | the list of filenames in the batch in alphabetical order | file1, file2, ... |  | |
 | Average Altitude | `-o avgAlt` | a flight record file | the average altitude during the flight | altitude | m | |
 | Max Altitude | `-o maxAlt` | a flight record file | the maximum altitude during the flight | altitude | m | |
 | Average Air Speed | `-o avgAirSpeed` | a flight record file | the average air speed during the flight | speed | m/s | |
