@@ -389,6 +389,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#structure" id="toc-structure" class="nav-link" data-scroll-target="#structure">Structure</a>
   <ul class="collapse">
   <li><a href="#type" id="toc-type" class="nav-link" data-scroll-target="#type">Type</a></li>
+  <li><a href="#short-description" id="toc-short-description" class="nav-link" data-scroll-target="#short-description">Short Description</a></li>
+  <li><a href="#scope" id="toc-scope" class="nav-link" data-scroll-target="#scope">Scope</a></li>
+  <li><a href="#footer" id="toc-footer" class="nav-link" data-scroll-target="#footer">Footer</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See Also</a></li>
@@ -407,7 +410,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="structure" class="level2">
 <h2 class="anchored" data-anchor-id="structure">Structure</h2>
 <p>The commit message should be structured as follows:</p>
-<pre><code>&lt;type&gt;[optional scope]: &lt;description&gt;
+<pre><code>&lt;type&gt;[optional scope]: &lt;description that start with a verb in the present tense&gt;
 
 [optional body]
 
@@ -430,6 +433,25 @@ ul.task-list li input[type="checkbox"] {
 <li>ci: Changes to our CI configuration files and scripts (change in the.github repository. <strong>You should not do that</strong>)</li>
 <li>revert: Reverts a previous commit</li>
 </ul>
+</section>
+<section id="short-description" class="level3">
+<h3 class="anchored" data-anchor-id="short-description">Short Description</h3>
+<p>The description is a short summary of the commit. It should be concise and to the point, ideally no more than 50 characters. It should start with a verb in the present tense (e.g.&nbsp;“add”, “fix”, “update”, “remove”, etc) and should not end with a period.</p>
+<p><code>fix: correct the parsing of the option -o</code></p>
+</section>
+<section id="scope" class="level3">
+<h3 class="anchored" data-anchor-id="scope">Scope</h3>
+<p>The scope is optional and can be anything specifying the place of the commit change. For example, if you are fixing a bug in the parser you can write:</p>
+<p><code>fix(parser): correct the parsing of the option -o</code></p>
+<p><code>feat(records): add the feature to count the number of records in a flight record</code></p>
+</section>
+<section id="footer" class="level3">
+<h3 class="anchored" data-anchor-id="footer">Footer</h3>
+<p>The footer is the place to reference any issues that this commit closes or affects. For example:</p>
+<pre><code>fix: correct minor typos in code
+See the issue for details:
+Closes #123</code></pre>
+<p>this commit message indicates that the commit fixes a bug and that the issue #123 is now closed. If you push that commit to github, the issue #123 will be automatically closed by github when merged onto the main branch.</p>
 </section>
 </section>
 </section>
