@@ -75,7 +75,7 @@ The script prints a summary grouped by milestone. A passing test is shown in gre
   },
   {
     "id": 2,
-    "feature": "fullReport",
+    "feature": "maxAlt",
     "milestone": 1,
     "mode": "full",
     "file": "test/resources/0_201_MiG-23MLD.frd",
