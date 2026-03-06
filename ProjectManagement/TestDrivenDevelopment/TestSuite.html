@@ -439,6 +439,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#file-format" id="toc-file-format" class="nav-link" data-scroll-target="#file-format">File Format</a></li>
   <li><a href="#fields" id="toc-fields" class="nav-link" data-scroll-target="#fields">Fields</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
   <li><a href="#what-makes-a-good-testsuite" id="toc-what-makes-a-good-testsuite" class="nav-link" data-scroll-target="#what-makes-a-good-testsuite">What Makes a Good TestSuite</a></li>
   </ul></li>
   <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See Also</a></li>
@@ -457,6 +458,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The autograder is a Python script provided in the starter pack that runs a test suite against any <code>pandora.jar</code>. It is the primary tool used by both students and the teacher team to evaluate implementations.</p>
 <section id="the-autograder" class="level2">
 <h2 class="anchored" data-anchor-id="the-autograder">The Autograder</h2>
+<p>Download the latest version of the autograder from the <a href="https://github.com/Estia-advanced-programming/autograder/tree/trunk">GitHub repository</a> - Current doc is for version 2.1.0</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> test/autograder.py <span class="dt">\</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">-t</span> <span class="op">&lt;</span>path_test_suite<span class="op">&gt;</span> <span class="dt">\</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-m</span> <span class="op">&lt;</span>path_manifest<span class="op">&gt;</span> <span class="dt">\</span></span>
@@ -512,12 +514,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="typical-usage">Typical Usage</h3>
 <p>Run your test suite against your own jar:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> test/autograder.py <span class="at">-t</span> test/testSuite.json <span class="at">-m</span> manifest.json target/pandora.jar</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Run your test suite against another team’s jar:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> test/autograder.py <span class="at">-t</span> test/testSuite.json <span class="at">-m</span> path/to/their/manifest.json path/to/their/pandora.jar</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Save a Markdown report:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> test/autograder.py <span class="at">-t</span> test/testSuite.json <span class="at">-m</span> manifest.json <span class="at">-f</span> md <span class="at">-o</span> results.md target/pandora.jar</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> test/autograder.py <span class="at">-t</span> test/testSuite.json <span class="at">-m</span> manifest.json <span class="at">-f</span> md <span class="at">-o</span> results.md target/pandora.jar</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Run with code coverage:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> test/autograder.py <span class="at">-t</span> test/testSuite.json <span class="at">-m</span> manifest.json <span class="at">-j</span> ~/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar target/pandora.jar</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> test/autograder.py <span class="at">-t</span> test/testSuite.json <span class="at">-m</span> manifest.json <span class="at">-j</span> ~/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar target/pandora.jar</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The script prints a summary grouped by milestone. A passing test is shown in green; a failing test shows the expected vs.&nbsp;actual diff.</p>
 <hr>
 </section>
@@ -527,25 +527,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>You are required to produce Black Box Integration Tests for every feature you implement</strong> by filling <code>test/testSuite.json</code> and placing the corresponding flight record files in <code>test/resources/</code>.</p>
 <section id="file-format" class="level3">
 <h3 class="anchored" data-anchor-id="file-format">File Format</h3>
-<p><code>test/testSuite.json</code> is a JSON array of test descriptions:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"feature"</span><span class="fu">:</span> <span class="st">"maxAlt"</span><span class="fu">,</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"milestone"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"feature"</span><span class="fu">,</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"file"</span><span class="fu">:</span> <span class="st">"test/resources/0_201_MiG-23MLD.frd"</span><span class="fu">,</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"result"</span><span class="fu">:</span> <span class="st">"14321.00"</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">2</span><span class="fu">,</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"feature"</span><span class="fu">:</span> <span class="st">"maxAlt"</span><span class="fu">,</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"milestone"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"full"</span><span class="fu">,</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"file"</span><span class="fu">:</span> <span class="st">"test/resources/0_201_MiG-23MLD.frd"</span><span class="fu">,</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"result"</span><span class="fu">:</span> <span class="st">"14321.00"</span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>test/testSuite.json</code> is a JSON array of test descriptions. There are three kinds of tests: <strong>feature tests</strong>, <strong>metadata tests</strong>, and <strong>multi-file tests</strong>.</p>
 </section>
 <section id="fields" class="level3">
 <h3 class="anchored" data-anchor-id="fields">Fields</h3>
@@ -554,6 +536,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Field</th>
 <th>Type</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -561,38 +544,136 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><code>id</code></td>
 <td>number</td>
+<td>yes</td>
 <td>Unique integer within the suite</td>
 </tr>
 <tr class="even">
-<td><code>feature</code></td>
-<td>string</td>
-<td>Exact value passed to <code>-o</code> (e.g.&nbsp;<code>maxAlt</code>, <code>flightDuration</code>) — must match the <a href="../../Pandora/Features.html">Features</a> table</td>
-</tr>
-<tr class="odd">
 <td><code>milestone</code></td>
 <td>number</td>
+<td>yes</td>
 <td>Milestone number, used for grouping output</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>mode</code></td>
 <td><code>"feature"</code> | <code>"full"</code></td>
-<td><code>feature</code>: run with <code>-o &lt;feature&gt;</code>; <code>full</code>: generate the full report and parse it for the expected value</td>
+<td>yes</td>
+<td><code>feature</code>: run with the appropriate CLI flags; <code>full</code>: generate the full report and parse it for the expected value</td>
+</tr>
+<tr class="even">
+<td><code>result</code></td>
+<td>string | number</td>
+<td>yes</td>
+<td>Expected output — the autograder does a <strong>strict string comparison</strong></td>
+</tr>
+<tr class="odd">
+<td><code>feature</code></td>
+<td>string</td>
+<td>conditional</td>
+<td>Exact value passed to <code>-o</code> (e.g.&nbsp;<code>maxAlt</code>, <code>maxAccelG</code>, <code>filenames</code>) — must match the <a href="../../Pandora/Features.html">Features</a> table. <strong>Required</strong> unless <code>metadata</code> is used</td>
+</tr>
+<tr class="even">
+<td><code>metadata</code></td>
+<td>string</td>
+<td>conditional</td>
+<td>Metadata key to query via <code>-m</code> (e.g.&nbsp;<code>flight_id</code>, <code>flight_code</code>, <code>origin</code>, <code>date</code>, <code>from</code>, <code>to</code>, <code>motor(s)</code>, <code>mass_aircraft</code>, <code>mass_fuel</code>, <code>lift_coef</code>, <code>drag_coef</code>). <strong>Required</strong> for metadata tests</td>
 </tr>
 <tr class="odd">
 <td><code>file</code></td>
 <td>string</td>
-<td>Path to the flight record, <strong>relative to the project root</strong> (e.g.&nbsp;<code>test/resources/my_flight.frd</code>)</td>
+<td>conditional</td>
+<td>Path to a single flight record, <strong>relative to the project root</strong>. Use this for single-file tests</td>
 </tr>
 <tr class="even">
-<td><code>result</code></td>
-<td>string</td>
-<td>Expected output — the autograder does a <strong>strict string comparison</strong></td>
+<td><code>files</code></td>
+<td>string[]</td>
+<td>conditional</td>
+<td>Array of paths to multiple flight records. Use this instead of <code>file</code> when the test requires more than one input file</td>
 </tr>
 </tbody>
 </table>
 <blockquote class="blockquote">
+<p>You must provide either <code>file</code> (single file) or <code>files</code> (multiple files), but not both.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>You must provide either <code>feature</code> or <code>metadata</code>, but not both.</p>
+</blockquote>
+<blockquote class="blockquote">
 <p>Follow the <a href="../../Pandora/Constants.html">output format rules</a> precisely — decimal separator, number of digits, and units must all match exactly.</p>
 </blockquote>
+</section>
+<section id="examples" class="level3">
+<h3 class="anchored" data-anchor-id="examples">Examples</h3>
+<section id="feature-test-single-file-feature-mode" class="level4">
+<h4 class="anchored" data-anchor-id="feature-test-single-file-feature-mode">Feature test (single file, feature mode)</h4>
+<p>Tests a specific feature on one flight record using <code>-o &lt;feature&gt;</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">1000536</span><span class="fu">,</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"milestone"</span><span class="fu">:</span> <span class="dv">3</span><span class="fu">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"feature"</span><span class="fu">,</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"feature"</span><span class="fu">:</span> <span class="st">"maxAccelG"</span><span class="fu">,</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"file"</span><span class="fu">:</span> <span class="st">"./test/testsFiles/mono/0_501_Tu-142.frd"</span><span class="fu">,</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"result"</span><span class="fu">:</span> <span class="fl">2.41</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="feature-test-single-file-full-mode" class="level4">
+<h4 class="anchored" data-anchor-id="feature-test-single-file-full-mode">Feature test (single file, full mode)</h4>
+<p>Runs the full report and checks that the feature value matches:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">1000535</span><span class="fu">,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"milestone"</span><span class="fu">:</span> <span class="dv">3</span><span class="fu">,</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"full"</span><span class="fu">,</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"feature"</span><span class="fu">:</span> <span class="st">"maxAccelG"</span><span class="fu">,</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"file"</span><span class="fu">:</span> <span class="st">"./test/testsFiles/mono/0_501_Tu-142.frd"</span><span class="fu">,</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"result"</span><span class="fu">:</span> <span class="fl">2.41</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="parameter-tests" class="level4">
+<h4 class="anchored" data-anchor-id="parameter-tests">Parameter tests</h4>
+<p>run the full report and check that a parameter value matches:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">1002001</span><span class="fu">,</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"milestone"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"full"</span><span class="fu">,</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"parameter"</span><span class="fu">:</span> <span class="st">"number"</span><span class="fu">,</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"file"</span><span class="fu">:</span> <span class="st">"./test/testsFiles/mono/0_201_MiG-23MLD.frd"</span><span class="fu">,</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"result"</span><span class="fu">:</span> <span class="dv">1463</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="metadata-test" class="level4">
+<h4 class="anchored" data-anchor-id="metadata-test">Metadata test</h4>
+<p>Queries a metadata field from a single flight record using <code>-m &lt;key&gt;</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">1001001</span><span class="fu">,</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"milestone"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"feature"</span><span class="fu">,</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"metadata"</span><span class="fu">:</span> <span class="st">"flight_id"</span><span class="fu">,</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"file"</span><span class="fu">:</span> <span class="st">"./test/testsFiles/mono/0_201_MiG-23MLD.frd"</span><span class="fu">,</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"result"</span><span class="fu">:</span> <span class="st">"201"</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">1001010</span><span class="fu">,</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"milestone"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"feature"</span><span class="fu">,</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"metadata"</span><span class="fu">:</span> <span class="st">"lift_coef"</span><span class="fu">,</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"file"</span><span class="fu">:</span> <span class="st">"./test/testsFiles/mono/0_201_MiG-23MLD.frd"</span><span class="fu">,</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"result"</span><span class="fu">:</span> <span class="st">"1.9060340730520209"</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="multi-file-test" class="level4">
+<h4 class="anchored" data-anchor-id="multi-file-test">Multi-file test</h4>
+<p>Tests a feature that takes multiple input files (using <code>files</code> instead of <code>file</code>):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">1003001</span><span class="fu">,</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"milestone"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"feature"</span><span class="fu">,</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"feature"</span><span class="fu">:</span> <span class="st">"filenames"</span><span class="fu">,</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"files"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./test/testsFiles/mono/0_201_MiG-23MLD.frd"</span><span class="ot">,</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./test/testsFiles/US/0_601_F-14A.frd"</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"result"</span><span class="fu">:</span> <span class="st">"0_201_MiG-23MLD.frd</span><span class="ch">\n</span><span class="st">0_601_F-14A.frd"</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
 </section>
 <section id="what-makes-a-good-testsuite" class="level3">
 <h3 class="anchored" data-anchor-id="what-makes-a-good-testsuite">What Makes a Good TestSuite</h3>
