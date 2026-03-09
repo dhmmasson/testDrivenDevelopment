@@ -415,6 +415,7 @@ An error should start with: “ERROR”, followed by the name of the error, a mi
 ERROR: INCOMPLETE_HEADER - file1.xyz=[date,origin] file2.xyz=[flight id]
 </p>
 <p>**</p>
+<p>the error should be printed ont the standard error stream (stderr) and the program should exit with a non-zero exit code.</p>
 <p><strong><ins>Important</ins></strong>: In case of multiple files and multiple parameters, the output is organized <code>alphabetically</code>.</p>
 <p><a id="list-of-potential-errors"></a></p>
 <section id="list-of-potential-errors" class="level2">
@@ -470,21 +471,21 @@ ERROR: INCOMPLETE_HEADER - file1.xyz=[date,origin] file2.xyz=[flight id]
 <td>A file given as an input is not found</td>
 <td>MISSING_FILE</td>
 <td>the file name(s)</td>
-<td>ERROR: MISSING_FILE - file1 file2 file3</td>
+<td>ERROR: MISSING_FILE - file1</td>
 </tr>
 <tr class="even">
 <td>Encoding problem</td>
 <td>The content of a file has encoding problems (ascii, utf-8, etc)</td>
 <td>ENCODING</td>
 <td>the file name(s)</td>
-<td>ERROR: ENCODING - file1 file2 file3</td>
+<td>ERROR: ENCODING - file1</td>
 </tr>
 <tr class="odd">
 <td>Corrupted file</td>
 <td>The file cannot be open because of incorrect binary data</td>
 <td>CORRUPTED</td>
 <td>the file name(s)</td>
-<td>ERROR: CORRUPTED - file1 file2 file3</td>
+<td>ERROR: CORRUPTED - file1</td>
 </tr>
 <tr class="even">
 <td>Missing header</td>
@@ -512,14 +513,14 @@ ERROR: INCOMPLETE_HEADER - file1.xyz=[date,origin] file2.xyz=[flight id]
 <td>The log file does not contain the column names</td>
 <td>MISSING_COLNAMES</td>
 <td>the file name(s)</td>
-<td>ERROR: MISSING_COLNAMES - file1 file2 file3</td>
+<td>ERROR: MISSING_COLNAMES - file1</td>
 </tr>
 <tr class="even">
 <td>Incorrect timestamp ordering</td>
 <td>The log file is not presenting data lines in a timely ordered way</td>
 <td>ORDERING</td>
 <td>The file name(s)</td>
-<td>ERROR: ORDERING - file1 file2 file3</td>
+<td>ERROR: ORDERING - file1</td>
 </tr>
 </tbody>
 </table>
