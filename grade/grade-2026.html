@@ -395,9 +395,15 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#class-grader-report" id="toc-class-grader-report" class="nav-link active" data-scroll-target="#class-grader-report">Class Grader Report</a>
   <ul class="collapse">
+  <li><a href="#legend" id="toc-legend" class="nav-link" data-scroll-target="#legend">Legend</a></li>
   <li><a href="#teacher-evaluation-teacher-tests-student-pandoras" id="toc-teacher-evaluation-teacher-tests-student-pandoras" class="nav-link" data-scroll-target="#teacher-evaluation-teacher-tests-student-pandoras">Teacher Evaluation (Teacher Tests → Student Pandoras)</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
   <li><a href="#test-suite-validation-student-tests-teacher-pandora" id="toc-test-suite-validation-student-tests-teacher-pandora" class="nav-link" data-scroll-target="#test-suite-validation-student-tests-teacher-pandora">Test Suite Validation (Student Tests → Teacher Pandora)</a></li>
   <li><a href="#class-summary" id="toc-class-summary" class="nav-link" data-scroll-target="#class-summary">Class Summary</a></li>
+  </ul></li>
+  <li><a href="#class-grader-report-1" id="toc-class-grader-report-1" class="nav-link" data-scroll-target="#class-grader-report-1">Class Grader Report</a>
+  <ul class="collapse">
+  <li><a href="#class-summary-1" id="toc-class-summary-1" class="nav-link" data-scroll-target="#class-summary-1">Class Summary</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -427,8 +433,53 @@ table thead th:first-child {
     text-align: left;
 }
 </style>
+<section id="legend" class="level2">
+<h2 class="anchored" data-anchor-id="legend">Legend</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 31%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Badge</th>
+<th>Meaning</th>
+<th>Score range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>🟢</td>
+<td><strong>Validated</strong> — the feature/test passes</td>
+<td>score ≥ 0.9</td>
+</tr>
+<tr class="even">
+<td>🟡</td>
+<td><strong>Almost</strong> — close but not passing</td>
+<td>0.5 ≤ score &lt; 0.9</td>
+</tr>
+<tr class="odd">
+<td>🔴</td>
+<td><strong>Missed</strong> — the feature was attempted but the output is wrong</td>
+<td>score &lt; 0.5</td>
+</tr>
+<tr class="even">
+<td>⚪️</td>
+<td><strong>Not implemented / not declared</strong> — the feature is not listed in the team’s manifest or was not found in the output</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="teacher-evaluation-teacher-tests-student-pandoras" class="level2">
 <h2 class="anchored" data-anchor-id="teacher-evaluation-teacher-tests-student-pandoras">Teacher Evaluation (Teacher Tests → Student Pandoras)</h2>
+<p><strong>Goal</strong>: measure how well each team’s Pandora implements the expected features.</p>
+<p>The teacher’s test suite (<code>partialEvaluation.json</code>, <strong>1423 tests</strong> covering <strong>82 features</strong>) is run against each team’s JAR. For every feature, the autograder compares the student’s output to the expected value with a numeric tolerance. The per-feature score is the average across all tests for that feature (1.0 = perfect match, 0.0 = completely wrong or missing).</p>
+<p>Only features declared in the team’s <code>manifest.json</code> are evaluated; undeclared features appear as ⚪️.</p>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 4%">
@@ -533,7 +584,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>⚪️</td>
 <td>🔴</td>
-<td>⚪️</td>
+<td>🔴</td>
 <td>⚪️</td>
 <td>🔴</td>
 <td>⚪️</td>
@@ -884,7 +935,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>🔴</td>
 <td>🟡</td>
-<td>⚪️</td>
+<td>🔴</td>
 <td>🟢</td>
 <td>🔴</td>
 <td>🔴</td>
@@ -1040,7 +1091,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>🟡</td>
 <td>🟢</td>
-<td>⚪️</td>
+<td>🟢</td>
 <td>🟢</td>
 <td>🟢</td>
 <td>🔴</td>
@@ -1079,7 +1130,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>🟡</td>
 <td>🟡</td>
-<td>⚪️</td>
+<td>🟢</td>
 <td>🟡</td>
 <td>🟢</td>
 <td>🔴</td>
@@ -1118,7 +1169,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>⚪️</td>
 <td>🟡</td>
-<td>⚪️</td>
+<td>🔴</td>
 <td>🟡</td>
 <td>🟡</td>
 <td>⚪️</td>
@@ -1157,7 +1208,7 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>🟡</td>
 <td>🟡</td>
-<td>⚪️</td>
+<td>🟢</td>
 <td>🟢</td>
 <td>🟢</td>
 <td>🔴</td>
@@ -1664,7 +1715,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>⚪️</td>
 <td>🟢</td>
-<td>🟡</td>
+<td>🟢</td>
 <td>🟡</td>
 <td>🟢</td>
 <td>⚪️</td>
@@ -2015,7 +2066,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>⚪️</td>
 <td>🔴</td>
-<td>⚪️</td>
+<td>🔴</td>
 <td>⚪️</td>
 <td>🔴</td>
 <td>⚪️</td>
@@ -2366,7 +2417,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>🔴</td>
 <td>🟡</td>
-<td>⚪️</td>
+<td>🔴</td>
 <td>🟢</td>
 <td>🔴</td>
 <td>🔴</td>
@@ -2522,7 +2573,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>⚪️</td>
 <td>🟢</td>
-<td>⚪️</td>
+<td>🟢</td>
 <td>🟢</td>
 <td>🟢</td>
 <td>🔴</td>
@@ -2561,7 +2612,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>⚪️</td>
 <td>🟡</td>
-<td>⚪️</td>
+<td>🟢</td>
 <td>🟡</td>
 <td>🟢</td>
 <td>🔴</td>
@@ -2600,7 +2651,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>⚪️</td>
 <td>🟡</td>
-<td>⚪️</td>
+<td>🔴</td>
 <td>🟡</td>
 <td>🟡</td>
 <td>⚪️</td>
@@ -2639,7 +2690,7 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>🟡</td>
-<td>⚪️</td>
+<td>🟢</td>
 <td>🟢</td>
 <td>🟢</td>
 <td>🔴</td>
@@ -2678,7 +2729,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>🟡</td>
 <td>🟢</td>
-<td>⚪️</td>
+<td>🟡</td>
 <td>🟢</td>
 <td>🟡</td>
 <td>🔴</td>
@@ -2717,7 +2768,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>🟡</td>
 <td>🟢</td>
-<td>⚪️</td>
+<td>🟡</td>
 <td>🟢</td>
 <td>🟡</td>
 <td>🔴</td>
@@ -2834,7 +2885,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>⚪️</td>
 <td>🟢</td>
-<td>⚪️</td>
+<td>🟢</td>
 <td>🟢</td>
 <td>🔴</td>
 <td>🔴</td>
@@ -2873,7 +2924,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>⚪️</td>
 <td>🟡</td>
-<td>⚪️</td>
+<td>🟢</td>
 <td>🟡</td>
 <td>🟢</td>
 <td>🔴</td>
@@ -2912,7 +2963,7 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>🟡</td>
-<td>⚪️</td>
+<td>🟢</td>
 <td>🟢</td>
 <td>🟢</td>
 <td>🔴</td>
@@ -2951,7 +3002,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>🟡</td>
 <td>🟢</td>
-<td>⚪️</td>
+<td>🟡</td>
 <td>🟢</td>
 <td>🟡</td>
 <td>🔴</td>
@@ -2990,7 +3041,7 @@ table thead th:first-child {
 <td>🔴</td>
 <td>🟡</td>
 <td>🟢</td>
-<td>⚪️</td>
+<td>🟡</td>
 <td>🟢</td>
 <td>🟡</td>
 <td>🔴</td>
@@ -6999,6 +7050,407 @@ table thead th:first-child {
 </section>
 <section id="class-summary" class="level2">
 <h2 class="anchored" data-anchor-id="class-summary">Class Summary</h2>
+<p>One row per team. The <strong>Features</strong> and <strong>Tests</strong> columns show how many items fall in each category: 🟢 validated · 🟡 almost · 🔴 missed · ⚪ not implemented.</p>
+<ul>
+<li><strong>Teacher Score</strong>: average across all evaluated tests from the teacher suite.</li>
+<li><strong>Features (🟢/🟡/🔴/⚪)</strong>: per-feature tally after aggregating test scores.</li>
+<li><strong>Tests (🟢/🟡/🔴/⚪)</strong>: per-individual-test tally.</li>
+<li><strong>Test Quality (F1)</strong>: F1 score from cross-testing (0 when cross_testing phase is disabled).</li>
+<li><strong>Valid Tests</strong>: how many of the team’s own tests pass against the reference / total tests.</li>
+<li><strong>Removed</strong>: tests dropped before evaluation (missing files, non-whitelisted features).</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 8%">
+<col style="width: 14%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 17%">
+<col style="width: 12%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Team</th>
+<th>Version</th>
+<th>Teacher Score</th>
+<th>Features (🟢/🟡/🔴/⚪)</th>
+<th>Tests (🟢/🟡/🔴/⚪)</th>
+<th>Test Quality (F1)</th>
+<th>Valid Tests</th>
+<th>Removed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>adjectives_wolves 2026</td>
+<td>2.0.0</td>
+<td>0.44</td>
+<td>🟢1 🟡0 🔴3 ⚪83</td>
+<td>🟢105 🟡0 🔴27 ⚪1291</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>awesome_teachers 2026</td>
+<td>?</td>
+<td>0.00</td>
+<td></td>
+<td></td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>blue_victors 2026</td>
+<td>1.1.0</td>
+<td>0.38</td>
+<td>🟢0 🟡0 🔴30 ⚪57</td>
+<td>🟢349 🟡2 🔴49 ⚪1023</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>celestial_treasures 2026</td>
+<td>1.0.4</td>
+<td>0.38</td>
+<td>🟢0 🟡0 🔴2 ⚪85</td>
+<td>🟢72 🟡0 🔴46 ⚪1305</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>coarse_tractors 2026</td>
+<td>3.0.1</td>
+<td>0.24</td>
+<td>🟢1 🟡0 🔴29 ⚪57</td>
+<td>🟢229 🟡0 🔴168 ⚪1026</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>cool_aspects 2026</td>
+<td>2.7.0</td>
+<td>0.37</td>
+<td>🟢0 🟡0 🔴2 ⚪85</td>
+<td>🟢72 🟡0 🔴36 ⚪1315</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>creative_symbols 2026</td>
+<td>3.0.0</td>
+<td>0.65</td>
+<td>🟢1 🟡0 🔴9 ⚪77</td>
+<td>🟢166 🟡0 🔴89 ⚪1168</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>crimson_sunsets 2026</td>
+<td>2.2.0</td>
+<td>0.72</td>
+<td>🟢11 🟡2 🔴13 ⚪61</td>
+<td>🟢539 🟡4 🔴124 ⚪756</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>dynamic_springs 2026</td>
+<td>2.0.2</td>
+<td>0.30</td>
+<td>🟢0 🟡0 🔴12 ⚪75</td>
+<td>🟢124 🟡0 🔴118 ⚪1181</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>empathetic_spectacles 2026</td>
+<td>1.1.10</td>
+<td>0.45</td>
+<td>🟢0 🟡0 🔴24 ⚪63</td>
+<td>🟢335 🟡0 🔴72 ⚪1016</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>energetic_spaceships 2026</td>
+<td>1.32.0</td>
+<td>0.48</td>
+<td>🟢1 🟡0 🔴23 ⚪63</td>
+<td>🟢344 🟡0 🔴63 ⚪1016</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>enlightened_solitudes 2026</td>
+<td>1.1.0</td>
+<td>0.32</td>
+<td>🟢0 🟡0 🔴8 ⚪79</td>
+<td>🟢66 🟡0 🔴58 ⚪1299</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>ethereal_skylines 2026</td>
+<td>1.0.1</td>
+<td>0.00</td>
+<td>🟢0 🟡0 🔴4 ⚪83</td>
+<td>🟢0 🟡0 🔴76 ⚪1347</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>gold_sapphires 2026</td>
+<td>1.0.1</td>
+<td>0.00</td>
+<td>🟢0 🟡0 🔴0 ⚪87</td>
+<td>🟢0 🟡0 🔴0 ⚪1423</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>golden_rubies 2026</td>
+<td>1.0.1</td>
+<td>0.00</td>
+<td>🟢0 🟡0 🔴0 ⚪87</td>
+<td>🟢0 🟡0 🔴0 ⚪1423</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>gracious_rollercoasters 2026</td>
+<td>1.0.1</td>
+<td>0.00</td>
+<td>🟢0 🟡0 🔴0 ⚪87</td>
+<td>🟢0 🟡0 🔴0 ⚪1423</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>grateful_rhinos 2026</td>
+<td>1.25.6</td>
+<td>0.53</td>
+<td>🟢4 🟡1 🔴13 ⚪69</td>
+<td>🟢298 🟡6 🔴194 ⚪925</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>invincible_penguins 2026</td>
+<td>1.30.0</td>
+<td>0.00</td>
+<td>🟢0 🟡0 🔴25 ⚪62</td>
+<td>🟢0 🟡0 🔴403 ⚪1020</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>light_nouns 2026</td>
+<td>1.2.1</td>
+<td>0.36</td>
+<td>🟢0 🟡0 🔴17 ⚪70</td>
+<td>🟢208 🟡0 🔴108 ⚪1107</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>lustrous_novelties 2026</td>
+<td>1.6.1</td>
+<td>0.77</td>
+<td>🟢14 🟡2 🔴19 ⚪52</td>
+<td>🟢519 🟡6 🔴180 ⚪718</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>opulent_motorcycles 2026</td>
+<td>1.6.0</td>
+<td>0.64</td>
+<td>🟢11 🟡0 🔴17 ⚪59</td>
+<td>🟢508 🟡2 🔴149 ⚪764</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>persistent_lagoons 2026</td>
+<td>2.0.0</td>
+<td>0.88</td>
+<td>🟢16 🟡1 🔴9 ⚪61</td>
+<td>🟢513 🟡3 🔴73 ⚪834</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>polished_jaguars 2026</td>
+<td>2.0.1</td>
+<td>0.41</td>
+<td>🟢10 🟡0 🔴52 ⚪25</td>
+<td>🟢475 🟡10 🔴578 ⚪360</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>purple_infinity 2026</td>
+<td>2.0.0</td>
+<td>0.29</td>
+<td>🟢1 🟡0 🔴22 ⚪64</td>
+<td>🟢202 🟡0 🔴186 ⚪1035</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>radiant_illuminations 2026</td>
+<td>1.3.0</td>
+<td>0.36</td>
+<td>🟢0 🟡0 🔴3 ⚪84</td>
+<td>🟢24 🟡0 🔴12 ⚪1387</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>red_helicopters 2026</td>
+<td>1.0.1</td>
+<td>0.41</td>
+<td>🟢0 🟡0 🔴30 ⚪57</td>
+<td>🟢386 🟡2 🔴66 ⚪969</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>silken_foxes 2026</td>
+<td>1.6.0</td>
+<td>0.33</td>
+<td>🟢0 🟡0 🔴10 ⚪77</td>
+<td>🟢118 🟡0 🔴117 ⚪1188</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>silky_flutes 2026</td>
+<td>1.0.0</td>
+<td>0.64</td>
+<td>🟢10 🟡1 🔴11 ⚪65</td>
+<td>🟢406 🟡0 🔴136 ⚪881</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>smiling_anvils 2026</td>
+<td>1.0.1</td>
+<td>0.40</td>
+<td>🟢0 🟡0 🔴29 ⚪58</td>
+<td>🟢284 🟡1 🔴70 ⚪1068</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>smooth_fantasies 2026</td>
+<td>2.0.0</td>
+<td>0.03</td>
+<td>🟢0 🟡0 🔴4 ⚪83</td>
+<td>🟢6 🟡0 🔴126 ⚪1291</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>soft_explorers 2026</td>
+<td>2.4.0</td>
+<td>0.24</td>
+<td>🟢0 🟡0 🔴3 ⚪84</td>
+<td>🟢60 🟡0 🔴63 ⚪1300</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>spirited_essences 2026</td>
+<td>2.0.0</td>
+<td>0.39</td>
+<td>🟢0 🟡0 🔴8 ⚪79</td>
+<td>🟢131 🟡0 🔴52 ⚪1240</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>tranquil_eclipses 2026</td>
+<td>1.2.0</td>
+<td>0.41</td>
+<td>🟢0 🟡0 🔴4 ⚪83</td>
+<td>🟢103 🟡0 🔴32 ⚪1288</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>unified_diamonds 2026</td>
+<td>2.0.1</td>
+<td>0.15</td>
+<td>🟢0 🟡0 🔴28 ⚪59</td>
+<td>🟢113 🟡16 🔴279 ⚪1015</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>vibrant_constellations 2026</td>
+<td>2.0.0</td>
+<td>0.57</td>
+<td>🟢10 🟡2 🔴24 ⚪51</td>
+<td>🟢484 🟡1 🔴318 ⚪620</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>white_cheetahs 2026</td>
+<td>2.1.0</td>
+<td>0.49</td>
+<td>🟢1 🟡0 🔴24 ⚪62</td>
+<td>🟢361 🟡0 🔴56 ⚪1006</td>
+<td>0.00</td>
+<td>0/0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="class-grader-report-1" class="level1">
+<h1>Class Grader Report</h1>
+<section id="class-summary-1" class="level2">
+<h2 class="anchored" data-anchor-id="class-summary-1">Class Summary</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 7%">
