@@ -478,13 +478,14 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -493,13 +494,15 @@ ul.task-list li input[type="checkbox"] {
 <th>Input</th>
 <th>Description</th>
 <th>Output</th>
-<th>Unit</th>
+<th>Metric Unit</th>
+<th>Imperial Unit</th>
 <th>Version</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><strong>Single Flight Computations</strong></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -514,6 +517,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the starting time of the flight</td>
 <td>time</td>
 <td>HH:mm:ss</td>
+<td>HH:mm:ss</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -524,6 +528,7 @@ ul.task-list li input[type="checkbox"] {
 <td>file1, file2, …</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>Average Altitude</td>
@@ -532,6 +537,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average altitude during the flight</td>
 <td>altitude</td>
 <td>m</td>
+<td>ft</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -541,6 +547,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the maximum altitude during the flight</td>
 <td>altitude</td>
 <td>m</td>
+<td>ft</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -550,6 +557,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average air speed during the flight</td>
 <td>speed</td>
 <td>m/s</td>
+<td>mph</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -559,6 +567,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the maximum air speed during the flight</td>
 <td>speed</td>
 <td>m/s</td>
+<td>mph</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -568,6 +577,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average total engine power during the flight</td>
 <td>power</td>
 <td>W</td>
+<td>hp</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -577,6 +587,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the maximum total engine power during the flight</td>
 <td>power</td>
 <td>W</td>
+<td>hp</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -586,6 +597,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average temperature in the cockpit during the flight</td>
 <td>temperature</td>
 <td>℃</td>
+<td>°F</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -595,6 +607,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the minimum temperature in the cockpit during the flight</td>
 <td>temperature</td>
 <td>℃</td>
+<td>°F</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -604,6 +617,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the maximum temperature in the cockpit during the flight</td>
 <td>temperature</td>
 <td>℃</td>
+<td>°F</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -613,6 +627,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average pressure in the cockpit during the flight</td>
 <td>pressure</td>
 <td>Pa</td>
+<td>psi</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -622,6 +637,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the maximum pressure in the cockpit during the flight</td>
 <td>pressure</td>
 <td>Pa</td>
+<td>psi</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -631,6 +647,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the minimum pressure in the cockpit during the flight</td>
 <td>pressure</td>
 <td>Pa</td>
+<td>psi</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -639,6 +656,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a flight record file</td>
 <td>the average relative humidity in the cockpit during the flight</td>
 <td>humidity</td>
+<td>%</td>
 <td>%</td>
 <td></td>
 </tr>
@@ -649,6 +667,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the maximum relative humidity in the cockpit during the flight</td>
 <td>humidity</td>
 <td>%</td>
+<td>%</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -657,6 +676,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a flight record file</td>
 <td>the minimum relative humidity in the cockpit during the flight</td>
 <td>humidity</td>
+<td>%</td>
 <td>%</td>
 <td></td>
 </tr>
@@ -667,6 +687,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average pilot’s heart rate during the flight</td>
 <td>heart rate</td>
 <td>bpm</td>
+<td>bpm</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -675,6 +696,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a flight record file</td>
 <td>the maximum pilot’s heart rate during the flight</td>
 <td>heart rate</td>
+<td>bpm</td>
 <td>bpm</td>
 <td></td>
 </tr>
@@ -685,6 +707,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the minimum pilot’s heart rate during the flight</td>
 <td>heart rate</td>
 <td>bpm</td>
+<td>bpm</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -693,6 +716,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a flight record file</td>
 <td>the average oxygen concentration delivered by the pilot’s mask during the flight</td>
 <td>concentration</td>
+<td>%</td>
 <td>%</td>
 <td></td>
 </tr>
@@ -703,6 +727,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the minimum oxygen concentration delivered by the pilot’s mask during the flight</td>
 <td>concentration</td>
 <td>%</td>
+<td>%</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -711,6 +736,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a flight record file</td>
 <td>the maximum oxygen concentration delivered by the pilot’s mask during the flight</td>
 <td>concentration</td>
+<td>%</td>
 <td>%</td>
 <td></td>
 </tr>
@@ -722,6 +748,7 @@ ul.task-list li input[type="checkbox"] {
 <td>HH:mm:ss</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>Flight Distance</td>
@@ -730,6 +757,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the total flight distance</td>
 <td>distance</td>
 <td>m</td>
+<td>miles</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -739,6 +767,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average acceleration during the flight</td>
 <td>acceleration</td>
 <td>m/s²</td>
+<td>ft/s²</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -748,6 +777,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the maximum acceleration during the flight</td>
 <td>acceleration</td>
 <td>m/s²</td>
+<td>ft/s²</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -757,6 +787,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average wind speed during the flight</td>
 <td>speed</td>
 <td>m/s</td>
+<td>mph</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -765,6 +796,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a flight record file</td>
 <td>the average speed in Mach during the flight</td>
 <td>Mach</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -776,6 +808,7 @@ ul.task-list li input[type="checkbox"] {
 <td>Mach</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>Max Acceleration in G</td>
@@ -783,6 +816,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a flight record file</td>
 <td>the maximum acceleration during the flight</td>
 <td>acceleration</td>
+<td>G</td>
 <td>G</td>
 <td></td>
 </tr>
@@ -793,6 +827,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the time to reach 80% of maximum altitude during the flight</td>
 <td>time / max_altitude</td>
 <td>min / m</td>
+<td>min / ft</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -801,7 +836,8 @@ ul.task-list li input[type="checkbox"] {
 <td>a flight record file</td>
 <td>the time to arrive at 80% of total flight distance</td>
 <td>time / total_distance</td>
-<td>min / km</td>
+<td>min / m</td>
+<td>min / miles</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -811,6 +847,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the altitude with the fastest wind outside the aircraft over a 5 min window</td>
 <td>altitude: avg_5min_wind_speed</td>
 <td>m: m/s</td>
+<td>ft: mph</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -820,6 +857,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the altitude at which the jet had its fastest speed over a 5 min window</td>
 <td>altitude: avg_5min_jet_speed</td>
 <td>m: m/s</td>
+<td>ft: mph</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -829,6 +867,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average noise in the temperature data assuming a reference temperature of 25℃</td>
 <td>noise_value</td>
 <td>℃</td>
+<td>°F (delta)</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -837,6 +876,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a flight record file</td>
 <td>whether the pilot had a stress attack</td>
 <td>y/n</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -848,9 +888,11 @@ ul.task-list li input[type="checkbox"] {
 <td>phase_name</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td><strong>Flight Phases</strong></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -866,6 +908,7 @@ ul.task-list li input[type="checkbox"] {
 <td>start=HH:mm:ss / end=HH:mm:ss</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>Cruise Phase Detection</td>
@@ -873,6 +916,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a flight record file</td>
 <td>the start and end time of the cruise phase</td>
 <td>start=HH:mm:ss / end=HH:mm:ss</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -884,6 +928,7 @@ ul.task-list li input[type="checkbox"] {
 <td>start=HH:mm:ss / end=HH:mm:ss</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>Ratio Distance</td>
@@ -891,6 +936,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a flight record file</td>
 <td>the ratio between the distance actually flown and the point-to-point distance between take off and landing</td>
 <td>ratio</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -901,6 +947,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average air speed during the take off phase</td>
 <td>speed</td>
 <td>m/s</td>
+<td>mph</td>
 <td>Deprecated in v2 — use <code>--phase takeOff</code> with <code>-o avgAirSpeed</code></td>
 </tr>
 <tr class="even">
@@ -910,6 +957,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the maximum air speed during the take off phase</td>
 <td>speed</td>
 <td>m/s</td>
+<td>mph</td>
 <td>Deprecated in v2 — use <code>--phase takeOff</code> with <code>-o maxAirSpeed</code></td>
 </tr>
 <tr class="odd">
@@ -919,6 +967,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average total engine power during the take off phase</td>
 <td>power</td>
 <td>W</td>
+<td>hp</td>
 <td>Deprecated in v2 — use <code>--phase takeOff</code> with <code>-o avgEnginePower</code></td>
 </tr>
 <tr class="even">
@@ -928,6 +977,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the maximum total engine power during the take off phase</td>
 <td>power</td>
 <td>W</td>
+<td>hp</td>
 <td>Deprecated in v2 — use <code>--phase takeOff</code> with <code>-o maxEnginePower</code></td>
 </tr>
 <tr class="odd">
@@ -937,6 +987,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average air speed during the cruise phase</td>
 <td>speed</td>
 <td>m/s</td>
+<td>mph</td>
 <td>Deprecated in v2 — use <code>--phase Cruise</code> with <code>-o avgAirSpeed</code></td>
 </tr>
 <tr class="even">
@@ -946,6 +997,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the maximum air speed during the cruise phase</td>
 <td>speed</td>
 <td>m/s</td>
+<td>mph</td>
 <td>Deprecated in v2 — use <code>--phase Cruise</code> with <code>-o maxAirSpeed</code></td>
 </tr>
 <tr class="odd">
@@ -955,6 +1007,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average total engine power during the cruise phase</td>
 <td>power</td>
 <td>W</td>
+<td>hp</td>
 <td>Deprecated in v2 — use <code>--phase Cruise</code> with <code>-o avgEnginePower</code></td>
 </tr>
 <tr class="even">
@@ -964,6 +1017,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the maximum total engine power during the cruise phase</td>
 <td>power</td>
 <td>W</td>
+<td>hp</td>
 <td>Deprecated in v2 — use <code>--phase Cruise</code> with <code>-o maxEnginePower</code></td>
 </tr>
 <tr class="odd">
@@ -973,6 +1027,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average air speed during the landing phase</td>
 <td>speed</td>
 <td>m/s</td>
+<td>mph</td>
 <td>Deprecated in v2 — use <code>--phase Landing</code> with <code>-o avgAirSpeed</code></td>
 </tr>
 <tr class="even">
@@ -982,6 +1037,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the maximum air speed during the landing phase</td>
 <td>speed</td>
 <td>m/s</td>
+<td>mph</td>
 <td>Deprecated in v2 — use <code>--phase Landing</code> with <code>-o maxAirSpeed</code></td>
 </tr>
 <tr class="odd">
@@ -991,6 +1047,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average total engine power during the landing phase</td>
 <td>power</td>
 <td>W</td>
+<td>hp</td>
 <td>Deprecated in v2 — use <code>--phase Landing</code> with <code>-o avgEnginePower</code></td>
 </tr>
 <tr class="even">
@@ -1000,6 +1057,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the maximum total engine power during the landing phase</td>
 <td>power</td>
 <td>W</td>
+<td>hp</td>
 <td>Deprecated in v2 — use <code>--phase Landing</code> with <code>-o maxEnginePower</code></td>
 </tr>
 <tr class="odd">
@@ -1009,6 +1067,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the total flight distance during the take off phase</td>
 <td>distance</td>
 <td>km</td>
+<td>miles</td>
 <td>Deprecated in v2 — use <code>--phase takeOff</code> with <code>-o flightDistance</code></td>
 </tr>
 <tr class="even">
@@ -1018,6 +1077,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average acceleration during the take off phase</td>
 <td>acceleration</td>
 <td>m/s²</td>
+<td>ft/s²</td>
 <td>Deprecated in v2 — use <code>--phase takeOff</code> with <code>-o avgAcceleration</code></td>
 </tr>
 <tr class="odd">
@@ -1027,6 +1087,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the maximum acceleration during the take off phase</td>
 <td>acceleration</td>
 <td>m/s²</td>
+<td>ft/s²</td>
 <td>Deprecated in v2 — use <code>--phase takeOff</code> with <code>-o maxAcceleration</code></td>
 </tr>
 <tr class="even">
@@ -1036,6 +1097,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average wind speed during the take off phase</td>
 <td>speed</td>
 <td>m/s</td>
+<td>mph</td>
 <td>Deprecated in v2 — use <code>--phase takeOff</code> with <code>-o windSpeed</code></td>
 </tr>
 <tr class="odd">
@@ -1045,6 +1107,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the total flight distance during the cruise phase</td>
 <td>distance</td>
 <td>km</td>
+<td>miles</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -1054,6 +1117,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average acceleration during the cruise phase</td>
 <td>acceleration</td>
 <td>m/s²</td>
+<td>ft/s²</td>
 <td>Deprecated in v2 — use <code>--phase Cruise</code> with <code>-o avgAcceleration</code></td>
 </tr>
 <tr class="odd">
@@ -1063,6 +1127,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the maximum acceleration during the cruise phase</td>
 <td>acceleration</td>
 <td>m/s²</td>
+<td>ft/s²</td>
 <td>Deprecated in v2 — use <code>--phase Cruise</code> with <code>-o maxAcceleration</code></td>
 </tr>
 <tr class="even">
@@ -1072,6 +1137,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average wind speed during the cruise phase</td>
 <td>speed</td>
 <td>m/s</td>
+<td>mph</td>
 <td>Deprecated in v2 — use <code>--phase Cruise</code> with <code>-o windSpeed</code></td>
 </tr>
 <tr class="odd">
@@ -1081,6 +1147,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the total flight distance during the landing phase</td>
 <td>distance</td>
 <td>km</td>
+<td>miles</td>
 <td>Deprecated in v2 — use <code>--phase Landing</code> with <code>-o flightDistance</code></td>
 </tr>
 <tr class="even">
@@ -1090,6 +1157,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average acceleration during the landing phase</td>
 <td>acceleration</td>
 <td>m/s²</td>
+<td>ft/s²</td>
 <td>Deprecated in v2 — use <code>--phase Landing</code> with <code>-o avgAcceleration</code></td>
 </tr>
 <tr class="odd">
@@ -1099,6 +1167,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the maximum acceleration during the landing phase</td>
 <td>acceleration</td>
 <td>m/s²</td>
+<td>ft/s²</td>
 <td>Deprecated in v2 — use <code>--phase Landing</code> with <code>-o maxAcceleration</code></td>
 </tr>
 <tr class="even">
@@ -1108,6 +1177,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the average wind speed during the landing phase</td>
 <td>speed</td>
 <td>m/s</td>
+<td>mph</td>
 <td>Deprecated in v2 — use <code>--phase Landing</code> with <code>-o windSpeed</code></td>
 </tr>
 <tr class="odd">
@@ -1117,6 +1187,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the phase which required the most average engine power</td>
 <td>phase_name:power</td>
 <td>W</td>
+<td>hp</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -1125,6 +1196,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a flight record file</td>
 <td>the phase which provoked the highest average heart rate</td>
 <td>phase_name:heart_beat</td>
+<td>bpm</td>
 <td>bpm</td>
 <td></td>
 </tr>
@@ -1135,10 +1207,12 @@ ul.task-list li input[type="checkbox"] {
 <td>the phase with the highest average horizontal acceleration</td>
 <td>phase_name:acceleration</td>
 <td>m/s²</td>
+<td>ft/s²</td>
 <td></td>
 </tr>
 <tr class="even">
 <td><strong>Cross Flights Computations</strong></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1154,6 +1228,7 @@ ul.task-list li input[type="checkbox"] {
 <td>HH:mm:ss</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>Total Cumulative Flight Distance</td>
@@ -1162,6 +1237,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the cumulative flight distance across all files</td>
 <td>distance</td>
 <td>km</td>
+<td>miles</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -1170,6 +1246,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a folder containing flight record file(s)</td>
 <td>the airport most often used for take off</td>
 <td>airport_name</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -1181,6 +1258,7 @@ ul.task-list li input[type="checkbox"] {
 <td>airport_name</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>Highest Drag Coef</td>
@@ -1188,6 +1266,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a folder containing flight record file(s)</td>
 <td>the fighter jet with the highest drag coefficient</td>
 <td>jet_id:drag_coef</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -1199,6 +1278,7 @@ ul.task-list li input[type="checkbox"] {
 <td>jet_id:drag_coef</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>Highest Lift Coef</td>
@@ -1206,6 +1286,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a folder containing flight record file(s)</td>
 <td>the fighter jet with the highest lift coefficient</td>
 <td>jet_id:lift_coef</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -1217,6 +1298,7 @@ ul.task-list li input[type="checkbox"] {
 <td>jet_id:lift_coef</td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>Highest Average Speed</td>
@@ -1225,6 +1307,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the fighter jet with the fastest average speed during its flight</td>
 <td>jet_id:speed</td>
 <td>km/h</td>
+<td>mph</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -1234,6 +1317,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the fighter jet with the slowest average speed during its flight</td>
 <td>jet_id:speed</td>
 <td>km/h</td>
+<td>mph</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -1243,6 +1327,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the fighter jet which flew the highest</td>
 <td>jet_id:max_altitude</td>
 <td>m</td>
+<td>ft</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -1251,6 +1336,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a folder containing flight record file(s)</td>
 <td>the fighter jet which flew the longest</td>
 <td>jet_id:duration</td>
+<td>HH:mm:ss</td>
 <td>HH:mm:ss</td>
 <td></td>
 </tr>
@@ -1261,6 +1347,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the fighter jet which landed first</td>
 <td>jet_id:airport_name:landing_time</td>
 <td>HH:mm:ss</td>
+<td>HH:mm:ss</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -1269,6 +1356,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a folder containing flight record file(s)</td>
 <td>the fighter jet which landed last</td>
 <td>jet_id:airport_name:landing_time</td>
+<td>HH:mm:ss</td>
 <td>HH:mm:ss</td>
 <td></td>
 </tr>
@@ -1279,6 +1367,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the fighter jet which used the highest average engine power</td>
 <td>jet_id:power</td>
 <td>W</td>
+<td>hp</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -1287,6 +1376,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a folder containing flight record file(s)</td>
 <td>the fighter jet which used the highest average oxygen concentration</td>
 <td>jet_id:oxygen</td>
+<td>%</td>
 <td>%</td>
 <td></td>
 </tr>
@@ -1297,6 +1387,7 @@ ul.task-list li input[type="checkbox"] {
 <td>the fighter jet whose pilot had the highest average heart beat</td>
 <td>jet_id:beat</td>
 <td>bpm</td>
+<td>bpm</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -1305,6 +1396,7 @@ ul.task-list li input[type="checkbox"] {
 <td>a folder containing flight record file(s)</td>
 <td>the fighter jet whose pilot had the lowest average heart beat</td>
 <td>jet_id:beat</td>
+<td>bpm</td>
 <td>bpm</td>
 <td></td>
 </tr>
@@ -1315,6 +1407,7 @@ ul.task-list li input[type="checkbox"] {
 <td>jets that flew less than 50 km from each other</td>
 <td>[jet_id1, jet_id2]:min_distance (alphabetical order)</td>
 <td>km</td>
+<td>miles</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -1324,6 +1417,7 @@ ul.task-list li input[type="checkbox"] {
 <td>jets that flew less than 50 km from each other and share the same origin (US/RU)</td>
 <td>[jet_id1, jet_id2]:min_distance (alphabetical order)</td>
 <td>km</td>
+<td>miles</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -1333,6 +1427,7 @@ ul.task-list li input[type="checkbox"] {
 <td>jets that flew less than 50 km from each other and are from different origins (US/RU)</td>
 <td>[jet_id1, jet_id2]:min_distance (alphabetical order)</td>
 <td>km</td>
+<td>miles</td>
 <td></td>
 </tr>
 </tbody>

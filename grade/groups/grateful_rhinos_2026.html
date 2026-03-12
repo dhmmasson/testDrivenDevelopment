@@ -444,15 +444,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><strong>Version</strong></td>
-<td>1.26.6</td>
+<td>1.30.7</td>
 </tr>
 <tr class="odd">
 <td><strong>Teacher Score</strong></td>
-<td>0.2322</td>
+<td>0.2210</td>
 </tr>
 <tr class="even">
 <td><strong>Average Score</strong></td>
-<td>63%</td>
+<td>62%</td>
 </tr>
 <tr class="odd">
 <td><strong>Tier</strong></td>
@@ -481,15 +481,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>🔴 Missed</td>
-<td>2</td>
+<td>3</td>
 </tr>
 <tr class="even">
 <td>⚪ Not implemented</td>
-<td>61</td>
+<td>62</td>
 </tr>
 <tr class="odd">
 <td><strong>Features attempted</strong></td>
-<td><strong>26</strong> / 87</td>
+<td><strong>27</strong> / 89</td>
 </tr>
 </tbody>
 </table>
@@ -532,6 +532,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><strong>metadata</strong> — 72/209 tests passed (score: 39%)</li>
 <li><strong>maxEnginePower</strong> — 9/36 tests passed (score: 25%)</li>
+<li><strong>flightDistance</strong> — 2/20 tests passed (score: 15%)</li>
 </ul>
 </section>
 </section>
@@ -549,9 +550,9 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Average Score</td>
-<td style="text-align: center;">0.63</td>
+<td style="text-align: center;">0.62</td>
 <td style="text-align: center;">1.00</td>
-<td style="text-align: center;">+0.37</td>
+<td style="text-align: center;">+0.38</td>
 </tr>
 </tbody>
 </table>
@@ -572,7 +573,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Total tests submitted</td>
-<td>32</td>
+<td>33</td>
 </tr>
 <tr class="odd">
 <td>Removed (invalid ref/features)</td>
@@ -580,7 +581,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>F1 score</td>
-<td>0.34</td>
+<td>0.21</td>
 </tr>
 </tbody>
 </table>
@@ -597,11 +598,11 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Line coverage</td>
-<td>84%</td>
+<td>83%</td>
 </tr>
 <tr class="even">
 <td>Branch coverage</td>
-<td>83%</td>
+<td>80%</td>
 </tr>
 <tr class="odd">
 <td>Uncovered classes</td>
@@ -622,7 +623,7 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Student commits</td>
-<td>206</td>
+<td>216</td>
 </tr>
 <tr class="even">
 <td>Quality grade</td>
@@ -668,22 +669,22 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Thibs64</td>
-<td style="text-align: center;">118</td>
-<td style="text-align: center;">57%</td>
+<td style="text-align: center;">121</td>
+<td style="text-align: center;">56%</td>
 <td style="text-align: center;">97</td>
-<td style="text-align: center;">105</td>
+<td style="text-align: center;">108</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">13</td>
 <td style="text-align: center;">0</td>
 </tr>
 <tr class="even">
 <td>Romane2308</td>
-<td style="text-align: center;">88</td>
-<td style="text-align: center;">43%</td>
 <td style="text-align: center;">95</td>
-<td style="text-align: center;">74</td>
+<td style="text-align: center;">44%</td>
+<td style="text-align: center;">95</td>
+<td style="text-align: center;">80</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">14</td>
+<td style="text-align: center;">15</td>
 <td style="text-align: center;">0</td>
 </tr>
 </tbody>
@@ -695,6 +696,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p>You have <strong>21 features at “almost”</strong> status — these are very close to passing. Focus on converting these to green. Common causes: rounding/precision issues, off-by-one in averaging, or only handling one output mode (full report vs feature mode).</p></li>
 <li><p><strong>Engine power</strong> features are failing. Remember: the feature is the engine power of the <em>plane</em>, not individual engines. Make sure you are using the total engine power.</p></li>
+<li><p><strong>Distance/Wind</strong> features need work. For <code>flightDistance</code>, the computation requires altitude data. For <code>windSpeed</code>, note that air speed is only recorded in the direction of the plane.</p></li>
 </ul>
 
 

@@ -447,7 +447,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><strong>Teacher Score</strong></td>
-<td>0.1044</td>
+<td>0.0997</td>
 </tr>
 <tr class="even">
 <td><strong>Average Score</strong></td>
@@ -484,11 +484,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>⚪ Not implemented</td>
-<td>64</td>
+<td>66</td>
 </tr>
 <tr class="odd">
 <td><strong>Features attempted</strong></td>
-<td><strong>23</strong> / 87</td>
+<td><strong>23</strong> / 89</td>
 </tr>
 </tbody>
 </table>
@@ -559,7 +559,7 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Valid tests</td>
-<td>13</td>
+<td>15</td>
 </tr>
 <tr class="even">
 <td>Total tests submitted</td>
@@ -571,7 +571,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>F1 score</td>
-<td>0.25</td>
+<td>0.11</td>
 </tr>
 </tbody>
 </table>
@@ -683,6 +683,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>You have <strong>15 features at “almost”</strong> status — these are very close to passing. Focus on converting these to green. Common causes: rounding/precision issues, off-by-one in averaging, or only handling one output mode (full report vs feature mode).</p></li>
 <li><p><strong>Acceleration</strong> features are not passing. Acceleration requires computing derivatives from speed data — double-check your formula and units.</p></li>
 <li><p><strong>Distance/Wind</strong> features need work. For <code>flightDistance</code>, the computation requires altitude data. For <code>windSpeed</code>, note that air speed is only recorded in the direction of the plane.</p></li>
+<li><p>Your test suite F1 score is low (0.11). Improve test quality by verifying expected values against the reference output.</p></li>
 <li><p><strong>85% of your commits have poor messages.</strong> Use conventional commits format: <code>feat: description</code>, <code>fix: bug</code>, <code>test: add tests for X</code>.</p></li>
 </ul>
 
