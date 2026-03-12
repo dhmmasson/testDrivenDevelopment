@@ -20,10 +20,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -69,9 +104,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -415,8 +449,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <style>
-/* Vertical column headers for feature matrices */
-table thead th:not(:first-child) {
+.column-screen-inset table thead th:not(:first-child) {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     vertical-align: bottom;
@@ -424,9 +457,7 @@ table thead th:not(:first-child) {
     min-height: 150px;
     white-space: nowrap;
 }
-
-/* Keep first column (Feature/Team) horizontal */
-table thead th:first-child {
+.column-screen-inset table thead th:first-child {
     writing-mode: horizontal-tb;
     text-align: left;
 }
@@ -476,12 +507,12 @@ table thead th:first-child {
 <section id="teacher-evaluation-teacher-tests-student-pandoras" class="level2">
 <h2 class="anchored" data-anchor-id="teacher-evaluation-teacher-tests-student-pandoras">Teacher Evaluation (Teacher Tests → Student Pandoras)</h2>
 <p><strong>Goal</strong>: measure how well each team’s Pandora implements the expected features.</p>
-<p>The teacher’s test suite (<code>partialEvaluation.json</code>, <strong>1423 tests</strong> covering <strong>82 features</strong>) is run against each team’s JAR. For every feature, the autograder compares the student’s output to the expected value with a numeric tolerance. The per-feature score is the average across all tests for that feature (1.0 = perfect match, 0.0 = completely wrong or missing).</p>
+<p>The teacher’s test suite (teacher test suite, <strong>? tests</strong> covering <strong>82 features</strong>) is run against each team’s JAR. For every feature, the autograder compares the student’s output to the expected value with a numeric tolerance. The per-feature score is the average across all tests for that feature (1.0 = perfect match, 0.0 = completely wrong or missing).</p>
 <p>Only features declared in the team’s <code>manifest.json</code> are evaluated; undeclared features appear as ⚪️.</p>
 </section>
 <section id="results" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
-<div class="column-screen">
+<div class="column-screen-inset">
 <div class="table-responsive">
 <table class="table-striped table-hover table-borderless caption-top table">
 <caption>Results</caption>
@@ -527,109 +558,481 @@ table thead th:first-child {
 <thead>
 <tr class="header">
 <th>Feature</th>
-<th>adjectives_wolves</th>
-<th>awesome_teachers</th>
-<th>blue_victors</th>
-<th>celestial_treasures</th>
-<th>coarse_tractors</th>
-<th>cool_aspects</th>
-<th>creative_symbols</th>
-<th>crimson_sunsets</th>
-<th>dynamic_springs</th>
-<th>empathetic_spectacles</th>
-<th>energetic_spaceships</th>
-<th>enlightened_solitudes</th>
-<th>ethereal_skylines</th>
-<th>gold_sapphires</th>
-<th>golden_rubies</th>
-<th>gracious_rollercoasters</th>
-<th>grateful_rhinos</th>
-<th>invincible_penguins</th>
-<th>light_nouns</th>
-<th>lustrous_novelties</th>
-<th>opulent_motorcycles</th>
-<th>persistent_lagoons</th>
-<th>polished_jaguars</th>
-<th>purple_infinity</th>
-<th>radiant_illuminations</th>
-<th>red_helicopters</th>
-<th>silken_foxes</th>
-<th>silky_flutes</th>
-<th>smiling_anvils</th>
-<th>smooth_fantasies</th>
-<th>soft_explorers</th>
-<th>spirited_essences</th>
-<th>tranquil_eclipses</th>
-<th>unified_diamonds</th>
-<th>vibrant_constellations</th>
-<th>white_cheetahs</th>
+<th>adjectives_wolves 2026</th>
+<th>awesome_teachers 2026</th>
+<th>blue_victors 2026</th>
+<th>celestial_treasures 2026</th>
+<th>coarse_tractors 2026</th>
+<th>cool_aspects 2026</th>
+<th>creative_symbols 2026</th>
+<th>crimson_sunsets 2026</th>
+<th>dynamic_springs 2026</th>
+<th>empathetic_spectacles 2026</th>
+<th>energetic_spaceships 2026</th>
+<th>enlightened_solitudes 2026</th>
+<th>ethereal_skylines 2026</th>
+<th>gold_sapphires 2026</th>
+<th>golden_rubies 2026</th>
+<th>gracious_rollercoasters 2026</th>
+<th>grateful_rhinos 2026</th>
+<th>invincible_penguins 2026</th>
+<th>light_nouns 2026</th>
+<th>lustrous_novelties 2026</th>
+<th>opulent_motorcycles 2026</th>
+<th>persistent_lagoons 2026</th>
+<th>polished_jaguars 2026</th>
+<th>purple_infinity 2026</th>
+<th>radiant_illuminations 2026</th>
+<th>red_helicopters 2026</th>
+<th>silken_foxes 2026</th>
+<th>silky_flutes 2026</th>
+<th>smiling_anvils 2026</th>
+<th>smooth_fantasies 2026</th>
+<th>soft_explorers 2026</th>
+<th>spirited_essences 2026</th>
+<th>tranquil_eclipses 2026</th>
+<th>unified_diamonds 2026</th>
+<th>vibrant_constellations 2026</th>
+<th>white_cheetahs 2026</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>avgAcceleration</td>
+<td>number</td>
+<td>🟢 <sup>9/9</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>1/20</sup></td>
-<td>🔴 <sup>1/20</sup></td>
-<td>🔴 <sup>2/20</sup></td>
+<td>🟢 <sup>9/9</sup></td>
+<td>🟢 <sup>9/9</sup></td>
+<td>🟢 <sup>9/9</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>9/9</sup></td>
+<td>🔴 <sup>0/9</sup></td>
+<td>🔴 <sup>0/9</sup></td>
+<td>🟢 <sup>9/9</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>3/20</sup></td>
+<td>🟢 <sup>9/9</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>🔴 <sup>0/9</sup></td>
+<td>🔴 <sup>0/9</sup></td>
 <td>⚪️</td>
+<td>🟢 <sup>9/9</sup></td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>0/20</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>6/20</sup></td>
-<td>🔴 <sup>2/20</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>1/20</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>2/20</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>1/20</sup></td>
+<td>🟢 <sup>9/9</sup></td>
+<td>🟢 <sup>9/9</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/20</sup></td>
-<td>🔴 <sup>3/20</sup></td>
 <td>⚪️</td>
+<td>🔴 <sup>0/9</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/9</sup></td>
+<td>🟢 <sup>9/9</sup></td>
 </tr>
 <tr class="even">
-<td>avgAccelerationCruise</td>
+<td>flightDuration</td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>🟡 <sup>19/29</sup></td>
+<td>🟢 <sup>23/29</sup></td>
+<td>🟡 <sup>19/29</sup></td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>🟢 <sup>29/29</sup></td>
+<td>🟢 <sup>24/29</sup></td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>🟡 <sup>19/29</sup></td>
+<td>🟡 <sup>19/29</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>🟡 <sup>26/29</sup></td>
+<td>🔴 <sup>0/29</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>29/29</sup></td>
+<td>🟢 <sup>27/29</sup></td>
+<td>🟡 <sup>26/29</sup></td>
+<td>🟢 <sup>29/29</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
+<td>🟡 <sup>16/29</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>20/29</sup></td>
+<td>🟡 <sup>18/29</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟢 <sup>29/29</sup></td>
+<td>🔴 <sup>0/29</sup></td>
+</tr>
+<tr class="odd">
+<td>minOxygen</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>21/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
+<tr class="even">
+<td>avgHeartRate</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>5/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
+<tr class="odd">
+<td>maxHeartRate</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>8/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>21/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
+<tr class="even">
+<td>maxHumidity</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>21/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
+<tr class="odd">
+<td>minHumidity</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>21/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>7/22</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
+<tr class="even">
+<td>maxOxygen</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>21/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
+<tr class="odd">
+<td>minHeartRate</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>5/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>21/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
+<tr class="even">
+<td>avgHumidity</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>7/22</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
+<tr class="odd">
+<td>avgOxygen</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
+<tr class="even">
+<td>stressedPilot</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -640,20 +1043,35 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
 <td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟢 <sup>10/10</sup></td>
+<td>🟢 <sup>9/10</sup></td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>4/10</sup></td>
 <td>⚪️</td>
 </tr>
 <tr class="odd">
-<td>avgAccelerationLanding</td>
+<td>reachAlt</td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -667,119 +1085,17 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>⚪️</td>
+<td>🟢 <sup>10/10</sup></td>
+<td>🟡 <sup>4/10</sup></td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>1/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>avgAccelerationTakeOff</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>1/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>avgAirSpeed</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-</tr>
-<tr class="even">
-<td>avgAirSpeedCruise</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -787,116 +1103,26 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>avgAirSpeedLanding</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
 </tr>
 <tr class="even">
-<td>avgAirSpeedTakeOff</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
 <td>avgAlt</td>
 <td>🟡 <sup>12/22</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
 <td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>4/22</sup></td>
 <td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
@@ -907,7 +1133,7 @@ table thead th:first-child {
 <td>🟡 <sup>12/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>13/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🔴 <sup>3/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
@@ -917,12 +1143,285 @@ table thead th:first-child {
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 </tr>
+<tr class="odd">
+<td>minPressure</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>16/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>7/22</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
+<tr class="even">
+<td>minTemp</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>16/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
+<tr class="odd">
+<td>avgPressure</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>7/22</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
+<tr class="even">
+<td>maxPressure</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>16/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>7/22</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
+<tr class="odd">
+<td>maxTemp</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>16/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
+<tr class="even">
+<td>avgTemp</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
+<tr class="odd">
+<td>maxAlt</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>16/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>3/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
 <tr class="even">
 <td>avgEnginePower</td>
-<td>⚪️</td>
+<td>🟡 <sup>26/36</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>26/36</sup></td>
-<td>🔴 <sup>8/36</sup></td>
+<td>🔴 <sup>9/36</sup></td>
 <td>🔴 <sup>8/36</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>9/36</sup></td>
@@ -943,10 +1442,10 @@ table thead th:first-child {
 <td>🟢 <sup>36/36</sup></td>
 <td>🔴 <sup>9/36</sup></td>
 <td>🔴 <sup>7/36</sup></td>
-<td>⚪️</td>
+<td>🟡 <sup>26/36</sup></td>
 <td>🟡 <sup>26/36</sup></td>
 <td>🔴 <sup>8/36</sup></td>
-<td>⚪️</td>
+<td>🔴 <sup>8/36</sup></td>
 <td>🔴 <sup>10/36</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -957,11 +1456,362 @@ table thead th:first-child {
 <td>🟡 <sup>26/36</sup></td>
 </tr>
 <tr class="odd">
+<td>maxEnginePower</td>
+<td>🟡 <sup>26/36</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>26/36</sup></td>
+<td>🔴 <sup>9/36</sup></td>
+<td>🔴 <sup>8/36</sup></td>
+<td>🟡 <sup>31/36</sup></td>
+<td>🔴 <sup>9/36</sup></td>
+<td>🟡 <sup>31/36</sup></td>
+<td>🟡 <sup>26/36</sup></td>
+<td>🟡 <sup>26/36</sup></td>
+<td>🔴 <sup>8/36</sup></td>
+<td>🔴 <sup>7/36</sup></td>
+<td>🔴 <sup>0/36</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>9/36</sup></td>
+<td>🔴 <sup>0/36</sup></td>
+<td>🔴 <sup>8/36</sup></td>
+<td>🟡 <sup>31/36</sup></td>
+<td>🔴 <sup>9/36</sup></td>
+<td>🟢 <sup>36/36</sup></td>
+<td>🔴 <sup>9/36</sup></td>
+<td>🔴 <sup>7/36</sup></td>
+<td>🟡 <sup>26/36</sup></td>
+<td>🟡 <sup>26/36</sup></td>
+<td>🟡 <sup>26/36</sup></td>
+<td>🔴 <sup>8/36</sup></td>
+<td>🔴 <sup>10/36</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/36</sup></td>
+<td>🟡 <sup>31/36</sup></td>
+<td>🟡 <sup>26/36</sup></td>
+</tr>
+<tr class="even">
+<td>avgAcceleration</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>1/20</sup></td>
+<td>🔴 <sup>1/20</sup></td>
+<td>🔴 <sup>2/20</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>3/20</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>1/20</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/20</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>6/20</sup></td>
+<td>🔴 <sup>3/20</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>1/20</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>2/20</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>2/20</sup></td>
+<td>🔴 <sup>1/20</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/20</sup></td>
+<td>🔴 <sup>3/20</sup></td>
+<td>⚪️</td>
+</tr>
+<tr class="odd">
+<td>avgAccelerationCruise</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+</tr>
+<tr class="even">
+<td>avgAccelerationLanding</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>1/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>1/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+</tr>
+<tr class="odd">
+<td>avgAccelerationTakeOff</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>1/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+</tr>
+<tr class="even">
+<td>avgAirSpeed</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+</tr>
+<tr class="odd">
+<td>avgAirSpeedCruise</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+</tr>
+<tr class="even">
+<td>avgAirSpeedLanding</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+</tr>
+<tr class="odd">
+<td>avgAirSpeedTakeOff</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+</tr>
+<tr class="even">
 <td>avgEnginePowerCruise</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -983,7 +1833,7 @@ table thead th:first-child {
 <td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -991,16 +1841,16 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>avgEnginePowerLanding</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1022,7 +1872,7 @@ table thead th:first-child {
 <td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1030,16 +1880,16 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>avgEnginePowerTakeOff</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1073,97 +1923,19 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
-<td>avgHeartRate</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>5/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-</tr>
 <tr class="odd">
-<td>avgHumidity</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-</tr>
-<tr class="even">
 <td>avgMachSpeed</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>🔴 <sup>6/16</sup></td>
-<td>🔴 <sup>6/16</sup></td>
+<td>🟡 <sup>11/16</sup></td>
 <td>🔴 <sup>1/16</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>🔴 <sup>6/16</sup></td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>🔴 <sup>6/16</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1173,7 +1945,7 @@ table thead th:first-child {
 <td>🔴 <sup>0/16</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>11/16</sup></td>
-<td>🔴 <sup>6/16</sup></td>
+<td>🟡 <sup>11/16</sup></td>
 <td>🟡 <sup>11/16</sup></td>
 <td>🟡 <sup>10/16</sup></td>
 <td>⚪️</td>
@@ -1190,130 +1962,13 @@ table thead th:first-child {
 <td>🟡 <sup>10/16</sup></td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
-<td>avgOxygen</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-</tr>
-<tr class="even">
-<td>avgPressure</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-</tr>
-<tr class="odd">
-<td>avgTemp</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-</tr>
 <tr class="even">
 <td>cruise</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️ 0/10</td>
+<td>🟡 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1329,7 +1984,7 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>🟡 <sup>8/10</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>0/10</sup></td>
 <td>⚪️</td>
@@ -1381,7 +2036,7 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
@@ -1389,13 +2044,13 @@ table thead th:first-child {
 <td>fastJetAlt</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1407,15 +2062,15 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>🟡 <sup>0/10</sup></td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1428,9 +2083,9 @@ table thead th:first-child {
 <td>fastWindAlt</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1446,15 +2101,15 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>🔴 <sup>1/10</sup></td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1465,41 +2120,41 @@ table thead th:first-child {
 </tr>
 <tr class="even">
 <td>filenames</td>
-<td>🔴 <sup>0/0</sup></td>
+<td>🔴</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
+<td>🔴</td>
+<td>⚪️</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/0</sup></td>
+<td>🔴</td>
 <td>⚪️</td>
 </tr>
 <tr class="odd">
@@ -1537,7 +2192,7 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
@@ -1548,12 +2203,12 @@ table thead th:first-child {
 <td>🔴 <sup>0/20</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>0/20</sup></td>
+<td>🔴 <sup>2/20</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>🔴 <sup>2/20</sup></td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>🔴 <sup>2/20</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1563,7 +2218,7 @@ table thead th:first-child {
 <td>🔴 <sup>0/20</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>2/20</sup></td>
-<td>⚪️</td>
+<td>🔴 <sup>2/20</sup></td>
 <td>🔴 <sup>2/20</sup></td>
 <td>🔴 <sup>2/20</sup></td>
 <td>⚪️</td>
@@ -1586,7 +2241,7 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1615,7 +2270,7 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
@@ -1654,7 +2309,7 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
@@ -1685,7 +2340,7 @@ table thead th:first-child {
 <td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1693,50 +2348,11 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
 <tr class="even">
-<td>flightDuration</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>19/29</sup></td>
-<td>🟡 <sup>17/29</sup></td>
-<td>🟡 <sup>19/29</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>29/29</sup></td>
-<td>🟢 <sup>24/29</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>19/29</sup></td>
-<td>🟡 <sup>19/29</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>20/29</sup></td>
-<td>🔴 <sup>0/29</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>29/29</sup></td>
-<td>🟢 <sup>28/29</sup></td>
-<td>🟡 <sup>26/29</sup></td>
-<td>🟢 <sup>29/29</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>16/29</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>29/29</sup></td>
-<td>🟡 <sup>18/29</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢 <sup>29/29</sup></td>
-<td>🔴 <sup>0/29</sup></td>
-</tr>
-<tr class="odd">
 <td>highestAltitude</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1771,11 +2387,11 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>highestLift</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1810,11 +2426,11 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>highestSpeed</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1849,11 +2465,11 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>imperial</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1864,41 +2480,15 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
+<td>🔴</td>
+<td>🔴</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/0</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>0/0</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>landing</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️ 0/10</td>
+<td>🔴</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1910,28 +2500,54 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🟡 <sup>0/10</sup></td>
+<td>🔴</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
 <tr class="even">
+<td>landing</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>2/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>1/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>3/10</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+</tr>
+<tr class="odd">
 <td>lastLanding</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1966,11 +2582,11 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>longestDuration</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2005,11 +2621,11 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>maxAccelG</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2019,9 +2635,7 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>🔴 <sup>0/16</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2032,6 +2646,8 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>🔴 <sup>0/16</sup></td>
 <td>⚪️</td>
+<td>🔴 <sup>0/16</sup></td>
+<td>🔴 <sup>0/16</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>0/16</sup></td>
 <td>⚪️</td>
@@ -2048,7 +2664,7 @@ table thead th:first-child {
 <td>🔴 <sup>0/16</sup></td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>maxAcceleration</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2058,9 +2674,9 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>🔴 <sup>1/20</sup></td>
+<td>🔴 <sup>1/20</sup></td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>🔴 <sup>0/20</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2087,12 +2703,12 @@ table thead th:first-child {
 <td>🔴 <sup>1/20</sup></td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>maxAccelerationCruise</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2122,16 +2738,16 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>maxAccelerationLanding</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>🔴 <sup>1/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2161,55 +2777,55 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>maxAccelerationTakeOff</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>1/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
 <tr class="odd">
+<td>maxAccelerationTakeOff</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>1/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+</tr>
+<tr class="even">
 <td>maxAirSpeed</td>
-<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
@@ -2226,14 +2842,14 @@ table thead th:first-child {
 <td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>16/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🔴 <sup>7/22</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
+<td>🟡 <sup>13/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2243,12 +2859,12 @@ table thead th:first-child {
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>maxAirSpeedCruise</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>🔴 <sup>2/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2278,16 +2894,16 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>maxAirSpeedLanding</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2309,7 +2925,7 @@ table thead th:first-child {
 <td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2317,16 +2933,16 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>maxAirSpeedTakeOff</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2360,90 +2976,12 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
-<td>maxAlt</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>3/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-</tr>
 <tr class="even">
-<td>maxEnginePower</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>26/36</sup></td>
-<td>🔴 <sup>8/36</sup></td>
-<td>🔴 <sup>8/36</sup></td>
-<td>🟡 <sup>31/36</sup></td>
-<td>🔴 <sup>9/36</sup></td>
-<td>🟡 <sup>31/36</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>26/36</sup></td>
-<td>🔴 <sup>8/36</sup></td>
-<td>🔴 <sup>7/36</sup></td>
-<td>🔴 <sup>0/36</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>9/36</sup></td>
-<td>🔴 <sup>0/36</sup></td>
-<td>🔴 <sup>8/36</sup></td>
-<td>🟡 <sup>31/36</sup></td>
-<td>🔴 <sup>9/36</sup></td>
-<td>🟢 <sup>36/36</sup></td>
-<td>🔴 <sup>9/36</sup></td>
-<td>🔴 <sup>7/36</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>26/36</sup></td>
-<td>🟡 <sup>26/36</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>10/36</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>0/36</sup></td>
-<td>🟡 <sup>31/36</sup></td>
-<td>🟡 <sup>26/36</sup></td>
-</tr>
-<tr class="odd">
 <td>maxEnginePowerCruise</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>🔴 <sup>1/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2465,7 +3003,7 @@ table thead th:first-child {
 <td>🔴 <sup>1/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2473,16 +3011,16 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>maxEnginePowerLanding</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2504,7 +3042,7 @@ table thead th:first-child {
 <td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2512,16 +3050,16 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>maxEnginePowerTakeOff</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2555,97 +3093,19 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
-<td>maxHeartRate</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>8/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-</tr>
 <tr class="odd">
-<td>maxHumidity</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-</tr>
-<tr class="even">
 <td>maxMachSpeed</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>🔴 <sup>4/16</sup></td>
-<td>🔴 <sup>4/16</sup></td>
+<td>🟡 <sup>8/16</sup></td>
 <td>🔴 <sup>1/16</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>🔴 <sup>4/16</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2655,13 +3115,13 @@ table thead th:first-child {
 <td>🔴 <sup>0/16</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>8/16</sup></td>
-<td>🔴 <sup>4/16</sup></td>
+<td>🟡 <sup>7/16</sup></td>
 <td>🟡 <sup>8/16</sup></td>
 <td>🟡 <sup>10/16</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>🔴 <sup>4/16</sup></td>
-<td>⚪️</td>
+<td>🔴 <sup>4/16</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>6/16</sup></td>
 <td>⚪️</td>
@@ -2671,123 +3131,6 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>🟡 <sup>10/16</sup></td>
 <td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>maxOxygen</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-</tr>
-<tr class="even">
-<td>maxPressure</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-</tr>
-<tr class="odd">
-<td>maxTemp</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
 </tr>
 <tr class="even">
 <td>metadata</td>
@@ -2804,10 +3147,10 @@ table thead th:first-child {
 <td>🔴 <sup>72/209</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>🔴 <sup>36/209</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>0/209</sup></td>
+<td>🔴 <sup>72/209</sup></td>
 <td>🔴 <sup>0/209</sup></td>
 <td>🔴 <sup>36/209</sup></td>
 <td>⚪️</td>
@@ -2839,15 +3182,15 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
+<td>🔴</td>
+<td>🔴</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/0</sup></td>
+<td>🔴</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2859,7 +3202,7 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/0</sup></td>
+<td>🔴</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2868,206 +3211,11 @@ table thead th:first-child {
 <td>⚪️</td>
 </tr>
 <tr class="even">
-<td>minHeartRate</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>5/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-</tr>
-<tr class="odd">
-<td>minHumidity</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-</tr>
-<tr class="even">
-<td>minOxygen</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-</tr>
-<tr class="odd">
-<td>minPressure</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-</tr>
-<tr class="even">
-<td>minTemp</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-</tr>
-<tr class="odd">
 <td>mostAccelPhase</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3101,51 +3249,12 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>mostPowerPhase</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>mostStressPhase</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3180,13 +3289,11 @@ table thead th:first-child {
 <td>⚪️</td>
 </tr>
 <tr class="even">
-<td>noiseTemp</td>
+<td>mostStressPhase</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
+<td>🟡 <sup>2/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3200,70 +3307,72 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
 <td>⚪️</td>
 </tr>
 <tr class="odd">
-<td>number</td>
-<td>🟢 <sup>9/9</sup></td>
+<td>noiseTemp</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🟢 <sup>9/9</sup></td>
-<td>🟢 <sup>9/9</sup></td>
-<td>🔴 <sup>0/9</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
-<td>🟢 <sup>9/9</sup></td>
-<td>🔴 <sup>0/9</sup></td>
-<td>🔴 <sup>0/9</sup></td>
-<td>🟢 <sup>9/9</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/9</sup></td>
-<td>🔴 <sup>0/9</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>9/9</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>9/9</sup></td>
-<td>🟢 <sup>9/9</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/9</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/9</sup></td>
-<td>🟢 <sup>9/9</sup></td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
 </tr>
 <tr class="even">
 <td>oxygenPhase</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️ 0/10</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>🔴 <sup>2/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3281,13 +3390,13 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3302,7 +3411,7 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3336,19 +3445,16 @@ table thead th:first-child {
 <td>⚪️</td>
 </tr>
 <tr class="even">
-<td>reachAlt</td>
+<td>reachDist</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3356,16 +3462,19 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🟢 <sup>10/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️</td>
+<td>🟡 <sup>0/10</sup></td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
-<td>🟡 <sup>5/10</sup></td>
-<td>⚪️ 0/10</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3375,45 +3484,6 @@ table thead th:first-child {
 <td>⚪️</td>
 </tr>
 <tr class="odd">
-<td>reachDist</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>🟡 <sup>0/10</sup></td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
 <td>slowestSpeed</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3448,11 +3518,11 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>smallestLift</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3487,95 +3557,56 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-</tr>
-<tr class="even">
-<td>start_time</td>
-<td>🔴 <sup>0/0</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
-<td>🔴 <sup>0/0</sup></td>
 </tr>
 <tr class="odd">
-<td>stressedPilot</td>
+<td>start_time</td>
+<td>🔴</td>
 <td>⚪️</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🟢 <sup>10/10</sup></td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
 <td>⚪️</td>
+<td>🔴</td>
+<td>🔴</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>4/10</sup></td>
-<td>⚪️</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
+<td>🔴</td>
 </tr>
 <tr class="even">
 <td>takeOff</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️ 0/10</td>
+<td>🟡 <sup>2/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3587,11 +3618,11 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🟡 <sup>0/10</sup></td>
+<td>🟡 <sup>1/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>🟡 <sup>7/10</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>0/10</sup></td>
 <td>⚪️</td>
@@ -3620,17 +3651,17 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>🔴 <sup>0/18</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>🔴 <sup>0/18</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>2/18</sup></td>
-<td>⚪️</td>
+<td>🔴 <sup>1/18</sup></td>
 <td>🔴 <sup>1/18</sup></td>
 <td>🔴 <sup>2/18</sup></td>
 <td>⚪️</td>
@@ -3682,7 +3713,7 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
@@ -3721,7 +3752,7 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
@@ -3752,7 +3783,7 @@ table thead th:first-child {
 <td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3760,3303 +3791,7 @@ table thead th:first-child {
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️ 0/10</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section id="test-suite-validation-student-tests-teacher-pandora" class="level2">
-<h2 class="anchored" data-anchor-id="test-suite-validation-student-tests-teacher-pandora">Test Suite Validation (Student Tests → Teacher Pandora)</h2>
-<p><strong>Goal</strong>: assess the quality of each team’s own test suite.</p>
-<p>Each team’s <code>testSuite.json</code> is first <strong>cleaned</strong> (tests referencing missing files or non-whitelisted features are removed), then run against the <strong>reference implementation</strong> (teacher’s JAR, which is assumed to be correct).</p>
-<p>A test that passes against the reference is <strong>valid</strong> — it checks something that the correct implementation actually produces. A test that fails is <strong>invalid</strong> — the expected value in the test is wrong.</p>
-</section>
-<section id="results-1" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="results-1">Results</h2>
-<div class="column-screen">
-<div class="table-responsive">
-<table class="table-striped table-hover table-borderless caption-top table">
-<caption>Results</caption>
-<colgroup>
-<col style="width: 4%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Feature</th>
-<th>adjectives_wolves</th>
-<th>awesome_teachers</th>
-<th>blue_victors</th>
-<th>celestial_treasures</th>
-<th>coarse_tractors</th>
-<th>cool_aspects</th>
-<th>creative_symbols</th>
-<th>crimson_sunsets</th>
-<th>dynamic_springs</th>
-<th>empathetic_spectacles</th>
-<th>energetic_spaceships</th>
-<th>enlightened_solitudes</th>
-<th>ethereal_skylines</th>
-<th>gold_sapphires</th>
-<th>golden_rubies</th>
-<th>gracious_rollercoasters</th>
-<th>grateful_rhinos</th>
-<th>invincible_penguins</th>
-<th>light_nouns</th>
-<th>lustrous_novelties</th>
-<th>opulent_motorcycles</th>
-<th>persistent_lagoons</th>
-<th>polished_jaguars</th>
-<th>purple_infinity</th>
-<th>radiant_illuminations</th>
-<th>red_helicopters</th>
-<th>silken_foxes</th>
-<th>silky_flutes</th>
-<th>smiling_anvils</th>
-<th>smooth_fantasies</th>
-<th>soft_explorers</th>
-<th>spirited_essences</th>
-<th>tranquil_eclipses</th>
-<th>unified_diamonds</th>
-<th>vibrant_constellations</th>
-<th>white_cheetahs</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>avgAcceleration</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>avgAccelerationCruise</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>avgAccelerationLanding</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>avgAccelerationTakeOff</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>avgAirSpeed</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>avgAirSpeedCruise</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>avgAirSpeedLanding</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>avgAirSpeedTakeOff</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>avgAlt</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>avgEnginePower</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>🟡</td>
-<td>🟡</td>
-<td>🟡</td>
-<td>🟡</td>
-<td>🟡</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>avgEnginePowerCruise</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>avgEnginePowerLanding</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>avgEnginePowerTakeOff</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>avgHeartRate</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>avgHumidity</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>avgMachSpeed</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>avgOxygen</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>avgPressure</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>avgTemp</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>cruise</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>cumulDuration</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>fastJetAlt</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>fastWindAlt</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>filenames</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>firstLanding</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>flightDistance</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>flightDistanceCruise</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>flightDistanceLanding</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>flightDistanceTakeOff</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>flightDuration</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>highestAltitude</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>highestLift</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>highestSpeed</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>imperial</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>landing</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>lastLanding</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>longestDuration</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>maxAccelG</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>maxAcceleration</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>maxAccelerationCruise</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>maxAccelerationLanding</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>maxAccelerationTakeOff</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>maxAirSpeed</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>maxAirSpeedCruise</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>maxAirSpeedLanding</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>maxAirSpeedTakeOff</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>maxAlt</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>maxEnginePower</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>🟡</td>
-<td>🟡</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>maxEnginePowerCruise</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>maxEnginePowerLanding</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>maxEnginePowerTakeOff</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>maxHeartRate</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>maxHumidity</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>maxMachSpeed</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>maxOxygen</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>maxPressure</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>maxTemp</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>metadata</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>metric</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>minHeartRate</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>minHumidity</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>minOxygen</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>minPressure</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>minTemp</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>mostAccelPhase</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>mostPowerPhase</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>mostStressPhase</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>noiseTemp</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>number</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>oxygenPhase</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>ratioDistance</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>reachAlt</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>reachDist</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>slowestSpeed</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>smallestLift</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>start_time</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>stressedPilot</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>takeOff</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>windSpeed</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🟢</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>🔴</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>windSpeedCruise</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>windSpeedLanding</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>windSpeedTakeOff</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
@@ -7118,13 +3853,14 @@ table thead th:first-child {
 <table class="table-striped table-hover table-borderless caption-top table">
 <caption>Cross-Testing Results</caption>
 <colgroup>
-<col style="width: 4%">
-<col style="width: 17%">
+<col style="width: 3%">
+<col style="width: 16%">
 <col style="width: 19%">
-<col style="width: 18%">
-<col style="width: 21%">
+<col style="width: 17%">
+<col style="width: 20%">
 <col style="width: 7%">
 <col style="width: 5%">
+<col style="width: 2%">
 <col style="width: 6%">
 </colgroup>
 <thead>
@@ -7136,356 +3872,403 @@ table thead th:first-child {
 <th style="text-align: center;">Not Detected &amp; Incorrect (TN)</th>
 <th style="text-align: center;">Precision</th>
 <th style="text-align: center;">Recall</th>
+<th style="text-align: center;">F1</th>
 <th style="text-align: center;">Accuracy</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>invincible_penguins</td>
+<td>invincible_penguins 2026</td>
 <td style="text-align: center;">88</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">106</td>
-<td style="text-align: center;">592</td>
-<td style="text-align: center;">0.45</td>
-<td style="text-align: center;">0.93</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">114</td>
+<td style="text-align: center;">662</td>
+<td style="text-align: center;">0.44</td>
+<td style="text-align: center;">0.82</td>
+<td style="text-align: center;">0.57</td>
+<td style="text-align: center;">0.85</td>
+</tr>
+<tr class="even">
+<td>celestial_treasures 2026</td>
+<td style="text-align: center;">79</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">103</td>
+<td style="text-align: center;">664</td>
+<td style="text-align: center;">0.43</td>
+<td style="text-align: center;">0.82</td>
+<td style="text-align: center;">0.57</td>
 <td style="text-align: center;">0.86</td>
 </tr>
-<tr class="even">
-<td>blue_victors</td>
-<td style="text-align: center;">72</td>
-<td style="text-align: center;">23</td>
-<td style="text-align: center;">207</td>
-<td style="text-align: center;">486</td>
-<td style="text-align: center;">0.26</td>
-<td style="text-align: center;">0.76</td>
-<td style="text-align: center;">0.71</td>
-</tr>
 <tr class="odd">
-<td>grateful_rhinos</td>
-<td style="text-align: center;">81</td>
-<td style="text-align: center;">11</td>
-<td style="text-align: center;">280</td>
-<td style="text-align: center;">426</td>
-<td style="text-align: center;">0.22</td>
-<td style="text-align: center;">0.88</td>
-<td style="text-align: center;">0.64</td>
-</tr>
-<tr class="even">
-<td>red_helicopters</td>
-<td style="text-align: center;">85</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">333</td>
-<td style="text-align: center;">355</td>
-<td style="text-align: center;">0.20</td>
-<td style="text-align: center;">0.89</td>
-<td style="text-align: center;">0.56</td>
-</tr>
-<tr class="odd">
-<td>polished_jaguars</td>
-<td style="text-align: center;">77</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">327</td>
-<td style="text-align: center;">345</td>
-<td style="text-align: center;">0.19</td>
-<td style="text-align: center;">0.91</td>
-<td style="text-align: center;">0.56</td>
-</tr>
-<tr class="even">
-<td>lustrous_novelties</td>
-<td style="text-align: center;">72</td>
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">308</td>
-<td style="text-align: center;">400</td>
-<td style="text-align: center;">0.19</td>
-<td style="text-align: center;">0.89</td>
-<td style="text-align: center;">0.60</td>
-</tr>
-<tr class="odd">
-<td>celestial_treasures</td>
+<td>energetic_spaceships 2026</td>
 <td style="text-align: center;">78</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">333</td>
-<td style="text-align: center;">344</td>
-<td style="text-align: center;">0.19</td>
-<td style="text-align: center;">0.83</td>
-<td style="text-align: center;">0.55</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">246</td>
+<td style="text-align: center;">532</td>
+<td style="text-align: center;">0.24</td>
+<td style="text-align: center;">0.74</td>
+<td style="text-align: center;">0.36</td>
+<td style="text-align: center;">0.69</td>
 </tr>
 <tr class="even">
-<td>opulent_motorcycles</td>
-<td style="text-align: center;">76</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">337</td>
-<td style="text-align: center;">376</td>
-<td style="text-align: center;">0.18</td>
-<td style="text-align: center;">0.90</td>
-<td style="text-align: center;">0.57</td>
+<td>silky_flutes 2026</td>
+<td style="text-align: center;">72</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">241</td>
+<td style="text-align: center;">541</td>
+<td style="text-align: center;">0.23</td>
+<td style="text-align: center;">0.67</td>
+<td style="text-align: center;">0.34</td>
+<td style="text-align: center;">0.69</td>
 </tr>
 <tr class="odd">
-<td>unified_diamonds</td>
-<td style="text-align: center;">77</td>
-<td style="text-align: center;">18</td>
-<td style="text-align: center;">348</td>
-<td style="text-align: center;">325</td>
+<td>grateful_rhinos 2026</td>
+<td style="text-align: center;">85</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">330</td>
+<td style="text-align: center;">456</td>
+<td style="text-align: center;">0.20</td>
+<td style="text-align: center;">0.82</td>
+<td style="text-align: center;">0.33</td>
+<td style="text-align: center;">0.61</td>
+</tr>
+<tr class="even">
+<td>blue_victors 2026</td>
+<td style="text-align: center;">63</td>
+<td style="text-align: center;">44</td>
+<td style="text-align: center;">229</td>
+<td style="text-align: center;">544</td>
+<td style="text-align: center;">0.22</td>
+<td style="text-align: center;">0.59</td>
+<td style="text-align: center;">0.32</td>
+<td style="text-align: center;">0.69</td>
+</tr>
+<tr class="odd">
+<td>radiant_illuminations 2026</td>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">62</td>
+<td style="text-align: center;">137</td>
+<td style="text-align: center;">656</td>
+<td style="text-align: center;">0.25</td>
+<td style="text-align: center;">0.42</td>
+<td style="text-align: center;">0.31</td>
+<td style="text-align: center;">0.78</td>
+</tr>
+<tr class="even">
+<td>red_helicopters 2026</td>
+<td style="text-align: center;">85</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">388</td>
+<td style="text-align: center;">380</td>
 <td style="text-align: center;">0.18</td>
-<td style="text-align: center;">0.81</td>
+<td style="text-align: center;">0.79</td>
+<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">0.53</td>
+</tr>
+<tr class="odd">
+<td>unified_diamonds 2026</td>
+<td style="text-align: center;">86</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">403</td>
+<td style="text-align: center;">350</td>
+<td style="text-align: center;">0.18</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">0.51</td>
+</tr>
+<tr class="even">
+<td>polished_jaguars 2026</td>
+<td style="text-align: center;">78</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">375</td>
+<td style="text-align: center;">377</td>
+<td style="text-align: center;">0.17</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.28</td>
+<td style="text-align: center;">0.54</td>
+</tr>
+<tr class="odd">
+<td>lustrous_novelties 2026</td>
+<td style="text-align: center;">73</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">353</td>
+<td style="text-align: center;">435</td>
+<td style="text-align: center;">0.17</td>
+<td style="text-align: center;">0.78</td>
+<td style="text-align: center;">0.28</td>
+<td style="text-align: center;">0.58</td>
+</tr>
+<tr class="even">
+<td>opulent_motorcycles 2026</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">441</td>
+<td style="text-align: center;">341</td>
+<td style="text-align: center;">0.15</td>
+<td style="text-align: center;">0.84</td>
+<td style="text-align: center;">0.26</td>
+<td style="text-align: center;">0.48</td>
+</tr>
+<tr class="odd">
+<td>dynamic_springs 2026</td>
+<td style="text-align: center;">31</td>
+<td style="text-align: center;">76</td>
+<td style="text-align: center;">113</td>
+<td style="text-align: center;">671</td>
+<td style="text-align: center;">0.22</td>
+<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">0.25</td>
+<td style="text-align: center;">0.79</td>
+</tr>
+<tr class="even">
+<td>persistent_lagoons 2026</td>
+<td style="text-align: center;">69</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">403</td>
+<td style="text-align: center;">397</td>
+<td style="text-align: center;">0.15</td>
+<td style="text-align: center;">0.76</td>
+<td style="text-align: center;">0.25</td>
 <td style="text-align: center;">0.52</td>
 </tr>
-<tr class="even">
-<td>persistent_lagoons</td>
-<td style="text-align: center;">68</td>
-<td style="text-align: center;">11</td>
-<td style="text-align: center;">348</td>
-<td style="text-align: center;">372</td>
-<td style="text-align: center;">0.16</td>
-<td style="text-align: center;">0.86</td>
-<td style="text-align: center;">0.55</td>
-</tr>
 <tr class="odd">
-<td>creative_symbols</td>
-<td style="text-align: center;">40</td>
-<td style="text-align: center;">51</td>
-<td style="text-align: center;">204</td>
-<td style="text-align: center;">510</td>
-<td style="text-align: center;">0.16</td>
-<td style="text-align: center;">0.44</td>
-<td style="text-align: center;">0.68</td>
-</tr>
-<tr class="even">
-<td>spirited_essences</td>
-<td style="text-align: center;">25</td>
-<td style="text-align: center;">70</td>
-<td style="text-align: center;">103</td>
-<td style="text-align: center;">618</td>
-<td style="text-align: center;">0.20</td>
-<td style="text-align: center;">0.26</td>
-<td style="text-align: center;">0.79</td>
-</tr>
-<tr class="odd">
-<td>light_nouns</td>
-<td style="text-align: center;">36</td>
-<td style="text-align: center;">59</td>
-<td style="text-align: center;">231</td>
-<td style="text-align: center;">481</td>
-<td style="text-align: center;">0.13</td>
-<td style="text-align: center;">0.38</td>
-<td style="text-align: center;">0.64</td>
-</tr>
-<tr class="even">
-<td>dynamic_springs</td>
-<td style="text-align: center;">15</td>
-<td style="text-align: center;">80</td>
-<td style="text-align: center;">55</td>
-<td style="text-align: center;">662</td>
-<td style="text-align: center;">0.21</td>
-<td style="text-align: center;">0.16</td>
-<td style="text-align: center;">0.83</td>
-</tr>
-<tr class="odd">
-<td>silky_flutes</td>
-<td style="text-align: center;">12</td>
-<td style="text-align: center;">73</td>
-<td style="text-align: center;">46</td>
-<td style="text-align: center;">671</td>
-<td style="text-align: center;">0.21</td>
-<td style="text-align: center;">0.14</td>
-<td style="text-align: center;">0.85</td>
-</tr>
-<tr class="even">
-<td>purple_infinity</td>
-<td style="text-align: center;">12</td>
-<td style="text-align: center;">82</td>
-<td style="text-align: center;">61</td>
-<td style="text-align: center;">646</td>
-<td style="text-align: center;">0.16</td>
-<td style="text-align: center;">0.13</td>
-<td style="text-align: center;">0.82</td>
-</tr>
-<tr class="odd">
-<td>energetic_spaceships</td>
-<td style="text-align: center;">13</td>
-<td style="text-align: center;">81</td>
-<td style="text-align: center;">108</td>
-<td style="text-align: center;">596</td>
-<td style="text-align: center;">0.11</td>
-<td style="text-align: center;">0.14</td>
+<td>cool_aspects 2026</td>
+<td style="text-align: center;">31</td>
+<td style="text-align: center;">67</td>
+<td style="text-align: center;">150</td>
+<td style="text-align: center;">647</td>
+<td style="text-align: center;">0.17</td>
+<td style="text-align: center;">0.32</td>
+<td style="text-align: center;">0.22</td>
 <td style="text-align: center;">0.76</td>
 </tr>
 <tr class="even">
-<td>silken_foxes</td>
-<td style="text-align: center;">8</td>
+<td>silken_foxes 2026</td>
+<td style="text-align: center;">20</td>
 <td style="text-align: center;">87</td>
-<td style="text-align: center;">33</td>
-<td style="text-align: center;">686</td>
-<td style="text-align: center;">0.20</td>
-<td style="text-align: center;">0.08</td>
-<td style="text-align: center;">0.85</td>
+<td style="text-align: center;">54</td>
+<td style="text-align: center;">739</td>
+<td style="text-align: center;">0.27</td>
+<td style="text-align: center;">0.19</td>
+<td style="text-align: center;">0.22</td>
+<td style="text-align: center;">0.84</td>
 </tr>
 <tr class="odd">
-<td>coarse_tractors</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">90</td>
-<td style="text-align: center;">26</td>
-<td style="text-align: center;">662</td>
-<td style="text-align: center;">0.13</td>
-<td style="text-align: center;">0.04</td>
-<td style="text-align: center;">0.85</td>
+<td>creative_symbols 2026</td>
+<td style="text-align: center;">41</td>
+<td style="text-align: center;">61</td>
+<td style="text-align: center;">236</td>
+<td style="text-align: center;">559</td>
+<td style="text-align: center;">0.15</td>
+<td style="text-align: center;">0.40</td>
+<td style="text-align: center;">0.22</td>
+<td style="text-align: center;">0.67</td>
 </tr>
 <tr class="even">
-<td>ethereal_skylines</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">89</td>
-<td style="text-align: center;">86</td>
-<td style="text-align: center;">639</td>
-<td style="text-align: center;">0.07</td>
-<td style="text-align: center;">0.06</td>
-<td style="text-align: center;">0.79</td>
-</tr>
-<tr class="odd">
-<td>crimson_sunsets</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">81</td>
-<td style="text-align: center;">24</td>
-<td style="text-align: center;">690</td>
-<td style="text-align: center;">0.11</td>
-<td style="text-align: center;">0.04</td>
-<td style="text-align: center;">0.87</td>
-</tr>
-<tr class="even">
-<td>soft_explorers</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">91</td>
-<td style="text-align: center;">70</td>
-<td style="text-align: center;">656</td>
-<td style="text-align: center;">0.05</td>
-<td style="text-align: center;">0.04</td>
-<td style="text-align: center;">0.80</td>
-</tr>
-<tr class="odd">
-<td>adjectives_wolves</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">90</td>
-<td style="text-align: center;">85</td>
-<td style="text-align: center;">641</td>
-<td style="text-align: center;">0.04</td>
-<td style="text-align: center;">0.04</td>
-<td style="text-align: center;">0.79</td>
-</tr>
-<tr class="even">
-<td>cool_aspects</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">91</td>
-<td style="text-align: center;">91</td>
-<td style="text-align: center;">629</td>
-<td style="text-align: center;">0.04</td>
-<td style="text-align: center;">0.04</td>
+<td>spirited_essences 2026</td>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">84</td>
+<td style="text-align: center;">113</td>
+<td style="text-align: center;">688</td>
+<td style="text-align: center;">0.17</td>
+<td style="text-align: center;">0.21</td>
+<td style="text-align: center;">0.19</td>
 <td style="text-align: center;">0.78</td>
 </tr>
 <tr class="odd">
-<td>empathetic_spectacles</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">92</td>
-<td style="text-align: center;">46</td>
-<td style="text-align: center;">658</td>
-<td style="text-align: center;">0.06</td>
-<td style="text-align: center;">0.03</td>
-<td style="text-align: center;">0.83</td>
+<td>light_nouns 2026</td>
+<td style="text-align: center;">37</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">263</td>
+<td style="text-align: center;">529</td>
+<td style="text-align: center;">0.12</td>
+<td style="text-align: center;">0.35</td>
+<td style="text-align: center;">0.18</td>
+<td style="text-align: center;">0.63</td>
 </tr>
 <tr class="even">
-<td>tranquil_eclipses</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">93</td>
-<td style="text-align: center;">52</td>
-<td style="text-align: center;">673</td>
-<td style="text-align: center;">0.04</td>
-<td style="text-align: center;">0.02</td>
+<td>crimson_sunsets 2026</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">79</td>
+<td style="text-align: center;">81</td>
+<td style="text-align: center;">713</td>
+<td style="text-align: center;">0.17</td>
+<td style="text-align: center;">0.18</td>
+<td style="text-align: center;">0.18</td>
 <td style="text-align: center;">0.82</td>
 </tr>
 <tr class="odd">
-<td>enlightened_solitudes</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">93</td>
-<td style="text-align: center;">59</td>
-<td style="text-align: center;">662</td>
-<td style="text-align: center;">0.03</td>
-<td style="text-align: center;">0.02</td>
-<td style="text-align: center;">0.81</td>
-</tr>
-<tr class="even">
-<td>radiant_illuminations</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">93</td>
-<td style="text-align: center;">63</td>
-<td style="text-align: center;">663</td>
-<td style="text-align: center;">0.03</td>
-<td style="text-align: center;">0.02</td>
-<td style="text-align: center;">0.81</td>
-</tr>
-<tr class="odd">
-<td>smooth_fantasies</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">94</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">718</td>
+<td>empathetic_spectacles 2026</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">95</td>
+<td style="text-align: center;">58</td>
+<td style="text-align: center;">726</td>
+<td style="text-align: center;">0.17</td>
+<td style="text-align: center;">0.11</td>
 <td style="text-align: center;">0.14</td>
-<td style="text-align: center;">0.01</td>
+<td style="text-align: center;">0.83</td>
+</tr>
+<tr class="even">
+<td>purple_infinity 2026</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">93</td>
+<td style="text-align: center;">81</td>
+<td style="text-align: center;">706</td>
+<td style="text-align: center;">0.14</td>
+<td style="text-align: center;">0.12</td>
+<td style="text-align: center;">0.13</td>
+<td style="text-align: center;">0.81</td>
+</tr>
+<tr class="odd">
+<td>adjectives_wolves 2026</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">93</td>
+<td style="text-align: center;">84</td>
+<td style="text-align: center;">709</td>
+<td style="text-align: center;">0.13</td>
+<td style="text-align: center;">0.12</td>
+<td style="text-align: center;">0.13</td>
+<td style="text-align: center;">0.80</td>
+</tr>
+<tr class="even">
+<td>ethereal_skylines 2026</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">97</td>
+<td style="text-align: center;">708</td>
+<td style="text-align: center;">0.07</td>
+<td style="text-align: center;">0.07</td>
+<td style="text-align: center;">0.07</td>
+<td style="text-align: center;">0.78</td>
+</tr>
+<tr class="odd">
+<td>coarse_tractors 2026</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">102</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">738</td>
+<td style="text-align: center;">0.12</td>
+<td style="text-align: center;">0.04</td>
+<td style="text-align: center;">0.06</td>
+<td style="text-align: center;">0.85</td>
+</tr>
+<tr class="even">
+<td>gold_sapphires 2026</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">102</td>
+<td style="text-align: center;">39</td>
+<td style="text-align: center;">763</td>
+<td style="text-align: center;">0.09</td>
+<td style="text-align: center;">0.04</td>
+<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">0.84</td>
+</tr>
+<tr class="odd">
+<td>soft_explorers 2026</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">102</td>
+<td style="text-align: center;">75</td>
+<td style="text-align: center;">731</td>
+<td style="text-align: center;">0.06</td>
+<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">0.81</td>
+</tr>
+<tr class="even">
+<td>tranquil_eclipses 2026</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">104</td>
+<td style="text-align: center;">56</td>
+<td style="text-align: center;">749</td>
+<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">0.03</td>
+<td style="text-align: center;">0.04</td>
+<td style="text-align: center;">0.82</td>
+</tr>
+<tr class="odd">
+<td>smooth_fantasies 2026</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">105</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">800</td>
+<td style="text-align: center;">0.33</td>
+<td style="text-align: center;">0.02</td>
+<td style="text-align: center;">0.04</td>
 <td style="text-align: center;">0.88</td>
 </tr>
 <tr class="even">
-<td>gold_sapphires</td>
+<td>enlightened_solitudes 2026</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">105</td>
+<td style="text-align: center;">67</td>
+<td style="text-align: center;">734</td>
+<td style="text-align: center;">0.03</td>
+<td style="text-align: center;">0.02</td>
+<td style="text-align: center;">0.02</td>
+<td style="text-align: center;">0.81</td>
+</tr>
+<tr class="odd">
+<td>awesome_teachers 2026</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">95</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">731</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">0.00</td>
+</tr>
+<tr class="even">
+<td>golden_rubies 2026</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">107</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">811</td>
+<td style="text-align: center;">0.00</td>
 <td style="text-align: center;">0.00</td>
 <td style="text-align: center;">0.00</td>
 <td style="text-align: center;">0.88</td>
 </tr>
 <tr class="odd">
-<td>golden_rubies</td>
+<td>gracious_rollercoasters 2026</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">95</td>
+<td style="text-align: center;">107</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">731</td>
+<td style="text-align: center;">811</td>
+<td style="text-align: center;">0.00</td>
 <td style="text-align: center;">0.00</td>
 <td style="text-align: center;">0.00</td>
 <td style="text-align: center;">0.88</td>
 </tr>
 <tr class="even">
-<td>gracious_rollercoasters</td>
+<td>smiling_anvils 2026</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">95</td>
+<td style="text-align: center;">107</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">731</td>
+<td style="text-align: center;">774</td>
+<td style="text-align: center;">0.00</td>
 <td style="text-align: center;">0.00</td>
 <td style="text-align: center;">0.00</td>
 <td style="text-align: center;">0.88</td>
 </tr>
 <tr class="odd">
-<td>smiling_anvils</td>
+<td>vibrant_constellations 2026</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">95</td>
+<td style="text-align: center;">97</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">694</td>
+<td style="text-align: center;">783</td>
 <td style="text-align: center;">0.00</td>
-<td style="text-align: center;">0.00</td>
-<td style="text-align: center;">0.88</td>
-</tr>
-<tr class="even">
-<td>vibrant_constellations</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">85</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">703</td>
 <td style="text-align: center;">0.00</td>
 <td style="text-align: center;">0.00</td>
 <td style="text-align: center;">0.89</td>
 </tr>
-<tr class="odd">
-<td>white_cheetahs</td>
+<tr class="even">
+<td>white_cheetahs 2026</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">94</td>
+<td style="text-align: center;">106</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">706</td>
+<td style="text-align: center;">786</td>
+<td style="text-align: center;">0.00</td>
 <td style="text-align: center;">0.00</td>
 <td style="text-align: center;">0.00</td>
 <td style="text-align: center;">0.88</td>
@@ -7494,17 +4277,385 @@ table thead th:first-child {
 </table>
 </div>
 </section>
+<section id="code-coverage" class="level2">
+<h2 class="anchored" data-anchor-id="code-coverage">Code Coverage</h2>
+<div class="table-responsive">
+<table class="table-striped table-hover table-borderless caption-top table">
+<caption>Code Coverage</caption>
+<thead>
+<tr class="header">
+<th>Team</th>
+<th style="text-align: center;">Line Coverage</th>
+<th style="text-align: center;">Branch Coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>blue_victors 2026</td>
+<td style="text-align: center;">93%</td>
+<td style="text-align: center;">88%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="commit-quality" class="level2">
+<h2 class="anchored" data-anchor-id="commit-quality">Commit Quality</h2>
+<div class="table-responsive">
+<table class="table-striped table-hover table-borderless caption-top table">
+<caption>Commit Quality</caption>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 12%">
+<col style="width: 10%">
+<col style="width: 20%">
+<col style="width: 8%">
+<col style="width: 27%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Team</th>
+<th style="text-align: center;">Commits</th>
+<th style="text-align: center;">Grade</th>
+<th style="text-align: center;">Conventional</th>
+<th style="text-align: center;">Poor</th>
+<th style="text-align: center;">Branch Discipline</th>
+<th style="text-align: center;">AI Flag</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>grateful_rhinos 2026</td>
+<td style="text-align: center;">206</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">87%</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">PR</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>invincible_penguins 2026</td>
+<td style="text-align: center;">75</td>
+<td style="text-align: center;">Poor</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">65%</td>
+<td style="text-align: center;">PR</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td>light_nouns 2026</td>
+<td style="text-align: center;">72</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">71%</td>
+<td style="text-align: center;">14%</td>
+<td style="text-align: center;">branches</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>silken_foxes 2026</td>
+<td style="text-align: center;">65</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">94%</td>
+<td style="text-align: center;">2%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td>red_helicopters 2026</td>
+<td style="text-align: center;">52</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">29%</td>
+<td style="text-align: center;">8%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>vibrant_constellations 2026</td>
+<td style="text-align: center;">52</td>
+<td style="text-align: center;">Poor</td>
+<td style="text-align: center;">2%</td>
+<td style="text-align: center;">81%</td>
+<td style="text-align: center;">branches</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td>creative_symbols 2026</td>
+<td style="text-align: center;">46</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">54%</td>
+<td style="text-align: center;">9%</td>
+<td style="text-align: center;">branches</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>silky_flutes 2026</td>
+<td style="text-align: center;">46</td>
+<td style="text-align: center;">Good</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">37%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td>blue_victors 2026</td>
+<td style="text-align: center;">43</td>
+<td style="text-align: center;">Good</td>
+<td style="text-align: center;">14%</td>
+<td style="text-align: center;">28%</td>
+<td style="text-align: center;">PR</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>energetic_spaceships 2026</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td>coarse_tractors 2026</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">Very Poor</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">89%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>radiant_illuminations 2026</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">Acceptable</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">50%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td>lustrous_novelties 2026</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">74%</td>
+<td style="text-align: center;">11%</td>
+<td style="text-align: center;">branches</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>spirited_essences 2026</td>
+<td style="text-align: center;">34</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">82%</td>
+<td style="text-align: center;">6%</td>
+<td style="text-align: center;">branches</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td>unified_diamonds 2026</td>
+<td style="text-align: center;">31</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>persistent_lagoons 2026</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">branches</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td>dynamic_springs 2026</td>
+<td style="text-align: center;">27</td>
+<td style="text-align: center;">Very Poor</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">85%</td>
+<td style="text-align: center;">branches</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>gold_sapphires 2026</td>
+<td style="text-align: center;">27</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">74%</td>
+<td style="text-align: center;">7%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td>empathetic_spectacles 2026</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">Acceptable</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">32%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>crimson_sunsets 2026</td>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">87%</td>
+<td style="text-align: center;">4%</td>
+<td style="text-align: center;">branches</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td>opulent_motorcycles 2026</td>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">PR</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>cool_aspects 2026</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">Good</td>
+<td style="text-align: center;">36%</td>
+<td style="text-align: center;">18%</td>
+<td style="text-align: center;">branches</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td>soft_explorers 2026</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">90%</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>white_cheetahs 2026</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">Good</td>
+<td style="text-align: center;">33%</td>
+<td style="text-align: center;">29%</td>
+<td style="text-align: center;">PR</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td>purple_infinity 2026</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">Good</td>
+<td style="text-align: center;">45%</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>polished_jaguars 2026</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">Poor</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">56%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td>tranquil_eclipses 2026</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">Good</td>
+<td style="text-align: center;">61%</td>
+<td style="text-align: center;">28%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>celestial_treasures 2026</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">Poor</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">73%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td>adjectives_wolves 2026</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">Very Poor</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>enlightened_solitudes 2026</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">Good</td>
+<td style="text-align: center;">69%</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">PR</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td>ethereal_skylines 2026</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">Very Poor</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>smiling_anvils 2026</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">88%</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">PR</td>
+<td style="text-align: center;">⚠️</td>
+</tr>
+<tr class="odd">
+<td>smooth_fantasies 2026</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">Very Poor</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>gracious_rollercoasters 2026</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Insufficient</td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td>awesome_teachers 2026</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>golden_rubies 2026</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">Insufficient</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 <section id="class-summary" class="level2">
 <h2 class="anchored" data-anchor-id="class-summary">Class Summary</h2>
 <p>One row per team. The <strong>Features</strong> and <strong>Tests</strong> columns show how many items fall in each category: 🟢 validated · 🟡 almost · 🔴 missed · ⚪ not implemented.</p>
-<ul>
-<li><strong>Teacher Score</strong>: average across all evaluated tests from the teacher suite.</li>
-<li><strong>Features (🟢/🟡/🔴/⚪)</strong>: per-feature tally after aggregating test scores.</li>
-<li><strong>Tests (🟢/🟡/🔴/⚪)</strong>: per-individual-test tally.</li>
-<li><strong>Test Quality (F1)</strong>: F1 score from cross-testing (0 when cross_testing phase is disabled).</li>
-<li><strong>Valid Tests</strong>: how many of the team’s own tests pass against the reference / total tests.</li>
-<li><strong>Removed</strong>: tests dropped before evaluation (missing files, non-whitelisted features).</li>
-</ul>
 <div class="table-responsive">
 <table class="table-primary table-striped table-hover table-borderless caption-top table">
 <caption>Class Summary</caption>
@@ -7523,469 +4674,393 @@ table thead th:first-child {
 <th>Team</th>
 <th>Version</th>
 <th>Teacher Score</th>
+<th>Test Quality (F1)</th>
 <th>Features (🟢/🟡/🔴/⚪)</th>
 <th>Tests (🟢/🟡/🔴/⚪)</th>
-<th>Test Quality (F1)</th>
 <th>Valid Tests</th>
 <th>Removed</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>adjectives_wolves</td>
+<td>adjectives_wolves 2026</td>
 <td>2.0.0</td>
-<td>0.44</td>
-<td>🟢1 🟡2 🔴1 ⚪83</td>
-<td>🟢105 🟡18 🔴9 ⚪1291</td>
-<td>0.04</td>
-<td>5/9</td>
-<td>3</td>
+<td>13 %</td>
+<td>13 %</td>
+<td>🟢1 🟡15 🔴1 ⚪70</td>
+<td>🟢289 🟡18 🔴9 ⚪1107</td>
+<td>23/35</td>
+<td>2</td>
 </tr>
 <tr class="even">
-<td>awesome_teachers</td>
+<td>awesome_teachers 2026</td>
 <td>?</td>
-<td>0.00</td>
+<td>0 %</td>
+<td>0 %</td>
 <td></td>
 <td></td>
-<td>0.00</td>
 <td>0/0</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<td>blue_victors</td>
-<td>1.1.0</td>
-<td>0.38</td>
+<td>blue_victors 2026</td>
+<td>2.1.0</td>
+<td>16 %</td>
+<td>32 %</td>
 <td>🟢0 🟡22 🔴8 ⚪57</td>
 <td>🟢349 🟡3 🔴48 ⚪1023</td>
-<td>0.39</td>
 <td>0/94</td>
-<td>53</td>
+<td>35</td>
 </tr>
 <tr class="even">
-<td>celestial_treasures</td>
-<td>1.1.6</td>
-<td>0.30</td>
-<td>🟢1 🟡20 🔴8 ⚪58</td>
-<td>🟢318 🟡4 🔴123 ⚪978</td>
-<td>0.31</td>
-<td>23/55</td>
+<td>celestial_treasures 2026</td>
+<td>2.0.4</td>
+<td>26 %</td>
+<td>57 %</td>
+<td>🟢11 🟡16 🔴27 ⚪33</td>
+<td>🟢488 🟡42 🔴435 ⚪458</td>
+<td>50/81</td>
 <td>1</td>
 </tr>
 <tr class="odd">
-<td>coarse_tractors</td>
+<td>coarse_tractors 2026</td>
 <td>3.0.1</td>
-<td>0.24</td>
+<td>9 %</td>
+<td>6 %</td>
 <td>🟢1 🟡13 🔴16 ⚪57</td>
 <td>🟢229 🟡1 🔴167 ⚪1026</td>
-<td>0.06</td>
 <td>0/49</td>
 <td>7</td>
 </tr>
 <tr class="even">
-<td>cool_aspects</td>
-<td>2.12.1</td>
-<td>0.73</td>
-<td>🟢0 🟡6 🔴3 ⚪78</td>
-<td>🟢271 🟡24 🔴91 ⚪1037</td>
-<td>0.04</td>
-<td>13/37</td>
+<td>cool_aspects 2026</td>
+<td>2.13.1</td>
+<td>25 %</td>
+<td>22 %</td>
+<td>🟢9 🟡12 🔴1 ⚪65</td>
+<td>🟢560 🟡19 🔴91 ⚪753</td>
+<td>14/57</td>
 <td>4</td>
 </tr>
 <tr class="odd">
-<td>creative_symbols</td>
-<td>3.0.1</td>
-<td>0.68</td>
-<td>🟢4 🟡10 🔴5 ⚪68</td>
-<td>🟢301 🟡2 🔴150 ⚪970</td>
-<td>0.24</td>
+<td>creative_symbols 2026</td>
+<td>3.0.2</td>
+<td>15 %</td>
+<td>22 %</td>
+<td>🟢5 🟡9 🔴5 ⚪68</td>
+<td>🟢306 🟡2 🔴145 ⚪970</td>
 <td>11/22</td>
 <td>2</td>
 </tr>
 <tr class="even">
-<td>crimson_sunsets</td>
+<td>crimson_sunsets 2026</td>
 <td>2.2.0</td>
-<td>0.72</td>
+<td>27 %</td>
+<td>18 %</td>
 <td>🟢11 🟡12 🔴3 ⚪61</td>
 <td>🟢539 🟡27 🔴101 ⚪756</td>
-<td>0.05</td>
-<td>12/33</td>
-<td>5</td>
+<td>28/62</td>
+<td>8</td>
 </tr>
 <tr class="odd">
-<td>dynamic_springs</td>
+<td>dynamic_springs 2026</td>
 <td>2.0.2</td>
-<td>0.30</td>
-<td>🟢0 🟡8 🔴4 ⚪75</td>
-<td>🟢124 🟡0 🔴118 ⚪1181</td>
-<td>0.18</td>
-<td>28/72</td>
+<td>10 %</td>
+<td>25 %</td>
+<td>🟢0 🟡15 🔴8 ⚪64</td>
+<td>🟢231 🟡1 🔴140 ⚪1051</td>
+<td>13/115</td>
 <td>8</td>
 </tr>
 <tr class="even">
-<td>empathetic_spectacles</td>
+<td>empathetic_spectacles 2026</td>
 <td>1.1.10</td>
-<td>0.45</td>
+<td>16 %</td>
+<td>14 %</td>
 <td>🟢0 🟡22 🔴2 ⚪63</td>
 <td>🟢335 🟡0 🔴72 ⚪1016</td>
-<td>0.04</td>
 <td>1/30</td>
 <td>5</td>
 </tr>
 <tr class="odd">
-<td>energetic_spaceships</td>
-<td>1.32.0</td>
-<td>0.48</td>
-<td>🟢1 🟡20 🔴3 ⚪63</td>
-<td>🟢344 🟡18 🔴45 ⚪1016</td>
-<td>0.12</td>
-<td>19/32</td>
-<td>3</td>
+<td>energetic_spaceships 2026</td>
+<td>1.38.0</td>
+<td>15 %</td>
+<td>36 %</td>
+<td>🟢1 🟡20 🔴9 ⚪57</td>
+<td>🟢357 🟡21 🔴79 ⚪966</td>
+<td>23/83</td>
+<td>5</td>
 </tr>
 <tr class="even">
-<td>enlightened_solitudes</td>
+<td>enlightened_solitudes 2026</td>
 <td>1.1.0</td>
-<td>0.32</td>
+<td>1 %</td>
+<td>2 %</td>
 <td>🟢0 🟡2 🔴6 ⚪79</td>
 <td>🟢66 🟡0 🔴58 ⚪1299</td>
-<td>0.03</td>
 <td>1/26</td>
 <td>9</td>
 </tr>
 <tr class="odd">
-<td>ethereal_skylines</td>
+<td>ethereal_skylines 2026</td>
 <td>1.0.1</td>
-<td>0.00</td>
+<td>0 %</td>
+<td>7 %</td>
 <td>🟢0 🟡0 🔴4 ⚪83</td>
 <td>🟢0 🟡0 🔴76 ⚪1347</td>
-<td>0.06</td>
 <td>5/7</td>
 <td>1</td>
 </tr>
 <tr class="even">
-<td>gold_sapphires</td>
+<td>gold_sapphires 2026</td>
 <td>1.0.1</td>
-<td>0.00</td>
-<td>🟢0 🟡0 🔴0 ⚪87</td>
-<td>🟢0 🟡0 🔴0 ⚪1423</td>
-<td>0.00</td>
-<td>0/0</td>
-<td>0</td>
+<td>7 %</td>
+<td>5 %</td>
+<td>🟢1 🟡8 🔴1 ⚪77</td>
+<td>🟢141 🟡0 🔴9 ⚪1273</td>
+<td>1/12</td>
+<td>2</td>
 </tr>
 <tr class="odd">
-<td>golden_rubies</td>
+<td>golden_rubies 2026</td>
 <td>1.0.1</td>
-<td>0.00</td>
+<td>0 %</td>
+<td>0 %</td>
 <td>🟢0 🟡0 🔴0 ⚪87</td>
 <td>🟢0 🟡0 🔴0 ⚪1423</td>
-<td>0.00</td>
 <td>0/0</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<td>gracious_rollercoasters</td>
+<td>gracious_rollercoasters 2026</td>
 <td>2.0.0</td>
-<td>0.00</td>
+<td>0 %</td>
+<td>0 %</td>
 <td>🟢0 🟡0 🔴0 ⚪87</td>
 <td>🟢0 🟡0 🔴0 ⚪1423</td>
-<td>0.00</td>
 <td>0/0</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<td>grateful_rhinos</td>
+<td>grateful_rhinos 2026</td>
 <td>1.26.6</td>
-<td>0.55</td>
-<td>🟢3 🟡20 🔴3 ⚪61</td>
-<td>🟢355 🟡60 🔴173 ⚪835</td>
-<td>0.36</td>
-<td>9/32</td>
+<td>23 %</td>
+<td>33 %</td>
+<td>🟢3 🟡21 🔴2 ⚪61</td>
+<td>🟢448 🟡43 🔴97 ⚪835</td>
+<td>10/32</td>
 <td>3</td>
 </tr>
 <tr class="even">
-<td>invincible_penguins</td>
-<td>1.30.1</td>
-<td>0.00</td>
-<td>🟢0 🟡0 🔴29 ⚪58</td>
-<td>🟢0 🟡0 🔴449 ⚪974</td>
-<td>0.61</td>
-<td>27/59</td>
+<td>invincible_penguins 2026</td>
+<td>1.32.0</td>
+<td>0 %</td>
+<td>57 %</td>
+<td>🟢0 🟡0 🔴31 ⚪56</td>
+<td>🟢0 🟡0 🔴463 ⚪960</td>
+<td>27/61</td>
 <td>16</td>
 </tr>
 <tr class="odd">
-<td>light_nouns</td>
+<td>light_nouns 2026</td>
 <td>1.2.1</td>
-<td>0.36</td>
+<td>9 %</td>
+<td>18 %</td>
 <td>🟢0 🟡13 🔴4 ⚪70</td>
 <td>🟢208 🟡0 🔴108 ⚪1107</td>
-<td>0.20</td>
 <td>43/49</td>
 <td>1</td>
 </tr>
 <tr class="even">
-<td>lustrous_novelties</td>
+<td>lustrous_novelties 2026</td>
 <td>1.6.1</td>
-<td>0.77</td>
+<td>30 %</td>
+<td>28 %</td>
 <td>🟢14 🟡14 🔴7 ⚪52</td>
 <td>🟢519 🟡23 🔴163 ⚪718</td>
-<td>0.31</td>
 <td>27/29</td>
 <td>1</td>
 </tr>
 <tr class="odd">
-<td>opulent_motorcycles</td>
-<td>1.6.0</td>
-<td>0.64</td>
-<td>🟢11 🟡10 🔴7 ⚪59</td>
-<td>🟢508 🟡22 🔴129 ⚪764</td>
-<td>0.31</td>
-<td>22/33</td>
-<td>6</td>
+<td>opulent_motorcycles 2026</td>
+<td>1.8.0</td>
+<td>29 %</td>
+<td>26 %</td>
+<td>🟢12 🟡16 🔴12 ⚪47</td>
+<td>🟢538 🟡49 🔴229 ⚪607</td>
+<td>27/44</td>
+<td>3</td>
 </tr>
 <tr class="even">
-<td>persistent_lagoons</td>
+<td>persistent_lagoons 2026</td>
 <td>2.0.0</td>
-<td>0.88</td>
+<td>28 %</td>
+<td>25 %</td>
 <td>🟢16 🟡8 🔴2 ⚪61</td>
 <td>🟢513 🟡4 🔴72 ⚪834</td>
-<td>0.27</td>
 <td>69/84</td>
 <td>2</td>
 </tr>
 <tr class="odd">
-<td>polished_jaguars</td>
+<td>polished_jaguars 2026</td>
 <td>2.0.1</td>
-<td>0.41</td>
+<td>23 %</td>
+<td>28 %</td>
 <td>🟢10 🟡15 🔴37 ⚪25</td>
 <td>🟢475 🟡45 🔴543 ⚪360</td>
-<td>0.31</td>
 <td>35/68</td>
 <td>1</td>
 </tr>
 <tr class="even">
-<td>purple_infinity</td>
+<td>purple_infinity 2026</td>
 <td>2.0.0</td>
-<td>0.29</td>
+<td>2 %</td>
+<td>13 %</td>
 <td>🟢1 🟡2 🔴20 ⚪64</td>
 <td>🟢202 🟡0 🔴186 ⚪1035</td>
-<td>0.14</td>
 <td>24/66</td>
 <td>4</td>
 </tr>
 <tr class="odd">
-<td>radiant_illuminations</td>
+<td>radiant_illuminations 2026</td>
 <td>1.3.0</td>
-<td>0.36</td>
-<td>🟢0 🟡2 🔴1 ⚪84</td>
-<td>🟢24 🟡0 🔴12 ⚪1387</td>
-<td>0.03</td>
-<td>2/6</td>
+<td>11 %</td>
+<td>31 %</td>
+<td>🟢0 🟡15 🔴1 ⚪71</td>
+<td>🟢208 🟡0 🔴12 ⚪1203</td>
+<td>0/22</td>
 <td>2</td>
 </tr>
 <tr class="even">
-<td>red_helicopters</td>
+<td>red_helicopters 2026</td>
 <td>1.0.1</td>
-<td>0.41</td>
+<td>16 %</td>
+<td>29 %</td>
 <td>🟢0 🟡22 🔴8 ⚪57</td>
 <td>🟢386 🟡23 🔴45 ⚪969</td>
-<td>0.33</td>
 <td>56/88</td>
 <td>2</td>
 </tr>
 <tr class="odd">
-<td>silken_foxes</td>
-<td>1.6.0</td>
-<td>0.33</td>
-<td>🟢0 🟡8 🔴2 ⚪77</td>
-<td>🟢118 🟡27 🔴90 ⚪1188</td>
-<td>0.12</td>
-<td>16/34</td>
-<td>3</td>
+<td>silken_foxes 2026</td>
+<td>1.12.0</td>
+<td>9 %</td>
+<td>22 %</td>
+<td>🟢0 🟡13 🔴3 ⚪71</td>
+<td>🟢182 🟡29 🔴90 ⚪1122</td>
+<td>32/73</td>
+<td>5</td>
 </tr>
 <tr class="even">
-<td>silky_flutes</td>
+<td>silky_flutes 2026</td>
 <td>1.0.0</td>
-<td>0.64</td>
-<td>🟢10 🟡10 🔴2 ⚪65</td>
-<td>🟢406 🟡13 🔴123 ⚪881</td>
-<td>0.17</td>
-<td>3/29</td>
+<td>15 %</td>
+<td>34 %</td>
+<td>🟢0 🟡20 🔴7 ⚪60</td>
+<td>🟢324 🟡3 🔴450 ⚪646</td>
+<td>23/40</td>
 <td>4</td>
 </tr>
 <tr class="odd">
-<td>smiling_anvils</td>
+<td>smiling_anvils 2026</td>
 <td>1.0.1</td>
-<td>0.40</td>
+<td>13 %</td>
+<td>0 %</td>
 <td>🟢0 🟡20 🔴9 ⚪58</td>
 <td>🟢284 🟡3 🔴68 ⚪1068</td>
-<td>0.00</td>
 <td>0/0</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<td>smooth_fantasies</td>
+<td>smooth_fantasies 2026</td>
 <td>2.0.0</td>
-<td>0.03</td>
+<td>0 %</td>
+<td>4 %</td>
 <td>🟢0 🟡0 🔴4 ⚪83</td>
 <td>🟢6 🟡1 🔴125 ⚪1291</td>
-<td>0.02</td>
 <td>0/13</td>
 <td>6</td>
 </tr>
 <tr class="odd">
-<td>soft_explorers</td>
+<td>soft_explorers 2026</td>
 <td>2.4.0</td>
-<td>0.24</td>
+<td>2 %</td>
+<td>5 %</td>
 <td>🟢0 🟡2 🔴1 ⚪84</td>
 <td>🟢60 🟡0 🔴63 ⚪1300</td>
-<td>0.05</td>
 <td>3/6</td>
 <td>2</td>
 </tr>
 <tr class="even">
-<td>spirited_essences</td>
+<td>spirited_essences 2026</td>
 <td>2.0.0</td>
-<td>0.39</td>
+<td>2 %</td>
+<td>19 %</td>
 <td>🟢0 🟡2 🔴6 ⚪79</td>
 <td>🟢131 🟡18 🔴34 ⚪1240</td>
-<td>0.22</td>
 <td>8/13</td>
 <td>3</td>
 </tr>
 <tr class="odd">
-<td>tranquil_eclipses</td>
+<td>tranquil_eclipses 2026</td>
 <td>1.2.0</td>
-<td>0.41</td>
+<td>2 %</td>
+<td>4 %</td>
 <td>🟢0 🟡2 🔴2 ⚪83</td>
 <td>🟢103 🟡18 🔴14 ⚪1288</td>
-<td>0.03</td>
 <td>9/17</td>
 <td>2</td>
 </tr>
 <tr class="even">
-<td>unified_diamonds</td>
+<td>unified_diamonds 2026</td>
 <td>2.0.1</td>
-<td>0.15</td>
+<td>2 %</td>
+<td>29 %</td>
 <td>🟢0 🟡5 🔴23 ⚪59</td>
 <td>🟢113 🟡24 🔴271 ⚪1015</td>
-<td>0.30</td>
 <td>21/65</td>
 <td>21</td>
 </tr>
 <tr class="odd">
-<td>vibrant_constellations</td>
+<td>vibrant_constellations 2026</td>
 <td>2.0.0</td>
-<td>0.57</td>
+<td>24 %</td>
+<td>0 %</td>
 <td>🟢10 🟡13 🔴13 ⚪51</td>
 <td>🟢484 🟡25 🔴294 ⚪620</td>
-<td>0.00</td>
 <td>0/20</td>
 <td>7</td>
 </tr>
 <tr class="even">
-<td>white_cheetahs</td>
+<td>white_cheetahs 2026</td>
 <td>2.1.0</td>
-<td>0.49</td>
+<td>17 %</td>
+<td>0 %</td>
 <td>🟢1 🟡21 🔴3 ⚪62</td>
 <td>🟢361 🟡18 🔴38 ⚪1006</td>
-<td>0.00</td>
 <td>0/49</td>
 <td>49</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="2b0d9b12" class="cell" data-execution_count="1">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-startfrom="303" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 302;"><span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"./summary_data.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(data<span class="op">,</span> { <span class="dt">sort</span><span class="op">:</span> <span class="st">"Teacher Score"</span><span class="op">,</span> <span class="dt">reverse</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">rows</span><span class="op">:</span> <span class="dv">75</span> })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
-<!--| quarto-html-table-processing: none -->
-<table id="itables_30c4a9d6_637d_42ee_86cd_bb965240190f">
-  <tbody>
-    <tr>
-      <td style="vertical-align:middle; text-align:left"><a href="https://mwouts.github.io/itables/"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="64" viewbox="0 0 500 400" style="font-family: 'Droid Sans', sans-serif;">
-    <g style="fill:#d9d7fc">
-        <path d="M100,400H500V357H100Z"></path>
-        <path d="M100,300H400V257H100Z"></path>
-        <path d="M0,200H400V157H0Z"></path>
-        <path d="M100,100H500V57H100Z"></path>
-        <path d="M100,350H500V307H100Z"></path>
-        <path d="M100,250H400V207H100Z"></path>
-        <path d="M0,150H400V107H0Z"></path>
-        <path d="M100,50H500V7H100Z"></path>
-    </g>
-    <g style="fill:#1a1366;stroke:#1a1366;">
-   <rect x="100" y="7" width="400" height="43">
-    <animate attributename="width" values="0;400;0" dur="5s" repeatcount="indefinite"></animate>
-      <animate attributename="x" values="100;100;500" dur="5s" repeatcount="indefinite"></animate>
-  </rect>
-        <rect x="0" y="107" width="400" height="43">
-    <animate attributename="width" values="0;400;0" dur="3.5s" repeatcount="indefinite"></animate>
-    <animate attributename="x" values="0;0;400" dur="3.5s" repeatcount="indefinite"></animate>
-  </rect>
-        <rect x="100" y="207" width="300" height="43">
-    <animate attributename="width" values="0;300;0" dur="3s" repeatcount="indefinite"></animate>
-    <animate attributename="x" values="100;100;400" dur="3s" repeatcount="indefinite"></animate>
-  </rect>
-        <rect x="100" y="307" width="400" height="43">
-    <animate attributename="width" values="0;400;0" dur="4s" repeatcount="indefinite"></animate>
-      <animate attributename="x" values="100;100;500" dur="4s" repeatcount="indefinite"></animate>
-  </rect>
-        <g style="fill:transparent;stroke-width:8; stroke-linejoin:round" rx="5">
-            <g transform="translate(45 50) rotate(-45)">
-                <circle r="33" cx="0" cy="0"></circle>
-                <rect x="-8" y="32" width="16" height="30"></rect>
-            </g>
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
 
-            <g transform="translate(450 152)">
-                <polyline points="-15,-20 -35,-20 -35,40 25,40 25,20"></polyline>
-                <rect x="-15" y="-40" width="60" height="60"></rect>
-            </g>
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="expression">
 
-            <g transform="translate(50 352)">
-                <polygon points="-35,-5 0,-40 35,-5"></polygon>
-                <polygon points="-35,10 0,45 35,10"></polygon>
-            </g>
-
-            <g transform="translate(75 250)">
-                <polyline points="-30,30 -60,0 -30,-30"></polyline>
-                <polyline points="0,30 -30,0 0,-30"></polyline>
-            </g>
-
-            <g transform="translate(425 250) rotate(180)">
-                <polyline points="-30,30 -60,0 -30,-30"></polyline>
-                <polyline points="0,30 -30,0 0,-30"></polyline>
-            </g>
-        </g>
-    </g>
-</svg>
-</a>
-        Loading ITables v2.7.1 from the internet...
-        (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)
-      </td>
-    </tr>
-  </tbody>
-</table>
-<link href="https://www.unpkg.com/dt_for_itables@2.5.1/dt_bundle.css" rel="stylesheet">
-<script type="module">
-    import { ITable, jQuery as $ } from 'https://www.unpkg.com/dt_for_itables@2.5.1/dt_bundle.js';
-
-    document.querySelectorAll("#itables_30c4a9d6_637d_42ee_86cd_bb965240190f:not(.dataTable)").forEach(table => {
-        if (!(table instanceof HTMLTableElement))
-            return;
-
-        let dt_args = {
-          "classes": ["display", "compact"],
-          "columnDefs": [{"render": "function (data, type, row, meta) { return type === 'sort' || type === 'type' ? data[1] : data[0]; }", "targets": [2, 11]}, {"className": "dt-center", "targets": "_all"}],
-          "data_json": "[[\"adjectives_wolves 2026\", \"2.0.0\", [\"0.44\", 0.44], 1, 2, 1, 83, 105, 18, 9, 1291, [\"0.04\", 0.04], 5, 9, 3], [\"awesome_teachers 2026\", \"?\", [\"0.00\", 0.0], 0, 0, 0, 0, 0, 0, 0, 0, [\"0.00\", 0.0], 0, 0, 0], [\"blue_victors 2026\", \"1.1.0\", [\"0.38\", 0.38], 0, 22, 8, 57, 349, 3, 48, 1023, [\"0.39\", 0.39], 0, 94, 53], [\"celestial_treasures 2026\", \"1.1.6\", [\"0.30\", 0.3], 1, 20, 8, 58, 318, 4, 123, 978, [\"0.31\", 0.31], 23, 55, 1], [\"coarse_tractors 2026\", \"3.0.1\", [\"0.24\", 0.24], 1, 13, 16, 57, 229, 1, 167, 1026, [\"0.06\", 0.06], 0, 49, 7], [\"cool_aspects 2026\", \"2.12.1\", [\"0.73\", 0.73], 0, 6, 3, 78, 271, 24, 91, 1037, [\"0.04\", 0.04], 13, 37, 4], [\"creative_symbols 2026\", \"3.0.1\", [\"0.68\", 0.68], 4, 10, 5, 68, 301, 2, 150, 970, [\"0.24\", 0.24], 11, 22, 2], [\"crimson_sunsets 2026\", \"2.2.0\", [\"0.72\", 0.72], 11, 12, 3, 61, 539, 27, 101, 756, [\"0.05\", 0.05], 12, 33, 5], [\"dynamic_springs 2026\", \"2.0.2\", [\"0.30\", 0.3], 0, 8, 4, 75, 124, 0, 118, 1181, [\"0.18\", 0.18], 28, 72, 8], [\"empathetic_spectacles 2026\", \"1.1.10\", [\"0.45\", 0.45], 0, 22, 2, 63, 335, 0, 72, 1016, [\"0.04\", 0.04], 1, 30, 5], [\"energetic_spaceships 2026\", \"1.32.0\", [\"0.48\", 0.48], 1, 20, 3, 63, 344, 18, 45, 1016, [\"0.12\", 0.12], 19, 32, 3], [\"enlightened_solitudes 2026\", \"1.1.0\", [\"0.32\", 0.32], 0, 2, 6, 79, 66, 0, 58, 1299, [\"0.03\", 0.03], 1, 26, 9], [\"ethereal_skylines 2026\", \"1.0.1\", [\"0.00\", 0.0], 0, 0, 4, 83, 0, 0, 76, 1347, [\"0.06\", 0.06], 5, 7, 1], [\"gold_sapphires 2026\", \"1.0.1\", [\"0.00\", 0.0], 0, 0, 0, 87, 0, 0, 0, 1423, [\"0.00\", 0.0], 0, 0, 0], [\"golden_rubies 2026\", \"1.0.1\", [\"0.00\", 0.0], 0, 0, 0, 87, 0, 0, 0, 1423, [\"0.00\", 0.0], 0, 0, 0], [\"gracious_rollercoasters 2026\", \"2.0.0\", [\"0.00\", 0.0], 0, 0, 0, 87, 0, 0, 0, 1423, [\"0.00\", 0.0], 0, 0, 0], [\"grateful_rhinos 2026\", \"1.26.6\", [\"0.55\", 0.55], 3, 20, 3, 61, 355, 60, 173, 835, [\"0.36\", 0.36], 9, 32, 3], [\"invincible_penguins 2026\", \"1.30.1\", [\"0.00\", 0.0], 0, 0, 29, 58, 0, 0, 449, 974, [\"0.61\", 0.61], 27, 59, 16], [\"light_nouns 2026\", \"1.2.1\", [\"0.36\", 0.36], 0, 13, 4, 70, 208, 0, 108, 1107, [\"0.20\", 0.2], 43, 49, 1], [\"lustrous_novelties 2026\", \"1.6.1\", [\"0.77\", 0.77], 14, 14, 7, 52, 519, 23, 163, 718, [\"0.31\", 0.31], 27, 29, 1], [\"opulent_motorcycles 2026\", \"1.6.0\", [\"0.64\", 0.64], 11, 10, 7, 59, 508, 22, 129, 764, [\"0.31\", 0.31], 22, 33, 6], [\"persistent_lagoons 2026\", \"2.0.0\", [\"0.88\", 0.88], 16, 8, 2, 61, 513, 4, 72, 834, [\"0.27\", 0.27], 69, 84, 2], [\"polished_jaguars 2026\", \"2.0.1\", [\"0.41\", 0.41], 10, 15, 37, 25, 475, 45, 543, 360, [\"0.31\", 0.31], 35, 68, 1], [\"purple_infinity 2026\", \"2.0.0\", [\"0.29\", 0.29], 1, 2, 20, 64, 202, 0, 186, 1035, [\"0.14\", 0.14], 24, 66, 4], [\"radiant_illuminations 2026\", \"1.3.0\", [\"0.36\", 0.36], 0, 2, 1, 84, 24, 0, 12, 1387, [\"0.03\", 0.03], 2, 6, 2], [\"red_helicopters 2026\", \"1.0.1\", [\"0.41\", 0.41], 0, 22, 8, 57, 386, 23, 45, 969, [\"0.33\", 0.33], 56, 88, 2], [\"silken_foxes 2026\", \"1.6.0\", [\"0.33\", 0.33], 0, 8, 2, 77, 118, 27, 90, 1188, [\"0.12\", 0.12], 16, 34, 3], [\"silky_flutes 2026\", \"1.0.0\", [\"0.64\", 0.64], 10, 10, 2, 65, 406, 13, 123, 881, [\"0.17\", 0.17], 3, 29, 4], [\"smiling_anvils 2026\", \"1.0.1\", [\"0.40\", 0.4], 0, 20, 9, 58, 284, 3, 68, 1068, [\"0.00\", 0.0], 0, 0, 0], [\"smooth_fantasies 2026\", \"2.0.0\", [\"0.03\", 0.03], 0, 0, 4, 83, 6, 1, 125, 1291, [\"0.02\", 0.02], 0, 13, 6], [\"soft_explorers 2026\", \"2.4.0\", [\"0.24\", 0.24], 0, 2, 1, 84, 60, 0, 63, 1300, [\"0.05\", 0.05], 3, 6, 2], [\"spirited_essences 2026\", \"2.0.0\", [\"0.39\", 0.39], 0, 2, 6, 79, 131, 18, 34, 1240, [\"0.22\", 0.22], 8, 13, 3], [\"tranquil_eclipses 2026\", \"1.2.0\", [\"0.41\", 0.41], 0, 2, 2, 83, 103, 18, 14, 1288, [\"0.03\", 0.03], 9, 17, 2], [\"unified_diamonds 2026\", \"2.0.1\", [\"0.15\", 0.15], 0, 5, 23, 59, 113, 24, 271, 1015, [\"0.30\", 0.3], 21, 65, 21], [\"vibrant_constellations 2026\", \"2.0.0\", [\"0.57\", 0.57], 10, 13, 13, 51, 484, 25, 294, 620, [\"0.00\", 0.0], 0, 20, 7], [\"white_cheetahs 2026\", \"2.1.0\", [\"0.49\", 0.49], 1, 21, 3, 62, 361, 18, 38, 1006, [\"0.00\", 0.0], 0, 49, 49]]",
-          "keys_to_be_evaluated": [["columnDefs", 0, "render"]],
-          "layout": {"bottomEnd": "paging", "bottomStart": "info", "topEnd": "search", "topStart": "pageLength"},
-          "order": [],
-          "paging": false,
-          "style": {"caption-side": "bottom", "margin": "auto", "table-layout": "auto", "width": "auto"},
-          "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>Team</th>\n      <th>Version</th>\n      <th>Teacher Score</th>\n      <th>F\u2705</th>\n      <th>F\ud83d\udfe1</th>\n      <th>F\u274c</th>\n      <th>F\u26aa</th>\n      <th>T\u2705</th>\n      <th>T\ud83d\udfe1</th>\n      <th>T\u274c</th>\n      <th>T\u26aa</th>\n      <th>F1</th>\n      <th>Valid Tests</th>\n      <th>Total Tests</th>\n      <th>Removed</th>\n    </tr>\n  </thead></table>",
-          "text_in_header_can_be_selected": true
-        };
-        new ITable(table, dt_args);
-    });
-</script>
+</div>
+</div>
 </div>
 </div>
 
@@ -7993,6 +5068,17 @@ table thead th:first-child {
 </section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImRhdGEgPSBGaWxlQXR0YWNobWVudChcIi4vc3VtbWFyeV9kYXRhLmpzb25cIikuanNvbigpXG5JbnB1dHMudGFibGUoZGF0YSwgeyBzb3J0OiBcIlRlYWNoZXIgU2NvcmVcIiwgcmV2ZXJzZTogdHJ1ZSwgcm93czogNzUgfSlcbiJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../grade";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -8066,7 +5152,7 @@ table thead th:first-child {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/dhmmasson\.github\.io\/testDrivenDevelopment\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
