@@ -499,7 +499,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>JaCoCo is the standard Java coverage tool. It is already configured in the Pandora starter pack.</p>
 <section id="run-coverage" class="level3">
 <h3 class="anchored" data-anchor-id="run-coverage">Run Coverage</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mvn</span> test jacoco:report</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mvn</span> package</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">autograder</span> <span class="at">-t</span> test/testSuite.json <span class="at">-m</span> manifest.json <span class="at">--coverage</span> target/pandora.jar</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">mvn</span> jacoco:report</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The HTML report is generated at:</p>
 <pre><code>target/site/jacoco/index.html</code></pre>
 <p>Open it in a browser to see line-by-line coverage for each class.</p>
