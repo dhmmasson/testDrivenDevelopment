@@ -152,8 +152,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         </a>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="d1e9163741d86561e87da35fe616b840" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p><strong>Alert</strong> - Download the <a href="https://github.com/Estia-advanced-programming/autograder">latest version of the autograder</a></p>
+  <div id="quarto-announcement" data-announcement-id="538b8c09cf192f665d4e2d9eabe7ff48" class="alert alert-danger hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p>The deadline is moved to Tuesday 2026-03-17 23H55:00</p>
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
@@ -725,22 +725,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The autograder will run:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-jar</span> target/pandora.jar <span class="at">-m</span> lift_coef ./test/testsFiles/mono/0_201_MiG-23MLD.frd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
+<section id="error-handling-test" class="level4">
+<h4 class="anchored" data-anchor-id="error-handling-test">Error Handling Test</h4>
+<p>To test that your program correctly handles errors, you can create a test case with an invalid input file and check that the expected error message is produced:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">58</span><span class="fu">,</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"error"</span><span class="fu">:</span> <span class="st">"MISSING_HEADER"</span><span class="fu">,</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"feature"</span><span class="fu">:</span> <span class="st">"ERROR"</span><span class="fu">,</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"milestone"</span><span class="fu">:</span> <span class="dv">2</span><span class="fu">,</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"full"</span><span class="fu">,</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"file"</span><span class="fu">:</span> <span class="st">"test/resources/common/error_tests/missing_header.frd"</span><span class="fu">,</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"result"</span><span class="fu">:</span> <span class="st">"MISSING_HEADER - test/resources/common/error_tests/missing_header.frd"</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The autograder will run and expect the following output:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> java <span class="at">-jar</span> target/pandora.jar test/resources/common/error_tests/missing_header.frd</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ERROR:</span> MISSING_HEADER <span class="at">-</span> test/resources/common/error_tests/missing_header.frd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<blockquote class="blockquote">
+<p>Note that the autograder expects the error message to be printed in the format <code>ERROR: &lt;error_code&gt; - &lt;file_path&gt;</code> — make sure to follow this format exactly in your implementation for the test to pass.</p>
+</blockquote>
+</section>
 <section id="multi-file-test" class="level4">
 <h4 class="anchored" data-anchor-id="multi-file-test">Multi-file test</h4>
 <p>Tests a feature that takes multiple input files (using <code>files</code> instead of <code>file</code>):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">1003001</span><span class="fu">,</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"milestone"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"feature"</span><span class="fu">,</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"feature"</span><span class="fu">:</span> <span class="st">"filenames"</span><span class="fu">,</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"files"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./test/testsFiles/mono/0_201_MiG-23MLD.frd"</span><span class="ot">,</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./test/testsFiles/US/0_601_F-14A.frd"</span></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"result"</span><span class="fu">:</span> <span class="st">"0_201_MiG-23MLD.frd</span><span class="ch">\n</span><span class="st">0_601_F-14A.frd"</span></span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">1003001</span><span class="fu">,</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"milestone"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"feature"</span><span class="fu">,</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"feature"</span><span class="fu">:</span> <span class="st">"filenames"</span><span class="fu">,</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"files"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./test/testsFiles/mono/0_201_MiG-23MLD.frd"</span><span class="ot">,</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./test/testsFiles/US/0_601_F-14A.frd"</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"result"</span><span class="fu">:</span> <span class="st">"0_201_MiG-23MLD.frd</span><span class="ch">\n</span><span class="st">0_601_F-14A.frd"</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The autograder will run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-jar</span> target/pandora.jar <span class="at">-o</span> filenames ./test/testsFiles/mono/0_201_MiG-23MLD.frd ./test/testsFiles/US/0_601_F-14A.frd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-jar</span> target/pandora.jar <span class="at">-o</span> filenames ./test/testsFiles/mono/0_201_MiG-23MLD.frd ./test/testsFiles/US/0_601_F-14A.frd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="what-makes-a-good-testsuite" class="level3">
