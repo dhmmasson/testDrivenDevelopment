@@ -396,12 +396,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#feature-implementation" id="toc-feature-implementation" class="nav-link" data-scroll-target="#feature-implementation">Feature Implementation</a>
   <ul class="collapse">
+  <li><a href="#validated-features" id="toc-validated-features" class="nav-link" data-scroll-target="#validated-features">🟢 Validated Features</a></li>
   <li><a href="#almost-there" id="toc-almost-there" class="nav-link" data-scroll-target="#almost-there">🟡 Almost There</a></li>
   <li><a href="#missed-features" id="toc-missed-features" class="nav-link" data-scroll-target="#missed-features">🔴 Missed Features</a></li>
   </ul></li>
   <li><a href="#self-evaluation-vs-teacher-evaluation" id="toc-self-evaluation-vs-teacher-evaluation" class="nav-link" data-scroll-target="#self-evaluation-vs-teacher-evaluation">Self-Evaluation vs Teacher Evaluation</a></li>
   <li><a href="#test-suite-quality" id="toc-test-suite-quality" class="nav-link" data-scroll-target="#test-suite-quality">Test Suite Quality</a></li>
-  <li><a href="#code-coverage" id="toc-code-coverage" class="nav-link" data-scroll-target="#code-coverage">Code Coverage</a></li>
   <li><a href="#commit-quality" id="toc-commit-quality" class="nav-link" data-scroll-target="#commit-quality">Commit Quality</a>
   <ul class="collapse">
   <li><a href="#per-student-contributions" id="toc-per-student-contributions" class="nav-link" data-scroll-target="#per-student-contributions">Per-Student Contributions</a></li>
@@ -443,15 +443,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><strong>Version</strong></td>
-<td>1.1.0</td>
+<td>1.2.0</td>
 </tr>
 <tr class="odd">
 <td><strong>Teacher Score</strong></td>
-<td>0.0113</td>
+<td>0.0259</td>
 </tr>
 <tr class="even">
 <td><strong>Average Score</strong></td>
-<td>32%</td>
+<td>39%</td>
 </tr>
 <tr class="odd">
 <td><strong>Tier</strong></td>
@@ -472,7 +472,7 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>🟢 Validated</td>
-<td>0</td>
+<td>1</td>
 </tr>
 <tr class="even">
 <td>🟡 Almost</td>
@@ -480,33 +480,47 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>🔴 Missed</td>
-<td>6</td>
+<td>14</td>
 </tr>
 <tr class="even">
 <td>⚪ Not implemented</td>
-<td>81</td>
+<td>72</td>
 </tr>
 <tr class="odd">
 <td><strong>Features attempted</strong></td>
-<td><strong>8</strong> / 89</td>
+<td><strong>17</strong> / 89</td>
 </tr>
 </tbody>
 </table>
+<section id="validated-features" class="level3">
+<h3 class="anchored" data-anchor-id="validated-features">🟢 Validated Features</h3>
+<ul>
+<li><strong>number</strong> — 9/9 tests passed (score: 100%)</li>
+</ul>
+</section>
 <section id="almost-there" class="level3">
 <h3 class="anchored" data-anchor-id="almost-there">🟡 Almost There</h3>
 <ul>
-<li><strong>avgAlt</strong> — 12/22 tests passed (score: 54%)</li>
+<li><strong>avgAlt</strong> — 12/22 tests passed (score: 55%)</li>
 <li><strong>maxAlt</strong> — 12/22 tests passed (score: 55%)</li>
 </ul>
 </section>
 <section id="missed-features" class="level3">
 <h3 class="anchored" data-anchor-id="missed-features">🔴 Missed Features</h3>
 <ul>
+<li><strong>metadata</strong> — 99/209 tests passed (score: 47%)</li>
 <li><strong>avgEnginePower</strong> — 7/36 tests passed (score: 19%)</li>
 <li><strong>maxAirSpeed</strong> — 7/22 tests passed (score: 32%)</li>
 <li><strong>maxEnginePower</strong> — 7/36 tests passed (score: 19%)</li>
+<li><strong>avgHumidity</strong> — 7/22 tests passed (score: 32%)</li>
+<li><strong>avgOxygen</strong> — 7/22 tests passed (score: 32%)</li>
+<li><strong>avgPressure</strong> — 7/22 tests passed (score: 32%)</li>
 <li><strong>avgTemp</strong> — 7/22 tests passed (score: 32%)</li>
+<li><strong>maxHumidity</strong> — 7/22 tests passed (score: 32%)</li>
+<li><strong>maxPressure</strong> — 7/22 tests passed (score: 32%)</li>
 <li><strong>maxTemp</strong> — 7/22 tests passed (score: 32%)</li>
+<li><strong>minHumidity</strong> — 7/22 tests passed (score: 32%)</li>
+<li><strong>minPressure</strong> — 7/22 tests passed (score: 32%)</li>
 <li><strong>minTemp</strong> — 7/22 tests passed (score: 32%)</li>
 </ul>
 </section>
@@ -525,9 +539,9 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Average Score</td>
-<td style="text-align: center;">0.32</td>
-<td style="text-align: center;">1.00</td>
-<td style="text-align: center;">+0.68</td>
+<td style="text-align: center;">0.39</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">-0.39</td>
 </tr>
 </tbody>
 </table>
@@ -544,40 +558,19 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Valid tests</td>
-<td>1</td>
+<td>0</td>
 </tr>
 <tr class="even">
 <td>Total tests submitted</td>
-<td>26</td>
+<td>0</td>
 </tr>
 <tr class="odd">
 <td>Removed (invalid ref/features)</td>
-<td>9</td>
+<td>0</td>
 </tr>
 <tr class="even">
 <td>F1 score</td>
 <td>0.00</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="code-coverage" class="level2">
-<h2 class="anchored" data-anchor-id="code-coverage">Code Coverage</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Metric</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Line coverage</td>
-<td>65%</td>
-</tr>
-<tr class="even">
-<td>Branch coverage</td>
-<td>49%</td>
 </tr>
 </tbody>
 </table>
@@ -594,7 +587,7 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Student commits</td>
-<td>13</td>
+<td>17</td>
 </tr>
 <tr class="even">
 <td>Quality grade</td>
@@ -602,19 +595,19 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Quality score</td>
-<td>78/100</td>
+<td>74/100</td>
 </tr>
 <tr class="even">
 <td>Conventional rate</td>
-<td>69%</td>
+<td>59%</td>
 </tr>
 <tr class="odd">
 <td>Structured rate</td>
-<td>77%</td>
+<td>65%</td>
 </tr>
 <tr class="even">
 <td>Poor rate</td>
-<td>15%</td>
+<td>18%</td>
 </tr>
 <tr class="odd">
 <td>Branch discipline</td>
@@ -640,23 +633,23 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>MathisPukowietz</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">65%</td>
+<td style="text-align: center;">91</td>
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">77%</td>
-<td style="text-align: center;">90</td>
-<td style="text-align: center;">9</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">0</td>
 </tr>
 <tr class="even">
 <td>Damattit Geerebaert</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">23%</td>
-<td style="text-align: center;">31</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">35%</td>
+<td style="text-align: center;">37</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
 <td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
 </tr>
 </tbody>
 </table>
@@ -666,7 +659,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="advice-next-steps">Advice &amp; Next Steps</h2>
 <ul>
 <li><p><strong>Engine power</strong> features are failing. Remember: the feature is the engine power of the <em>plane</em>, not individual engines. Make sure you are using the total engine power.</p></li>
-<li><p>Your test suite F1 score is low (0.00). Improve test quality by verifying expected values against the reference output.</p></li>
+<li><p><strong>You have not submitted a test suite.</strong> Writing tests is a key part of the evaluation. Create <code>testSuite.json</code> with at least one test per feature you implemented.</p></li>
 </ul>
 
 

@@ -580,28 +580,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>Expected output — the autograder does a <strong>strict string comparison</strong></td>
 </tr>
 <tr class="odd">
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr class="even">
 <td><code>feature</code></td>
 <td>string</td>
 <td>conditional</td>
 <td>Exact value passed to <code>-o</code> (e.g.&nbsp;<code>maxAlt</code>, <code>maxAccelG</code>, <code>filenames</code>) — must match the <a href="../../Pandora/Features.html">Features</a> table. <strong>Required</strong> unless <code>metadata</code> is used</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>metadata</code></td>
 <td>string</td>
 <td>conditional</td>
 <td>Metadata key to query via <code>-m</code> (e.g.&nbsp;<code>flight_id</code>, <code>flight_code</code>, <code>origin</code>, <code>date</code>, <code>from</code>, <code>to</code>, <code>motor(s)</code>, <code>mass_aircraft</code>, <code>mass_fuel</code>, <code>lift_coef</code>, <code>drag_coef</code>). <strong>Required</strong> for metadata tests</td>
 </tr>
+<tr class="even">
+<td><code>parameter</code></td>
+<td>string</td>
+<td>conditional</td>
+<td>Parameter name to query (e.g.&nbsp;<code>number</code>) — used for parameter tests that check the value of a parameter in the full report</td>
+</tr>
 <tr class="odd">
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr class="even">
 <td><code>file</code></td>
 <td>string</td>
 <td>conditional</td>
 <td>Path to a single flight record, <strong>relative to the project root</strong>. Use this for single-file tests</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>files</code></td>
 <td>string[]</td>
 <td>conditional</td>
 <td>Array of paths to multiple flight records. Use this instead of <code>file</code> when the test requires more than one input file</td>
+</tr>
+<tr class="even">
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
 </tr>
 <tr class="odd">
 <td><code>option</code></td>
@@ -618,10 +642,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <blockquote class="blockquote">
+<p>You must provide either <code>feature</code>, <code>metadata</code> or <code>parameter</code>, but no more than one of these.</p>
+</blockquote>
+<blockquote class="blockquote">
 <p>You must provide either <code>file</code> (single file) or <code>files</code> (multiple files), but not both.</p>
 </blockquote>
 <blockquote class="blockquote">
-<p>You must provide either <code>feature</code> or <code>metadata</code>, but not both.</p>
+<p>You must provide either <code>options</code> or <code>option</code> if the test requires additional CLI options, but not both.</p>
 </blockquote>
 <blockquote class="blockquote">
 <p>Follow the <a href="../../Pandora/Constants.html">output format rules</a> precisely — decimal separator, number of digits, and units must all match exactly.</p>
