@@ -444,15 +444,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><strong>Version</strong></td>
-<td>1.3.0</td>
+<td>1.4.0</td>
 </tr>
 <tr class="odd">
 <td><strong>Teacher Score</strong></td>
-<td>0.1714</td>
+<td>0.1972</td>
 </tr>
 <tr class="even">
 <td><strong>Average Score</strong></td>
-<td>75%</td>
+<td>63%</td>
 </tr>
 <tr class="odd">
 <td><strong>Tier</strong></td>
@@ -473,23 +473,23 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>🟢 Validated</td>
-<td>12</td>
+<td>14</td>
 </tr>
 <tr class="even">
 <td>🟡 Almost</td>
-<td>5</td>
+<td>7</td>
 </tr>
 <tr class="odd">
 <td>🔴 Missed</td>
-<td>7</td>
+<td>12</td>
 </tr>
 <tr class="even">
 <td>⚪ Not implemented</td>
-<td>65</td>
+<td>56</td>
 </tr>
 <tr class="odd">
 <td><strong>Features attempted</strong></td>
-<td><strong>24</strong> / 89</td>
+<td><strong>33</strong> / 89</td>
 </tr>
 </tbody>
 </table>
@@ -497,6 +497,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="validated-features">🟢 Validated Features</h3>
 <ul>
 <li><strong>flightDuration</strong> — 29/29 tests passed (score: 100%)</li>
+<li><strong>number</strong> — 9/9 tests passed (score: 100%)</li>
 <li><strong>avgAlt</strong> — 22/22 tests passed (score: 100%)</li>
 <li><strong>maxAlt</strong> — 22/22 tests passed (score: 100%)</li>
 <li><strong>avgHeartRate</strong> — 22/22 tests passed (score: 100%)</li>
@@ -508,28 +509,36 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>minHeartRate</strong> — 22/22 tests passed (score: 100%)</li>
 <li><strong>minHumidity</strong> — 22/22 tests passed (score: 100%)</li>
 <li><strong>minPressure</strong> — 22/22 tests passed (score: 100%)</li>
+<li><strong>stressedPilot</strong> — 9/10 tests passed (score: 90%)</li>
 </ul>
 </section>
 <section id="almost-there" class="level3">
 <h3 class="anchored" data-anchor-id="almost-there">🟡 Almost There</h3>
 <ul>
 <li><strong>avgEnginePower</strong> — 31/36 tests passed (score: 86%)</li>
+<li><strong>maxAirSpeed</strong> — 12/22 tests passed (score: 55%)</li>
 <li><strong>maxEnginePower</strong> — 31/36 tests passed (score: 86%)</li>
 <li><strong>avgTemp</strong> — 17/22 tests passed (score: 77%)</li>
 <li><strong>maxTemp</strong> — 17/22 tests passed (score: 77%)</li>
 <li><strong>minTemp</strong> — 17/22 tests passed (score: 77%)</li>
+<li><strong>takeOff</strong> — 0/10 tests passed (score: 72%)</li>
 </ul>
 </section>
 <section id="missed-features" class="level3">
 <h3 class="anchored" data-anchor-id="missed-features">🔴 Missed Features</h3>
 <ul>
 <li><strong>avgAirSpeed</strong> — 0/22 tests passed (score: 0%)</li>
+<li><strong>avgOxygen</strong> — 0/22 tests passed (score: 0%)</li>
+<li><strong>maxOxygen</strong> — 0/22 tests passed (score: 0%)</li>
+<li><strong>minOxygen</strong> — 0/22 tests passed (score: 0%)</li>
 <li><strong>avgAcceleration</strong> — 6/20 tests passed (score: 47%)</li>
 <li><strong>avgMachSpeed</strong> — 6/16 tests passed (score: 37%)</li>
-<li><strong>flightDistance</strong> — 2/20 tests passed (score: 15%)</li>
+<li><strong>flightDistance</strong> — 3/20 tests passed (score: 16%)</li>
 <li><strong>maxAccelG</strong> — 0/16 tests passed (score: 0%)</li>
 <li><strong>maxAcceleration</strong> — 1/20 tests passed (score: 5%)</li>
-<li><strong>maxMachSpeed</strong> — 0/16 tests passed (score: 0%)</li>
+<li><strong>maxMachSpeed</strong> — 4/16 tests passed (score: 34%)</li>
+<li><strong>noiseTemp</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>oxygenPhase</strong> — 0/10 tests passed (score: 27%)</li>
 </ul>
 </section>
 </section>
@@ -547,9 +556,9 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Average Score</td>
-<td style="text-align: center;">0.75</td>
-<td style="text-align: center;">0.96</td>
-<td style="text-align: center;">+0.21</td>
+<td style="text-align: center;">0.63</td>
+<td style="text-align: center;">0.86</td>
+<td style="text-align: center;">+0.23</td>
 </tr>
 </tbody>
 </table>
@@ -566,19 +575,19 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Valid tests</td>
-<td>0</td>
+<td>16</td>
 </tr>
 <tr class="even">
 <td>Total tests submitted</td>
-<td>33</td>
+<td>51</td>
 </tr>
 <tr class="odd">
 <td>Removed (invalid ref/features)</td>
-<td>5</td>
+<td>3</td>
 </tr>
 <tr class="even">
 <td>F1 score</td>
-<td>0.19</td>
+<td>0.33</td>
 </tr>
 </tbody>
 </table>
@@ -595,15 +604,15 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Line coverage</td>
-<td>62%</td>
+<td>73%</td>
 </tr>
 <tr class="even">
 <td>Branch coverage</td>
-<td>56%</td>
+<td>66%</td>
 </tr>
 <tr class="odd">
 <td>Uncovered classes</td>
-<td>6</td>
+<td>3</td>
 </tr>
 </tbody>
 </table>
@@ -620,7 +629,7 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Student commits</td>
-<td>52</td>
+<td>68</td>
 </tr>
 <tr class="even">
 <td>Quality grade</td>
@@ -628,19 +637,19 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Quality score</td>
-<td>48/100</td>
+<td>60/100</td>
 </tr>
 <tr class="even">
 <td>Conventional rate</td>
-<td>12%</td>
+<td>32%</td>
 </tr>
 <tr class="odd">
 <td>Structured rate</td>
-<td>13%</td>
+<td>34%</td>
 </tr>
 <tr class="even">
 <td>Poor rate</td>
-<td>44%</td>
+<td>34%</td>
 </tr>
 </tbody>
 </table>
@@ -662,20 +671,20 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Antoinelijeour</td>
-<td style="text-align: center;">27</td>
-<td style="text-align: center;">52%</td>
-<td style="text-align: center;">33</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">36</td>
+<td style="text-align: center;">53%</td>
+<td style="text-align: center;">51</td>
+<td style="text-align: center;">14</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">19</td>
 </tr>
 <tr class="even">
 <td>MarcoPENE</td>
-<td style="text-align: center;">24</td>
+<td style="text-align: center;">31</td>
 <td style="text-align: center;">46%</td>
-<td style="text-align: center;">59</td>
-<td style="text-align: center;">1</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">19</td>
 <td style="text-align: center;">4</td>
@@ -683,7 +692,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>Antoinelijeour</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">2%</td>
+<td style="text-align: center;">1%</td>
 <td style="text-align: center;">60</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
@@ -699,8 +708,6 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p><strong>Acceleration</strong> features are not passing. Acceleration requires computing derivatives from speed data — double-check your formula and units.</p></li>
 <li><p><strong>Distance/Wind</strong> features need work. For <code>flightDistance</code>, the computation requires altitude data. For <code>windSpeed</code>, note that air speed is only recorded in the direction of the plane.</p></li>
-<li><p><strong>None of your 33 tests are valid</strong> against the reference implementation. Your expected values are incorrect.</p></li>
-<li><p><strong>44% of your commits have poor messages.</strong> Use conventional commits format: <code>feat: description</code>, <code>fix: bug</code>, <code>test: add tests for X</code>.</p></li>
 </ul>
 
 
