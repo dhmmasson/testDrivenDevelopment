@@ -66,6 +66,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../images/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -104,9 +106,68 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      page: 30,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -625,7 +686,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>9/9</sup></td>
 <td>🟢 <sup>9/9</sup></td>
 <td>🔴 <sup>0/9</sup></td>
-<td>🟢 <sup>9/9</sup></td>
+<td>🔴 <sup>0/9</sup></td>
 <td>🟢 <sup>9/9</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -643,14 +704,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>9/9</sup></td>
 <td>⚪️</td>
 <td>🟢 <sup>9/9</sup></td>
+<td>🟢 <sup>9/9</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
 <td>🔴 <sup>0/9</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
 <td>🟢 <sup>9/9</sup></td>
-<td>🟢 <sup>9/9</sup></td>
+<td>⚪️</td>
 <td>🟢 <sup>9/9</sup></td>
 </tr>
 <tr class="even">
@@ -665,21 +726,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>18/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>21/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>20/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>21/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
@@ -690,7 +751,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>12/22</sup></td>
 <td>🔴 <sup>7/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
 <td>🟢 <sup>22/22</sup></td>
 </tr>
 <tr class="odd">
@@ -705,21 +766,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>18/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>21/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>20/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>21/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
@@ -730,7 +791,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>12/22</sup></td>
 <td>🔴 <sup>7/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
 <td>🟢 <sup>22/22</sup></td>
 </tr>
 <tr class="even">
@@ -745,21 +806,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>18/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>21/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>20/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>21/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
@@ -770,7 +831,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>12/22</sup></td>
 <td>🔴 <sup>7/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
 <td>🟢 <sup>22/22</sup></td>
 </tr>
 <tr class="odd">
@@ -785,7 +846,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>29/29</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>18/29</sup></td>
-<td>🟡 <sup>19/29</sup></td>
+<td>🔴 <sup>0/29</sup></td>
 <td>🟡 <sup>19/29</sup></td>
 <td>🟢 <sup>23/29</sup></td>
 <td>🟡 <sup>18/29</sup></td>
@@ -793,13 +854,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>29/29</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>26/29</sup></td>
-<td>🟡 <sup>25/29</sup></td>
+<td>🟢 <sup>28/29</sup></td>
 <td>🟢 <sup>29/29</sup></td>
 <td>🟢 <sup>29/29</sup></td>
 <td>🟢 <sup>26/29</sup></td>
 <td>🟡 <sup>26/29</sup></td>
 <td>🟢 <sup>29/29</sup></td>
-<td>🟢 <sup>28/29</sup></td>
+<td>🟢 <sup>29/29</sup></td>
 <td>🟢 <sup>29/29</sup></td>
 <td>🟡 <sup>26/29</sup></td>
 <td>🟡 <sup>26/29</sup></td>
@@ -810,7 +871,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>18/29</sup></td>
 <td>🟡 <sup>19/29</sup></td>
 <td>🟢 <sup>29/29</sup></td>
-<td>🟢 <sup>29/29</sup></td>
+<td>⚪️</td>
 <td>🟢 <sup>29/29</sup></td>
 </tr>
 <tr class="even">
@@ -825,32 +886,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
 <td>🟢 <sup>20/22</sup></td>
-<td>🟡 <sup>18/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>20/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>21/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>20/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🔴 <sup>7/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
+<td>⚪️</td>
 <td>🟢 <sup>22/22</sup></td>
 </tr>
 <tr class="odd">
@@ -865,35 +926,75 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
 <td>🟢 <sup>21/22</sup></td>
-<td>🟡 <sup>18/22</sup></td>
+<td>🟢 <sup>21/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>20/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>21/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🔴 <sup>7/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
+<td>⚪️</td>
 <td>🟢 <sup>22/22</sup></td>
 </tr>
 <tr class="even">
+<td>minPressure</td>
+<td>🟢 <sup>17/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>21/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>20/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+</tr>
+<tr class="odd">
 <td>avgOxygen</td>
 <td>🟡 <sup>17/22</sup></td>
 <td>⚪️</td>
@@ -905,15 +1006,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>15/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>20/22</sup></td>
@@ -930,47 +1031,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>12/22</sup></td>
 <td>🔴 <sup>7/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-</tr>
-<tr class="odd">
-<td>minPressure</td>
-<td>🟢 <sup>17/22</sup></td>
 <td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>18/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>20/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>21/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 </tr>
 <tr class="even">
@@ -985,7 +1046,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
@@ -993,104 +1054,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>18/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>20/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>21/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
-</tr>
-<tr class="odd">
-<td>maxOxygen</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>15/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>20/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>16/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-</tr>
-<tr class="even">
-<td>minOxygen</td>
 <td>🟡 <sup>17/22</sup></td>
 <td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
 <td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>15/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>20/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>13/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 </tr>
 <tr class="odd">
@@ -1105,7 +1086,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>22/22</sup></td>
 <td>🔴 <sup>8/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
@@ -1113,13 +1094,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>18/22</sup></td>
+<td>🟢 <sup>21/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>20/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>21/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
@@ -1130,50 +1111,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>12/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
+<td>⚪️</td>
 <td>🟢 <sup>22/22</sup></td>
 </tr>
 <tr class="even">
-<td>avgHumidity</td>
-<td>🟡 <sup>17/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>15/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>16/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-</tr>
-<tr class="odd">
 <td>avgTemp</td>
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
@@ -1185,73 +1126,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>18/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>16/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>21/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>16/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🔴 <sup>2/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-</tr>
-<tr class="even">
-<td>maxHumidity</td>
-<td>🟡 <sup>17/22</sup></td>
 <td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>15/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>16/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>13/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
 </tr>
 <tr class="odd">
 <td>maxTemp</td>
@@ -1265,36 +1166,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>18/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>16/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>21/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>16/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🔴 <sup>3/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
+<td>⚪️</td>
 <td>🟡 <sup>17/22</sup></td>
 </tr>
 <tr class="even">
-<td>minHumidity</td>
+<td>maxOxygen</td>
 <td>🟡 <sup>17/22</sup></td>
 <td>⚪️</td>
 <td>🟢 <sup>22/22</sup></td>
@@ -1305,35 +1206,75 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>⚪️</td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>15/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>20/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>16/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>12/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🔴 <sup>7/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
 <td>🟢 <sup>22/22</sup></td>
 </tr>
 <tr class="odd">
+<td>minOxygen</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>20/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+</tr>
+<tr class="even">
 <td>minTemp</td>
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
@@ -1345,75 +1286,75 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>18/22</sup></td>
+<td>🟢 <sup>21/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>16/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
-<td>🟢 <sup>21/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>3/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+</tr>
+<tr class="odd">
+<td>avgHumidity</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>16/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>3/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
 </tr>
 <tr class="even">
-<td>stressedPilot</td>
-<td>🔴 <sup>2/10</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>1/10</sup></td>
-<td>⚪️</td>
-<td>⚪️ <sup>0/10</sup></td>
-<td>🔴 <sup>2/10</sup></td>
-<td>⚪️</td>
-<td>🟢 <sup>10/10</sup></td>
-<td>⚪️</td>
-<td>⚪️ <sup>0/10</sup></td>
-<td>⚪️ <sup>0/10</sup></td>
-<td>⚪️ <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢 <sup>10/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>5/10</sup></td>
-<td>🟢 <sup>9/10</sup></td>
-<td>🟢 <sup>10/10</sup></td>
-<td>🟡 <sup>8/10</sup></td>
-<td>🔴 <sup>2/10</sup></td>
-<td>🟢 <sup>9/10</sup></td>
-<td>🟢 <sup>9/10</sup></td>
-<td>🟢 <sup>9/10</sup></td>
-<td>⚪️ <sup>0/10</sup></td>
-<td>⚪️ <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>2/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟢 <sup>9/10</sup></td>
-<td>🔴 <sup>4/10</sup></td>
-<td>🔴 <sup>2/10</sup></td>
-</tr>
-<tr class="odd">
 <td>reachAlt</td>
 <td>🟢 <sup>10/10</sup></td>
 <td>⚪️</td>
@@ -1433,11 +1374,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>10/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🟡 <sup>6/10</sup></td>
+<td>🟢 <sup>9/10</sup></td>
 <td>🟡 <sup>5/10</sup></td>
 <td>🟢 <sup>10/10</sup></td>
 <td>🟡 <sup>8/10</sup></td>
-<td>🟡 <sup>5/10</sup></td>
+<td>🟢 <sup>10/10</sup></td>
 <td>🟡 <sup>1/10</sup></td>
 <td>🟡 <sup>0/10</sup></td>
 <td>⚪️ <sup>0/10</sup></td>
@@ -1450,8 +1391,128 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>🟡 <sup>4/10</sup></td>
+<td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+</tr>
+<tr class="odd">
+<td>maxHumidity</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>16/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>13/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+</tr>
+<tr class="even">
+<td>minHumidity</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>16/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟢 <sup>22/22</sup></td>
+<td>⚪️</td>
+<td>🟡 <sup>17/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>7/22</sup></td>
+<td>🟡 <sup>12/22</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>22/22</sup></td>
+</tr>
+<tr class="odd">
+<td>stressedPilot</td>
+<td>🔴 <sup>2/10</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>1/10</sup></td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>🔴 <sup>2/10</sup></td>
+<td>⚪️</td>
+<td>🟢 <sup>10/10</sup></td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟢 <sup>10/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟡 <sup>8/10</sup></td>
+<td>🟢 <sup>9/10</sup></td>
+<td>🟢 <sup>10/10</sup></td>
+<td>🟡 <sup>8/10</sup></td>
+<td>🔴 <sup>2/10</sup></td>
+<td>🟢 <sup>9/10</sup></td>
+<td>🟢 <sup>10/10</sup></td>
+<td>🟢 <sup>9/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>2/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🟢 <sup>9/10</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>2/10</sup></td>
 </tr>
 <tr class="even">
 <td>takeOff</td>
@@ -1473,7 +1534,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>10/10</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>1/10</sup></td>
-<td>🟡 <sup>6/10</sup></td>
+<td>🟢 <sup>9/10</sup></td>
 <td>🟢 <sup>9/10</sup></td>
 <td>🟢 <sup>9/10</sup></td>
 <td>🟡 <sup>7/10</sup></td>
@@ -1512,8 +1573,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>🟢 <sup>7/10</sup></td>
 <td>⚪️</td>
-<td>🟡 <sup>1/10</sup></td>
-<td>🟡 <sup>6/10</sup></td>
+<td>🟡 <sup>4/10</sup></td>
+<td>🟢 <sup>9/10</sup></td>
 <td>🟡 <sup>8/10</sup></td>
 <td>🟢 <sup>8/10</sup></td>
 <td>🟡 <sup>3/10</sup></td>
@@ -1553,7 +1614,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>7/10</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>0/10</sup></td>
-<td>🟡 <sup>6/10</sup></td>
+<td>🟢 <sup>9/10</sup></td>
 <td>🟡 <sup>8/10</sup></td>
 <td>🟢 <sup>8/10</sup></td>
 <td>🟡 <sup>8/10</sup></td>
@@ -1593,7 +1654,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟢 <sup>10/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🟡 <sup>6/10</sup></td>
+<td>🟢 <sup>9/10</sup></td>
 <td>🔴 <sup>1/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
@@ -1610,7 +1671,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 </tr>
 <tr class="even">
@@ -1625,19 +1686,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>31/36</sup></td>
 <td>🟡 <sup>31/36</sup></td>
 <td>🔴 <sup>0/36</sup></td>
-<td>🔴 <sup>8/36</sup></td>
-<td>🔴 <sup>7/36</sup></td>
+<td>🔴 <sup>0/36</sup></td>
+<td>🟡 <sup>26/36</sup></td>
 <td>🔴 <sup>9/36</sup></td>
 <td>🟡 <sup>26/36</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>31/36</sup></td>
 <td>⚪️</td>
 <td>🟢 <sup>36/36</sup></td>
-<td>🟡 <sup>29/36</sup></td>
+<td>🟡 <sup>31/36</sup></td>
 <td>🟡 <sup>22/36</sup></td>
 <td>🟡 <sup>31/36</sup></td>
 <td>🔴 <sup>9/36</sup></td>
-<td>🟢 <sup>36/36</sup></td>
+<td>🟡 <sup>31/36</sup></td>
 <td>🟡 <sup>31/36</sup></td>
 <td>🔴 <sup>9/36</sup></td>
 <td>🟡 <sup>31/36</sup></td>
@@ -1646,54 +1707,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>31/36</sup></td>
 <td>🟢 <sup>36/36</sup></td>
 <td>⚪️</td>
-<td>🟡 <sup>31/36</sup></td>
+<td>🟢 <sup>36/36</sup></td>
 <td>🟡 <sup>26/36</sup></td>
 <td>🟡 <sup>26/36</sup></td>
 <td>🔴 <sup>0/36</sup></td>
-<td>🟡 <sup>31/36</sup></td>
+<td>⚪️</td>
 <td>🟡 <sup>31/36</sup></td>
 </tr>
 <tr class="odd">
-<td>maxEnginePowerCruise</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>2/10</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>3/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>3/10</sup></td>
-<td>⚪️ <sup>0/10</sup></td>
-<td>🔴 <sup>1/10</sup></td>
-<td>🟢 <sup>9/10</sup></td>
-<td>🔴 <sup>2/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>4/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>1/10</sup></td>
-</tr>
-<tr class="even">
 <td>maxEnginePower</td>
 <td>🟡 <sup>31/36</sup></td>
 <td>⚪️</td>
@@ -1705,19 +1726,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>31/36</sup></td>
 <td>🟡 <sup>31/36</sup></td>
 <td>🔴 <sup>8/36</sup></td>
-<td>🔴 <sup>8/36</sup></td>
-<td>🔴 <sup>7/36</sup></td>
+<td>🔴 <sup>0/36</sup></td>
+<td>🟡 <sup>26/36</sup></td>
 <td>🟡 <sup>31/36</sup></td>
 <td>🟡 <sup>26/36</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>31/36</sup></td>
 <td>⚪️</td>
-<td>🔴 <sup>10/36</sup></td>
-<td>🟡 <sup>29/36</sup></td>
+<td>🟢 <sup>36/36</sup></td>
+<td>🟡 <sup>31/36</sup></td>
 <td>🟡 <sup>22/36</sup></td>
 <td>🟡 <sup>31/36</sup></td>
 <td>🔴 <sup>9/36</sup></td>
-<td>🟢 <sup>36/36</sup></td>
+<td>🟡 <sup>31/36</sup></td>
 <td>🟡 <sup>31/36</sup></td>
 <td>🔴 <sup>9/36</sup></td>
 <td>🟡 <sup>31/36</sup></td>
@@ -1726,12 +1747,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>31/36</sup></td>
 <td>🟢 <sup>36/36</sup></td>
 <td>⚪️</td>
-<td>🟡 <sup>31/36</sup></td>
+<td>🟢 <sup>36/36</sup></td>
 <td>🟡 <sup>26/36</sup></td>
 <td>🟡 <sup>26/36</sup></td>
 <td>🔴 <sup>0/36</sup></td>
+<td>⚪️</td>
 <td>🟡 <sup>31/36</sup></td>
-<td>🟡 <sup>31/36</sup></td>
+</tr>
+<tr class="even">
+<td>avgAcceleration</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>1/20</sup></td>
+<td>🔴 <sup>3/20</sup></td>
+<td>🔴 <sup>2/20</sup></td>
+<td>🔴 <sup>1/20</sup></td>
+<td>🟡 <sup>9/20</sup></td>
+<td>🔴 <sup>7/20</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>1/20</sup></td>
+<td>🔴 <sup>0/20</sup></td>
+<td>🔴 <sup>1/20</sup></td>
+<td>🔴 <sup>1/20</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>6/20</sup></td>
+<td>🔴 <sup>6/20</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>7/20</sup></td>
+<td>🟢 <sup>19/20</sup></td>
+<td>🔴 <sup>3/20</sup></td>
+<td>🔴 <sup>3/20</sup></td>
+<td>🔴 <sup>6/20</sup></td>
+<td>🔴 <sup>7/20</sup></td>
+<td>🔴 <sup>3/20</sup></td>
+<td>🔴 <sup>6/20</sup></td>
+<td>🔴 <sup>6/20</sup></td>
+<td>🟢 <sup>20/20</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>6/20</sup></td>
+<td>🔴 <sup>4/20</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>2/20</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>3/20</sup></td>
 </tr>
 <tr class="odd">
 <td>avgAirSpeed</td>
@@ -1745,15 +1806,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>15/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
@@ -1770,7 +1831,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>12/22</sup></td>
 <td>🔴 <sup>7/22</sup></td>
 <td>🔴 <sup>0/22</sup></td>
-<td>🟡 <sup>17/22</sup></td>
+<td>⚪️</td>
 <td>🟡 <sup>17/22</sup></td>
 </tr>
 <tr class="even">
@@ -1814,46 +1875,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>0/10</sup></td>
 </tr>
 <tr class="odd">
-<td>avgAcceleration</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>1/20</sup></td>
-<td>🔴 <sup>3/20</sup></td>
-<td>🔴 <sup>2/20</sup></td>
-<td>🔴 <sup>1/20</sup></td>
-<td>🟡 <sup>9/20</sup></td>
-<td>🔴 <sup>7/20</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>1/20</sup></td>
-<td>🔴 <sup>1/20</sup></td>
-<td>🔴 <sup>1/20</sup></td>
-<td>🔴 <sup>1/20</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>6/20</sup></td>
-<td>🔴 <sup>6/20</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🟡 <sup>16/20</sup></td>
-<td>🔴 <sup>3/20</sup></td>
-<td>🔴 <sup>3/20</sup></td>
-<td>🔴 <sup>6/20</sup></td>
-<td>🔴 <sup>7/20</sup></td>
-<td>🔴 <sup>3/20</sup></td>
-<td>🔴 <sup>5/20</sup></td>
-<td>🔴 <sup>6/20</sup></td>
-<td>🟢 <sup>20/20</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>6/20</sup></td>
-<td>🔴 <sup>4/20</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>2/20</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>1/20</sup></td>
-<td>🔴 <sup>3/20</sup></td>
-</tr>
-<tr class="even">
 <td>metadata</td>
 <td>🔴 <sup>99/209</sup></td>
 <td>⚪️</td>
@@ -1865,7 +1886,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>99/209</sup></td>
 <td>🔴 <sup>45/209</sup></td>
 <td>🔴 <sup>45/209</sup></td>
-<td>🔴 <sup>99/209</sup></td>
+<td>🔴 <sup>0/209</sup></td>
 <td>🔴 <sup>99/209</sup></td>
 <td>🔴 <sup>36/209</sup></td>
 <td>🔴 <sup>99/209</sup></td>
@@ -1890,10 +1911,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>99/209</sup></td>
 <td>🔴 <sup>99/209</sup></td>
 <td>🔴 <sup>99/209</sup></td>
-<td>🔴 <sup>99/209</sup></td>
+<td>⚪️</td>
 <td>🔴 <sup>99/209</sup></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>maxAirSpeed</td>
 <td>🟡 <sup>17/22</sup></td>
 <td>⚪️</td>
@@ -1905,15 +1926,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
+<td>🔴 <sup>0/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
-<td>🔴 <sup>7/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>🟢 <sup>22/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>17/22</sup></td>
-<td>🟡 <sup>15/22</sup></td>
+<td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>17/22</sup></td>
 <td>🟡 <sup>16/22</sup></td>
@@ -1930,10 +1951,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>12/22</sup></td>
 <td>🟡 <sup>12/22</sup></td>
 <td>⚪️</td>
-<td>🟡 <sup>17/22</sup></td>
+<td>⚪️</td>
 <td>🟡 <sup>17/22</sup></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>ERROR</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1973,7 +1994,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>airportLanding</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -1985,7 +2006,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2013,7 +2034,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>airportTakeOff</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2025,7 +2046,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2053,7 +2074,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>avgAccelerationCruise</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2065,7 +2086,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2079,47 +2100,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>4/10</sup></td>
 <td>🟡 <sup>4/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>avgAccelerationLanding</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
 <td>⚪️ <sup>0/10</sup></td>
-<td>🟡 <sup>4/10</sup></td>
-<td>🟡 <sup>4/10</sup></td>
-<td>🔴 <sup>1/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
@@ -2134,6 +2115,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 </tr>
 <tr class="odd">
+<td>avgAccelerationLanding</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>🟡 <sup>4/10</sup></td>
+<td>🟡 <sup>4/10</sup></td>
+<td>🔴 <sup>1/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+</tr>
+<tr class="even">
 <td>avgAccelerationTakeOff</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2145,7 +2166,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2159,7 +2180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>1/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>1/10</sup></td>
 <td>⚪️</td>
@@ -2173,7 +2194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>avgAirSpeedCruise</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2199,7 +2220,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>4/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2213,7 +2234,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>avgAirSpeedLanding</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2239,7 +2260,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>1/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>1/10</sup></td>
 <td>⚪️</td>
@@ -2253,7 +2274,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>avgAirSpeedTakeOff</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2273,13 +2294,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>3/10</sup></td>
+<td>🟡 <sup>5/10</sup></td>
 <td>🔴 <sup>2/10</sup></td>
 <td>⚪️ <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>2/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2293,7 +2314,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>avgEnginePowerCruise</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2317,9 +2338,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>4/10</sup></td>
 <td>⚪️ <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🟡 <sup>8/10</sup></td>
+<td>🔴 <sup>4/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>4/10</sup></td>
 <td>⚪️</td>
@@ -2333,7 +2354,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>avgEnginePowerLanding</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2359,7 +2380,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
@@ -2373,7 +2394,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>avgEnginePowerTakeOff</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2399,7 +2420,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2413,7 +2434,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>avgMachSpeed</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2425,15 +2446,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>0/16</sup></td>
 <td>🟡 <sup>11/16</sup></td>
 <td>🔴 <sup>5/16</sup></td>
+<td>🔴 <sup>0/16</sup></td>
 <td>🔴 <sup>6/16</sup></td>
-<td>🔴 <sup>1/16</sup></td>
 <td>🟡 <sup>11/16</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>11/16</sup></td>
 <td>🟡 <sup>11/16</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>3/16</sup></td>
+<td>🔴 <sup>5/16</sup></td>
 <td>🟡 <sup>11/16</sup></td>
 <td>🟡 <sup>11/16</sup></td>
 <td>🔴 <sup>0/16</sup></td>
@@ -2450,10 +2471,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🟡 <sup>9/16</sup></td>
+<td>⚪️</td>
 <td>🟡 <sup>11/16</sup></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>closeFlight</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2465,7 +2486,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>🔴</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2493,7 +2514,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>closeFlightDiffOri</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2505,7 +2526,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>🔴</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2533,7 +2554,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>closeFlightSameOri</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2545,7 +2566,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>🔴</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2573,7 +2594,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>cumulDistance</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2585,7 +2606,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2613,7 +2634,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>cumulDuration</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2625,7 +2646,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2653,7 +2674,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>fastWindAlt</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2690,10 +2711,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>filenames</td>
 <td>🔴</td>
 <td>⚪️</td>
@@ -2730,10 +2751,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴</td>
 <td>🔴</td>
 <td>🔴</td>
-<td>🔴</td>
+<td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>firstLanding</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2745,7 +2766,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2773,7 +2794,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>flightDistance</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2785,15 +2806,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>9/20</sup></td>
 <td>🔴 <sup>3/20</sup></td>
 <td>🔴 <sup>3/20</sup></td>
-<td>🔴 <sup>5/20</sup></td>
+<td>🔴 <sup>0/20</sup></td>
 <td>🔴 <sup>3/20</sup></td>
 <td>🔴 <sup>0/20</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>6/20</sup></td>
 <td>🔴 <sup>3/20</sup></td>
 <td>⚪️</td>
-<td>🔴 <sup>3/20</sup></td>
-<td>🔴 <sup>3/20</sup></td>
+<td>🔴 <sup>6/20</sup></td>
+<td>🔴 <sup>6/20</sup></td>
 <td>🔴 <sup>3/20</sup></td>
 <td>🔴 <sup>6/20</sup></td>
 <td>🔴 <sup>3/20</sup></td>
@@ -2803,17 +2824,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>3/20</sup></td>
 <td>🔴 <sup>6/20</sup></td>
 <td>🔴 <sup>3/20</sup></td>
-<td>🔴 <sup>3/20</sup></td>
+<td>🔴 <sup>6/20</sup></td>
 <td>🔴 <sup>3/20</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>🔴 <sup>3/20</sup></td>
 <td>🔴 <sup>3/20</sup></td>
 <td>🔴 <sup>0/20</sup></td>
-<td>🔴 <sup>3/20</sup></td>
+<td>⚪️</td>
 <td>🔴 <sup>3/20</sup></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>flightDistanceCruise</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2825,12 +2846,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2839,7 +2860,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
@@ -2853,7 +2874,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>flightDistanceLanding</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2865,12 +2886,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2879,7 +2900,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>1/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
@@ -2893,7 +2914,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>flightDistanceTakeOff</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2905,12 +2926,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2919,7 +2940,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
@@ -2933,7 +2954,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>highestAltitude</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2945,7 +2966,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2973,7 +2994,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>highestDrag</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -2985,7 +3006,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3013,7 +3034,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>highestHeartBeat</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3025,7 +3046,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3053,7 +3074,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>highestLift</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3065,7 +3086,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3093,7 +3114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>highestOxygen</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3105,47 +3126,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
 <td>⚪️ <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>highestPower</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3174,6 +3155,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 </tr>
 <tr class="odd">
+<td>highestPower</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+</tr>
+<tr class="even">
 <td>highestSpeed</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3185,7 +3206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3213,7 +3234,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>imperial</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3233,7 +3254,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>19/235</sup></td>
+<td>🔴 <sup>41/235</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>🔴 <sup>27/235</sup></td>
@@ -3253,7 +3274,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>lastLanding</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3265,47 +3286,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
 <td>⚪️ <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️ <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="even">
-<td>longestDuration</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3334,6 +3315,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 </tr>
 <tr class="odd">
+<td>longestDuration</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+</tr>
+<tr class="even">
 <td>lowestHeartBeat</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3345,7 +3366,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3373,7 +3394,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>maxAccelG</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3393,7 +3414,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>0/16</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>6/16</sup></td>
+<td>🔴 <sup>8/16</sup></td>
 <td>🔴 <sup>0/16</sup></td>
 <td>🔴 <sup>0/16</sup></td>
 <td>🔴 <sup>3/16</sup></td>
@@ -3410,10 +3431,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/16</sup></td>
+<td>⚪️</td>
 <td>🔴 <sup>0/16</sup></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>maxAcceleration</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3425,15 +3446,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>10/20</sup></td>
 <td>🔴 <sup>1/20</sup></td>
 <td>🔴 <sup>1/20</sup></td>
-<td>🔴 <sup>1/20</sup></td>
-<td>🔴 <sup>1/20</sup></td>
-<td>🔴 <sup>1/20</sup></td>
-<td>⚪️</td>
+<td>🔴 <sup>0/20</sup></td>
 <td>🔴 <sup>1/20</sup></td>
 <td>🔴 <sup>1/20</sup></td>
 <td>⚪️</td>
+<td>🔴 <sup>1/20</sup></td>
+<td>🔴 <sup>1/20</sup></td>
 <td>⚪️</td>
-<td>🔴 <sup>6/20</sup></td>
+<td>🔴 <sup>2/20</sup></td>
+<td>🔴 <sup>7/20</sup></td>
 <td>🔴 <sup>1/20</sup></td>
 <td>🔴 <sup>1/20</sup></td>
 <td>🔴 <sup>2/20</sup></td>
@@ -3450,10 +3471,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>1/20</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>1/20</sup></td>
+<td>⚪️</td>
 <td>🔴 <sup>1/20</sup></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>maxAccelerationCruise</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3465,7 +3486,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3479,47 +3500,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-</tr>
-<tr class="odd">
-<td>maxAccelerationLanding</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
 <td>⚪️ <sup>0/10</sup></td>
-<td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>1/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
@@ -3534,18 +3515,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 </tr>
 <tr class="even">
-<td>maxAccelerationTakeOff</td>
+<td>maxAccelerationLanding</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>1/10</sup></td>
+<td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3559,7 +3540,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>1/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
@@ -3574,6 +3555,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 </tr>
 <tr class="odd">
+<td>maxAccelerationTakeOff</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>1/10</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>🔴 <sup>1/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+</tr>
+<tr class="even">
 <td>maxAirSpeedCruise</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3599,7 +3620,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>4/10</sup></td>
 <td>🔴 <sup>4/10</sup></td>
 <td>🔴 <sup>2/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3613,7 +3634,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>🔴 <sup>2/10</sup></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>maxAirSpeedLanding</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3639,7 +3660,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>4/10</sup></td>
 <td>🔴 <sup>4/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>4/10</sup></td>
 <td>⚪️</td>
@@ -3653,7 +3674,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>maxAirSpeedTakeOff</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3679,9 +3700,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>4/10</sup></td>
 <td>🔴 <sup>4/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>1/10</sup></td>
+</tr>
+<tr class="odd">
+<td>maxEnginePowerCruise</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>2/10</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>3/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>⚪️</td>
+<td>🔴 <sup>3/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>🔴 <sup>1/10</sup></td>
+<td>🔴 <sup>4/10</sup></td>
+<td>🔴 <sup>2/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
+<td>⚪️</td>
+<td>🔴 <sup>4/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3717,9 +3778,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️ <sup>0/10</sup></td>
 <td>🔴 <sup>1/10</sup></td>
-<td>🟡 <sup>7/10</sup></td>
+<td>🔴 <sup>4/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>4/10</sup></td>
 <td>⚪️</td>
@@ -3757,9 +3818,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>3/10</sup></td>
 <td>⚪️ <sup>0/10</sup></td>
 <td>🔴 <sup>1/10</sup></td>
-<td>🟡 <sup>8/10</sup></td>
+<td>🔴 <sup>3/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3785,15 +3846,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>0/16</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>5/16</sup></td>
-<td>🔴 <sup>4/16</sup></td>
 <td>🔴 <sup>0/16</sup></td>
+<td>🔴 <sup>4/16</sup></td>
 <td>🟡 <sup>11/16</sup></td>
 <td>⚪️</td>
 <td>🟡 <sup>8/16</sup></td>
 <td>🟡 <sup>8/16</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>2/16</sup></td>
+<td>🔴 <sup>4/16</sup></td>
 <td>🔴 <sup>2/16</sup></td>
 <td>🟡 <sup>8/16</sup></td>
 <td>🔴 <sup>0/16</sup></td>
@@ -3810,7 +3871,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>2/16</sup></td>
+<td>⚪️</td>
 <td>🟡 <sup>8/16</sup></td>
 </tr>
 <tr class="odd">
@@ -3833,7 +3894,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>57/220</sup></td>
+<td>🔴 <sup>71/220</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>🔴 <sup>68/220</sup></td>
@@ -3865,7 +3926,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3905,7 +3966,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3917,7 +3978,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>0/10</sup></td>
 <td>🟡 <sup>1/10</sup></td>
 <td>⚪️</td>
-<td>🟡 <sup>3/10</sup></td>
+<td>🟡 <sup>1/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>1/10</sup></td>
 <td>⚪️</td>
@@ -3945,7 +4006,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -3993,7 +4054,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>5/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>2/10</sup></td>
+<td>🔴 <sup>3/10</sup></td>
 <td>🟡 <sup>1/10</sup></td>
 <td>🟡 <sup>4/10</sup></td>
 <td>⚪️</td>
@@ -4033,7 +4094,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>1/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
+<td>🟡 <sup>6/10</sup></td>
 <td>🔴 <sup>3/10</sup></td>
 <td>🟡 <sup>6/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
@@ -4073,7 +4134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🟡 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>1/10</sup></td>
+<td>🟡 <sup>1/10</sup></td>
 <td>🟡 <sup>0/10</sup></td>
 <td>🟡 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
@@ -4083,14 +4144,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️ <sup>0/10</sup></td>
 <td>🟡 <sup>0/10</sup></td>
 <td>⚪️</td>
+<td>🟡 <sup>1/10</sup></td>
 <td>🟡 <sup>0/10</sup></td>
-<td>🟡 <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 </tr>
 <tr class="even">
@@ -4105,7 +4166,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -4145,7 +4206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -4185,7 +4246,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -4250,7 +4311,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴</td>
 <td>🔴</td>
 <td>🔴</td>
-<td>🔴</td>
+<td>⚪️</td>
 <td>🔴</td>
 </tr>
 <tr class="even">
@@ -4265,14 +4326,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>4/18</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>2/18</sup></td>
-<td>⚪️</td>
+<td>🔴 <sup>0/18</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>1/18</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>2/18</sup></td>
 <td>🔴 <sup>4/18</sup></td>
 <td>⚪️</td>
-<td>⚪️</td>
+<td>🔴 <sup>2/18</sup></td>
 <td>🔴 <sup>3/18</sup></td>
 <td>🔴 <sup>2/18</sup></td>
 <td>🔴 <sup>2/18</sup></td>
@@ -4290,7 +4351,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>🔴 <sup>0/18</sup></td>
-<td>🔴 <sup>2/18</sup></td>
+<td>⚪️</td>
 <td>🔴 <sup>1/18</sup></td>
 </tr>
 <tr class="odd">
@@ -4305,12 +4366,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -4319,7 +4380,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>1/10</sup></td>
 <td>⚪️</td>
@@ -4345,12 +4406,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -4359,7 +4420,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>1/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>1/10</sup></td>
 <td>⚪️</td>
@@ -4385,12 +4446,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
-<td>⚪️</td>
-<td>⚪️</td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>⚪️</td>
 <td>⚪️</td>
@@ -4399,7 +4460,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
 <td>🔴 <sup>0/10</sup></td>
-<td>🔴 <sup>0/10</sup></td>
+<td>⚪️ <sup>0/10</sup></td>
 <td>⚪️</td>
 <td>🔴 <sup>0/10</sup></td>
 <td>⚪️</td>
@@ -4497,296 +4558,296 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>persistent_lagoons 2026</td>
-<td style="text-align: center;">281</td>
+<td style="text-align: center;">301</td>
 <td style="text-align: center;">62</td>
-<td style="text-align: center;">581</td>
-<td style="text-align: center;">586</td>
+<td style="text-align: center;">544</td>
+<td style="text-align: center;">613</td>
+<td style="text-align: center;">0.36</td>
+<td style="text-align: center;">0.83</td>
+<td style="text-align: center;">0.50</td>
+<td style="text-align: center;">0.60</td>
+</tr>
+<tr class="even">
+<td>light_nouns 2026</td>
+<td style="text-align: center;">306</td>
+<td style="text-align: center;">64</td>
+<td style="text-align: center;">560</td>
+<td style="text-align: center;">592</td>
+<td style="text-align: center;">0.35</td>
+<td style="text-align: center;">0.83</td>
+<td style="text-align: center;">0.50</td>
+<td style="text-align: center;">0.59</td>
+</tr>
+<tr class="odd">
+<td>polished_jaguars 2026</td>
+<td style="text-align: center;">296</td>
+<td style="text-align: center;">74</td>
+<td style="text-align: center;">548</td>
+<td style="text-align: center;">608</td>
+<td style="text-align: center;">0.35</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.49</td>
+<td style="text-align: center;">0.59</td>
+</tr>
+<tr class="even">
+<td>opulent_motorcycles 2026</td>
+<td style="text-align: center;">308</td>
+<td style="text-align: center;">61</td>
+<td style="text-align: center;">633</td>
+<td style="text-align: center;">527</td>
 <td style="text-align: center;">0.33</td>
-<td style="text-align: center;">0.82</td>
+<td style="text-align: center;">0.83</td>
+<td style="text-align: center;">0.47</td>
+<td style="text-align: center;">0.55</td>
+</tr>
+<tr class="odd">
+<td>golden_rubies 2026</td>
+<td style="text-align: center;">291</td>
+<td style="text-align: center;">73</td>
+<td style="text-align: center;">585</td>
+<td style="text-align: center;">565</td>
+<td style="text-align: center;">0.33</td>
+<td style="text-align: center;">0.80</td>
 <td style="text-align: center;">0.47</td>
 <td style="text-align: center;">0.57</td>
 </tr>
 <tr class="even">
-<td>light_nouns 2026</td>
-<td style="text-align: center;">288</td>
-<td style="text-align: center;">64</td>
-<td style="text-align: center;">600</td>
-<td style="text-align: center;">560</td>
-<td style="text-align: center;">0.32</td>
-<td style="text-align: center;">0.82</td>
-<td style="text-align: center;">0.46</td>
-<td style="text-align: center;">0.56</td>
-</tr>
-<tr class="odd">
-<td>polished_jaguars 2026</td>
-<td style="text-align: center;">279</td>
-<td style="text-align: center;">73</td>
-<td style="text-align: center;">590</td>
-<td style="text-align: center;">574</td>
-<td style="text-align: center;">0.32</td>
-<td style="text-align: center;">0.79</td>
-<td style="text-align: center;">0.46</td>
-<td style="text-align: center;">0.56</td>
-</tr>
-<tr class="even">
-<td>opulent_motorcycles 2026</td>
-<td style="text-align: center;">294</td>
-<td style="text-align: center;">57</td>
-<td style="text-align: center;">673</td>
-<td style="text-align: center;">495</td>
-<td style="text-align: center;">0.30</td>
-<td style="text-align: center;">0.84</td>
-<td style="text-align: center;">0.45</td>
-<td style="text-align: center;">0.52</td>
-</tr>
-<tr class="odd">
 <td>celestial_treasures 2026</td>
-<td style="text-align: center;">278</td>
-<td style="text-align: center;">75</td>
-<td style="text-align: center;">632</td>
+<td style="text-align: center;">290</td>
+<td style="text-align: center;">81</td>
+<td style="text-align: center;">624</td>
 <td style="text-align: center;">545</td>
-<td style="text-align: center;">0.31</td>
-<td style="text-align: center;">0.79</td>
-<td style="text-align: center;">0.44</td>
+<td style="text-align: center;">0.32</td>
+<td style="text-align: center;">0.78</td>
+<td style="text-align: center;">0.45</td>
 <td style="text-align: center;">0.54</td>
 </tr>
-<tr class="even">
-<td>golden_rubies 2026</td>
-<td style="text-align: center;">274</td>
-<td style="text-align: center;">72</td>
-<td style="text-align: center;">665</td>
-<td style="text-align: center;">499</td>
-<td style="text-align: center;">0.29</td>
-<td style="text-align: center;">0.79</td>
+<tr class="odd">
+<td>lustrous_novelties 2026</td>
+<td style="text-align: center;">286</td>
+<td style="text-align: center;">79</td>
+<td style="text-align: center;">675</td>
+<td style="text-align: center;">486</td>
+<td style="text-align: center;">0.30</td>
+<td style="text-align: center;">0.78</td>
 <td style="text-align: center;">0.43</td>
 <td style="text-align: center;">0.51</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>invincible_penguins 2026</td>
-<td style="text-align: center;">301</td>
-<td style="text-align: center;">62</td>
-<td style="text-align: center;">751</td>
-<td style="text-align: center;">424</td>
-<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">302</td>
+<td style="text-align: center;">61</td>
+<td style="text-align: center;">760</td>
+<td style="text-align: center;">425</td>
+<td style="text-align: center;">0.28</td>
 <td style="text-align: center;">0.83</td>
-<td style="text-align: center;">0.43</td>
+<td style="text-align: center;">0.42</td>
 <td style="text-align: center;">0.47</td>
 </tr>
-<tr class="even">
-<td>lustrous_novelties 2026</td>
-<td style="text-align: center;">272</td>
-<td style="text-align: center;">75</td>
-<td style="text-align: center;">715</td>
-<td style="text-align: center;">454</td>
-<td style="text-align: center;">0.28</td>
-<td style="text-align: center;">0.78</td>
-<td style="text-align: center;">0.41</td>
-<td style="text-align: center;">0.48</td>
-</tr>
 <tr class="odd">
-<td>coarse_tractors 2026</td>
-<td style="text-align: center;">297</td>
-<td style="text-align: center;">66</td>
-<td style="text-align: center;">809</td>
-<td style="text-align: center;">369</td>
-<td style="text-align: center;">0.27</td>
-<td style="text-align: center;">0.82</td>
-<td style="text-align: center;">0.40</td>
-<td style="text-align: center;">0.43</td>
+<td>red_helicopters 2026</td>
+<td style="text-align: center;">214</td>
+<td style="text-align: center;">155</td>
+<td style="text-align: center;">427</td>
+<td style="text-align: center;">719</td>
+<td style="text-align: center;">0.33</td>
+<td style="text-align: center;">0.58</td>
+<td style="text-align: center;">0.42</td>
+<td style="text-align: center;">0.62</td>
 </tr>
 <tr class="even">
-<td>red_helicopters 2026</td>
-<td style="text-align: center;">195</td>
-<td style="text-align: center;">156</td>
-<td style="text-align: center;">423</td>
-<td style="text-align: center;">731</td>
-<td style="text-align: center;">0.32</td>
-<td style="text-align: center;">0.56</td>
-<td style="text-align: center;">0.40</td>
-<td style="text-align: center;">0.62</td>
+<td>coarse_tractors 2026</td>
+<td style="text-align: center;">311</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">784</td>
+<td style="text-align: center;">386</td>
+<td style="text-align: center;">0.28</td>
+<td style="text-align: center;">0.82</td>
+<td style="text-align: center;">0.42</td>
+<td style="text-align: center;">0.45</td>
 </tr>
 <tr class="odd">
 <td>cool_aspects 2026</td>
-<td style="text-align: center;">175</td>
-<td style="text-align: center;">178</td>
-<td style="text-align: center;">344</td>
-<td style="text-align: center;">815</td>
+<td style="text-align: center;">182</td>
+<td style="text-align: center;">189</td>
+<td style="text-align: center;">347</td>
+<td style="text-align: center;">804</td>
 <td style="text-align: center;">0.34</td>
-<td style="text-align: center;">0.50</td>
+<td style="text-align: center;">0.49</td>
 <td style="text-align: center;">0.40</td>
 <td style="text-align: center;">0.65</td>
 </tr>
 <tr class="even">
-<td>white_cheetahs 2026</td>
-<td style="text-align: center;">255</td>
-<td style="text-align: center;">93</td>
-<td style="text-align: center;">798</td>
-<td style="text-align: center;">389</td>
-<td style="text-align: center;">0.24</td>
-<td style="text-align: center;">0.73</td>
-<td style="text-align: center;">0.36</td>
-<td style="text-align: center;">0.42</td>
+<td>grateful_rhinos 2026</td>
+<td style="text-align: center;">274</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: center;">767</td>
+<td style="text-align: center;">431</td>
+<td style="text-align: center;">0.26</td>
+<td style="text-align: center;">0.75</td>
+<td style="text-align: center;">0.39</td>
+<td style="text-align: center;">0.45</td>
 </tr>
 <tr class="odd">
-<td>grateful_rhinos 2026</td>
-<td style="text-align: center;">262</td>
-<td style="text-align: center;">91</td>
-<td style="text-align: center;">853</td>
-<td style="text-align: center;">349</td>
-<td style="text-align: center;">0.23</td>
-<td style="text-align: center;">0.74</td>
+<td>white_cheetahs 2026</td>
+<td style="text-align: center;">268</td>
+<td style="text-align: center;">98</td>
+<td style="text-align: center;">775</td>
+<td style="text-align: center;">404</td>
+<td style="text-align: center;">0.26</td>
+<td style="text-align: center;">0.73</td>
+<td style="text-align: center;">0.38</td>
+<td style="text-align: center;">0.43</td>
+</tr>
+<tr class="even">
+<td>enlightened_solitudes 2026</td>
+<td style="text-align: center;">307</td>
+<td style="text-align: center;">74</td>
+<td style="text-align: center;">927</td>
+<td style="text-align: center;">244</td>
+<td style="text-align: center;">0.25</td>
+<td style="text-align: center;">0.81</td>
+<td style="text-align: center;">0.38</td>
 <td style="text-align: center;">0.36</td>
-<td style="text-align: center;">0.39</td>
+</tr>
+<tr class="odd">
+<td>energetic_spaceships 2026</td>
+<td style="text-align: center;">195</td>
+<td style="text-align: center;">187</td>
+<td style="text-align: center;">480</td>
+<td style="text-align: center;">647</td>
+<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">0.51</td>
+<td style="text-align: center;">0.37</td>
+<td style="text-align: center;">0.56</td>
 </tr>
 <tr class="even">
 <td>smiling_anvils 2026</td>
-<td style="text-align: center;">276</td>
-<td style="text-align: center;">69</td>
-<td style="text-align: center;">987</td>
-<td style="text-align: center;">198</td>
-<td style="text-align: center;">0.22</td>
+<td style="text-align: center;">290</td>
+<td style="text-align: center;">73</td>
+<td style="text-align: center;">969</td>
+<td style="text-align: center;">208</td>
+<td style="text-align: center;">0.23</td>
 <td style="text-align: center;">0.80</td>
-<td style="text-align: center;">0.34</td>
-<td style="text-align: center;">0.31</td>
+<td style="text-align: center;">0.36</td>
+<td style="text-align: center;">0.32</td>
 </tr>
 <tr class="odd">
 <td>ethereal_skylines 2026</td>
-<td style="text-align: center;">284</td>
-<td style="text-align: center;">65</td>
-<td style="text-align: center;">1065</td>
-<td style="text-align: center;">139</td>
-<td style="text-align: center;">0.21</td>
+<td style="text-align: center;">298</td>
+<td style="text-align: center;">69</td>
+<td style="text-align: center;">1040</td>
+<td style="text-align: center;">156</td>
+<td style="text-align: center;">0.22</td>
 <td style="text-align: center;">0.81</td>
-<td style="text-align: center;">0.33</td>
-<td style="text-align: center;">0.27</td>
+<td style="text-align: center;">0.35</td>
+<td style="text-align: center;">0.29</td>
 </tr>
 <tr class="even">
 <td>unified_diamonds 2026</td>
-<td style="text-align: center;">250</td>
-<td style="text-align: center;">102</td>
-<td style="text-align: center;">926</td>
-<td style="text-align: center;">267</td>
-<td style="text-align: center;">0.21</td>
+<td style="text-align: center;">261</td>
+<td style="text-align: center;">109</td>
+<td style="text-align: center;">931</td>
+<td style="text-align: center;">254</td>
+<td style="text-align: center;">0.22</td>
 <td style="text-align: center;">0.71</td>
 <td style="text-align: center;">0.33</td>
 <td style="text-align: center;">0.33</td>
 </tr>
 <tr class="odd">
-<td>energetic_spaceships 2026</td>
-<td style="text-align: center;">190</td>
-<td style="text-align: center;">173</td>
-<td style="text-align: center;">623</td>
-<td style="text-align: center;">550</td>
-<td style="text-align: center;">0.23</td>
-<td style="text-align: center;">0.52</td>
+<td>gleaming_seagulls 2026</td>
+<td style="text-align: center;">280</td>
+<td style="text-align: center;">102</td>
+<td style="text-align: center;">1100</td>
+<td style="text-align: center;">89</td>
+<td style="text-align: center;">0.20</td>
+<td style="text-align: center;">0.73</td>
 <td style="text-align: center;">0.32</td>
-<td style="text-align: center;">0.48</td>
+<td style="text-align: center;">0.23</td>
+</tr>
+<tr class="even">
+<td>radiant_illuminations 2026</td>
+<td style="text-align: center;">206</td>
+<td style="text-align: center;">162</td>
+<td style="text-align: center;">739</td>
+<td style="text-align: center;">448</td>
+<td style="text-align: center;">0.22</td>
+<td style="text-align: center;">0.56</td>
+<td style="text-align: center;">0.31</td>
+<td style="text-align: center;">0.42</td>
+</tr>
+<tr class="odd">
+<td>creative_symbols 2026</td>
+<td style="text-align: center;">202</td>
+<td style="text-align: center;">161</td>
+<td style="text-align: center;">738</td>
+<td style="text-align: center;">462</td>
+<td style="text-align: center;">0.21</td>
+<td style="text-align: center;">0.56</td>
+<td style="text-align: center;">0.31</td>
+<td style="text-align: center;">0.42</td>
 </tr>
 <tr class="even">
 <td>blue_victors 2026</td>
 <td style="text-align: center;">170</td>
-<td style="text-align: center;">184</td>
-<td style="text-align: center;">539</td>
-<td style="text-align: center;">654</td>
-<td style="text-align: center;">0.24</td>
-<td style="text-align: center;">0.48</td>
-<td style="text-align: center;">0.32</td>
-<td style="text-align: center;">0.53</td>
+<td style="text-align: center;">202</td>
+<td style="text-align: center;">571</td>
+<td style="text-align: center;">614</td>
+<td style="text-align: center;">0.23</td>
+<td style="text-align: center;">0.46</td>
+<td style="text-align: center;">0.31</td>
+<td style="text-align: center;">0.50</td>
 </tr>
 <tr class="odd">
-<td>radiant_illuminations 2026</td>
-<td style="text-align: center;">197</td>
-<td style="text-align: center;">153</td>
-<td style="text-align: center;">715</td>
-<td style="text-align: center;">480</td>
-<td style="text-align: center;">0.22</td>
-<td style="text-align: center;">0.56</td>
-<td style="text-align: center;">0.31</td>
-<td style="text-align: center;">0.44</td>
-</tr>
-<tr class="even">
-<td>creative_symbols 2026</td>
-<td style="text-align: center;">195</td>
-<td style="text-align: center;">150</td>
-<td style="text-align: center;">717</td>
-<td style="text-align: center;">491</td>
-<td style="text-align: center;">0.21</td>
-<td style="text-align: center;">0.57</td>
-<td style="text-align: center;">0.31</td>
-<td style="text-align: center;">0.44</td>
-</tr>
-<tr class="odd">
-<td>gleaming_seagulls 2026</td>
-<td style="text-align: center;">267</td>
-<td style="text-align: center;">97</td>
-<td style="text-align: center;">1116</td>
-<td style="text-align: center;">81</td>
-<td style="text-align: center;">0.19</td>
-<td style="text-align: center;">0.73</td>
-<td style="text-align: center;">0.31</td>
-<td style="text-align: center;">0.22</td>
-</tr>
-<tr class="even">
 <td>silky_flutes 2026</td>
-<td style="text-align: center;">200</td>
-<td style="text-align: center;">150</td>
-<td style="text-align: center;">866</td>
-<td style="text-align: center;">338</td>
+<td style="text-align: center;">202</td>
+<td style="text-align: center;">165</td>
+<td style="text-align: center;">853</td>
+<td style="text-align: center;">344</td>
 <td style="text-align: center;">0.19</td>
-<td style="text-align: center;">0.57</td>
+<td style="text-align: center;">0.55</td>
 <td style="text-align: center;">0.28</td>
 <td style="text-align: center;">0.35</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>empathetic_spectacles 2026</td>
-<td style="text-align: center;">149</td>
-<td style="text-align: center;">215</td>
-<td style="text-align: center;">715</td>
-<td style="text-align: center;">460</td>
-<td style="text-align: center;">0.17</td>
+<td style="text-align: center;">157</td>
+<td style="text-align: center;">225</td>
+<td style="text-align: center;">710</td>
+<td style="text-align: center;">457</td>
+<td style="text-align: center;">0.18</td>
 <td style="text-align: center;">0.41</td>
-<td style="text-align: center;">0.24</td>
+<td style="text-align: center;">0.25</td>
 <td style="text-align: center;">0.40</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>spirited_essences 2026</td>
-<td style="text-align: center;">144</td>
-<td style="text-align: center;">220</td>
-<td style="text-align: center;">770</td>
-<td style="text-align: center;">421</td>
+<td style="text-align: center;">153</td>
+<td style="text-align: center;">229</td>
+<td style="text-align: center;">788</td>
+<td style="text-align: center;">395</td>
 <td style="text-align: center;">0.16</td>
 <td style="text-align: center;">0.40</td>
 <td style="text-align: center;">0.23</td>
-<td style="text-align: center;">0.36</td>
-</tr>
-<tr class="odd">
-<td>tranquil_eclipses 2026</td>
-<td style="text-align: center;">151</td>
-<td style="text-align: center;">213</td>
-<td style="text-align: center;">917</td>
-<td style="text-align: center;">278</td>
-<td style="text-align: center;">0.14</td>
-<td style="text-align: center;">0.41</td>
-<td style="text-align: center;">0.21</td>
-<td style="text-align: center;">0.28</td>
+<td style="text-align: center;">0.35</td>
 </tr>
 <tr class="even">
-<td>soft_explorers 2026</td>
+<td>tranquil_eclipses 2026</td>
 <td style="text-align: center;">161</td>
-<td style="text-align: center;">200</td>
-<td style="text-align: center;">1037</td>
-<td style="text-align: center;">169</td>
-<td style="text-align: center;">0.13</td>
-<td style="text-align: center;">0.45</td>
-<td style="text-align: center;">0.21</td>
-<td style="text-align: center;">0.21</td>
+<td style="text-align: center;">221</td>
+<td style="text-align: center;">932</td>
+<td style="text-align: center;">255</td>
+<td style="text-align: center;">0.15</td>
+<td style="text-align: center;">0.42</td>
+<td style="text-align: center;">0.22</td>
+<td style="text-align: center;">0.27</td>
 </tr>
 <tr class="odd">
 <td>smooth_fantasies 2026</td>
-<td style="text-align: center;">151</td>
-<td style="text-align: center;">213</td>
-<td style="text-align: center;">1144</td>
-<td style="text-align: center;">77</td>
+<td style="text-align: center;">155</td>
+<td style="text-align: center;">227</td>
+<td style="text-align: center;">1141</td>
+<td style="text-align: center;">72</td>
 <td style="text-align: center;">0.12</td>
 <td style="text-align: center;">0.41</td>
 <td style="text-align: center;">0.18</td>
@@ -4794,83 +4855,83 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>silken_foxes 2026</td>
-<td style="text-align: center;">105</td>
-<td style="text-align: center;">246</td>
-<td style="text-align: center;">819</td>
-<td style="text-align: center;">383</td>
-<td style="text-align: center;">0.11</td>
-<td style="text-align: center;">0.30</td>
-<td style="text-align: center;">0.16</td>
+<td style="text-align: center;">116</td>
+<td style="text-align: center;">253</td>
+<td style="text-align: center;">843</td>
+<td style="text-align: center;">351</td>
+<td style="text-align: center;">0.12</td>
 <td style="text-align: center;">0.31</td>
+<td style="text-align: center;">0.17</td>
+<td style="text-align: center;">0.30</td>
 </tr>
 <tr class="odd">
-<td>purple_infinity 2026</td>
-<td style="text-align: center;">61</td>
-<td style="text-align: center;">289</td>
-<td style="text-align: center;">381</td>
-<td style="text-align: center;">783</td>
-<td style="text-align: center;">0.14</td>
-<td style="text-align: center;">0.17</td>
-<td style="text-align: center;">0.15</td>
-<td style="text-align: center;">0.56</td>
+<td>soft_explorers 2026</td>
+<td style="text-align: center;">116</td>
+<td style="text-align: center;">257</td>
+<td style="text-align: center;">930</td>
+<td style="text-align: center;">272</td>
+<td style="text-align: center;">0.11</td>
+<td style="text-align: center;">0.31</td>
+<td style="text-align: center;">0.16</td>
+<td style="text-align: center;">0.25</td>
 </tr>
 <tr class="even">
 <td>adjectives_wolves 2026</td>
-<td style="text-align: center;">101</td>
-<td style="text-align: center;">249</td>
-<td style="text-align: center;">871</td>
-<td style="text-align: center;">336</td>
-<td style="text-align: center;">0.10</td>
-<td style="text-align: center;">0.29</td>
+<td style="text-align: center;">111</td>
+<td style="text-align: center;">257</td>
+<td style="text-align: center;">890</td>
+<td style="text-align: center;">309</td>
+<td style="text-align: center;">0.11</td>
+<td style="text-align: center;">0.30</td>
+<td style="text-align: center;">0.16</td>
+<td style="text-align: center;">0.27</td>
+</tr>
+<tr class="odd">
+<td>crimson_sunsets 2026</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">292</td>
+<td style="text-align: center;">514</td>
+<td style="text-align: center;">674</td>
+<td style="text-align: center;">0.12</td>
+<td style="text-align: center;">0.19</td>
 <td style="text-align: center;">0.15</td>
-<td style="text-align: center;">0.28</td>
+<td style="text-align: center;">0.48</td>
+</tr>
+<tr class="even">
+<td>purple_infinity 2026</td>
+<td style="text-align: center;">59</td>
+<td style="text-align: center;">309</td>
+<td style="text-align: center;">410</td>
+<td style="text-align: center;">746</td>
+<td style="text-align: center;">0.13</td>
+<td style="text-align: center;">0.16</td>
+<td style="text-align: center;">0.14</td>
+<td style="text-align: center;">0.53</td>
 </tr>
 <tr class="odd">
 <td>dynamic_springs 2026</td>
-<td style="text-align: center;">80</td>
-<td style="text-align: center;">275</td>
-<td style="text-align: center;">645</td>
-<td style="text-align: center;">555</td>
-<td style="text-align: center;">0.11</td>
-<td style="text-align: center;">0.23</td>
-<td style="text-align: center;">0.15</td>
-<td style="text-align: center;">0.41</td>
+<td style="text-align: center;">74</td>
+<td style="text-align: center;">299</td>
+<td style="text-align: center;">655</td>
+<td style="text-align: center;">537</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.20</td>
+<td style="text-align: center;">0.13</td>
+<td style="text-align: center;">0.39</td>
 </tr>
 <tr class="even">
-<td>crimson_sunsets 2026</td>
-<td style="text-align: center;">62</td>
-<td style="text-align: center;">282</td>
-<td style="text-align: center;">568</td>
-<td style="text-align: center;">628</td>
-<td style="text-align: center;">0.10</td>
-<td style="text-align: center;">0.18</td>
-<td style="text-align: center;">0.13</td>
-<td style="text-align: center;">0.45</td>
-</tr>
-<tr class="odd">
 <td>gold_sapphires 2026</td>
 <td style="text-align: center;">44</td>
-<td style="text-align: center;">302</td>
-<td style="text-align: center;">745</td>
-<td style="text-align: center;">463</td>
-<td style="text-align: center;">0.06</td>
-<td style="text-align: center;">0.13</td>
+<td style="text-align: center;">320</td>
+<td style="text-align: center;">757</td>
+<td style="text-align: center;">443</td>
+<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">0.12</td>
 <td style="text-align: center;">0.08</td>
-<td style="text-align: center;">0.33</td>
-</tr>
-<tr class="even">
-<td>awesome_teachers 2026</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0.00</td>
-<td style="text-align: center;">0.00</td>
-<td style="text-align: center;">0.00</td>
-<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">0.31</td>
 </tr>
 <tr class="odd">
-<td>enlightened_solitudes 2026</td>
+<td>awesome_teachers 2026</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
@@ -4883,8 +4944,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td>gracious_rollercoasters 2026</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">364</td>
-<td style="text-align: center;">1221</td>
+<td style="text-align: center;">382</td>
+<td style="text-align: center;">1213</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">0.00</td>
 <td style="text-align: center;">0.00</td>
@@ -4894,8 +4955,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td>vibrant_constellations 2026</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">353</td>
-<td style="text-align: center;">1194</td>
+<td style="text-align: center;">382</td>
+<td style="text-align: center;">1213</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">0.00</td>
 <td style="text-align: center;">0.00</td>
@@ -4921,8 +4982,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>grateful_rhinos 2026</td>
-<td style="text-align: center;">93%</td>
-<td style="text-align: center;">88%</td>
+<td style="text-align: center;">91%</td>
+<td style="text-align: center;">85%</td>
 </tr>
 <tr class="even">
 <td>creative_symbols 2026</td>
@@ -4936,23 +4997,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>soft_explorers 2026</td>
-<td style="text-align: center;">85%</td>
-<td style="text-align: center;">80%</td>
+<td style="text-align: center;">86%</td>
+<td style="text-align: center;">82%</td>
 </tr>
 <tr class="odd">
-<td>tranquil_eclipses 2026</td>
-<td style="text-align: center;">81%</td>
-<td style="text-align: center;">77%</td>
-</tr>
-<tr class="even">
 <td>spirited_essences 2026</td>
 <td style="text-align: center;">81%</td>
 <td style="text-align: center;">66%</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>coarse_tractors 2026</td>
 <td style="text-align: center;">80%</td>
 <td style="text-align: center;">66%</td>
+</tr>
+<tr class="odd">
+<td>tranquil_eclipses 2026</td>
+<td style="text-align: center;">80%</td>
+<td style="text-align: center;">75%</td>
 </tr>
 <tr class="even">
 <td>purple_infinity 2026</td>
@@ -4965,14 +5026,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: center;">58%</td>
 </tr>
 <tr class="even">
-<td>invincible_penguins 2026</td>
-<td style="text-align: center;">79%</td>
-<td style="text-align: center;">63%</td>
-</tr>
-<tr class="odd">
 <td>lustrous_novelties 2026</td>
 <td style="text-align: center;">78%</td>
 <td style="text-align: center;">67%</td>
+</tr>
+<tr class="odd">
+<td>invincible_penguins 2026</td>
+<td style="text-align: center;">78%</td>
+<td style="text-align: center;">63%</td>
 </tr>
 <tr class="even">
 <td>gleaming_seagulls 2026</td>
@@ -4995,14 +5056,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: center;">64%</td>
 </tr>
 <tr class="even">
-<td>persistent_lagoons 2026</td>
-<td style="text-align: center;">74%</td>
-<td style="text-align: center;">62%</td>
+<td>crimson_sunsets 2026</td>
+<td style="text-align: center;">75%</td>
+<td style="text-align: center;">70%</td>
 </tr>
 <tr class="odd">
+<td>enlightened_solitudes 2026</td>
+<td style="text-align: center;">75%</td>
+<td style="text-align: center;">53%</td>
+</tr>
+<tr class="even">
 <td>radiant_illuminations 2026</td>
 <td style="text-align: center;">73%</td>
 <td style="text-align: center;">66%</td>
+</tr>
+<tr class="odd">
+<td>persistent_lagoons 2026</td>
+<td style="text-align: center;">73%</td>
+<td style="text-align: center;">62%</td>
 </tr>
 <tr class="even">
 <td>white_cheetahs 2026</td>
@@ -5012,22 +5083,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td>silken_foxes 2026</td>
 <td style="text-align: center;">69%</td>
-<td style="text-align: center;">62%</td>
+<td style="text-align: center;">61%</td>
 </tr>
 <tr class="even">
 <td>silky_flutes 2026</td>
 <td style="text-align: center;">69%</td>
-<td style="text-align: center;">66%</td>
-</tr>
-<tr class="odd">
-<td>energetic_spaceships 2026</td>
-<td style="text-align: center;">67%</td>
-<td style="text-align: center;">54%</td>
-</tr>
-<tr class="even">
-<td>crimson_sunsets 2026</td>
-<td style="text-align: center;">66%</td>
-<td style="text-align: center;">61%</td>
+<td style="text-align: center;">64%</td>
 </tr>
 <tr class="odd">
 <td>blue_victors 2026</td>
@@ -5056,8 +5117,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>golden_rubies 2026</td>
-<td style="text-align: center;">55%</td>
-<td style="text-align: center;">43%</td>
+<td style="text-align: center;">57%</td>
+<td style="text-align: center;">45%</td>
 </tr>
 <tr class="odd">
 <td>red_helicopters 2026</td>
@@ -5080,9 +5141,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: center;">2%</td>
 </tr>
 <tr class="odd">
-<td>vibrant_constellations 2026</td>
-<td style="text-align: center;">2%</td>
-<td style="text-align: center;">1%</td>
+<td>energetic_spaceships 2026</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">0%</td>
 </tr>
 </tbody>
 </table>
@@ -5116,19 +5177,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>grateful_rhinos 2026</td>
-<td style="text-align: center;">245</td>
+<td style="text-align: center;">282</td>
 <td style="text-align: center;">Excellent</td>
-<td style="text-align: center;">88%</td>
+<td style="text-align: center;">89%</td>
 <td style="text-align: center;">0%</td>
 <td style="text-align: center;">PR</td>
 <td style="text-align: center;">—</td>
 </tr>
 <tr class="even">
 <td>invincible_penguins 2026</td>
-<td style="text-align: center;">131</td>
-<td style="text-align: center;">Poor</td>
-<td style="text-align: center;">23%</td>
-<td style="text-align: center;">65%</td>
+<td style="text-align: center;">134</td>
+<td style="text-align: center;">Acceptable</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: center;">63%</td>
 <td style="text-align: center;">PR</td>
 <td style="text-align: center;">—</td>
 </tr>
@@ -5152,7 +5213,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td>silken_foxes 2026</td>
-<td style="text-align: center;">106</td>
+<td style="text-align: center;">107</td>
 <td style="text-align: center;">Excellent</td>
 <td style="text-align: center;">95%</td>
 <td style="text-align: center;">1%</td>
@@ -5187,6 +5248,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: center;">—</td>
 </tr>
 <tr class="odd">
+<td>vibrant_constellations 2026</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">Acceptable</td>
+<td style="text-align: center;">26%</td>
+<td style="text-align: center;">61%</td>
+<td style="text-align: center;">branches</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
 <td>radiant_illuminations 2026</td>
 <td style="text-align: center;">68</td>
 <td style="text-align: center;">Acceptable</td>
@@ -5195,21 +5265,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: center;">—</td>
 <td style="text-align: center;">—</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>creative_symbols 2026</td>
 <td style="text-align: center;">67</td>
 <td style="text-align: center;">Excellent</td>
 <td style="text-align: center;">67%</td>
 <td style="text-align: center;">7%</td>
-<td style="text-align: center;">branches</td>
-<td style="text-align: center;">—</td>
-</tr>
-<tr class="odd">
-<td>vibrant_constellations 2026</td>
-<td style="text-align: center;">65</td>
-<td style="text-align: center;">Poor</td>
-<td style="text-align: center;">20%</td>
-<td style="text-align: center;">66%</td>
 <td style="text-align: center;">branches</td>
 <td style="text-align: center;">—</td>
 </tr>
@@ -5223,33 +5284,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: center;">—</td>
 </tr>
 <tr class="odd">
-<td>silky_flutes 2026</td>
-<td style="text-align: center;">57</td>
-<td style="text-align: center;">Acceptable</td>
-<td style="text-align: center;">0%</td>
-<td style="text-align: center;">40%</td>
+<td>soft_explorers 2026</td>
+<td style="text-align: center;">61</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">85%</td>
+<td style="text-align: center;">13%</td>
 <td style="text-align: center;">—</td>
 <td style="text-align: center;">—</td>
 </tr>
 <tr class="even">
-<td>energetic_spaceships 2026</td>
-<td style="text-align: center;">56</td>
-<td style="text-align: center;">Excellent</td>
-<td style="text-align: center;">98%</td>
-<td style="text-align: center;">0%</td>
+<td>silky_flutes 2026</td>
+<td style="text-align: center;">59</td>
+<td style="text-align: center;">Acceptable</td>
+<td style="text-align: center;">3%</td>
+<td style="text-align: center;">39%</td>
 <td style="text-align: center;">—</td>
 <td style="text-align: center;">—</td>
 </tr>
 <tr class="odd">
-<td>soft_explorers 2026</td>
-<td style="text-align: center;">56</td>
+<td>energetic_spaceships 2026</td>
+<td style="text-align: center;">58</td>
 <td style="text-align: center;">Excellent</td>
-<td style="text-align: center;">84%</td>
-<td style="text-align: center;">14%</td>
-<td style="text-align: center;">—</td>
+<td style="text-align: center;">98%</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">branches</td>
 <td style="text-align: center;">—</td>
 </tr>
 <tr class="even">
+<td>purple_infinity 2026</td>
+<td style="text-align: center;">52</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">69%</td>
+<td style="text-align: center;">8%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
 <td>smiling_anvils 2026</td>
 <td style="text-align: center;">52</td>
 <td style="text-align: center;">Excellent</td>
@@ -5258,21 +5328,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: center;">PR</td>
 <td style="text-align: center;">⚠️</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>coarse_tractors 2026</td>
 <td style="text-align: center;">50</td>
 <td style="text-align: center;">Poor</td>
 <td style="text-align: center;">22%</td>
 <td style="text-align: center;">68%</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">—</td>
-</tr>
-<tr class="even">
-<td>purple_infinity 2026</td>
-<td style="text-align: center;">50</td>
-<td style="text-align: center;">Excellent</td>
-<td style="text-align: center;">68%</td>
-<td style="text-align: center;">8%</td>
 <td style="text-align: center;">—</td>
 <td style="text-align: center;">—</td>
 </tr>
@@ -5314,7 +5375,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td>persistent_lagoons 2026</td>
-<td style="text-align: center;">42</td>
+<td style="text-align: center;">44</td>
 <td style="text-align: center;">Excellent</td>
 <td style="text-align: center;">100%</td>
 <td style="text-align: center;">0%</td>
@@ -5323,19 +5384,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>crimson_sunsets 2026</td>
-<td style="text-align: center;">40</td>
+<td style="text-align: center;">42</td>
 <td style="text-align: center;">Excellent</td>
-<td style="text-align: center;">92%</td>
+<td style="text-align: center;">93%</td>
 <td style="text-align: center;">2%</td>
 <td style="text-align: center;">branches</td>
 <td style="text-align: center;">—</td>
 </tr>
 <tr class="odd">
 <td>enlightened_solitudes 2026</td>
-<td style="text-align: center;">33</td>
+<td style="text-align: center;">34</td>
 <td style="text-align: center;">Good</td>
-<td style="text-align: center;">58%</td>
-<td style="text-align: center;">21%</td>
+<td style="text-align: center;">56%</td>
+<td style="text-align: center;">24%</td>
 <td style="text-align: center;">PR</td>
 <td style="text-align: center;">—</td>
 </tr>
@@ -5376,20 +5437,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: center;">—</td>
 </tr>
 <tr class="even">
+<td>tranquil_eclipses 2026</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">Good</td>
+<td style="text-align: center;">72%</td>
+<td style="text-align: center;">20%</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
 <td>ethereal_skylines 2026</td>
 <td style="text-align: center;">24</td>
 <td style="text-align: center;">Acceptable</td>
 <td style="text-align: center;">50%</td>
 <td style="text-align: center;">50%</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">—</td>
-</tr>
-<tr class="odd">
-<td>tranquil_eclipses 2026</td>
-<td style="text-align: center;">24</td>
-<td style="text-align: center;">Good</td>
-<td style="text-align: center;">71%</td>
-<td style="text-align: center;">21%</td>
 <td style="text-align: center;">—</td>
 <td style="text-align: center;">—</td>
 </tr>
@@ -5413,7 +5474,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>golden_rubies 2026</td>
-<td style="text-align: center;">9</td>
+<td style="text-align: center;">10</td>
 <td style="text-align: center;">Excellent</td>
 <td style="text-align: center;">100%</td>
 <td style="text-align: center;">0%</td>
@@ -5484,7 +5545,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>adjectives_wolves 2026</td>
 <td>2.1.1</td>
 <td>24%</td>
-<td>15%</td>
+<td>16%</td>
 <td>🟢14 🟡10 🔴2 ⚪63</td>
 <td>🟢569 🟡20 🔴58 ⚪1231</td>
 <td>76/100</td>
@@ -5504,7 +5565,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>blue_victors 2026</td>
 <td>2.3.0</td>
 <td>23%</td>
-<td>32%</td>
+<td>31%</td>
 <td>🟢10 🟡15 🔴12 ⚪52</td>
 <td>🟢578 🟡16 🔴216 ⚪1068</td>
 <td>0/172</td>
@@ -5514,7 +5575,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>celestial_treasures 2026</td>
 <td>3.4.5</td>
 <td>22%</td>
-<td>44%</td>
+<td>45%</td>
 <td>🟢11 🟡16 🔴27 ⚪35</td>
 <td>🟢500 🟡49 🔴416 ⚪913</td>
 <td>51/81</td>
@@ -5524,7 +5585,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>coarse_tractors 2026</td>
 <td>4.2.0</td>
 <td>14%</td>
-<td>40%</td>
+<td>42%</td>
 <td>🟢1 🟡21 🔴8 ⚪59</td>
 <td>🟢361 🟡1 🔴35 ⚪1481</td>
 <td>28/49</td>
@@ -5554,17 +5615,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>crimson_sunsets 2026</td>
 <td>2.5.0</td>
 <td>33%</td>
-<td>13%</td>
+<td>15%</td>
 <td>🟢20 🟡14 🔴9 ⚪46</td>
 <td>🟢795 🟡42 🔴231 ⚪810</td>
-<td>177/320</td>
-<td>37</td>
+<td>195/364</td>
+<td>34</td>
 </tr>
 <tr class="odd">
 <td>dynamic_springs 2026</td>
 <td>2.0.2</td>
 <td>20%</td>
-<td>15%</td>
+<td>13%</td>
 <td>🟢9 🟡13 🔴6 ⚪61</td>
 <td>🟢468 🟡8 🔴192 ⚪1210</td>
 <td>684/1259</td>
@@ -5574,7 +5635,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>empathetic_spectacles 2026</td>
 <td>1.2.4</td>
 <td>11%</td>
-<td>24%</td>
+<td>25%</td>
 <td>🟢0 🟡20 🔴11 ⚪58</td>
 <td>🟢316 🟡4 🔴143 ⚪1415</td>
 <td>12/49</td>
@@ -5582,29 +5643,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td>energetic_spaceships 2026</td>
-<td>1.42.1</td>
-<td>13%</td>
-<td>32%</td>
-<td>🟢1 🟡20 🔴9 ⚪59</td>
-<td>🟢388 🟡2 🔴65 ⚪1423</td>
-<td>35/121</td>
-<td>5</td>
+<td>1.45.0</td>
+<td>0%</td>
+<td>37%</td>
+<td>🟢0 🟡0 🔴31 ⚪58</td>
+<td>🟢0 🟡0 🔴463 ⚪1415</td>
+<td>44/187</td>
+<td>32</td>
 </tr>
 <tr class="even">
 <td>enlightened_solitudes 2026</td>
-<td>1.2.0</td>
-<td>3%</td>
-<td>0%</td>
-<td>🟢1 🟡3 🔴26 ⚪59</td>
-<td>🟢290 🟡1 🔴164 ⚪1423</td>
-<td>0/0</td>
-<td>0</td>
+<td>1.3.0</td>
+<td>15%</td>
+<td>38%</td>
+<td>🟢1 🟡22 🔴7 ⚪59</td>
+<td>🟢422 🟡2 🔴31 ⚪1423</td>
+<td>30/51</td>
+<td>8</td>
 </tr>
 <tr class="odd">
 <td>ethereal_skylines 2026</td>
 <td>2.0.0</td>
 <td>22%</td>
-<td>33%</td>
+<td>35%</td>
 <td>🟢15 🟡8 🔴7 ⚪59</td>
 <td>🟢517 🟡6 🔴221 ⚪1134</td>
 <td>28/35</td>
@@ -5614,7 +5675,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>gleaming_seagulls 2026</td>
 <td>1.2.2</td>
 <td>14%</td>
-<td>31%</td>
+<td>32%</td>
 <td>🟢0 🟡22 🔴1 ⚪66</td>
 <td>🟢397 🟡1 🔴0 ⚪1480</td>
 <td>21/24</td>
@@ -5634,10 +5695,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>golden_rubies 2026</td>
 <td>2.0.0</td>
 <td>32%</td>
-<td>43%</td>
+<td>47%</td>
 <td>🟢18 🟡18 🔴7 ⚪46</td>
 <td>🟢570 🟡49 🔴166 ⚪1093</td>
-<td>31/75</td>
+<td>31/81</td>
 <td>21</td>
 </tr>
 <tr class="odd">
@@ -5652,21 +5713,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>grateful_rhinos 2026</td>
-<td>1.33.10</td>
-<td>22%</td>
-<td>36%</td>
-<td>🟢11 🟡14 🔴3 ⚪61</td>
-<td>🟢520 🟡28 🔴59 ⚪1271</td>
-<td>27/63</td>
+<td>1.34.11</td>
+<td>26%</td>
+<td>39%</td>
+<td>🟢18 🟡8 🔴5 ⚪58</td>
+<td>🟢623 🟡29 🔴83 ⚪1143</td>
+<td>50/97</td>
 <td>4</td>
 </tr>
 <tr class="odd">
 <td>invincible_penguins 2026</td>
-<td>2.7.3</td>
-<td>24%</td>
-<td>43%</td>
-<td>🟢1 🟡29 🔴15 ⚪44</td>
-<td>🟢665 🟡33 🔴480 ⚪700</td>
+<td>2.7.4</td>
+<td>32%</td>
+<td>42%</td>
+<td>🟢19 🟡14 🔴12 ⚪44</td>
+<td>🟢797 🟡41 🔴271 ⚪769</td>
 <td>76/111</td>
 <td>3</td>
 </tr>
@@ -5674,7 +5735,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>light_nouns 2026</td>
 <td>2.0.1</td>
 <td>27%</td>
-<td>46%</td>
+<td>50%</td>
 <td>🟢12 🟡22 🔴33 ⚪22</td>
 <td>🟢589 🟡67 🔴437 ⚪785</td>
 <td>70/124</td>
@@ -5684,7 +5745,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>lustrous_novelties 2026</td>
 <td>1.7.0</td>
 <td>31%</td>
-<td>41%</td>
+<td>43%</td>
 <td>🟢17 🟡19 🔴7 ⚪46</td>
 <td>🟢560 🟡56 🔴169 ⚪1093</td>
 <td>40/86</td>
@@ -5694,7 +5755,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>opulent_motorcycles 2026</td>
 <td>1.14.0</td>
 <td>24%</td>
-<td>45%</td>
+<td>47%</td>
 <td>🟢13 🟡16 🔴36 ⚪24</td>
 <td>🟢674 🟡70 🔴574 ⚪560</td>
 <td>34/69</td>
@@ -5703,18 +5764,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td>persistent_lagoons 2026</td>
 <td>2.0.0</td>
-<td>33%</td>
-<td>47%</td>
-<td>🟢21 🟡18 🔴28 ⚪22</td>
-<td>🟢644 🟡59 🔴322 ⚪853</td>
-<td>109/213</td>
-<td>8</td>
+<td>30%</td>
+<td>50%</td>
+<td>🟢19 🟡16 🔴32 ⚪22</td>
+<td>🟢620 🟡61 🔴344 ⚪853</td>
+<td>110/213</td>
+<td>6</td>
 </tr>
 <tr class="even">
 <td>polished_jaguars 2026</td>
 <td>2.0.1</td>
 <td>24%</td>
-<td>46%</td>
+<td>49%</td>
 <td>🟢12 🟡18 🔴39 ⚪20</td>
 <td>🟢563 🟡63 🔴507 ⚪745</td>
 <td>35/68</td>
@@ -5723,11 +5784,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td>purple_infinity 2026</td>
 <td>3.0.0</td>
-<td>24%</td>
-<td>15%</td>
-<td>🟢14 🟡16 🔴39 ⚪20</td>
-<td>🟢524 🟡49 🔴355 ⚪950</td>
-<td>55/253</td>
+<td>26%</td>
+<td>14%</td>
+<td>🟢14 🟡16 🔴15 ⚪44</td>
+<td>🟢538 🟡56 🔴299 ⚪985</td>
+<td>55/271</td>
 <td>4</td>
 </tr>
 <tr class="even">
@@ -5744,7 +5805,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>red_helicopters 2026</td>
 <td>1.0.1</td>
 <td>25%</td>
-<td>40%</td>
+<td>42%</td>
 <td>🟢13 🟡16 🔴24 ⚪36</td>
 <td>🟢618 🟡61 🔴277 ⚪922</td>
 <td>79/210</td>
@@ -5754,7 +5815,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>silken_foxes 2026</td>
 <td>1.26.0</td>
 <td>23%</td>
-<td>16%</td>
+<td>17%</td>
 <td>🟢13 🟡11 🔴4 ⚪61</td>
 <td>🟢566 🟡3 🔴130 ⚪1179</td>
 <td>51/113</td>
@@ -5763,18 +5824,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td>silky_flutes 2026</td>
 <td>1.0.0</td>
-<td>23%</td>
+<td>25%</td>
 <td>28%</td>
-<td>🟢14 🟡10 🔴5 ⚪60</td>
-<td>🟢529 🟡21 🔴147 ⚪1181</td>
-<td>56/110</td>
+<td>🟢15 🟡10 🔴4 ⚪60</td>
+<td>🟢542 🟡23 🔴132 ⚪1181</td>
+<td>60/121</td>
 <td>9</td>
 </tr>
 <tr class="even">
 <td>smiling_anvils 2026</td>
 <td>2.3.0</td>
 <td>27%</td>
-<td>34%</td>
+<td>36%</td>
 <td>🟢19 🟡9 🔴9 ⚪52</td>
 <td>🟢540 🟡36 🔴149 ⚪1153</td>
 <td>26/59</td>
@@ -5792,13 +5853,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>soft_explorers 2026</td>
-<td>3.18.0</td>
-<td>14%</td>
-<td>21%</td>
-<td>🟢3 🟡12 🔴1 ⚪73</td>
-<td>🟢345 🟡5 🔴114 ⚪1414</td>
-<td>59/70</td>
-<td>6</td>
+<td>3.22.0</td>
+<td>16%</td>
+<td>16%</td>
+<td>🟢9 🟡7 🔴2 ⚪71</td>
+<td>🟢392 🟡6 🔴97 ⚪1383</td>
+<td>79/104</td>
+<td>2</td>
 </tr>
 <tr class="odd">
 <td>spirited_essences 2026</td>
@@ -5814,10 +5875,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>tranquil_eclipses 2026</td>
 <td>1.2.0</td>
 <td>4%</td>
-<td>21%</td>
+<td>22%</td>
 <td>🟢0 🟡6 🔴18 ⚪65</td>
 <td>🟢308 🟡0 🔴100 ⚪1470</td>
-<td>36/76</td>
+<td>36/83</td>
 <td>2</td>
 </tr>
 <tr class="odd">
@@ -5832,19 +5893,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>vibrant_constellations 2026</td>
-<td>2.1.0</td>
-<td>23%</td>
+<td>?</td>
 <td>0%</td>
-<td>🟢11 🟡13 🔴12 ⚪53</td>
-<td>🟢589 🟡9 🔴205 ⚪1075</td>
-<td>0/49</td>
-<td>49</td>
+<td>0%</td>
+<td></td>
+<td></td>
+<td>0/50</td>
+<td>50</td>
 </tr>
 <tr class="odd">
 <td>white_cheetahs 2026</td>
 <td>2.1.0</td>
 <td>27%</td>
-<td>36%</td>
+<td>38%</td>
 <td>🟢16 🟡13 🔴20 ⚪40</td>
 <td>🟢636 🟡32 🔴265 ⚪945</td>
 <td>25/72</td>
@@ -5854,8 +5915,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-startfrom="346" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 345;"><span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"summary_data.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(data<span class="op">,</span> { <span class="dt">sort</span><span class="op">:</span> <span class="st">"Teacher Score"</span><span class="op">,</span> <span class="dt">reverse</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">rows</span><span class="op">:</span> <span class="dv">75</span>  })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-startfrom="349" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 348;"><span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"summary_data.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(data<span class="op">,</span> { <span class="dt">sort</span><span class="op">:</span> <span class="st">"Teacher Score"</span><span class="op">,</span> <span class="dt">reverse</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">rows</span><span class="op">:</span> <span class="dv">75</span>  })</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -5873,9 +5934,412 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-file-modified-sort="1773692929262" data-listing-reading-time-sort="3" data-listing-word-count-sort="438" data-listing-title-sort="Group Report — Adjectives Wolves 2026" data-listing-filename-sort="adjectives_wolves_2026.qmd">
+<td>
+<a href="../grade/groups/adjectives_wolves_2026.html" class="title listing-title">Group Report — Adjectives Wolves 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-file-modified-sort="1773692929262" data-listing-reading-time-sort="3" data-listing-word-count-sort="595" data-listing-title-sort="Group Report — Blue Victors 2026" data-listing-filename-sort="blue_victors_2026.qmd">
+<td>
+<a href="../grade/groups/blue_victors_2026.html" class="title listing-title">Group Report — Blue Victors 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-file-modified-sort="1773692929263" data-listing-reading-time-sort="4" data-listing-word-count-sort="742" data-listing-title-sort="Group Report — Celestial Treasures 2026" data-listing-filename-sort="celestial_treasures_2026.qmd">
+<td>
+<a href="../grade/groups/celestial_treasures_2026.html" class="title listing-title">Group Report — Celestial Treasures 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-file-modified-sort="1773692929263" data-listing-reading-time-sort="3" data-listing-word-count-sort="545" data-listing-title-sort="Group Report — Coarse Tractors 2026" data-listing-filename-sort="coarse_tractors_2026.qmd">
+<td>
+<a href="../grade/groups/coarse_tractors_2026.html" class="title listing-title">Group Report — Coarse Tractors 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-file-modified-sort="1773692929263" data-listing-reading-time-sort="5" data-listing-word-count-sort="847" data-listing-title-sort="Group Report — Cool Aspects 2026" data-listing-filename-sort="cool_aspects_2026.qmd">
+<td>
+<a href="../grade/groups/cool_aspects_2026.html" class="title listing-title">Group Report — Cool Aspects 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-file-modified-sort="1773692929263" data-listing-reading-time-sort="3" data-listing-word-count-sort="482" data-listing-title-sort="Group Report — Creative Symbols 2026" data-listing-filename-sort="creative_symbols_2026.qmd">
+<td>
+<a href="../grade/groups/creative_symbols_2026.html" class="title listing-title">Group Report — Creative Symbols 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-file-modified-sort="1773692929264" data-listing-reading-time-sort="4" data-listing-word-count-sort="606" data-listing-title-sort="Group Report — Crimson Sunsets 2026" data-listing-filename-sort="crimson_sunsets_2026.qmd">
+<td>
+<a href="../grade/groups/crimson_sunsets_2026.html" class="title listing-title">Group Report — Crimson Sunsets 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-file-modified-sort="1773692929264" data-listing-reading-time-sort="3" data-listing-word-count-sort="556" data-listing-title-sort="Group Report — Dynamic Springs 2026" data-listing-filename-sort="dynamic_springs_2026.qmd">
+<td>
+<a href="../grade/groups/dynamic_springs_2026.html" class="title listing-title">Group Report — Dynamic Springs 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-listing-file-modified-sort="1773692929264" data-listing-reading-time-sort="3" data-listing-word-count-sort="597" data-listing-title-sort="Group Report — Empathetic Spectacles 2026" data-listing-filename-sort="empathetic_spectacles_2026.qmd">
+<td>
+<a href="../grade/groups/empathetic_spectacles_2026.html" class="title listing-title">Group Report — Empathetic Spectacles 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-listing-file-modified-sort="1773692929264" data-listing-reading-time-sort="3" data-listing-word-count-sort="494" data-listing-title-sort="Group Report — Energetic Spaceships 2026" data-listing-filename-sort="energetic_spaceships_2026.qmd">
+<td>
+<a href="../grade/groups/energetic_spaceships_2026.html" class="title listing-title">Group Report — Energetic Spaceships 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="10" data-listing-file-modified-sort="1773692929264" data-listing-reading-time-sort="3" data-listing-word-count-sort="532" data-listing-title-sort="Group Report — Enlightened Solitudes 2026" data-listing-filename-sort="enlightened_solitudes_2026.qmd">
+<td>
+<a href="../grade/groups/enlightened_solitudes_2026.html" class="title listing-title">Group Report — Enlightened Solitudes 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-listing-file-modified-sort="1773692929264" data-listing-reading-time-sort="3" data-listing-word-count-sort="554" data-listing-title-sort="Group Report — Ethereal Skylines 2026" data-listing-filename-sort="ethereal_skylines_2026.qmd">
+<td>
+<a href="../grade/groups/ethereal_skylines_2026.html" class="title listing-title">Group Report — Ethereal Skylines 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="12" data-listing-file-modified-sort="1773692929264" data-listing-reading-time-sort="3" data-listing-word-count-sort="418" data-listing-title-sort="Group Report — Gleaming Seagulls 2026" data-listing-filename-sort="gleaming_seagulls_2026.qmd">
+<td>
+<a href="../grade/groups/gleaming_seagulls_2026.html" class="title listing-title">Group Report — Gleaming Seagulls 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="13" data-listing-file-modified-sort="1773692929264" data-listing-reading-time-sort="3" data-listing-word-count-sort="496" data-listing-title-sort="Group Report — Gold Sapphires 2026" data-listing-filename-sort="gold_sapphires_2026.qmd">
+<td>
+<a href="../grade/groups/gold_sapphires_2026.html" class="title listing-title">Group Report — Gold Sapphires 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="14" data-listing-file-modified-sort="1773692929265" data-listing-reading-time-sort="4" data-listing-word-count-sort="601" data-listing-title-sort="Group Report — Golden Rubies 2026" data-listing-filename-sort="golden_rubies_2026.qmd">
+<td>
+<a href="../grade/groups/golden_rubies_2026.html" class="title listing-title">Group Report — Golden Rubies 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="15" data-listing-file-modified-sort="1773692929265" data-listing-reading-time-sort="2" data-listing-word-count-sort="256" data-listing-title-sort="Group Report — Gracious Rollercoasters 2026" data-listing-filename-sort="gracious_rollercoasters_2026.qmd">
+<td>
+<a href="../grade/groups/gracious_rollercoasters_2026.html" class="title listing-title">Group Report — Gracious Rollercoasters 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="16" data-listing-file-modified-sort="1773692929265" data-listing-reading-time-sort="3" data-listing-word-count-sort="504" data-listing-title-sort="Group Report — Grateful Rhinos 2026" data-listing-filename-sort="grateful_rhinos_2026.qmd">
+<td>
+<a href="../grade/groups/grateful_rhinos_2026.html" class="title listing-title">Group Report — Grateful Rhinos 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="17" data-listing-file-modified-sort="1773692929265" data-listing-reading-time-sort="4" data-listing-word-count-sort="618" data-listing-title-sort="Group Report — Invincible Penguins 2026" data-listing-filename-sort="invincible_penguins_2026.qmd">
+<td>
+<a href="../grade/groups/invincible_penguins_2026.html" class="title listing-title">Group Report — Invincible Penguins 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="18" data-listing-file-modified-sort="1773692929265" data-listing-reading-time-sort="5" data-listing-word-count-sort="819" data-listing-title-sort="Group Report — Light Nouns 2026" data-listing-filename-sort="light_nouns_2026.qmd">
+<td>
+<a href="../grade/groups/light_nouns_2026.html" class="title listing-title">Group Report — Light Nouns 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="19" data-listing-file-modified-sort="1773692929266" data-listing-reading-time-sort="4" data-listing-word-count-sort="629" data-listing-title-sort="Group Report — Lustrous Novelties 2026" data-listing-filename-sort="lustrous_novelties_2026.qmd">
+<td>
+<a href="../grade/groups/lustrous_novelties_2026.html" class="title listing-title">Group Report — Lustrous Novelties 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="20" data-listing-file-modified-sort="1773692929266" data-listing-reading-time-sort="5" data-listing-word-count-sort="826" data-listing-title-sort="Group Report — Opulent Motorcycles 2026" data-listing-filename-sort="opulent_motorcycles_2026.qmd">
+<td>
+<a href="../grade/groups/opulent_motorcycles_2026.html" class="title listing-title">Group Report — Opulent Motorcycles 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="21" data-listing-file-modified-sort="1773692929266" data-listing-reading-time-sort="4" data-listing-word-count-sort="781" data-listing-title-sort="Group Report — Persistent Lagoons 2026" data-listing-filename-sort="persistent_lagoons_2026.qmd">
+<td>
+<a href="../grade/groups/persistent_lagoons_2026.html" class="title listing-title">Group Report — Persistent Lagoons 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="22" data-listing-file-modified-sort="1773692929267" data-listing-reading-time-sort="5" data-listing-word-count-sort="842" data-listing-title-sort="Group Report — Polished Jaguars 2026" data-listing-filename-sort="polished_jaguars_2026.qmd">
+<td>
+<a href="../grade/groups/polished_jaguars_2026.html" class="title listing-title">Group Report — Polished Jaguars 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="23" data-listing-file-modified-sort="1773692929267" data-listing-reading-time-sort="4" data-listing-word-count-sort="675" data-listing-title-sort="Group Report — Purple Infinity 2026" data-listing-filename-sort="purple_infinity_2026.qmd">
+<td>
+<a href="../grade/groups/purple_infinity_2026.html" class="title listing-title">Group Report — Purple Infinity 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="24" data-listing-file-modified-sort="1773692929267" data-listing-reading-time-sort="3" data-listing-word-count-sort="528" data-listing-title-sort="Group Report — Radiant Illuminations 2026" data-listing-filename-sort="radiant_illuminations_2026.qmd">
+<td>
+<a href="../grade/groups/radiant_illuminations_2026.html" class="title listing-title">Group Report — Radiant Illuminations 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="25" data-listing-file-modified-sort="1773692929267" data-listing-reading-time-sort="4" data-listing-word-count-sort="709" data-listing-title-sort="Group Report — Red Helicopters 2026" data-listing-filename-sort="red_helicopters_2026.qmd">
+<td>
+<a href="../grade/groups/red_helicopters_2026.html" class="title listing-title">Group Report — Red Helicopters 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="26" data-listing-file-modified-sort="1773692929267" data-listing-reading-time-sort="3" data-listing-word-count-sort="491" data-listing-title-sort="Group Report — Silken Foxes 2026" data-listing-filename-sort="silken_foxes_2026.qmd">
+<td>
+<a href="../grade/groups/silken_foxes_2026.html" class="title listing-title">Group Report — Silken Foxes 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="27" data-listing-file-modified-sort="1773692929267" data-listing-reading-time-sort="3" data-listing-word-count-sort="480" data-listing-title-sort="Group Report — Silky Flutes 2026" data-listing-filename-sort="silky_flutes_2026.qmd">
+<td>
+<a href="../grade/groups/silky_flutes_2026.html" class="title listing-title">Group Report — Silky Flutes 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="28" data-listing-file-modified-sort="1773692929267" data-listing-reading-time-sort="3" data-listing-word-count-sort="573" data-listing-title-sort="Group Report — Smiling Anvils 2026" data-listing-filename-sort="smiling_anvils_2026.qmd">
+<td>
+<a href="../grade/groups/smiling_anvils_2026.html" class="title listing-title">Group Report — Smiling Anvils 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="29" data-listing-file-modified-sort="1773692929268" data-listing-reading-time-sort="2" data-listing-word-count-sort="251" data-listing-title-sort="Group Report — Smooth Fantasies 2026" data-listing-filename-sort="smooth_fantasies_2026.qmd">
+<td>
+<a href="../grade/groups/smooth_fantasies_2026.html" class="title listing-title">Group Report — Smooth Fantasies 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="30" data-listing-file-modified-sort="1773692929268" data-listing-reading-time-sort="2" data-listing-word-count-sort="378" data-listing-title-sort="Group Report — Soft Explorers 2026" data-listing-filename-sort="soft_explorers_2026.qmd">
+<td>
+<a href="../grade/groups/soft_explorers_2026.html" class="title listing-title">Group Report — Soft Explorers 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="31" data-listing-file-modified-sort="1773692929268" data-listing-reading-time-sort="3" data-listing-word-count-sort="502" data-listing-title-sort="Group Report — Spirited Essences 2026" data-listing-filename-sort="spirited_essences_2026.qmd">
+<td>
+<a href="../grade/groups/spirited_essences_2026.html" class="title listing-title">Group Report — Spirited Essences 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="32" data-listing-file-modified-sort="1773692929268" data-listing-reading-time-sort="3" data-listing-word-count-sort="462" data-listing-title-sort="Group Report — Tranquil Eclipses 2026" data-listing-filename-sort="tranquil_eclipses_2026.qmd">
+<td>
+<a href="../grade/groups/tranquil_eclipses_2026.html" class="title listing-title">Group Report — Tranquil Eclipses 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="33" data-listing-file-modified-sort="1773692929268" data-listing-reading-time-sort="3" data-listing-word-count-sort="492" data-listing-title-sort="Group Report — Unified Diamonds 2026" data-listing-filename-sort="unified_diamonds_2026.qmd">
+<td>
+<a href="../grade/groups/unified_diamonds_2026.html" class="title listing-title">Group Report — Unified Diamonds 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="34" data-listing-file-modified-sort="1773692929268" data-listing-reading-time-sort="2" data-listing-word-count-sort="290" data-listing-title-sort="Group Report — Vibrant Constellations 2026" data-listing-filename-sort="vibrant_constellations_2026.qmd">
+<td>
+<a href="../grade/groups/vibrant_constellations_2026.html" class="title listing-title">Group Report — Vibrant Constellations 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="35" data-listing-file-modified-sort="1773692929269" data-listing-reading-time-sort="4" data-listing-word-count-sort="649" data-listing-title-sort="Group Report — White Cheetahs 2026" data-listing-filename-sort="white_cheetahs_2026.qmd">
+<td>
+<a href="../grade/groups/white_cheetahs_2026.html" class="title listing-title">Group Report — White Cheetahs 2026</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div></main> <!-- /main -->
 <script type="ojs-module-contents">
 eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImRhdGEgPSBGaWxlQXR0YWNobWVudChcInN1bW1hcnlfZGF0YS5qc29uXCIpLmpzb24oKVxuSW5wdXRzLnRhYmxlKGRhdGEsIHsgc29ydDogXCJUZWFjaGVyIFNjb3JlXCIsIHJldmVyc2U6IHRydWUsIHJvd3M6IDc1ICB9KVxuIn1dfQ==
 </script>
