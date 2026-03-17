@@ -448,11 +448,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><strong>Teacher Score</strong></td>
-<td>0.2023</td>
+<td>0.2016</td>
 </tr>
 <tr class="even">
 <td><strong>Average Score</strong></td>
-<td>61%</td>
+<td>60%</td>
 </tr>
 <tr class="odd">
 <td><strong>Tier</strong></td>
@@ -481,15 +481,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>🔴 Missed</td>
-<td>6</td>
+<td>7</td>
 </tr>
 <tr class="even">
 <td>⚪ Not implemented</td>
-<td>61</td>
+<td>60</td>
 </tr>
 <tr class="odd">
 <td><strong>Features attempted</strong></td>
-<td><strong>28</strong> / 89</td>
+<td><strong>29</strong> / 89</td>
 </tr>
 </tbody>
 </table>
@@ -533,6 +533,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>flightDistance</strong> — 3/20 tests passed (score: 16%)</li>
 <li><strong>maxAccelG</strong> — 0/16 tests passed (score: 0%)</li>
 <li><strong>maxAcceleration</strong> — 1/20 tests passed (score: 5%)</li>
+<li><strong>windSpeed</strong> — 1/18 tests passed (score: 6%)</li>
 <li><strong>fastJetAlt</strong> — 0/10 tests passed (score: 38%)</li>
 </ul>
 </section>
@@ -551,9 +552,9 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Average Score</td>
-<td style="text-align: center;">0.61</td>
+<td style="text-align: center;">0.60</td>
 <td style="text-align: center;">1.00</td>
-<td style="text-align: center;">+0.38</td>
+<td style="text-align: center;">+0.40</td>
 </tr>
 </tbody>
 </table>
@@ -570,11 +571,11 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Valid tests</td>
-<td>684</td>
+<td>689</td>
 </tr>
 <tr class="even">
 <td>Total tests submitted</td>
-<td>1259</td>
+<td>1326</td>
 </tr>
 <tr class="odd">
 <td>Removed (invalid ref/features)</td>
@@ -582,7 +583,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>F1 score</td>
-<td>0.15</td>
+<td>0.14</td>
 </tr>
 </tbody>
 </table>
@@ -599,7 +600,7 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Line coverage</td>
-<td>76%</td>
+<td>77%</td>
 </tr>
 <tr class="even">
 <td>Branch coverage</td>
@@ -620,7 +621,7 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Student commits</td>
-<td>44</td>
+<td>48</td>
 </tr>
 <tr class="even">
 <td>Quality grade</td>
@@ -628,19 +629,19 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Quality score</td>
-<td>50/100</td>
+<td>54/100</td>
 </tr>
 <tr class="even">
 <td>Conventional rate</td>
-<td>39%</td>
+<td>44%</td>
 </tr>
 <tr class="odd">
 <td>Structured rate</td>
-<td>39%</td>
+<td>44%</td>
 </tr>
 <tr class="even">
 <td>Poor rate</td>
-<td>52%</td>
+<td>48%</td>
 </tr>
 <tr class="odd">
 <td>Branch discipline</td>
@@ -667,7 +668,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>Mathilde</td>
 <td style="text-align: center;">24</td>
-<td style="text-align: center;">55%</td>
+<td style="text-align: center;">50%</td>
 <td style="text-align: center;">56</td>
 <td style="text-align: center;">12</td>
 <td style="text-align: center;">0</td>
@@ -676,10 +677,10 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Lolatte3</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">45%</td>
-<td style="text-align: center;">38</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">50%</td>
+<td style="text-align: center;">49</td>
+<td style="text-align: center;">9</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">3</td>
 <td style="text-align: center;">12</td>
@@ -694,8 +695,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>You have <strong>13 features at “almost”</strong> status — these are very close to passing. Focus on converting these to green. Common causes: rounding/precision issues, off-by-one in averaging, or only handling one output mode (full report vs feature mode).</p></li>
 <li><p><strong>Acceleration</strong> features are not passing. Acceleration requires computing derivatives from speed data — double-check your formula and units.</p></li>
 <li><p><strong>Distance/Wind</strong> features need work. For <code>flightDistance</code>, the computation requires altitude data. For <code>windSpeed</code>, note that air speed is only recorded in the direction of the plane.</p></li>
-<li><p>Your test suite F1 score is low (0.15). Improve test quality by verifying expected values against the reference output.</p></li>
-<li><p><strong>52% of your commits have poor messages.</strong> Use conventional commits format: <code>feat: description</code>, <code>fix: bug</code>, <code>test: add tests for X</code>.</p></li>
+<li><p>Your test suite F1 score is low (0.14). Improve test quality by verifying expected values against the reference output.</p></li>
+<li><p><strong>48% of your commits have poor messages.</strong> Use conventional commits format: <code>feat: description</code>, <code>fix: bug</code>, <code>test: add tests for X</code>.</p></li>
 </ul>
 
 

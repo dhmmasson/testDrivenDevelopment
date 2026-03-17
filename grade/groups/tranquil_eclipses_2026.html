@@ -396,6 +396,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#feature-implementation" id="toc-feature-implementation" class="nav-link" data-scroll-target="#feature-implementation">Feature Implementation</a>
   <ul class="collapse">
+  <li><a href="#validated-features" id="toc-validated-features" class="nav-link" data-scroll-target="#validated-features">🟢 Validated Features</a></li>
   <li><a href="#almost-there" id="toc-almost-there" class="nav-link" data-scroll-target="#almost-there">🟡 Almost There</a></li>
   <li><a href="#missed-features" id="toc-missed-features" class="nav-link" data-scroll-target="#missed-features">🔴 Missed Features</a></li>
   </ul></li>
@@ -447,11 +448,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><strong>Teacher Score</strong></td>
-<td>0.0423</td>
+<td>0.1015</td>
 </tr>
 <tr class="even">
 <td><strong>Average Score</strong></td>
-<td>40%</td>
+<td>34%</td>
 </tr>
 <tr class="odd">
 <td><strong>Tier</strong></td>
@@ -472,35 +473,50 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>🟢 Validated</td>
-<td>0</td>
+<td>3</td>
 </tr>
 <tr class="even">
 <td>🟡 Almost</td>
-<td>6</td>
+<td>13</td>
 </tr>
 <tr class="odd">
 <td>🔴 Missed</td>
-<td>18</td>
+<td>52</td>
 </tr>
 <tr class="even">
 <td>⚪ Not implemented</td>
-<td>65</td>
+<td>21</td>
 </tr>
 <tr class="odd">
 <td><strong>Features attempted</strong></td>
-<td><strong>24</strong> / 89</td>
+<td><strong>68</strong> / 89</td>
 </tr>
 </tbody>
 </table>
+<section id="validated-features" class="level3">
+<h3 class="anchored" data-anchor-id="validated-features">🟢 Validated Features</h3>
+<ul>
+<li><strong>flightDuration</strong> — 29/29 tests passed (score: 100%)</li>
+<li><strong>reachAlt</strong> — 6/10 tests passed (score: 92%)</li>
+<li><strong>stressedPilot</strong> — 9/10 tests passed (score: 90%)</li>
+</ul>
+</section>
 <section id="almost-there" class="level3">
 <h3 class="anchored" data-anchor-id="almost-there">🟡 Almost There</h3>
 <ul>
-<li><strong>flightDuration</strong> — 19/29 tests passed (score: 66%)</li>
-<li><strong>avgAlt</strong> — 12/22 tests passed (score: 54%)</li>
-<li><strong>avgEnginePower</strong> — 26/36 tests passed (score: 71%)</li>
-<li><strong>maxAirSpeed</strong> — 12/22 tests passed (score: 54%)</li>
-<li><strong>maxAlt</strong> — 12/22 tests passed (score: 55%)</li>
-<li><strong>maxEnginePower</strong> — 26/36 tests passed (score: 72%)</li>
+<li><strong>avgAlt</strong> — 12/22 tests passed (score: 64%)</li>
+<li><strong>avgEnginePower</strong> — 31/36 tests passed (score: 86%)</li>
+<li><strong>maxAirSpeed</strong> — 17/22 tests passed (score: 77%)</li>
+<li><strong>maxAlt</strong> — 17/22 tests passed (score: 80%)</li>
+<li><strong>maxEnginePower</strong> — 31/36 tests passed (score: 86%)</li>
+<li><strong>avgMachSpeed</strong> — 9/16 tests passed (score: 62%)</li>
+<li><strong>cruise</strong> — 0/10 tests passed (score: 74%)</li>
+<li><strong>landing</strong> — 3/10 tests passed (score: 83%)</li>
+<li><strong>mostStressPhase</strong> — 2/10 tests passed (score: 68%)</li>
+<li><strong>noiseTemp</strong> — 6/10 tests passed (score: 70%)</li>
+<li><strong>ratioDistance</strong> — 6/10 tests passed (score: 67%)</li>
+<li><strong>reachDist</strong> — 1/10 tests passed (score: 76%)</li>
+<li><strong>takeOff</strong> — 3/10 tests passed (score: 83%)</li>
 </ul>
 </section>
 <section id="missed-features" class="level3">
@@ -509,21 +525,55 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>metadata</strong> — 81/209 tests passed (score: 43%)</li>
 <li><strong>avgAirSpeed</strong> — 7/22 tests passed (score: 32%)</li>
 <li><strong>avgHeartRate</strong> — 7/22 tests passed (score: 32%)</li>
-<li><strong>avgHumidity</strong> — 7/22 tests passed (score: 31%)</li>
+<li><strong>avgHumidity</strong> — 7/22 tests passed (score: 32%)</li>
 <li><strong>avgOxygen</strong> — 7/22 tests passed (score: 32%)</li>
-<li><strong>avgPressure</strong> — 7/22 tests passed (score: 31%)</li>
-<li><strong>avgTemp</strong> — 2/22 tests passed (score: 9%)</li>
+<li><strong>avgPressure</strong> — 7/22 tests passed (score: 32%)</li>
+<li><strong>avgTemp</strong> — 7/22 tests passed (score: 32%)</li>
 <li><strong>maxHeartRate</strong> — 7/22 tests passed (score: 32%)</li>
 <li><strong>maxHumidity</strong> — 7/22 tests passed (score: 32%)</li>
 <li><strong>maxOxygen</strong> — 7/22 tests passed (score: 32%)</li>
 <li><strong>maxPressure</strong> — 7/22 tests passed (score: 32%)</li>
-<li><strong>maxTemp</strong> — 3/22 tests passed (score: 16%)</li>
+<li><strong>maxTemp</strong> — 7/22 tests passed (score: 32%)</li>
 <li><strong>minHeartRate</strong> — 7/22 tests passed (score: 32%)</li>
 <li><strong>minHumidity</strong> — 7/22 tests passed (score: 32%)</li>
 <li><strong>minOxygen</strong> — 7/22 tests passed (score: 32%)</li>
 <li><strong>minPressure</strong> — 7/22 tests passed (score: 32%)</li>
-<li><strong>minTemp</strong> — 3/22 tests passed (score: 14%)</li>
-<li><strong>flightDistance</strong> — 3/20 tests passed (score: 15%)</li>
+<li><strong>minTemp</strong> — 7/22 tests passed (score: 32%)</li>
+<li><strong>avgAcceleration</strong> — 6/20 tests passed (score: 47%)</li>
+<li><strong>flightDistance</strong> — 3/20 tests passed (score: 16%)</li>
+<li><strong>maxAccelG</strong> — 0/16 tests passed (score: 0%)</li>
+<li><strong>maxAcceleration</strong> — 1/20 tests passed (score: 5%)</li>
+<li><strong>maxMachSpeed</strong> — 2/16 tests passed (score: 47%)</li>
+<li><strong>windSpeed</strong> — 2/18 tests passed (score: 19%)</li>
+<li><strong>avgAccelerationCruise</strong> — 2/10 tests passed (score: 33%)</li>
+<li><strong>avgAccelerationLanding</strong> — 1/10 tests passed (score: 22%)</li>
+<li><strong>avgAccelerationTakeOff</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>avgAirSpeedCruise</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>avgAirSpeedLanding</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>avgAirSpeedTakeOff</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>avgEnginePowerCruise</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>avgEnginePowerLanding</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>avgEnginePowerTakeOff</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>fastJetAlt</strong> — 0/10 tests passed (score: 38%)</li>
+<li><strong>fastWindAlt</strong> — 0/10 tests passed (score: 45%)</li>
+<li><strong>flightDistanceCruise</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>flightDistanceLanding</strong> — 0/10 tests passed (score: 15%)</li>
+<li><strong>flightDistanceTakeOff</strong> — 1/10 tests passed (score: 10%)</li>
+<li><strong>maxAccelerationCruise</strong> — 1/10 tests passed (score: 10%)</li>
+<li><strong>maxAccelerationLanding</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>maxAccelerationTakeOff</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>maxAirSpeedCruise</strong> — 2/10 tests passed (score: 20%)</li>
+<li><strong>maxAirSpeedLanding</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>maxAirSpeedTakeOff</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>maxEnginePowerCruise</strong> — 2/10 tests passed (score: 20%)</li>
+<li><strong>maxEnginePowerLanding</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>maxEnginePowerTakeOff</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>mostAccelPhase</strong> — 0/10 tests passed (score: 26%)</li>
+<li><strong>mostPowerPhase</strong> — 0/10 tests passed (score: 29%)</li>
+<li><strong>oxygenPhase</strong> — 1/10 tests passed (score: 47%)</li>
+<li><strong>windSpeedCruise</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>windSpeedLanding</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>windSpeedTakeOff</strong> — 0/10 tests passed (score: 0%)</li>
 </ul>
 </section>
 </section>
@@ -541,9 +591,9 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Average Score</td>
-<td style="text-align: center;">0.40</td>
+<td style="text-align: center;">0.34</td>
 <td style="text-align: center;">1.00</td>
-<td style="text-align: center;">+0.60</td>
+<td style="text-align: center;">+0.66</td>
 </tr>
 </tbody>
 </table>
@@ -560,19 +610,19 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Valid tests</td>
-<td>36</td>
+<td>57</td>
 </tr>
 <tr class="even">
 <td>Total tests submitted</td>
-<td>83</td>
+<td>210</td>
 </tr>
 <tr class="odd">
 <td>Removed (invalid ref/features)</td>
-<td>2</td>
+<td>44</td>
 </tr>
 <tr class="even">
 <td>F1 score</td>
-<td>0.21</td>
+<td>0.41</td>
 </tr>
 </tbody>
 </table>
@@ -589,11 +639,15 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Line coverage</td>
-<td>80%</td>
+<td>73%</td>
 </tr>
 <tr class="even">
 <td>Branch coverage</td>
-<td>75%</td>
+<td>58%</td>
+</tr>
+<tr class="odd">
+<td>Uncovered classes</td>
+<td>1</td>
 </tr>
 </tbody>
 </table>
@@ -610,27 +664,27 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Student commits</td>
-<td>25</td>
+<td>28</td>
 </tr>
 <tr class="even">
 <td>Quality grade</td>
-<td><strong>Good</strong></td>
+<td><strong>Excellent</strong></td>
 </tr>
 <tr class="odd">
 <td>Quality score</td>
-<td>79/100</td>
+<td>82/100</td>
 </tr>
 <tr class="even">
 <td>Conventional rate</td>
-<td>72%</td>
+<td>75%</td>
 </tr>
 <tr class="odd">
 <td>Structured rate</td>
-<td>76%</td>
+<td>79%</td>
 </tr>
 <tr class="even">
 <td>Poor rate</td>
-<td>20%</td>
+<td>18%</td>
 </tr>
 </tbody>
 </table>
@@ -653,7 +707,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>MathisGiordano</td>
 <td style="text-align: center;">16</td>
-<td style="text-align: center;">64%</td>
+<td style="text-align: center;">57%</td>
 <td style="text-align: center;">71</td>
 <td style="text-align: center;">10</td>
 <td style="text-align: center;">1</td>
@@ -662,10 +716,10 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>leocazeaux</td>
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">36%</td>
-<td style="text-align: center;">83</td>
-<td style="text-align: center;">8</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">43%</td>
+<td style="text-align: center;">86</td>
+<td style="text-align: center;">11</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">1</td>
@@ -677,8 +731,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="advice-next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="advice-next-steps">Advice &amp; Next Steps</h2>
 <ul>
-<li><p>You have <strong>6 features at “almost”</strong> status — these are very close to passing. Focus on converting these to green. Common causes: rounding/precision issues, off-by-one in averaging, or only handling one output mode (full report vs feature mode).</p></li>
+<li><p>You have <strong>13 features at “almost”</strong> status — these are very close to passing. Focus on converting these to green. Common causes: rounding/precision issues, off-by-one in averaging, or only handling one output mode (full report vs feature mode).</p></li>
+<li><p><strong>Acceleration</strong> features are not passing. Acceleration requires computing derivatives from speed data — double-check your formula and units.</p></li>
 <li><p><strong>Distance/Wind</strong> features need work. For <code>flightDistance</code>, the computation requires altitude data. For <code>windSpeed</code>, note that air speed is only recorded in the direction of the plane.</p></li>
+<li><p><strong>Phase-specific features</strong> (avgAccelerationCruise, avgAccelerationLanding, avgAccelerationTakeOff, avgAirSpeedCruise, avgAirSpeedLanding) are not passing. Make sure you correctly detect flight phases (takeoff, cruise, landing) from the altitude/speed profile.</p></li>
 </ul>
 
 
