@@ -394,9 +394,15 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#feature-implementation" id="toc-feature-implementation" class="nav-link" data-scroll-target="#feature-implementation">Feature Implementation</a></li>
+  <li><a href="#feature-implementation" id="toc-feature-implementation" class="nav-link" data-scroll-target="#feature-implementation">Feature Implementation</a>
+  <ul class="collapse">
+  <li><a href="#validated-features" id="toc-validated-features" class="nav-link" data-scroll-target="#validated-features">🟢 Validated Features</a></li>
+  <li><a href="#almost-there" id="toc-almost-there" class="nav-link" data-scroll-target="#almost-there">🟡 Almost There</a></li>
+  <li><a href="#missed-features" id="toc-missed-features" class="nav-link" data-scroll-target="#missed-features">🔴 Missed Features</a></li>
+  </ul></li>
   <li><a href="#self-evaluation-vs-teacher-evaluation" id="toc-self-evaluation-vs-teacher-evaluation" class="nav-link" data-scroll-target="#self-evaluation-vs-teacher-evaluation">Self-Evaluation vs Teacher Evaluation</a></li>
   <li><a href="#test-suite-quality" id="toc-test-suite-quality" class="nav-link" data-scroll-target="#test-suite-quality">Test Suite Quality</a></li>
+  <li><a href="#code-coverage" id="toc-code-coverage" class="nav-link" data-scroll-target="#code-coverage">Code Coverage</a></li>
   <li><a href="#commit-quality" id="toc-commit-quality" class="nav-link" data-scroll-target="#commit-quality">Commit Quality</a>
   <ul class="collapse">
   <li><a href="#per-student-contributions" id="toc-per-student-contributions" class="nav-link" data-scroll-target="#per-student-contributions">Per-Student Contributions</a></li>
@@ -438,19 +444,19 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><strong>Version</strong></td>
-<td>?</td>
+<td>2.1.1</td>
 </tr>
 <tr class="odd">
 <td><strong>Teacher Score</strong></td>
-<td>0.0000</td>
+<td>0.2248</td>
 </tr>
 <tr class="even">
 <td><strong>Average Score</strong></td>
-<td>0%</td>
+<td>65%</td>
 </tr>
 <tr class="odd">
 <td><strong>Tier</strong></td>
-<td>🚀 Getting Started</td>
+<td>🔧 Developing</td>
 </tr>
 </tbody>
 </table>
@@ -467,26 +473,77 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>🟢 Validated</td>
-<td>0</td>
+<td>11</td>
 </tr>
 <tr class="even">
 <td>🟡 Almost</td>
-<td>0</td>
+<td>13</td>
 </tr>
 <tr class="odd">
 <td>🔴 Missed</td>
-<td>0</td>
+<td>12</td>
 </tr>
 <tr class="even">
 <td>⚪ Not implemented</td>
-<td>0</td>
+<td>53</td>
 </tr>
 <tr class="odd">
 <td><strong>Features attempted</strong></td>
-<td><strong>0</strong> / 0</td>
+<td><strong>36</strong> / 89</td>
 </tr>
 </tbody>
 </table>
+<section id="validated-features" class="level3">
+<h3 class="anchored" data-anchor-id="validated-features">🟢 Validated Features</h3>
+<ul>
+<li><strong>flightDuration</strong> — 29/29 tests passed (score: 100%)</li>
+<li><strong>number</strong> — 9/9 tests passed (score: 100%)</li>
+<li><strong>avgHeartRate</strong> — 22/22 tests passed (score: 100%)</li>
+<li><strong>avgHumidity</strong> — 22/22 tests passed (score: 100%)</li>
+<li><strong>avgOxygen</strong> — 22/22 tests passed (score: 100%)</li>
+<li><strong>maxHeartRate</strong> — 22/22 tests passed (score: 100%)</li>
+<li><strong>maxHumidity</strong> — 22/22 tests passed (score: 100%)</li>
+<li><strong>maxOxygen</strong> — 22/22 tests passed (score: 100%)</li>
+<li><strong>minHeartRate</strong> — 22/22 tests passed (score: 100%)</li>
+<li><strong>minHumidity</strong> — 22/22 tests passed (score: 100%)</li>
+<li><strong>minOxygen</strong> — 22/22 tests passed (score: 100%)</li>
+</ul>
+</section>
+<section id="almost-there" class="level3">
+<h3 class="anchored" data-anchor-id="almost-there">🟡 Almost There</h3>
+<ul>
+<li><strong>avgAirSpeed</strong> — 17/22 tests passed (score: 77%)</li>
+<li><strong>avgAlt</strong> — 17/22 tests passed (score: 77%)</li>
+<li><strong>avgEnginePower</strong> — 31/36 tests passed (score: 86%)</li>
+<li><strong>maxAirSpeed</strong> — 17/22 tests passed (score: 77%)</li>
+<li><strong>maxAlt</strong> — 17/22 tests passed (score: 77%)</li>
+<li><strong>maxEnginePower</strong> — 31/36 tests passed (score: 86%)</li>
+<li><strong>avgPressure</strong> — 17/22 tests passed (score: 77%)</li>
+<li><strong>avgTemp</strong> — 17/22 tests passed (score: 77%)</li>
+<li><strong>maxPressure</strong> — 17/22 tests passed (score: 77%)</li>
+<li><strong>maxTemp</strong> — 17/22 tests passed (score: 77%)</li>
+<li><strong>minPressure</strong> — 17/22 tests passed (score: 77%)</li>
+<li><strong>minTemp</strong> — 17/22 tests passed (score: 77%)</li>
+<li><strong>avgMachSpeed</strong> — 9/16 tests passed (score: 62%)</li>
+</ul>
+</section>
+<section id="missed-features" class="level3">
+<h3 class="anchored" data-anchor-id="missed-features">🔴 Missed Features</h3>
+<ul>
+<li><strong>metadata</strong> — 81/209 tests passed (score: 43%)</li>
+<li><strong>avgAcceleration</strong> — 1/20 tests passed (score: 5%)</li>
+<li><strong>flightDistance</strong> — 3/20 tests passed (score: 16%)</li>
+<li><strong>maxAccelG</strong> — 0/16 tests passed (score: 0%)</li>
+<li><strong>maxAcceleration</strong> — 1/20 tests passed (score: 5%)</li>
+<li><strong>maxMachSpeed</strong> — 2/16 tests passed (score: 47%)</li>
+<li><strong>windSpeed</strong> — 2/18 tests passed (score: 19%)</li>
+<li><strong>fastWindAlt</strong> — 0/10 tests passed (score: 23%)</li>
+<li><strong>noiseTemp</strong> — 0/10 tests passed (score: 0%)</li>
+<li><strong>reachAlt</strong> — 0/10 tests passed (score: 30%)</li>
+<li><strong>reachDist</strong> — 0/10 tests passed (score: 23%)</li>
+<li><strong>stressedPilot</strong> — 4/10 tests passed (score: 40%)</li>
+</ul>
+</section>
 </section>
 <section id="self-evaluation-vs-teacher-evaluation" class="level2">
 <h2 class="anchored" data-anchor-id="self-evaluation-vs-teacher-evaluation">Self-Evaluation vs Teacher Evaluation</h2>
@@ -502,9 +559,9 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Average Score</td>
+<td style="text-align: center;">0.65</td>
 <td style="text-align: center;">0.00</td>
-<td style="text-align: center;">0.00</td>
-<td style="text-align: center;">+0.00</td>
+<td style="text-align: center;">-0.65</td>
 </tr>
 </tbody>
 </table>
@@ -525,15 +582,40 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Total tests submitted</td>
-<td>50</td>
+<td>55</td>
 </tr>
 <tr class="odd">
 <td>Removed (invalid ref/features)</td>
-<td>50</td>
+<td>55</td>
 </tr>
 <tr class="even">
 <td>F1 score</td>
 <td>0.00</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="code-coverage" class="level2">
+<h2 class="anchored" data-anchor-id="code-coverage">Code Coverage</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Line coverage</td>
+<td>2%</td>
+</tr>
+<tr class="even">
+<td>Branch coverage</td>
+<td>1%</td>
+</tr>
+<tr class="odd">
+<td>Uncovered classes</td>
+<td>34</td>
 </tr>
 </tbody>
 </table>
@@ -550,7 +632,7 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Student commits</td>
-<td>70</td>
+<td>85</td>
 </tr>
 <tr class="even">
 <td>Quality grade</td>
@@ -558,19 +640,19 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Quality score</td>
-<td>41/100</td>
+<td>52/100</td>
 </tr>
 <tr class="even">
 <td>Conventional rate</td>
-<td>26%</td>
+<td>39%</td>
 </tr>
 <tr class="odd">
 <td>Structured rate</td>
-<td>27%</td>
+<td>40%</td>
 </tr>
 <tr class="even">
 <td>Poor rate</td>
-<td>61%</td>
+<td>51%</td>
 </tr>
 <tr class="odd">
 <td>Branch discipline</td>
@@ -595,29 +677,29 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
+<td>Mohaelm02</td>
+<td style="text-align: center;">39</td>
+<td style="text-align: center;">46%</td>
+<td style="text-align: center;">58</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">18</td>
+</tr>
+<tr class="even">
 <td>Germain LEVRY</td>
 <td style="text-align: center;">29</td>
-<td style="text-align: center;">41%</td>
+<td style="text-align: center;">34%</td>
 <td style="text-align: center;">40</td>
 <td style="text-align: center;">4</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">7</td>
 <td style="text-align: center;">17</td>
 </tr>
-<tr class="even">
-<td>Mohaelm02</td>
-<td style="text-align: center;">24</td>
-<td style="text-align: center;">34%</td>
-<td style="text-align: center;">29</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">18</td>
-</tr>
 <tr class="odd">
 <td>CoralieMLNC</td>
 <td style="text-align: center;">9</td>
-<td style="text-align: center;">13%</td>
+<td style="text-align: center;">11%</td>
 <td style="text-align: center;">83</td>
 <td style="text-align: center;">8</td>
 <td style="text-align: center;">0</td>
@@ -627,7 +709,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>simondurquet</td>
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">11%</td>
+<td style="text-align: center;">9%</td>
 <td style="text-align: center;">14</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">0</td>
@@ -641,7 +723,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="advice-next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="advice-next-steps">Advice &amp; Next Steps</h2>
 <ul>
-<li><strong>Priority: Get your Pandora running.</strong> No features were detected by the autograder. Make sure your JAR executes correctly, produces output in the expected format, and that your <code>manifest.json</code> declares the features you have implemented. Start with the simplest features: <code>avgAlt</code>, <code>maxAlt</code>, <code>flightDuration</code>.</li>
+<li><p>You have <strong>13 features at “almost”</strong> status — these are very close to passing. Focus on converting these to green. Common causes: rounding/precision issues, off-by-one in averaging, or only handling one output mode (full report vs feature mode).</p></li>
+<li><p><strong>Acceleration</strong> features are not passing. Acceleration requires computing derivatives from speed data — double-check your formula and units.</p></li>
+<li><p><strong>Distance/Wind</strong> features need work. For <code>flightDistance</code>, the computation requires altitude data. For <code>windSpeed</code>, note that air speed is only recorded in the direction of the plane.</p></li>
+<li><p><strong>None of your 55 tests are valid</strong> against the reference implementation. Your expected values are incorrect.</p></li>
+<li><p>Your line coverage is <strong>2%</strong>. Consider adding more tests to cover untested code paths.</p></li>
+<li><p><strong>51% of your commits have poor messages.</strong> Use conventional commits format: <code>feat: description</code>, <code>fix: bug</code>, <code>test: add tests for X</code>.</p></li>
 </ul>
 
 
